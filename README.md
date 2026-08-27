@@ -42,6 +42,18 @@ python -m unittest tests.test_validate_skill_mcp_refs -v
 | `VISION.md` | Product objectives and non-goals |
 | `.planning/` | GSD roadmap and phase state |
 
+## Orchestrator
+
+User-invoked skill: `archi-orchestrator` (`skills/archi-orchestrator/SKILL.md`).
+
+After `python install.py`, invoke via your ZCode skill runner as `/archi-orchestrator`.
+
+Validate a View Plan file:
+
+```bash
+python helpers/view_plan_schema.py docs/evidence/orchestrator-smoke/sample-view-plan.md
+```
+
 ## Status
 
-Phase 1 foundations: inventory, structural validator, install path, docs. Orchestrator skill (OBJ-1) is Phase 2.
+Phase 1 foundations complete. Phase 2 ships `archi-orchestrator` (OBJ-1 / ORCH-*). Later phases add viewpoint grounding, specialists, compliance, and live evidence.
