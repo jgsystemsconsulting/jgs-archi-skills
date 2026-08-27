@@ -22,13 +22,13 @@ Requirements for initial release / first milestone path. Each maps to roadmap ph
 
 ### Viewpoint Selection (OBJ-2)
 
-- [ ] **VIEW-01**: Viewpoint choices in the plan are traceable to stakeholder, concern, purpose, and abstraction level
-- [ ] **VIEW-02**: When no standard ArchiMate viewpoint fits, the system proposes a justified organisation-specific viewpoint that remains ArchiMate-compliant
+- [x] **VIEW-01**: Viewpoint choices in the plan are traceable to stakeholder, concern, purpose, and abstraction level
+- [x] **VIEW-02**: When no standard ArchiMate viewpoint fits, the system proposes a justified organisation-specific viewpoint that remains ArchiMate-compliant
 
 ### Specialists and Model Work (OBJ-3, OBJ-4)
 
-- [ ] **SPEC-01**: Skill set includes (or clearly stubs with dispatch contracts for) the vision-enumerated responsibilities: elicitation, viewpoint selection, motivation, capability/strategy, business, application, technology/physical, implementation/migration, cross-layer traceability, model QA, layout/presentation, documentation/rationale
-- [ ] **SPEC-02**: Specialists are orchestrator-dispatched, not separately user-invoked as the primary path
+- [x] **SPEC-01**: Skill set includes (or clearly stubs with dispatch contracts for) the vision-enumerated responsibilities: elicitation, viewpoint selection, motivation, capability/strategy, business, application, technology/physical, implementation/migration, cross-layer traceability, model QA, layout/presentation, documentation/rationale
+- [x] **SPEC-02**: Specialists are orchestrator-dispatched, not separately user-invoked as the primary path
 - [ ] **SPEC-03**: Before creating an element, the agent path inspects existing model content via MCP and reuses shared concepts when present
 - [ ] **SPEC-04**: Naming stays consistent across views for the same concept; duplicate elements are minimised
 
@@ -85,10 +85,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | ORCH-02 | Phase 2 | Complete |
 | ORCH-03 | Phase 2 | Complete |
 | ORCH-04 | Phase 2 | Complete |
-| VIEW-01 | Phase 3 | Pending |
-| VIEW-02 | Phase 3 | Pending |
-| SPEC-01 | Phase 3 | Pending |
-| SPEC-02 | Phase 3 | Pending |
+| VIEW-01 | Phase 3 | Complete |
+| VIEW-02 | Phase 3 | Complete |
+| SPEC-01 | Phase 3 | Complete |
+| SPEC-02 | Phase 3 | Complete |
 | SPEC-03 | Phase 4 | Pending |
 | SPEC-04 | Phase 4 | Pending |
 | COMP-01 | Phase 4 | Pending |

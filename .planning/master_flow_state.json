@@ -1,14 +1,10 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 3,
-  "active_phase_dir": ".planning/phases/3-viewpoint-grounding-and-specialist-contracts",
-  "active_state": ".planning/phases/3-viewpoint-grounding-and-specialist-contracts/master_flow_state.json",
-  "lock": {
-    "phase": 3,
-    "session_hint": "master-flow",
-    "updated_at": "2026-08-27T23:00:29.947Z"
-  },
-  "updated_at": "2026-08-27T23:00:29.948Z",
-  "notes": ""
+  "active_phase": 4,
+  "active_phase_dir": ".planning/phases/4-coherence-create-path-and-compliance",
+  "active_state": ".planning/phases/4-coherence-create-path-and-compliance/master_flow_state.json",
+  "lock": null,
+  "updated_at": "2026-08-27T23:04:25.788Z",
+  "notes": "Phase 3 verify passed. Next: 4"
 }
