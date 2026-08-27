@@ -4,9 +4,9 @@
   "milestone": null,
   "phase": 5,
   "phase_slug": "5-rationale-summary-and-live-evidence",
-  "phase_dir": ".planning/phases/5-rationale-summary-and-live-evidence",
+  "phase_dir": ".planning/milestones/v1.0-phases/5-rationale-summary-and-live-evidence",
   "scope": "milestone",
-  "current_gate": "complete",
+  "current_gate": null,
   "completed": [
     "research",
     "plan",
@@ -19,7 +19,9 @@
     "security_audit",
     "gap_analysis",
     "verify",
-    "milestone_audit"
+    "milestone_audit",
+    "complete",
+    "retrospective"
   ],
   "skipped": [
     "discuss",
@@ -59,7 +61,9 @@
     "security_audit": "passed:review_wave",
     "gap_analysis": "passed",
     "verify": "passed",
-    "milestone_audit": "passed"
+    "milestone_audit": "passed",
+    "complete": "passed",
+    "retrospective": "passed"
   },
   "artifacts": {},
   "regate_attempts": {},
@@ -116,6 +120,7 @@
     }
   ],
   "started_at": "2026-08-27T23:04:38.303Z",
-  "updated_at": "2026-08-27T23:06:53.817Z",
-  "notes": "Initialized master_flow for phase 5"
+  "updated_at": "2026-08-27T23:10:14.763581+00:00",
+  "notes": "Milestone v1.0 complete+retrospective passed; archive closed",
+  "pending_checkpoint": null
 }
