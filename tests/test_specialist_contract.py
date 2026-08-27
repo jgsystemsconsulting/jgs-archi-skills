@@ -51,6 +51,13 @@ class SpecialistContractTests(unittest.TestCase):
             )
             self.assertIn("View Plan confirmation", text)
 
+    def test_specialists_not_stubs(self) -> None:
+        for name in MUTATING:
+            text = (ROOT / "skills" / name / "SKILL.md").read_text(encoding="utf-8")
+            self.assertIn("## Purpose", text, msg=name)
+            self.assertIn("## Procedure", text, msg=name)
+            self.assertNotIn("Contract stub for suite completeness", text, msg=name)
+
     def test_viewpoint_select_frozen(self) -> None:
         digest = hashlib.sha256(VSEL.read_bytes()).hexdigest()
         self.assertEqual(digest, FROZEN)

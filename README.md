@@ -56,4 +56,7 @@ python helpers/view_plan_schema.py docs/evidence/orchestrator-smoke/sample-view-
 
 ## Status
 
-Phase 1 foundations complete. Phase 2 ships `archi-orchestrator` (OBJ-1 / ORCH-*). Later phases add viewpoint grounding, specialists, compliance, and live evidence.
+Milestone **v1.2** (SEED-003 / OBJ-3): full specialist skill bodies + orchestrator post-confirm dispatch. Offline evidence: docs/evidence/specialist-suite-offline/.
+
+
+v1.0 foundations + orchestrator; v1.1 viewpoint-select; v1.2 full specialist set (OBJ-3). Live Archi MCP E2E still deferred when Bridge is down.

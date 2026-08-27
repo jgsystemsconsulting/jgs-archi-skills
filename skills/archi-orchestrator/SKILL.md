@@ -109,6 +109,53 @@ Present the View Plan and stop. Ask the user to **approve**, **revise** (with no
 - On **abort**: stop cleanly; summarize what was learned; no MCP mutations.
 - On **approve**: state that modelling may proceed via specialist skills in a later step/phase; still do not mutate inside this skill unless a future version of this skill explicitly adds a post-confirm specialist dispatch section approved by the roadmap.
 
+
+
+## Step 5 — Post-confirm specialist dispatch (SPEC-D-16, SPEC-D-17)
+
+After the user **approves** the View Plan (Step 4), modelling may proceed via orchestrator-dispatched specialists. The orchestrator still does not need to mutate inside this skill; it **hands off** with a standard payload and a default order.
+
+### Hand-off payload (required fields)
+
+| Field | Content |
+|-------|---------|
+| confirmation_status | `approved` |
+| intent_summary | From View Plan Intent Summary + elicit output |
+| stakeholders_concerns | From View Plan |
+| viewpoints | Names + abstraction levels (must match Trace Table) |
+| layers_in_scope | From View Plan Layers Involved |
+| modelling_sequence | Numbered steps from View Plan |
+| reuse_constraints | Prefer existing IDs; naming notes |
+| open_questions | Still unresolved items (user-visible) |
+| target_views | Optional known view names |
+
+### Default specialist order (decision rules)
+
+Skip specialists whose layer/concern is out of confirmed scope.
+
+1. archi-elicit — only if intent fields still incomplete
+2. archi-viewpoint-select — already done in Step 2b; re-run only if viewpoints change after approval notes
+3. archi-motivation — if motivation/strategy drivers in scope
+4. archi-capability-strategy — if capability/strategy in scope
+5. archi-business — if business layer in scope
+6. archi-application — if application layer in scope
+7. archi-technology-physical — if technology/physical in scope
+8. archi-implementation-migration — if roadmap/migration in scope
+9. archi-traceability — after at least two layer specialists (or when cross-layer traces requested)
+10. archi-model-qa — after structural creates; before final layout freeze preferred
+11. archi-layout — after content stable on target views
+12. archi-documentation — last: rationale + completion summary
+
+Parallelism: independent layer specialists may run in parallel when the modelling sequence has no dependency; traceability waits on their IDs.
+
+### Shared contract
+
+Every mutating specialist must follow `docs/CREATE_PATH.md`. Inventory tools only. No ArchiMate table dumps (NG-4). User remains governor (NG-3).
+
+### Completion
+
+End the run when documentation specialist returns a completion summary, or earlier if the user aborts. Capture offline evidence under `docs/evidence/` when live MCP is unavailable.
+
 ## Completion summary (when stopping)
 
 Always end with:
