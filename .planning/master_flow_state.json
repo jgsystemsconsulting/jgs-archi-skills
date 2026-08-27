@@ -1,0 +1,10 @@
+{
+  "schema_version": 1,
+  "kind": "pointer",
+  "active_phase": 1,
+  "active_phase_dir": ".planning/phases/1-foundations-and-mcp-contract",
+  "active_state": ".planning/phases/1-foundations-and-mcp-contract/master_flow_state.json",
+  "lock": null,
+  "updated_at": "2026-08-27T22:55:59.823Z",
+  "notes": "Phase 1 verify passed. Next: 1"
+}

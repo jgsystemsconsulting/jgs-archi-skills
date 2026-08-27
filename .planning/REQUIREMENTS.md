@@ -9,9 +9,9 @@ Requirements for initial release / first milestone path. Each maps to roadmap ph
 
 ### Foundation
 
-- [ ] **FOUND-01**: Contributor can install the in-repo skill suite to `~/.zcode/skills/` via a documented install script
-- [ ] **FOUND-02**: Structural validation helper fails when a skill references an MCP tool or resource name that is not on the known Archi Bridge surface
-- [ ] **FOUND-03**: Repo documents the MCP endpoint default (`http://127.0.0.1:18090/mcp`) and that skills consume tools/resources only (no plugin modification)
+- [x] **FOUND-01**: Contributor can install the in-repo skill suite to `~/.zcode/skills/` via a documented install script
+- [x] **FOUND-02**: Structural validation helper fails when a skill references an MCP tool or resource name that is not on the known Archi Bridge surface
+- [x] **FOUND-03**: Repo documents the MCP endpoint default (`http://127.0.0.1:18090/mcp`) and that skills consume tools/resources only (no plugin modification)
 
 ### Orchestration (OBJ-1)
 
@@ -78,9 +78,9 @@ Which phases cover which requirements. Updated during roadmap creation.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| FOUND-01 | Phase 1 | Pending |
-| FOUND-02 | Phase 1 | Pending |
-| FOUND-03 | Phase 1 | Pending |
+| FOUND-01 | Phase 1 | Complete |
+| FOUND-02 | Phase 1 | Complete |
+| FOUND-03 | Phase 1 | Complete |
 | ORCH-01 | Phase 2 | Pending |
 | ORCH-02 | Phase 2 | Pending |
 | ORCH-03 | Phase 2 | Pending |
@@ -100,6 +100,7 @@ Which phases cover which requirements. Updated during roadmap creation.
 | EVID-02 | Phase 5 | Pending |
 
 **Coverage:**
+
 - v1 requirements: 20 total
 - Mapped to phases: 20
 - Unmapped: 0
