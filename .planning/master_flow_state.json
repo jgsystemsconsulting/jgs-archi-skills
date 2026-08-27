@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 2,
-  "active_phase_dir": ".planning/phases/2-orchestrator-intent-and-view-plan",
-  "active_state": ".planning/phases/2-orchestrator-intent-and-view-plan/master_flow_state.json",
+  "active_phase": 3,
+  "active_phase_dir": ".planning/phases/3-viewpoint-grounding-and-specialist-contracts",
+  "active_state": ".planning/phases/3-viewpoint-grounding-and-specialist-contracts/master_flow_state.json",
   "lock": {
-    "phase": 2,
+    "phase": 3,
     "session_hint": "master-flow",
-    "updated_at": "2026-08-27T23:00:10.184Z"
+    "updated_at": "2026-08-27T23:00:29.947Z"
   },
-  "updated_at": "2026-08-27T23:00:10.185Z",
-  "notes": "Phase 2 verify passed. Next: 2"
+  "updated_at": "2026-08-27T23:00:29.948Z",
+  "notes": ""
 }
