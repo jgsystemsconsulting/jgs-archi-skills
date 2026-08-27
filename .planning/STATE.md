@@ -1,18 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.1
-status: Awaiting next milestone
-last_updated: "2026-08-27T23:31:04.355Z"
+milestone: v1.2
+milestone_name: Full specialist skill set
+status: planning
+last_updated: "2026-08-27T23:38:03.551Z"
 last_activity: 2026-08-28
-last_activity_desc: Milestone v1.1 completed and archived
-state_head: 57ad087d464e39fc4980f096e02ef77238b3fbd9
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 3
-milestone_name: Viewpoint selection grounding
-current_phase: 8
+  total_phases: 4
+  completed_phases: 0
+  total_plans: 4
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -22,14 +20,14 @@ current_phase: 8
 See: .planning/PROJECT.md (updated 2026-08-27)
 
 **Core value:** A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
-**Current focus:** Phase 1 — Foundations and MCP contract
+**Current focus:** Phase 9 — Shared specialist contract and elicit body
 
 ## Current Position
 
-Phase: Milestone v1.1 complete
+Phase: Not started (defining requirements)
 Plan: —
-Status: Awaiting next milestone
-Last activity: 2026-08-28 — Milestone v1.1 completed and archived
+Status: Defining requirements
+Last activity: 2026-08-28 — Milestone v1.2 started
 
 ## Performance Metrics
 
