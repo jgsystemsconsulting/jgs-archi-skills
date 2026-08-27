@@ -5,12 +5,16 @@ description: "Cross-layer traceability specialist; orchestrator-dispatched."
 
 # archi-traceability
 
-Contract stub for suite completeness (SPEC-01). Full modelling depth may expand later.
+
+Contract stub for suite completeness (SPEC-01). Full modelling depth lands in later v1.2 phases.
 
 
-## Rules
-- Orchestrator-dispatched only (SPEC-02).
-- Inventory MCP tools only; read archimate://recipes/index before non-trivial views.
-- Inspect before create: search-elements / get-or-create-element (SPEC-03).
-- On compliance failure explain + propose alternative (COMP-02). See docs/CREATE_PATH.md.
-- No plugin modification; no ArchiMate table dumps.
+## Shared contract (v1.2)
+
+- See `docs/CREATE_PATH.md` (shared specialist modelling contract).
+- Orchestrator-dispatched only (SPEC-02 / SPEC-D-13).
+- Mutations only after View Plan confirmation (SPEC-D-15 / NG-3).
+- No ArchiMate metamodel table dumps (NG-4 / SPEC-D-14).
+- Inventory MCP tools only; read relevant `archimate://recipes/index` and sibling recipe URIs before non-trivial views.
+- Inspect before create: `search-elements` / `get-or-create-element` (SPEC-03).
+- On compliance failure explain + propose alternative (COMP-02).
