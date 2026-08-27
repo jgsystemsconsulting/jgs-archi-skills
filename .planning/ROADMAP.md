@@ -36,10 +36,10 @@ Archive: `.planning/milestones/v1.1-*` and `v1.1-phases/`
 
 </details>
 
-- [ ] **Phase 9: Shared specialist contract and elicit body** — Shared create-path binding across specialists; full `archi-elicit`; freeze viewpoint-select as done
-- [ ] **Phase 10: Core layer modelling specialists** — Full bodies for motivation, capability/strategy, business, application, technology/physical, implementation/migration
-- [ ] **Phase 11: Cross-cutting specialists** — Full bodies for traceability, model-qa, layout, documentation/rationale
-- [ ] **Phase 12: Orchestrator dispatch, evidence, regression** — Post-confirm dispatch sequence, offline evidence fixtures, green suite
+- [x] **Phase 9: Shared specialist contract and elicit body** — Shared create-path binding across specialists; full `archi-elicit`; freeze viewpoint-select as done (completed 2026-08-28)
+- [x] **Phase 10: Core layer modelling specialists** — Full bodies for motivation, capability/strategy, business, application, technology/physical, implementation/migration (completed 2026-08-28)
+- [x] **Phase 11: Cross-cutting specialists** — Full bodies for traceability, model-qa, layout, documentation/rationale (completed 2026-08-28)
+- [x] **Phase 12: Orchestrator dispatch, evidence, regression** — Post-confirm dispatch sequence, offline evidence fixtures, green suite (completed 2026-08-28)
 
 ## Phase Details
 
@@ -59,7 +59,7 @@ Archive: `.planning/milestones/v1.1-*` and `v1.1-phases/`
 
 Plans:
 
-- [ ] 09-01: Shared specialist contract + full archi-elicit; leave viewpoint-select frozen
+- [x] 09-01: Shared specialist contract + full archi-elicit; leave viewpoint-select frozen
 
 ### Phase 10: Core layer modelling specialists
 
@@ -77,7 +77,7 @@ Plans:
 
 Plans:
 
-- [ ] 10-01: Full bodies for motivation, capability-strategy, business, application, technology-physical, implementation-migration
+- [x] 10-01: Full bodies for motivation, capability-strategy, business, application, technology-physical, implementation-migration
 
 ### Phase 11: Cross-cutting specialists
 
@@ -95,7 +95,7 @@ Plans:
 
 Plans:
 
-- [ ] 11-01: Full bodies for traceability, model-qa, layout, documentation
+- [x] 11-01: Full bodies for traceability, model-qa, layout, documentation
 
 ### Phase 12: Orchestrator dispatch, evidence, regression
 
@@ -113,7 +113,7 @@ Plans:
 
 Plans:
 
-- [ ] 12-01: Orchestrator post-confirm dispatch + offline evidence + regression lock
+- [x] 12-01: Orchestrator post-confirm dispatch + offline evidence + regression lock
 
 ## Progress
 
@@ -121,10 +121,10 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 9. Shared specialist contract and elicit body | 0/1 | Pending | - |
-| 10. Core layer modelling specialists | 0/1 | Pending | - |
-| 11. Cross-cutting specialists | 0/1 | Pending | - |
-| 12. Orchestrator dispatch, evidence, regression | 0/1 | Pending | - |
+| 9. Shared specialist contract and elicit body | 1/1 | Complete    | 2026-08-28 |
+| 10. Core layer modelling specialists | 1/1 | Complete    | 2026-08-28 |
+| 11. Cross-cutting specialists | 1/1 | Complete    | 2026-08-28 |
+| 12. Orchestrator dispatch, evidence, regression | 1/1 | Complete    | 2026-08-28 |
 
 ---
 *Roadmap created: 2026-08-28 for milestone v1.2 (SEED-003 / OBJ-3)*
