@@ -10,35 +10,35 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 ### Specialist bodies (OBJ-3)
 
-- [ ] **SPEC-D-01**: `archi-elicit` has a complete SKILL.md body that normalizes free-text intent into the orchestrator field set and never mutates the Archi model
-- [ ] **SPEC-D-02**: `archi-motivation` has a complete modelling body that creates motivation-layer elements, relationships, and views via MCP after user confirmation, using inspect-before-create
-- [ ] **SPEC-D-03**: `archi-capability-strategy` has a complete modelling body for strategy/capability elements, relationships, and views via MCP after confirmation
-- [ ] **SPEC-D-04**: `archi-business` has a complete modelling body for business-layer elements, relationships, and views via MCP after confirmation
-- [ ] **SPEC-D-05**: `archi-application` has a complete modelling body for application-layer elements, relationships, and views via MCP after confirmation
-- [ ] **SPEC-D-06**: `archi-technology-physical` has a complete modelling body for technology/physical elements, relationships, and views via MCP after confirmation
-- [ ] **SPEC-D-07**: `archi-implementation-migration` has a complete modelling body for implementation/migration elements, relationships, and views via MCP after confirmation
-- [ ] **SPEC-D-08**: `archi-traceability` has a complete body that establishes explicit cross-layer traces (motivation to business to application to technology) via MCP relationships and reports gaps
-- [ ] **SPEC-D-09**: `archi-model-qa` has a complete body that runs compliance/coherence checks, explains violations, and proposes compliant alternatives without silent illegal fixes
-- [ ] **SPEC-D-10**: `archi-layout` has a complete body that applies Archi-native layout/presentation tools to improve readability of target views
-- [ ] **SPEC-D-11**: `archi-documentation` has a complete body that writes structured rationale into model documentation fields and produces the completion summary pattern
+- [x] **SPEC-D-01**: `archi-elicit` has a complete SKILL.md body that normalizes free-text intent into the orchestrator field set and never mutates the Archi model
+- [x] **SPEC-D-02**: `archi-motivation` has a complete modelling body that creates motivation-layer elements, relationships, and views via MCP after user confirmation, using inspect-before-create
+- [x] **SPEC-D-03**: `archi-capability-strategy` has a complete modelling body for strategy/capability elements, relationships, and views via MCP after confirmation
+- [x] **SPEC-D-04**: `archi-business` has a complete modelling body for business-layer elements, relationships, and views via MCP after confirmation
+- [x] **SPEC-D-05**: `archi-application` has a complete modelling body for application-layer elements, relationships, and views via MCP after confirmation
+- [x] **SPEC-D-06**: `archi-technology-physical` has a complete modelling body for technology/physical elements, relationships, and views via MCP after confirmation
+- [x] **SPEC-D-07**: `archi-implementation-migration` has a complete modelling body for implementation/migration elements, relationships, and views via MCP after confirmation
+- [x] **SPEC-D-08**: `archi-traceability` has a complete body that establishes explicit cross-layer traces (motivation to business to application to technology) via MCP relationships and reports gaps
+- [x] **SPEC-D-09**: `archi-model-qa` has a complete body that runs compliance/coherence checks, explains violations, and proposes compliant alternatives without silent illegal fixes
+- [x] **SPEC-D-10**: `archi-layout` has a complete body that applies Archi-native layout/presentation tools to improve readability of target views
+- [x] **SPEC-D-11**: `archi-documentation` has a complete body that writes structured rationale into model documentation fields and produces the completion summary pattern
 
 ### Shared create path and governance
 
-- [ ] **SPEC-D-12**: Every mutating specialist documents the same create-path binding: search/get-or-create before create, inventory MCP tools only, read relevant archimate recipes before non-trivial views, compliance explain-and-propose on failure
-- [ ] **SPEC-D-13**: Every specialist remains orchestrator-dispatched only (SPEC-02); no specialist becomes a primary user entrypoint
-- [ ] **SPEC-D-14**: No specialist copies ArchiMate metamodel catalogs into skill text (NG-4); recipe/resource URIs are referenced, not inlined as tables
-- [ ] **SPEC-D-15**: Mutating specialists do not run creates until the View Plan confirmation gate has been approved (NG-3)
+- [x] **SPEC-D-12**: Every mutating specialist documents the same create-path binding: search/get-or-create before create, inventory MCP tools only, read relevant archimate recipes before non-trivial views, compliance explain-and-propose on failure
+- [x] **SPEC-D-13**: Every specialist remains orchestrator-dispatched only (SPEC-02); no specialist becomes a primary user entrypoint
+- [x] **SPEC-D-14**: No specialist copies ArchiMate metamodel catalogs into skill text (NG-4); recipe/resource URIs are referenced, not inlined as tables
+- [x] **SPEC-D-15**: Mutating specialists do not run creates until the View Plan confirmation gate has been approved (NG-3)
 
 ### Orchestrator integration
 
-- [ ] **SPEC-D-16**: `archi-orchestrator` documents a post-confirm modelling dispatch sequence naming the specialist order (or decision rules for order) without performing mutations inside the orchestrator happy path unless explicitly scoped
-- [ ] **SPEC-D-17**: Orchestrator hand-off payloads to specialists are specified (intent summary, confirmed viewpoints, target layers/views, reuse constraints)
+- [x] **SPEC-D-16**: `archi-orchestrator` documents a post-confirm modelling dispatch sequence naming the specialist order (or decision rules for order) without performing mutations inside the orchestrator happy path unless explicitly scoped
+- [x] **SPEC-D-17**: Orchestrator hand-off payloads to specialists are specified (intent summary, confirmed viewpoints, target layers/views, reuse constraints)
 
 ### Evidence and regression
 
-- [ ] **SPEC-D-18**: Offline evidence fixtures exist under `docs/evidence/` covering each deepened specialist path (procedure transcript and/or expected tool sequence); live MCP runs remain optional when Bridge is down
-- [ ] **SPEC-D-19**: Unit/structural tests keep the suite green: MCP-ref validator, specialist manifest count, and any new schema/helpers introduced this milestone
-- [ ] **SPEC-D-20**: `archi-viewpoint-select` is not reworked; v1.1 body remains the source of truth for viewpoint grounding
+- [x] **SPEC-D-18**: Offline evidence fixtures exist under `docs/evidence/` covering each deepened specialist path (procedure transcript and/or expected tool sequence); live MCP runs remain optional when Bridge is down
+- [x] **SPEC-D-19**: Unit/structural tests keep the suite green: MCP-ref validator, specialist manifest count, and any new schema/helpers introduced this milestone
+- [x] **SPEC-D-20**: `archi-viewpoint-select` is not reworked; v1.1 body remains the source of truth for viewpoint grounding
 
 ## Future Requirements (not this milestone)
 
@@ -76,26 +76,26 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| SPEC-D-01 | Phase 9 | Pending |
-| SPEC-D-02 | Phase 10 | Pending |
-| SPEC-D-03 | Phase 10 | Pending |
-| SPEC-D-04 | Phase 10 | Pending |
-| SPEC-D-05 | Phase 10 | Pending |
-| SPEC-D-06 | Phase 10 | Pending |
-| SPEC-D-07 | Phase 10 | Pending |
-| SPEC-D-08 | Phase 11 | Pending |
-| SPEC-D-09 | Phase 11 | Pending |
-| SPEC-D-10 | Phase 11 | Pending |
-| SPEC-D-11 | Phase 11 | Pending |
-| SPEC-D-12 | Phase 9 | Pending |
-| SPEC-D-13 | Phase 9 | Pending |
-| SPEC-D-14 | Phase 9 | Pending |
-| SPEC-D-15 | Phase 9 | Pending |
-| SPEC-D-16 | Phase 12 | Pending |
-| SPEC-D-17 | Phase 12 | Pending |
-| SPEC-D-18 | Phase 12 | Pending |
-| SPEC-D-19 | Phase 12 | Pending |
-| SPEC-D-20 | Phase 9 | Pending |
+| SPEC-D-01 | Phase 9 | Complete |
+| SPEC-D-02 | Phase 10 | Complete |
+| SPEC-D-03 | Phase 10 | Complete |
+| SPEC-D-04 | Phase 10 | Complete |
+| SPEC-D-05 | Phase 10 | Complete |
+| SPEC-D-06 | Phase 10 | Complete |
+| SPEC-D-07 | Phase 10 | Complete |
+| SPEC-D-08 | Phase 11 | Complete |
+| SPEC-D-09 | Phase 11 | Complete |
+| SPEC-D-10 | Phase 11 | Complete |
+| SPEC-D-11 | Phase 11 | Complete |
+| SPEC-D-12 | Phase 9 | Complete |
+| SPEC-D-13 | Phase 9 | Complete |
+| SPEC-D-14 | Phase 9 | Complete |
+| SPEC-D-15 | Phase 9 | Complete |
+| SPEC-D-16 | Phase 12 | Complete |
+| SPEC-D-17 | Phase 12 | Complete |
+| SPEC-D-18 | Phase 12 | Complete |
+| SPEC-D-19 | Phase 12 | Complete |
+| SPEC-D-20 | Phase 9 | Complete |
 
 **Coverage:**
 
