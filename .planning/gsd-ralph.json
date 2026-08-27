@@ -1,0 +1,7 @@
+{
+  "budgetCap": 25,
+  "heartbeatMinutes": 360,
+  "autoShip": true,
+  "autoShipMode": "silent",
+  "autoCloseout": "audit-passed"
+}
