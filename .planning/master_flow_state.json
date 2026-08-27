@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 5,
-  "active_phase_dir": ".planning/phases/5-rationale-summary-and-live-evidence",
-  "active_state": ".planning/phases/5-rationale-summary-and-live-evidence/master_flow_state.json",
+  "active_phase": null,
+  "active_phase_dir": null,
+  "active_state": null,
   "lock": null,
-  "updated_at": "2026-08-27T23:04:36.653Z",
-  "notes": "Phase 4 verify passed. Next: 5"
+  "updated_at": "2026-08-27T23:04:47.037Z",
+  "notes": "Phase 5 verify passed. Next: none"
 }

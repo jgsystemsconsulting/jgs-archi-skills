@@ -36,14 +36,14 @@ Requirements for initial release / first milestone path. Each maps to roadmap ph
 
 - [x] **COMP-01**: Compliance checks cover element types, relationship source/target combinations, permitted relationship types, abstraction levels, cross-view consistency, and naming
 - [x] **COMP-02**: On violation, the system explains the problem and proposes a compliant alternative rather than silently applying an illegal change
-- [ ] **RATE-01**: Significant views carry structured rationale (purpose, stakeholders/concerns, viewpoint, questions answered, assumptions, decisions, exclusions, open questions) recorded in the model via MCP
-- [ ] **RATE-02**: User can request natural-language changes that regenerate affected views without damaging shared model elements used elsewhere
-- [ ] **RATE-03**: A modelling run ends with a completion summary the user can read
+- [x] **RATE-01**: Significant views carry structured rationale (purpose, stakeholders/concerns, viewpoint, questions answered, assumptions, decisions, exclusions, open questions) recorded in the model via MCP
+- [x] **RATE-02**: User can request natural-language changes that regenerate affected views without damaging shared model elements used elsewhere
+- [x] **RATE-03**: A modelling run ends with a completion summary the user can read
 
 ### Evidence
 
-- [ ] **EVID-01**: At least one documented live end-to-end scenario for the orchestrator path is captured under `docs/evidence/` when MCP is available
-- [ ] **EVID-02**: Evidence layout and naming convention exist so later specialists can add one live scenario each
+- [x] **EVID-01**: At least one documented live end-to-end scenario for the orchestrator path is captured under `docs/evidence/` when MCP is available
+- [x] **EVID-02**: Evidence layout and naming convention exist so later specialists can add one live scenario each
 
 ## v2 Requirements
 
@@ -93,11 +93,11 @@ Which phases cover which requirements. Updated during roadmap creation.
 | SPEC-04 | Phase 4 | Complete |
 | COMP-01 | Phase 4 | Complete |
 | COMP-02 | Phase 4 | Complete |
-| RATE-01 | Phase 5 | Pending |
-| RATE-02 | Phase 5 | Pending |
-| RATE-03 | Phase 5 | Pending |
-| EVID-01 | Phase 5 | Pending |
-| EVID-02 | Phase 5 | Pending |
+| RATE-01 | Phase 5 | Complete |
+| RATE-02 | Phase 5 | Complete |
+| RATE-03 | Phase 5 | Complete |
+| EVID-01 | Phase 5 | Complete |
+| EVID-02 | Phase 5 | Complete |
 
 **Coverage:**
 
