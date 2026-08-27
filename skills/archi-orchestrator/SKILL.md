@@ -73,6 +73,24 @@ Keep the main plan free of element-type catalogs. If technical type hints help a
 ## Appendix: Technical Hints
 ```
 
+## Step 2b — Ground viewpoints (VSEL-08..10 / OBJ-2)
+
+After drafting **Proposed Viewpoints**, dispatch the orchestrator-only specialist **archi-viewpoint-select** (do not ask the user to invoke it):
+
+1. Pass normalized intent axes (stakeholders, concerns, purpose, abstraction) and the draft viewpoint bullets.
+2. Specialist returns a schema-valid **Viewpoint Trace Table** (plus org-specific proposals and rejected alternatives). No MCP mutations on this path.
+3. Reconcile **Proposed Viewpoints** so names and abstraction levels **match the Trace Table** (VSEL-09). Prefer Trace Table order when conflicts arise.
+4. Optionally attach the Trace Table under:
+
+```markdown
+## Appendix: Viewpoint Trace
+```
+
+5. If the specialist proposed organisation-specific viewpoints, surface them under **Open Questions for User** until the user accepts or revises them (NG-3).
+6. Offline helper the specialist may run: `python helpers/viewpoint_selection_matrix.py`; validate traces with `python helpers/viewpoint_trace_schema.py`.
+
+Then continue to schema check of the View Plan itself.
+
 ## Step 3 — Schema check
 
 If the plan is written to a file, run:
