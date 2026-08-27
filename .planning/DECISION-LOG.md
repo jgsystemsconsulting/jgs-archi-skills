@@ -13,3 +13,4 @@
 2026-08-27T23:34:38Z | IDLE | seed/milestone: SEED-002 | because: seed work verified complete | evidence: .planning\milestones\v1.1-ROADMAP.md | vision: n/a
 2026-08-27T23:34:38Z | PROPOSE | seed/milestone: SEED-003 | because: drafted from uncovered OBJ-3 | evidence: VISION.md | vision: OBJ-3
 2026-08-27T23:34:38Z | KICK_MILESTONE | seed/milestone: SEED-003 | because: kickable seed | evidence: BACKLOG.md | vision: OBJ-3
+2026-08-27T23:54:47Z | CHECKPOINT_ANSWERED | seed/milestone: SEED-003 | because: auto-closeout consent (audit passed) | evidence: milestones/v1.2-MILESTONE-AUDIT.md | vision: OBJ-3

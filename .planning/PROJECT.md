@@ -8,22 +8,21 @@ A suite of ZCode skills that turn the existing JGS Archi Bridge MCP into a gover
 
 A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
 
-## Current Milestone: v1.2 Full specialist skill set
+## Current Milestone: v1.2 Full specialist skill set (SHIPPED 2026-08-28)
 
-**Goal:** Replace remaining specialist contract stubs with complete modelling bodies that create elements, relationships, and views through the Archi MCP under user-governed confirmation, covering every OBJ-3 responsibility.
+**Goal:** OBJ-3 specialist suite complete offline.
 
-**Target features:**
-- Full SKILL.md bodies for elicit, motivation, capability/strategy, business, application, technology/physical, implementation/migration, traceability, model-qa, layout, documentation (viewpoint-select already complete in v1.1)
-- Shared create-path procedure binding (inspect-before-create, compliance explain-and-propose, no metamodel dumps)
-- Orchestrator post-confirm dispatch order across specialists
-- Offline evidence fixtures per specialist path; live MCP E2E remains soft/deferred
+**Shipped:** Full specialist bodies, CREATE_PATH contract, orchestrator post-confirm dispatch, offline evidence.
 
-**Non-goals this milestone:** Live Bridge hard-gate, org-viewpoint library side store, plugin changes, third-party Python deps.
 
 ## Requirements
 
 ### Validated
 
+- ✓ Full specialist modelling bodies for OBJ-3 suite (SEED-003) — v1.2
+- ✓ Shared CREATE_PATH specialist contract + confirmation gate binding — v1.2
+- ✓ Orchestrator post-confirm dispatch order and hand-off payload — v1.2
+- ✓ Offline specialist-suite evidence fixtures — v1.2
 - ✓ Installable skill suite with MCP inventory + structural validator — v1.0
 - ✓ Orchestrator intent elicitation and plain-language view plan with confirmation gate — v1.0
 - ✓ Viewpoint trace contracts and specialist dispatch set (12 specialists) — v1.0
@@ -36,10 +35,8 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 ### Active
 
-- [ ] Full specialist SKILL bodies for remaining 11 specialists (OBJ-3 / SEED-003)
-- [ ] Orchestrator post-confirm specialist dispatch sequence for modelling run
-- [ ] Offline evidence fixtures covering each specialist modelling path
-- [ ] Live Archi MCP E2E evidence when Bridge available (deferred gate, not hard blocker)
+- [ ] Live Archi MCP E2E evidence for orchestrator + multi-specialist path (when Bridge available)
+- [ ] Stronger coherence/naming helpers beyond create-path guidance (OBJ-4+ future)
 
 ### Out of Scope
 
@@ -55,7 +52,7 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 - v1.0 shipped 2026-08-28: foundations, orchestrator, specialist contracts, compliance helpers, rationale/evidence conventions.
 - v1.1 shipped 2026-08-28 (SEED-002 / OBJ-2): matrix + trace schema helpers, full viewpoint-select, orchestrator wiring, offline evidence.
-- v1.2 (SEED-003 / OBJ-3) in progress: full specialist skill set beyond stubs; viewpoint-select stays as shipped in v1.1.
+- v1.2 shipped 2026-08-28 (SEED-003 / OBJ-3): full specialist bodies, CREATE_PATH contract, orchestrator Step 5, offline specialist evidence.
 - Runtime dependency: JGS Archi Bridge MCP at default `http://127.0.0.1:18090/mcp`.
 - Delivery: skills under `skills/`, install via `python install.py` to `~/.zcode/skills/`.
 - Python 3.10+ stdlib-only helpers; no third-party deps.
@@ -82,8 +79,8 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 | Live MCP E2E deferred | Archi availability | ⚠️ Revisit when Bridge up |
 | v1.1 deepens OBJ-2 only | SEED-002; leave other specialist bodies to later seeds | ✓ Good |
 | Matrix holds selection axes + fixture keys, not metamodel tables | NG-4; MCP recipes remain SoT | ✓ Good |
-| v1.2 deepens OBJ-3 specialist bodies only | SEED-003; do not rework v1.0/v1.1 shipped surfaces | ✓ Planned |
-| Offline specialist evidence fixtures as hard gate | Live MCP soft/deferred until Bridge up | ✓ Planned |
+| v1.2 deepens OBJ-3 specialist bodies only | SEED-003; do not rework v1.0/v1.1 shipped surfaces | ✓ Good |
+| Offline specialist evidence fixtures as hard gate | Live MCP soft/deferred until Bridge up | ✓ Good |
 
 ## Evolution
 
@@ -103,4 +100,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-08-28 after v1.2 milestone start (SEED-003)*
+*Last updated: 2026-08-28 after v1.2 milestone closeout*

@@ -96,3 +96,58 @@
 |-----------|--------|-------|-------|
 | v1.0 | 5 | 5 | First ship; specialist depth deferred |
 | v1.1 | 3 | 3 | OBJ-2 depth; offline-only evidence |
+
+## Milestone: v1.2 — Full specialist skill set
+
+**Shipped:** 2026-08-28
+**Phases:** 9-12 | **Plans:** 4
+**Seed:** SEED-003 / OBJ-3
+
+### What Was Built
+
+- Shared CREATE_PATH specialist modelling contract
+- Full archi-elicit body (non-mutating)
+- Six core layer specialist modelling bodies
+- Four cross-cutting specialists (traceability, model-qa, layout, documentation)
+- Orchestrator Step 5 post-confirm dispatch + hand-off payload
+- Offline specialist-suite evidence; 26 tests; viewpoint-select frozen
+
+### What Worked
+
+- Template-driven layer skills kept inventory tool names consistent
+- Freeze hash test prevented accidental v1.1 rework
+- autoCloseout audit-passed checkpoint again unblocked closeout
+- Phase numbering continued 9-12 without reset
+
+### What Was Inefficient
+
+- Nested Agent still unavailable; entire master-flow degraded inline
+- Shell heredoc/quoting friction on Windows for multi-file writes
+- Skill-name backticks still trip MCP-ref scanner (fixed again)
+- milestone.complete auto-accomplishments weak (manual polish)
+
+### Patterns Established
+
+- CREATE_PATH as single shared mutating contract
+- Specialist Result hand-back template across layer skills
+- Post-confirm default dispatch order on orchestrator
+- Offline specialist evidence pack under docs/evidence/specialist-suite-offline/
+
+### Key Lessons
+
+- Never backtick internal skill package names if TOOL_BT regex scans them as MCP tools
+- Keep SPEC-D freeze requirements with a content hash test
+- Dual N-/0N-VERIFICATION.md with status: passed remains required before phase.complete
+
+### Cost Observations
+
+- Model mix: single worker host inline (no nested Agent tokens)
+- Sessions: SEED-003 kick + resume after complete checkpoint
+
+## Cross-Milestone Trends
+
+| Milestone | Phases | Plans | Notes |
+|-----------|--------|-------|-------|
+| v1.0 | 5 | 5 | First ship; specialist depth deferred |
+| v1.1 | 3 | 3 | OBJ-2 depth; offline-only evidence |
+| v1.2 | 4 | 4 | OBJ-3 full specialist bodies; live MCP still deferred |

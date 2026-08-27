@@ -1,14 +1,10 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 12,
-  "active_phase_dir": ".planning/phases/12-orchestrator-dispatch-evidence-regression",
-  "active_state": ".planning/phases/12-orchestrator-dispatch-evidence-regression/master_flow_state.json",
-  "lock": {
-    "phase": 12,
-    "session_hint": "master-flow",
-    "updated_at": "2026-08-27T23:54:02.021Z"
-  },
-  "updated_at": "2026-08-27T23:54:02.022Z",
-  "notes": "Phase 12 verify passed. Next: none"
+  "active_phase": null,
+  "active_phase_dir": null,
+  "active_state": null,
+  "lock": null,
+  "updated_at": "2026-08-27T23:57:39.528Z",
+  "notes": "Awaiting next milestone"
 }

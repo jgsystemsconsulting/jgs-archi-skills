@@ -1,5 +1,33 @@
 # Milestones
 
+## v1.2 Full specialist skill set (Shipped: 2026-08-28)
+
+**Delivered:** OBJ-3 depth — full specialist SKILL bodies for all vision-enumerated responsibilities; shared CREATE_PATH contract; orchestrator post-confirm dispatch; offline specialist evidence (SEED-003).
+
+**Phases completed:** 9-12 (4 plans)
+
+**Key accomplishments:**
+
+- docs/CREATE_PATH.md shared specialist modelling contract (confirmation gate, SPEC-02, NG-4)
+- Full archi-elicit intent normalizer (non-mutating)
+- Six core layer modelling specialists (motivation, capability-strategy, business, application, technology-physical, implementation-migration)
+- Four cross-cutting specialists (traceability, model-qa, layout, documentation)
+- archi-orchestrator Step 5 post-confirm hand-off payload + dispatch order
+- docs/evidence/specialist-suite-offline fixtures; 26 tests green; viewpoint-select frozen from v1.1
+
+**Known gaps:**
+
+- Live Archi MCP E2E still deferred until Bridge is up (EVID-LIVE-*)
+- Nested Agent unavailable this host; gates ran inline (degraded tier)
+
+**Stats:** 4 phases, 4 plans; specialist skill docs + contract + evidence
+
+**Git range:** docs v1.2 start → feat(9..12) → audit/closeout
+
+**What is next:** Later seeds for live MCP evidence (OBJ-4+ coherence depth optional) when Bridge available
+
+---
+
 ## v1.1 Viewpoint selection grounding (Shipped: 2026-08-28)
 
 **Delivered:** OBJ-2 depth — deterministic viewpoint matrix, full archi-viewpoint-select body, orchestrator Step 2b wiring, offline multi-stakeholder evidence (SEED-002).
