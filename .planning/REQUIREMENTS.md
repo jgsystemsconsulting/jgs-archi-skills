@@ -10,27 +10,27 @@ Requirements for this milestone only. v1.0 REQUIREMENTS remain archived under `.
 
 ### Viewpoint matrix (deterministic helper)
 
-- [ ] **VSEL-01**: Contributor can run a stdlib helper that accepts structured intent axes (stakeholder roles, concerns, purpose, abstraction level) and returns ranked candidate viewpoint keys without embedding ArchiMate element/relationship catalogs
-- [ ] **VSEL-02**: Matrix data is fixture/key-based (IDs and axes only); full viewpoint definitions stay on MCP resources (`archimate://recipes/*`, `archimate://reference/archimate-view-patterns`)
-- [ ] **VSEL-03**: Helper exits non-zero on malformed input and prints a clear error; valid input exits 0 with stable, testable output (JSON and/or markdown table)
+- [x] **VSEL-01**: Contributor can run a stdlib helper that accepts structured intent axes (stakeholder roles, concerns, purpose, abstraction level) and returns ranked candidate viewpoint keys without embedding ArchiMate element/relationship catalogs
+- [x] **VSEL-02**: Matrix data is fixture/key-based (IDs and axes only); full viewpoint definitions stay on MCP resources (`archimate://recipes/*`, `archimate://reference/archimate-view-patterns`)
+- [x] **VSEL-03**: Helper exits non-zero on malformed input and prints a clear error; valid input exits 0 with stable, testable output (JSON and/or markdown table)
 
 ### Trace table and org-specific path
 
-- [ ] **VSEL-04**: `archi-viewpoint-select` produces a Viewpoint Trace Table with columns for Viewpoint, Stakeholder, Concern, Purpose, Abstraction, Standard?, Justification
-- [ ] **VSEL-05**: A stdlib schema helper validates a Trace Table markdown/JSON artifact the same way `view_plan_schema.py` validates View Plans
-- [ ] **VSEL-06**: When no standard candidate fits above a documented threshold, the skill proposes an organisation-specific viewpoint with explicit justification and ArchiMate-compliance constraints (no illegal layer/element mixes; no silent metamodel invention)
-- [ ] **VSEL-07**: Rejected alternatives are listed so the user can see why other viewpoints were not chosen (NG-3 visibility)
+- [x] **VSEL-04**: `archi-viewpoint-select` produces a Viewpoint Trace Table with columns for Viewpoint, Stakeholder, Concern, Purpose, Abstraction, Standard?, Justification
+- [x] **VSEL-05**: A stdlib schema helper validates a Trace Table markdown/JSON artifact the same way `view_plan_schema.py` validates View Plans
+- [x] **VSEL-06**: When no standard candidate fits above a documented threshold, the skill proposes an organisation-specific viewpoint with explicit justification and ArchiMate-compliance constraints (no illegal layer/element mixes; no silent metamodel invention)
+- [x] **VSEL-07**: Rejected alternatives are listed so the user can see why other viewpoints were not chosen (NG-3 visibility)
 
 ### Orchestrator integration
 
-- [ ] **VSEL-08**: `archi-orchestrator` dispatches (or documents the exact hand-off to) `archi-viewpoint-select` after intent elicitation and before final View Plan confirmation
-- [ ] **VSEL-09**: View Plan **Proposed Viewpoints** section is consistent with the Trace Table (same viewpoint names and abstraction levels); schema check still passes
-- [ ] **VSEL-10**: Viewpoint selection path performs **no MCP mutations** (read resources only); user confirmation gate remains before any model creates
+- [x] **VSEL-08**: `archi-orchestrator` dispatches (or documents the exact hand-off to) `archi-viewpoint-select` after intent elicitation and before final View Plan confirmation
+- [x] **VSEL-09**: View Plan **Proposed Viewpoints** section is consistent with the Trace Table (same viewpoint names and abstraction levels); schema check still passes
+- [x] **VSEL-10**: Viewpoint selection path performs **no MCP mutations** (read resources only); user confirmation gate remains before any model creates
 
 ### Evidence and regression
 
-- [ ] **VSEL-11**: Offline fixture under `docs/evidence/` demonstrates intent axes → matrix → trace table → view-plan headings for at least one multi-stakeholder scenario
-- [ ] **VSEL-12**: Unit tests cover matrix ranking, schema validation (pass and fail), and skill MCP-ref structural check; full suite remains green
+- [x] **VSEL-11**: Offline fixture under `docs/evidence/` demonstrates intent axes → matrix → trace table → view-plan headings for at least one multi-stakeholder scenario
+- [x] **VSEL-12**: Unit tests cover matrix ranking, schema validation (pass and fail), and skill MCP-ref structural check; full suite remains green
 
 ## Future Requirements (not this milestone)
 
@@ -67,20 +67,21 @@ Requirements for this milestone only. v1.0 REQUIREMENTS remain archived under `.
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| VSEL-01 | Phase 6 | Pending |
-| VSEL-02 | Phase 6 | Pending |
-| VSEL-03 | Phase 6 | Pending |
-| VSEL-04 | Phase 7 | Pending |
-| VSEL-05 | Phase 6 | Pending |
-| VSEL-06 | Phase 7 | Pending |
-| VSEL-07 | Phase 7 | Pending |
-| VSEL-08 | Phase 7 | Pending |
-| VSEL-09 | Phase 7 | Pending |
-| VSEL-10 | Phase 7 | Pending |
-| VSEL-11 | Phase 8 | Pending |
-| VSEL-12 | Phase 8 | Pending |
+| VSEL-01 | Phase 6 | Complete |
+| VSEL-02 | Phase 6 | Complete |
+| VSEL-03 | Phase 6 | Complete |
+| VSEL-04 | Phase 7 | Complete |
+| VSEL-05 | Phase 6 | Complete |
+| VSEL-06 | Phase 7 | Complete |
+| VSEL-07 | Phase 7 | Complete |
+| VSEL-08 | Phase 7 | Complete |
+| VSEL-09 | Phase 7 | Complete |
+| VSEL-10 | Phase 7 | Complete |
+| VSEL-11 | Phase 8 | Complete |
+| VSEL-12 | Phase 8 | Complete |
 
 **Coverage:**
+
 - v1.1 requirements: 12 total
 - Mapped to phases: 12
 - Unmapped: 0

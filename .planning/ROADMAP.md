@@ -24,52 +24,64 @@ Archive: `.planning/milestones/v1.0-*` and `v1.0-phases/`
 
 </details>
 
-- [ ] **Phase 6: Viewpoint matrix and trace schema** — Deterministic stdlib helpers for selection axes and Trace Table validation
-- [ ] **Phase 7: Viewpoint-select skill and orchestrator wiring** — Full specialist body, org-specific path, orchestrator hand-off, no mutations
-- [ ] **Phase 8: Offline evidence and regression** — Fixture scenario + unit tests; suite green
+- [x] **Phase 6: Viewpoint matrix and trace schema** — Deterministic stdlib helpers for selection axes and Trace Table validation (completed 2026-08-28)
+- [x] **Phase 7: Viewpoint-select skill and orchestrator wiring** — Full specialist body, org-specific path, orchestrator hand-off, no mutations (completed 2026-08-28)
+- [x] **Phase 8: Offline evidence and regression** — Fixture scenario + unit tests; suite green (completed 2026-08-28)
 
 ## Phase Details
 
 ### Phase 6: Viewpoint matrix and trace schema
+
 **Goal**: Ship stdlib helpers that rank viewpoint candidates from intent axes and validate Trace Table artifacts, without copying ArchiMate metamodel tables.
 **Depends on**: v1.0 complete
 **Requirements**: VSEL-01, VSEL-02, VSEL-03, VSEL-05
 **Success Criteria** (what must be TRUE):
+
   1. Contributor runs matrix helper on a sample intent file and gets ranked candidate keys (exit 0)
   2. Malformed intent yields non-zero exit and a clear error message
   3. Trace schema helper accepts a valid Trace Table fixture and rejects a missing-column fixture
   4. Matrix fixtures contain axes/keys only; no element-type or relationship catalogs
+
 **Plans**: 1 plan
 
 Plans:
-- [ ] 06-01: Implement `viewpoint_selection_matrix` + `viewpoint_trace_schema` helpers and unit tests
+
+- [x] 06-01: Implement `viewpoint_selection_matrix` + `viewpoint_trace_schema` helpers and unit tests
 
 ### Phase 7: Viewpoint-select skill and orchestrator wiring
+
 **Goal**: Replace the viewpoint-select stub with a complete skill body and connect it to the orchestrator View Plan path under NG-3/NG-4 rules.
 **Depends on**: Phase 6
 **Requirements**: VSEL-04, VSEL-06, VSEL-07, VSEL-08, VSEL-09, VSEL-10
 **Success Criteria** (what must be TRUE):
+
   1. `archi-viewpoint-select` SKILL.md describes full procedure: read MCP recipes/patterns, run/consult matrix, emit Trace Table + rejected alternatives + org-specific proposal path
   2. Orchestrator documents dispatch/hand-off to viewpoint-select and requires Trace Table consistency in Proposed Viewpoints
   3. Both skills still declare no MCP mutations on this path; structural MCP-ref validator passes
   4. Org-specific proposal rules require justification + compliance constraints when standard candidates are insufficient
+
 **Plans**: 1 plan
 
 Plans:
-- [ ] 07-01: Expand viewpoint-select skill and orchestrator wiring; keep MCP refs inventory-clean
+
+- [x] 07-01: Expand viewpoint-select skill and orchestrator wiring; keep MCP refs inventory-clean
 
 ### Phase 8: Offline evidence and regression
+
 **Goal**: Prove the OBJ-2 path offline with a documented multi-stakeholder fixture and green regression suite.
 **Depends on**: Phase 7
 **Requirements**: VSEL-11, VSEL-12
 **Success Criteria** (what must be TRUE):
+
   1. `docs/evidence/` contains a viewpoint-selection scenario (intent axes, matrix output, trace table, view-plan headings)
   2. Unit tests cover matrix ranking, schema pass/fail, and skill MCP refs; full test suite green
   3. README or evidence index points at the new scenario
+
 **Plans**: 1 plan
 
 Plans:
-- [ ] 08-01: Add offline evidence fixture, wire tests, document path
+
+- [x] 08-01: Add offline evidence fixture, wire tests, document path
 
 ## Progress
 
@@ -77,9 +89,9 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 6. Viewpoint matrix and trace schema | 0/1 | Not started | - |
-| 7. Viewpoint-select skill and orchestrator wiring | 0/1 | Not started | - |
-| 8. Offline evidence and regression | 0/1 | Not started | - |
+| 6. Viewpoint matrix and trace schema | 1/1 | Complete    | 2026-08-28 |
+| 7. Viewpoint-select skill and orchestrator wiring | 1/1 | Complete    | 2026-08-28 |
+| 8. Offline evidence and regression | 1/1 | Complete    | 2026-08-28 |
 
 ---
 *Roadmap created: 2026-08-28 for milestone v1.1*
