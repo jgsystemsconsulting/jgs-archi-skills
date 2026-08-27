@@ -15,10 +15,10 @@ Requirements for initial release / first milestone path. Each maps to roadmap ph
 
 ### Orchestration (OBJ-1)
 
-- [ ] **ORCH-01**: User can invoke a single orchestrator skill and provide architectural intent in plain language (problem, stakeholders, concerns, scope, current/target state, expected outcome)
-- [ ] **ORCH-02**: Orchestrator produces a plain-language view plan naming viewpoints, layers, modelling sequence, dependencies, and validation points
-- [ ] **ORCH-03**: View plan is usable without ArchiMate expertise (terms explained or avoided where possible; no assumption user knows element type catalogs)
-- [ ] **ORCH-04**: Orchestrator keeps scope and architectural decisions visible for user confirmation (no fully autonomous commit of intent)
+- [x] **ORCH-01**: User can invoke a single orchestrator skill and provide architectural intent in plain language (problem, stakeholders, concerns, scope, current/target state, expected outcome)
+- [x] **ORCH-02**: Orchestrator produces a plain-language view plan naming viewpoints, layers, modelling sequence, dependencies, and validation points
+- [x] **ORCH-03**: View plan is usable without ArchiMate expertise (terms explained or avoided where possible; no assumption user knows element type catalogs)
+- [x] **ORCH-04**: Orchestrator keeps scope and architectural decisions visible for user confirmation (no fully autonomous commit of intent)
 
 ### Viewpoint Selection (OBJ-2)
 
@@ -81,10 +81,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | FOUND-01 | Phase 1 | Complete |
 | FOUND-02 | Phase 1 | Complete |
 | FOUND-03 | Phase 1 | Complete |
-| ORCH-01 | Phase 2 | Pending |
-| ORCH-02 | Phase 2 | Pending |
-| ORCH-03 | Phase 2 | Pending |
-| ORCH-04 | Phase 2 | Pending |
+| ORCH-01 | Phase 2 | Complete |
+| ORCH-02 | Phase 2 | Complete |
+| ORCH-03 | Phase 2 | Complete |
+| ORCH-04 | Phase 2 | Complete |
 | VIEW-01 | Phase 3 | Pending |
 | VIEW-02 | Phase 3 | Pending |
 | SPEC-01 | Phase 3 | Pending |

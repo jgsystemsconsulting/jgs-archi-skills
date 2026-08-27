@@ -12,7 +12,7 @@ Build a ZCode skill suite on the existing JGS Archi Bridge MCP: first stand up i
 - Decimal phases (2.1, 2.2): Urgent insertions (marked with INSERTED)
 
 - [x] **Phase 1: Foundations and MCP contract** - Install path, skill tree skeleton, structural validator against real MCP tool/resource names (completed 2026-08-27)
-- [ ] **Phase 2: Orchestrator intent and view plan** - User-invoked orchestrator delivers OBJ-1 elicitation and plain-language view plan
+- [x] **Phase 2: Orchestrator intent and view plan** - User-invoked orchestrator delivers OBJ-1 elicitation and plain-language view plan (completed 2026-08-28)
 - [ ] **Phase 3: Viewpoint grounding and specialist contracts** - OBJ-2 selection rules plus dispatch stubs for the vision specialist set
 - [ ] **Phase 4: Coherence, create path, and compliance** - Inspect-before-create reuse and compliance checks with explained alternatives
 - [ ] **Phase 5: Rationale, summary, and live evidence** - Structured rationale, NL-safe regen hooks, completion summary, orchestrator E2E evidence
@@ -49,12 +49,12 @@ Plans:
   2. Orchestrator returns a view plan naming viewpoints, layers, modelling sequence, dependencies, and validation points
   3. Plan is readable without ArchiMate expertise; user remains the decision authority on scope
 
-**Plans:** TBD
+**Plans:** 1/1 plans complete
 **UI hint**: no
 
 Plans:
 
-- [ ] 02-01: TBD during plan-phase
+- [x] 02-01: TBD during plan-phase
 
 ### Phase 3: Viewpoint grounding and specialist contracts
 
@@ -118,7 +118,7 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
 | 1. Foundations and MCP contract | 1/1 | Complete    | 2026-08-27 |
-| 2. Orchestrator intent and view plan | 0/TBD | Not started | - |
+| 2. Orchestrator intent and view plan | 1/1 | Complete    | 2026-08-28 |
 | 3. Viewpoint grounding and specialist contracts | 0/TBD | Not started | - |
 | 4. Coherence, create path, and compliance | 0/TBD | Not started | - |
 | 5. Rationale, summary, and live evidence | 0/TBD | Not started | - |
