@@ -4,101 +4,127 @@
 
 - ✅ **v1.0 Initial skill suite** — Phases 1-5 (shipped 2026-08-28)
 - ✅ **v1.1 Viewpoint selection grounding** — Phases 6-8 (shipped 2026-08-28)
+- 🚧 **v1.2 Full specialist skill set** — Phases 9-12 (SEED-003 / OBJ-3)
 
 ## Overview
 
-v1.1 deepens OBJ-2 beyond the v1.0 contract stub. Phase 6 adds deterministic helpers (selection matrix + trace schema). Phase 7 completes the viewpoint-select skill and wires the orchestrator. Phase 8 locks offline evidence fixtures and regression tests. Phase numbering continues from v1.0 (last phase was 5).
+v1.2 deepens OBJ-3: replace remaining specialist contract stubs with complete modelling bodies that create elements, relationships, and views through the Archi MCP under user confirmation. Do not rework v1.0 foundations or v1.1 viewpoint-select. Phase numbering continues from v1.1 (last phase was 8).
 
 ## Phases
 
 <details>
 <summary>✅ v1.0 Initial skill suite (Phases 1-5) — SHIPPED 2026-08-28</summary>
 
-- [x] Phase 1: Foundations and MCP contract (1/1 plans) — completed 2026-08-27
-- [x] Phase 2: Orchestrator intent and view plan (1/1 plans) — completed 2026-08-28
-- [x] Phase 3: Viewpoint grounding and specialist contracts (1/1 plans) — completed 2026-08-28
-- [x] Phase 4: Coherence, create path, and compliance (1/1 plans) — completed 2026-08-28
-- [x] Phase 5: Rationale, summary, and live evidence (1/1 plans) — completed 2026-08-28
+- [x] Phase 1: Foundations and MCP contract
+- [x] Phase 2: Orchestrator intent and view plan
+- [x] Phase 3: Viewpoint grounding and specialist contracts
+- [x] Phase 4: Coherence, create path, and compliance
+- [x] Phase 5: Rationale, summary, and live evidence
 
 Archive: `.planning/milestones/v1.0-*` and `v1.0-phases/`
 
 </details>
 
-- [x] **Phase 6: Viewpoint matrix and trace schema** — Deterministic stdlib helpers for selection axes and Trace Table validation
- (completed 2026-08-28)
-- [x] **Phase 7: Viewpoint-select skill and orchestrator wiring** — Full specialist body, org-specific path, orchestrator hand-off, no mutations (completed 2026-08-28)
-- [x] **Phase 8: Offline evidence and regression** — Fixture scenario + unit tests; suite green (completed 2026-08-28)
+<details>
+<summary>✅ v1.1 Viewpoint selection grounding (Phases 6-8) — SHIPPED 2026-08-28</summary>
+
+- [x] Phase 6: Viewpoint matrix and trace schema
+- [x] Phase 7: Viewpoint-select skill and orchestrator wiring
+- [x] Phase 8: Offline evidence and regression
+
+Archive: `.planning/milestones/v1.1-*` and `v1.1-phases/`
+
+</details>
+
+- [ ] **Phase 9: Shared specialist contract and elicit body** — Shared create-path binding across specialists; full `archi-elicit`; freeze viewpoint-select as done
+- [ ] **Phase 10: Core layer modelling specialists** — Full bodies for motivation, capability/strategy, business, application, technology/physical, implementation/migration
+- [ ] **Phase 11: Cross-cutting specialists** — Full bodies for traceability, model-qa, layout, documentation/rationale
+- [ ] **Phase 12: Orchestrator dispatch, evidence, regression** — Post-confirm dispatch sequence, offline evidence fixtures, green suite
 
 ## Phase Details
 
-### Phase 6: Viewpoint matrix and trace schema
+### Phase 9: Shared specialist contract and elicit body
 
-**Goal**: Ship stdlib helpers that rank viewpoint candidates from intent axes and validate Trace Table artifacts, without copying ArchiMate metamodel tables.
-**Depends on**: v1.0 complete
-**Requirements**: VSEL-01, VSEL-02, VSEL-03, VSEL-05
+**Goal**: Lock the shared modelling contract every specialist must follow, ship full `archi-elicit`, and explicitly leave `archi-viewpoint-select` untouched.
+**Depends on**: v1.1 complete
+**Requirements**: SPEC-D-01, SPEC-D-12, SPEC-D-13, SPEC-D-14, SPEC-D-15, SPEC-D-20
 **Success Criteria** (what must be TRUE):
 
-  1. Contributor runs matrix helper on a sample intent file and gets ranked candidate keys (exit 0)
-  2. Malformed intent yields non-zero exit and a clear error message
-  3. Trace schema helper accepts a valid Trace Table fixture and rejects a missing-column fixture
-  4. Matrix fixtures contain axes/keys only; no element-type or relationship catalogs
+  1. A single shared create-path / governance section exists (docs and/or skill fragment) that every mutating specialist references
+  2. `archi-elicit` SKILL.md is a complete procedure (not stub) and declares no MCP mutations
+  3. Specialist skills still state orchestrator-dispatched only; MCP-ref validator remains green
+  4. `archi-viewpoint-select` content is unchanged from v1.1 (no drive-by edits)
 
 **Plans**: 1 plan
 
 Plans:
 
-- [x] 06-01: Implement `viewpoint_selection_matrix` + `viewpoint_trace_schema` helpers and unit tests
+- [ ] 09-01: Shared specialist contract + full archi-elicit; leave viewpoint-select frozen
 
-### Phase 7: Viewpoint-select skill and orchestrator wiring
+### Phase 10: Core layer modelling specialists
 
-**Goal**: Replace the viewpoint-select stub with a complete skill body and connect it to the orchestrator View Plan path under NG-3/NG-4 rules.
-**Depends on**: Phase 6
-**Requirements**: VSEL-04, VSEL-06, VSEL-07, VSEL-08, VSEL-09, VSEL-10
+**Goal**: Replace layer-oriented stubs with complete MCP modelling procedures for the six core modelling specialists.
+**Depends on**: Phase 9
+**Requirements**: SPEC-D-02, SPEC-D-03, SPEC-D-04, SPEC-D-05, SPEC-D-06, SPEC-D-07
 **Success Criteria** (what must be TRUE):
 
-  1. `archi-viewpoint-select` SKILL.md describes full procedure: read MCP recipes/patterns, run/consult matrix, emit Trace Table + rejected alternatives + org-specific proposal path
-  2. Orchestrator documents dispatch/hand-off to viewpoint-select and requires Trace Table consistency in Proposed Viewpoints
-  3. Both skills still declare no MCP mutations on this path; structural MCP-ref validator passes
-  4. Org-specific proposal rules require justification + compliance constraints when standard candidates are insufficient
+  1. Each of the six skills has Purpose, Inputs, MCP tools/resources, Procedure, Output/return-to-orchestrator sections
+  2. Each procedure includes inspect-before-create, recipe read before non-trivial views, and compliance explain-and-propose
+  3. No skill invents tool/resource names outside the inventory
+  4. Structural MCP-ref check passes on the whole suite
 
 **Plans**: 1 plan
 
 Plans:
 
-- [x] 07-01: Expand viewpoint-select skill and orchestrator wiring; keep MCP refs inventory-clean
+- [ ] 10-01: Full bodies for motivation, capability-strategy, business, application, technology-physical, implementation-migration
 
-### Phase 8: Offline evidence and regression
+### Phase 11: Cross-cutting specialists
 
-**Goal**: Prove the OBJ-2 path offline with a documented multi-stakeholder fixture and green regression suite.
-**Depends on**: Phase 7
-**Requirements**: VSEL-11, VSEL-12
+**Goal**: Ship full bodies for traceability, model QA, layout/presentation, and documentation/rationale.
+**Depends on**: Phase 10
+**Requirements**: SPEC-D-08, SPEC-D-09, SPEC-D-10, SPEC-D-11
 **Success Criteria** (what must be TRUE):
 
-  1. `docs/evidence/` contains a viewpoint-selection scenario (intent axes, matrix output, trace table, view-plan headings)
-  2. Unit tests cover matrix ranking, schema pass/fail, and skill MCP refs; full test suite green
-  3. README or evidence index points at the new scenario
+  1. Traceability skill defines how cross-layer traces are created and gap-reported
+  2. Model-qa skill defines check sequence and explain-and-propose output (no silent illegal fixes)
+  3. Layout skill uses inventory layout tools only (Archi canvas)
+  4. Documentation skill binds rationale schema + completion summary and MCP doc-field write path
 
 **Plans**: 1 plan
 
 Plans:
 
-- [x] 08-01: Add offline evidence fixture, wire tests, document path
+- [ ] 11-01: Full bodies for traceability, model-qa, layout, documentation
+
+### Phase 12: Orchestrator dispatch, evidence, regression
+
+**Goal**: Wire post-confirm specialist dispatch on the orchestrator, add offline evidence fixtures for specialist paths, keep tests green.
+**Depends on**: Phase 11
+**Requirements**: SPEC-D-16, SPEC-D-17, SPEC-D-18, SPEC-D-19
+**Success Criteria** (what must be TRUE):
+
+  1. Orchestrator documents post-confirm hand-off payload and specialist order/decision rules
+  2. `docs/evidence/` contains offline fixtures covering deepened specialist paths (index updated)
+  3. Full unit/structural suite green
+  4. README points at specialist evidence layout
+
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 12-01: Orchestrator post-confirm dispatch + offline evidence + regression lock
 
 ## Progress
 
-**Execution Order:** 6 → 7 → 8
+**Execution Order:** 9 → 10 → 11 → 12
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 6. Viewpoint matrix and trace schema | 1/1 | Complete    | 2026-08-28 |
-| 7. Viewpoint-select skill and orchestrator wiring | 1/1 | Complete    | 2026-08-28 |
-| 8. Offline evidence and regression | 1/1 | Complete    | 2026-08-28 |
+| 9. Shared specialist contract and elicit body | 0/1 | Pending | - |
+| 10. Core layer modelling specialists | 0/1 | Pending | - |
+| 11. Cross-cutting specialists | 0/1 | Pending | - |
+| 12. Orchestrator dispatch, evidence, regression | 0/1 | Pending | - |
 
 ---
-*Roadmap created: 2026-08-28 for milestone v1.1*
-
-## Next
-
-Awaiting next seed/milestone (OBJ-3+ specialist depth and/or live Archi MCP evidence).
-
-Archive: `.planning/milestones/v1.1-*` and `v1.1-phases/`
+*Roadmap created: 2026-08-28 for milestone v1.2 (SEED-003 / OBJ-3)*
