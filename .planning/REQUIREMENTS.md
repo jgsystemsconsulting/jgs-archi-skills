@@ -29,13 +29,13 @@ Requirements for initial release / first milestone path. Each maps to roadmap ph
 
 - [x] **SPEC-01**: Skill set includes (or clearly stubs with dispatch contracts for) the vision-enumerated responsibilities: elicitation, viewpoint selection, motivation, capability/strategy, business, application, technology/physical, implementation/migration, cross-layer traceability, model QA, layout/presentation, documentation/rationale
 - [x] **SPEC-02**: Specialists are orchestrator-dispatched, not separately user-invoked as the primary path
-- [ ] **SPEC-03**: Before creating an element, the agent path inspects existing model content via MCP and reuses shared concepts when present
-- [ ] **SPEC-04**: Naming stays consistent across views for the same concept; duplicate elements are minimised
+- [x] **SPEC-03**: Before creating an element, the agent path inspects existing model content via MCP and reuses shared concepts when present
+- [x] **SPEC-04**: Naming stays consistent across views for the same concept; duplicate elements are minimised
 
 ### Compliance and Rationale (OBJ-5, OBJ-6)
 
-- [ ] **COMP-01**: Compliance checks cover element types, relationship source/target combinations, permitted relationship types, abstraction levels, cross-view consistency, and naming
-- [ ] **COMP-02**: On violation, the system explains the problem and proposes a compliant alternative rather than silently applying an illegal change
+- [x] **COMP-01**: Compliance checks cover element types, relationship source/target combinations, permitted relationship types, abstraction levels, cross-view consistency, and naming
+- [x] **COMP-02**: On violation, the system explains the problem and proposes a compliant alternative rather than silently applying an illegal change
 - [ ] **RATE-01**: Significant views carry structured rationale (purpose, stakeholders/concerns, viewpoint, questions answered, assumptions, decisions, exclusions, open questions) recorded in the model via MCP
 - [ ] **RATE-02**: User can request natural-language changes that regenerate affected views without damaging shared model elements used elsewhere
 - [ ] **RATE-03**: A modelling run ends with a completion summary the user can read
@@ -89,10 +89,10 @@ Which phases cover which requirements. Updated during roadmap creation.
 | VIEW-02 | Phase 3 | Complete |
 | SPEC-01 | Phase 3 | Complete |
 | SPEC-02 | Phase 3 | Complete |
-| SPEC-03 | Phase 4 | Pending |
-| SPEC-04 | Phase 4 | Pending |
-| COMP-01 | Phase 4 | Pending |
-| COMP-02 | Phase 4 | Pending |
+| SPEC-03 | Phase 4 | Complete |
+| SPEC-04 | Phase 4 | Complete |
+| COMP-01 | Phase 4 | Complete |
+| COMP-02 | Phase 4 | Complete |
 | RATE-01 | Phase 5 | Pending |
 | RATE-02 | Phase 5 | Pending |
 | RATE-03 | Phase 5 | Pending |

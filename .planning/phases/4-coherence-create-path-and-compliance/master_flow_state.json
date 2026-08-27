@@ -6,13 +6,19 @@
   "phase_slug": "4-coherence-create-path-and-compliance",
   "phase_dir": ".planning/phases/4-coherence-create-path-and-compliance",
   "scope": "milestone",
-  "current_gate": "plan_remediate",
+  "current_gate": "doc_check",
   "completed": [
     "research",
     "plan",
     "plan_check",
     "plan_review",
-    "execute"
+    "execute",
+    "impl_review",
+    "code_review",
+    "integration_check",
+    "security_audit",
+    "gap_analysis",
+    "verify"
   ],
   "skipped": [
     "discuss",
@@ -24,7 +30,8 @@
     "ui_check",
     "ui_audit",
     "nyquist_audit",
-    "doc_check"
+    "doc_check",
+    "plan_remediate"
   ],
   "failed": [],
   "blocked_by": null,
@@ -40,10 +47,17 @@
     "nyquist_audit": "skipped",
     "doc_check": "skipped",
     "research": "passed:present",
-    "plan": "passed:present",
-    "plan_check": "passed:present",
-    "plan_review": "passed:present",
-    "execute": "passed:already_complete_if_no_checkpoint"
+    "plan": "passed",
+    "plan_check": "passed",
+    "plan_review": "passed",
+    "execute": "passed",
+    "plan_remediate": "skipped",
+    "impl_review": "passed:review_wave",
+    "code_review": "passed:review_wave",
+    "integration_check": "passed:review_wave",
+    "security_audit": "passed:review_wave",
+    "gap_analysis": "passed",
+    "verify": "passed"
   },
   "artifacts": {},
   "regate_attempts": {},
@@ -85,6 +99,6 @@
   },
   "checkpoint_log": [],
   "started_at": "2026-08-27T23:04:27.532Z",
-  "updated_at": "2026-08-27T23:04:27.542Z",
+  "updated_at": "2026-08-27T23:04:36.010Z",
   "notes": "Initialized master_flow for phase 4"
 }

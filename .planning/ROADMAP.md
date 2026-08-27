@@ -14,7 +14,7 @@ Build a ZCode skill suite on the existing JGS Archi Bridge MCP: first stand up i
 - [x] **Phase 1: Foundations and MCP contract** - Install path, skill tree skeleton, structural validator against real MCP tool/resource names (completed 2026-08-27)
 - [x] **Phase 2: Orchestrator intent and view plan** - User-invoked orchestrator delivers OBJ-1 elicitation and plain-language view plan (completed 2026-08-28)
 - [x] **Phase 3: Viewpoint grounding and specialist contracts** - OBJ-2 selection rules plus dispatch stubs for the vision specialist set (completed 2026-08-28)
-- [ ] **Phase 4: Coherence, create path, and compliance** - Inspect-before-create reuse and compliance checks with explained alternatives
+- [x] **Phase 4: Coherence, create path, and compliance** - Inspect-before-create reuse and compliance checks with explained alternatives (completed 2026-08-28)
 - [ ] **Phase 5: Rationale, summary, and live evidence** - Structured rationale, NL-safe regen hooks, completion summary, orchestrator E2E evidence
 
 ## Phase Details
@@ -86,11 +86,11 @@ Plans:
   2. Compliance checks cover types, allowed relationships, abstraction, cross-view consistency, and naming
   3. Illegal changes are not applied silently; user sees explanation plus compliant alternative
 
-**Plans:** TBD
+**Plans:** 1/1 plans complete
 
 Plans:
 
-- [ ] 04-01: TBD during plan-phase
+- [x] 04-01: TBD during plan-phase
 
 ### Phase 5: Rationale, summary, and live evidence
 
@@ -120,5 +120,5 @@ Phases execute in numeric order: 1 → 2 → 3 → 4 → 5
 | 1. Foundations and MCP contract | 1/1 | Complete    | 2026-08-27 |
 | 2. Orchestrator intent and view plan | 1/1 | Complete    | 2026-08-28 |
 | 3. Viewpoint grounding and specialist contracts | 1/1 | Complete    | 2026-08-28 |
-| 4. Coherence, create path, and compliance | 0/TBD | Not started | - |
+| 4. Coherence, create path, and compliance | 1/1 | Complete    | 2026-08-28 |
 | 5. Rationale, summary, and live evidence | 0/TBD | Not started | - |

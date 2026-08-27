@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 4,
-  "active_phase_dir": ".planning/phases/4-coherence-create-path-and-compliance",
-  "active_state": ".planning/phases/4-coherence-create-path-and-compliance/master_flow_state.json",
+  "active_phase": 5,
+  "active_phase_dir": ".planning/phases/5-rationale-summary-and-live-evidence",
+  "active_state": ".planning/phases/5-rationale-summary-and-live-evidence/master_flow_state.json",
   "lock": null,
-  "updated_at": "2026-08-27T23:04:25.788Z",
-  "notes": "Phase 3 verify passed. Next: 4"
+  "updated_at": "2026-08-27T23:04:36.653Z",
+  "notes": "Phase 4 verify passed. Next: 5"
 }
