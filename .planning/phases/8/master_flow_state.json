@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "kind": "phase",
+  "milestone": null,
+  "phase": 8,
+  "phase_slug": "8",
+  "phase_dir": ".planning/phases/8",
+  "scope": "phase",
+  "current_gate": "retrospective",
+  "completed": [
+    "complete",
+    "retrospective"
+  ],
+  "skipped": [],
+  "failed": [],
+  "blocked_by": null,
+  "verdicts": {
+    "complete": "passed",
+    "retrospective": "passed"
+  },
+  "artifacts": {},
+  "regate_attempts": {},
+  "usage": {},
+  "config_snapshot": {},
+  "execute": {
+    "plans_total": 0,
+    "plans_complete": 0,
+    "incomplete_plans": [],
+    "complete_plans": [],
+    "pending_checkpoint": null
+  },
+  "checkpoint_log": [],
+  "started_at": "2026-08-27T23:33:46.108Z",
+  "updated_at": "2026-08-27T23:33:46.840Z",
+  "notes": ""
+}
