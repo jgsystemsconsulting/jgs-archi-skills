@@ -6,7 +6,7 @@
   "phase_slug": "5-rationale-summary-and-live-evidence",
   "phase_dir": ".planning/phases/5-rationale-summary-and-live-evidence",
   "scope": "milestone",
-  "current_gate": "doc_check",
+  "current_gate": "complete",
   "completed": [
     "research",
     "plan",
@@ -18,7 +18,8 @@
     "integration_check",
     "security_audit",
     "gap_analysis",
-    "verify"
+    "verify",
+    "milestone_audit"
   ],
   "skipped": [
     "discuss",
@@ -34,7 +35,7 @@
     "plan_remediate"
   ],
   "failed": [],
-  "blocked_by": null,
+  "blocked_by": "execute",
   "verdicts": {
     "discuss": "skipped",
     "assumptions": "skipped",
@@ -57,7 +58,8 @@
     "integration_check": "passed:review_wave",
     "security_audit": "passed:review_wave",
     "gap_analysis": "passed",
-    "verify": "passed"
+    "verify": "passed",
+    "milestone_audit": "passed"
   },
   "artifacts": {},
   "regate_attempts": {},
@@ -95,10 +97,18 @@
     "plans_complete": 0,
     "incomplete_plans": [],
     "complete_plans": [],
-    "pending_checkpoint": null
+    "pending_checkpoint": "complete-milestone"
   },
-  "checkpoint_log": [],
+  "checkpoint_log": [
+    {
+      "at": "2026-08-27T23:05:29.469Z",
+      "id": "complete-milestone",
+      "kind": null,
+      "status": "set",
+      "detail": "awaiting human complete-milestone consent after audit passed"
+    }
+  ],
   "started_at": "2026-08-27T23:04:38.303Z",
-  "updated_at": "2026-08-27T23:04:46.408Z",
+  "updated_at": "2026-08-27T23:05:29.471Z",
   "notes": "Initialized master_flow for phase 5"
 }
