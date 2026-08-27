@@ -2,7 +2,7 @@
 
 ## What This Is
 
-A suite of ZCode skills that turn the existing JGS Archi Bridge MCP into a governed, agent-guided architecture-development capability inside Archi. One user-invoked orchestrator elicits architectural intent and produces a plain-language view plan; orchestrator-dispatched specialists create ArchiMate elements, relationships, and views through the MCP without requiring ArchiMate expertise from the user.
+A suite of ZCode skills that turn the existing JGS Archi Bridge MCP into a governed, agent-guided architecture-development capability inside Archi. One user-invoked orchestrator (`archi-orchestrator`) elicits architectural intent and produces a plain-language view plan; orchestrator-dispatched specialists cover the vision responsibility set through MCP without requiring ArchiMate expertise from the user.
 
 ## Core Value
 
@@ -12,18 +12,17 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 ### Validated
 
-(None yet — ship to validate)
+- ✓ Installable skill suite with MCP inventory + structural validator — v1.0
+- ✓ Orchestrator intent elicitation and plain-language view plan with confirmation gate — v1.0
+- ✓ Viewpoint trace contracts and specialist dispatch set (12 specialists) — v1.0
+- ✓ Inspect-before-create and compliance checklist path — v1.0
+- ✓ Rationale schema, completion summary pattern, evidence layout — v1.0
 
 ### Active
 
-- [ ] Orchestrator elicits architectural intent (problem, stakeholders, concerns, scope, current/target state, expected outcome) and produces a plain-language view plan (viewpoints, layers, modelling sequence, dependencies, validation points).
-- [ ] Viewpoint selection is grounded in the ArchiMate viewpoint framework (stakeholder, concern, purpose, abstraction level), with justified organisation-specific viewpoints only when no standard fit exists.
-- [ ] Specialist skill set covers elicitation, viewpoint selection, motivation, capability/strategy, business, application, technology/physical, implementation/migration, cross-layer traceability, model QA, layout/presentation, and documentation/rationale.
-- [ ] Model coherence and reuse: inspect existing model content before create; reuse shared concepts; consistent naming; minimise duplicates.
-- [ ] Compliance validation for element types, relationship combinations, permitted types, abstraction levels, cross-view consistency, and naming, with explained alternatives instead of silent fixes.
-- [ ] Structured rationale on significant views, natural-language change requests that regenerate views without damaging the shared model, and completion summaries.
-- [ ] Structural validation helper proves skills reference only real MCP tools/resources; one documented live end-to-end scenario per specialist with evidence under `docs/evidence/`.
-- [ ] Install path: skills live in-repo and install to `~/.zcode/skills/` via an install script.
+- [ ] Live Archi MCP E2E evidence for orchestrator (when Bridge available)
+- [ ] Full specialist modelling bodies beyond contract stubs
+- [ ] One live evidence scenario per specialist
 
 ### Out of Scope
 
@@ -36,11 +35,11 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 ## Context
 
-- Greenfield skills repo. No application source yet. Owner-authored VISION.md is the product brief.
-- Runtime dependency: JGS Archi Bridge MCP at default `http://127.0.0.1:18090/mcp` (69 tools, 14 resources including archimate-layers, archimate-relationships, archimate-specializations, archimate-view-patterns, viewpoint recipes).
-- Delivery form: one SKILL.md per skill; Python 3.10+ stdlib-only helpers for viewpoint matrix, compliance asserts, and suite structural validation.
-- First milestone seed SEED-001 targets OBJ-1 (orchestrator intent elicitation and view plan). Later seeds cover OBJ-2..OBJ-6.
-- Quality bar is dual: structural checks plus live MCP evidence captures.
+- v1.0 shipped 2026-08-28: foundations, orchestrator, specialist contracts, compliance helpers, rationale/evidence conventions.
+- Runtime dependency: JGS Archi Bridge MCP at default `http://127.0.0.1:18090/mcp`.
+- Delivery: skills under `skills/`, install via `python install.py` to `~/.zcode/skills/`.
+- Python 3.10+ stdlib-only helpers: validate_skill_mcp_refs, view_plan_schema, specialist_manifest, compliance_checklist, rationale_schema.
+- Archive: `.planning/milestones/v1.0-*`.
 
 ## Constraints
 
@@ -55,29 +54,16 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 | Decision | Rationale | Outcome |
 |----------|-----------|---------|
-| YOLO + coarse granularity + parallel plans | Ralph non-interactive bootstrap; recommended auto-mode defaults | — Pending |
-| Adaptive model profile | Role-based cost/quality balance across GSD agents | — Pending |
-| Research on for project init | Domain (ArchiMate skill orchestration) benefits from explicit stack/features/architecture/pitfalls | — Pending |
-| MVP phase mode | Vertical slices that leave runnable skill/capability increments | — Pending |
-| Skill naming deferred to planner | VISION leaves naming open | — Pending |
-| First milestone focuses OBJ-1 orchestrator | SEED-001 / BACKLOG priority; remaining OBJs later seeds | — Pending |
+| YOLO + coarse + parallel + adaptive | Ralph non-interactive bootstrap | ✓ Good |
+| Skill name archi-orchestrator | Clear user entrypoint | ✓ Good |
+| Specialists orchestrator-dispatched only | SPEC-02 / governance | ✓ Good |
+| Offline inventory allowlist | CI without live Archi | ✓ Good |
+| Specialist stubs in v1.0 | Unblock suite structure; depth later | ✓ Good — revisit in v2 |
+| Live MCP E2E deferred | Archi availability | ⚠️ Revisit when Bridge up |
 
 ## Evolution
 
 This document evolves at phase transitions and milestone boundaries.
 
-**After each phase transition** (via `/gsd-transition`):
-1. Requirements invalidated? → Move to Out of Scope with reason
-2. Requirements validated? → Move to Validated with phase reference
-3. New requirements emerged? → Add to Active
-4. Decisions to log? → Add to Key Decisions
-5. "What This Is" still accurate? → Update if drifted
-
-**After each milestone** (via `/gsd:complete-milestone`):
-1. Full review of all sections
-2. Core Value check — still the right priority?
-3. Audit Out of Scope — reasons still valid?
-4. Update Context with current state
-
 ---
-*Last updated: 2026-08-27 after initialization*
+*Last updated: 2026-08-28 after v1.0 milestone*
