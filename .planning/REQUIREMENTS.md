@@ -1,53 +1,61 @@
 # Requirements: jgs-archi-skills
 
 **Defined:** 2026-08-28
-**Milestone:** v1.1 Viewpoint selection grounding (SEED-002 / OBJ-2)
+**Milestone:** v1.2 Full specialist skill set (SEED-003 / OBJ-3)
 **Core Value:** A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
 
-## v1.1 Requirements
+## v1.2 Requirements
 
-Requirements for this milestone only. v1.0 REQUIREMENTS remain archived under `.planning/milestones/v1.0-REQUIREMENTS.md`.
+Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning/milestones/v1.0-REQUIREMENTS.md` and `v1.1-REQUIREMENTS.md`.
 
-### Viewpoint matrix (deterministic helper)
+### Specialist bodies (OBJ-3)
 
-- [x] **VSEL-01**: Contributor can run a stdlib helper that accepts structured intent axes (stakeholder roles, concerns, purpose, abstraction level) and returns ranked candidate viewpoint keys without embedding ArchiMate element/relationship catalogs
-- [x] **VSEL-02**: Matrix data is fixture/key-based (IDs and axes only); full viewpoint definitions stay on MCP resources (`archimate://recipes/*`, `archimate://reference/archimate-view-patterns`)
-- [x] **VSEL-03**: Helper exits non-zero on malformed input and prints a clear error; valid input exits 0 with stable, testable output (JSON and/or markdown table)
+- [ ] **SPEC-D-01**: `archi-elicit` has a complete SKILL.md body that normalizes free-text intent into the orchestrator field set and never mutates the Archi model
+- [ ] **SPEC-D-02**: `archi-motivation` has a complete modelling body that creates motivation-layer elements, relationships, and views via MCP after user confirmation, using inspect-before-create
+- [ ] **SPEC-D-03**: `archi-capability-strategy` has a complete modelling body for strategy/capability elements, relationships, and views via MCP after confirmation
+- [ ] **SPEC-D-04**: `archi-business` has a complete modelling body for business-layer elements, relationships, and views via MCP after confirmation
+- [ ] **SPEC-D-05**: `archi-application` has a complete modelling body for application-layer elements, relationships, and views via MCP after confirmation
+- [ ] **SPEC-D-06**: `archi-technology-physical` has a complete modelling body for technology/physical elements, relationships, and views via MCP after confirmation
+- [ ] **SPEC-D-07**: `archi-implementation-migration` has a complete modelling body for implementation/migration elements, relationships, and views via MCP after confirmation
+- [ ] **SPEC-D-08**: `archi-traceability` has a complete body that establishes explicit cross-layer traces (motivation to business to application to technology) via MCP relationships and reports gaps
+- [ ] **SPEC-D-09**: `archi-model-qa` has a complete body that runs compliance/coherence checks, explains violations, and proposes compliant alternatives without silent illegal fixes
+- [ ] **SPEC-D-10**: `archi-layout` has a complete body that applies Archi-native layout/presentation tools to improve readability of target views
+- [ ] **SPEC-D-11**: `archi-documentation` has a complete body that writes structured rationale into model documentation fields and produces the completion summary pattern
 
-### Trace table and org-specific path
+### Shared create path and governance
 
-- [x] **VSEL-04**: `archi-viewpoint-select` produces a Viewpoint Trace Table with columns for Viewpoint, Stakeholder, Concern, Purpose, Abstraction, Standard?, Justification
-- [x] **VSEL-05**: A stdlib schema helper validates a Trace Table markdown/JSON artifact the same way `view_plan_schema.py` validates View Plans
-- [x] **VSEL-06**: When no standard candidate fits above a documented threshold, the skill proposes an organisation-specific viewpoint with explicit justification and ArchiMate-compliance constraints (no illegal layer/element mixes; no silent metamodel invention)
-- [x] **VSEL-07**: Rejected alternatives are listed so the user can see why other viewpoints were not chosen (NG-3 visibility)
+- [ ] **SPEC-D-12**: Every mutating specialist documents the same create-path binding: search/get-or-create before create, inventory MCP tools only, read relevant archimate recipes before non-trivial views, compliance explain-and-propose on failure
+- [ ] **SPEC-D-13**: Every specialist remains orchestrator-dispatched only (SPEC-02); no specialist becomes a primary user entrypoint
+- [ ] **SPEC-D-14**: No specialist copies ArchiMate metamodel catalogs into skill text (NG-4); recipe/resource URIs are referenced, not inlined as tables
+- [ ] **SPEC-D-15**: Mutating specialists do not run creates until the View Plan confirmation gate has been approved (NG-3)
 
 ### Orchestrator integration
 
-- [x] **VSEL-08**: `archi-orchestrator` dispatches (or documents the exact hand-off to) `archi-viewpoint-select` after intent elicitation and before final View Plan confirmation
-- [x] **VSEL-09**: View Plan **Proposed Viewpoints** section is consistent with the Trace Table (same viewpoint names and abstraction levels); schema check still passes
-- [x] **VSEL-10**: Viewpoint selection path performs **no MCP mutations** (read resources only); user confirmation gate remains before any model creates
+- [ ] **SPEC-D-16**: `archi-orchestrator` documents a post-confirm modelling dispatch sequence naming the specialist order (or decision rules for order) without performing mutations inside the orchestrator happy path unless explicitly scoped
+- [ ] **SPEC-D-17**: Orchestrator hand-off payloads to specialists are specified (intent summary, confirmed viewpoints, target layers/views, reuse constraints)
 
 ### Evidence and regression
 
-- [x] **VSEL-11**: Offline fixture under `docs/evidence/` demonstrates intent axes → matrix → trace table → view-plan headings for at least one multi-stakeholder scenario
-- [x] **VSEL-12**: Unit tests cover matrix ranking, schema validation (pass and fail), and skill MCP-ref structural check; full suite remains green
+- [ ] **SPEC-D-18**: Offline evidence fixtures exist under `docs/evidence/` covering each deepened specialist path (procedure transcript and/or expected tool sequence); live MCP runs remain optional when Bridge is down
+- [ ] **SPEC-D-19**: Unit/structural tests keep the suite green: MCP-ref validator, specialist manifest count, and any new schema/helpers introduced this milestone
+- [ ] **SPEC-D-20**: `archi-viewpoint-select` is not reworked; v1.1 body remains the source of truth for viewpoint grounding
 
 ## Future Requirements (not this milestone)
 
-### Other specialist depth
+### Live evidence hard gate
 
-- **SPEC-V2-01**: Every remaining specialist has a complete SKILL.md body and one live evidence scenario
-- **SPEC-V2-02**: Layout/presentation specialist produces Archi-native layouts meeting agreed readability bar
-- **SPEC-V2-03**: Cross-layer traceability specialist produces explicit traces across motivation→business→application→technology
+- **EVID-LIVE-01**: Live Archi MCP end-to-end transcript for orchestrator + multi-specialist modelling when Bridge is available
+- **EVID-LIVE-02**: One live evidence scenario per specialist against a real Archi model
 
 ### Advanced governance
 
 - **GOV-V2-01**: Organisation-specific viewpoint library persistence pattern (still via model/MCP, not a side DB)
 - **GOV-V2-02**: Batch compliance report across entire model
 
-### Live evidence
+### Coherence depth (OBJ-4+)
 
-- **EVID-LIVE-01**: Live Archi MCP end-to-end transcript for orchestrator + viewpoint-select when Bridge is available
+- **COH-V2-01**: Stronger duplicate detection heuristics beyond search/get-or-create guidance
+- **COH-V2-02**: Naming convention enforcer across multi-view runs
 
 ## Out of Scope
 
@@ -60,32 +68,41 @@ Requirements for this milestone only. v1.0 REQUIREMENTS remain archived under `.
 | Support for EA tools other than Archi | NG-5 |
 | Skill-side database or durable local model cache as SoT | Stateless skills policy |
 | Third-party Python dependencies | Stdlib-only policy |
-| Full bodies for non-viewpoint specialists | Later seeds (OBJ-3+) |
-| Live Archi E2E as hard gate for v1.1 | Offline fixtures sufficient; live when Bridge up |
+| Rework of v1.0 orchestrator intent path or v1.1 viewpoint-select core | Already shipped; integrate only |
+| Live Archi E2E as hard gate for v1.2 | Offline fixtures sufficient; live when Bridge up |
+| Org-specific viewpoint library side store | GOV-V2-01 future |
 
 ## Traceability
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| VSEL-01 | Phase 6 | Complete |
-| VSEL-02 | Phase 6 | Complete |
-| VSEL-03 | Phase 6 | Complete |
-| VSEL-04 | Phase 7 | Complete |
-| VSEL-05 | Phase 6 | Complete |
-| VSEL-06 | Phase 7 | Complete |
-| VSEL-07 | Phase 7 | Complete |
-| VSEL-08 | Phase 7 | Complete |
-| VSEL-09 | Phase 7 | Complete |
-| VSEL-10 | Phase 7 | Complete |
-| VSEL-11 | Phase 8 | Complete |
-| VSEL-12 | Phase 8 | Complete |
+| SPEC-D-01 | Phase 9 | Pending |
+| SPEC-D-02 | Phase 10 | Pending |
+| SPEC-D-03 | Phase 10 | Pending |
+| SPEC-D-04 | Phase 10 | Pending |
+| SPEC-D-05 | Phase 10 | Pending |
+| SPEC-D-06 | Phase 10 | Pending |
+| SPEC-D-07 | Phase 10 | Pending |
+| SPEC-D-08 | Phase 11 | Pending |
+| SPEC-D-09 | Phase 11 | Pending |
+| SPEC-D-10 | Phase 11 | Pending |
+| SPEC-D-11 | Phase 11 | Pending |
+| SPEC-D-12 | Phase 9 | Pending |
+| SPEC-D-13 | Phase 9 | Pending |
+| SPEC-D-14 | Phase 9 | Pending |
+| SPEC-D-15 | Phase 9 | Pending |
+| SPEC-D-16 | Phase 12 | Pending |
+| SPEC-D-17 | Phase 12 | Pending |
+| SPEC-D-18 | Phase 12 | Pending |
+| SPEC-D-19 | Phase 12 | Pending |
+| SPEC-D-20 | Phase 9 | Pending |
 
 **Coverage:**
 
-- v1.1 requirements: 12 total
-- Mapped to phases: 12
+- v1.2 requirements: 20 total
+- Mapped to phases: 20
 - Unmapped: 0
 
 ---
 *Requirements defined: 2026-08-28*
-*Last updated: 2026-08-28 after SEED-002 new-milestone*
+*Last updated: 2026-08-28 after SEED-003 new-milestone*
