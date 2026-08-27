@@ -1,0 +1,2 @@
+# Gap Analysis
+**Verdict:** CLOSED
