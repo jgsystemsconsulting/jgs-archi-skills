@@ -6,9 +6,13 @@
   "phase_slug": "3-viewpoint-grounding-and-specialist-contracts",
   "phase_dir": ".planning/phases/3-viewpoint-grounding-and-specialist-contracts",
   "scope": "milestone",
-  "current_gate": "plan",
+  "current_gate": "plan_remediate",
   "completed": [
-    "research"
+    "research",
+    "plan",
+    "plan_check",
+    "plan_review",
+    "execute"
   ],
   "skipped": [
     "discuss",
@@ -35,7 +39,11 @@
     "ui_audit": "skipped",
     "nyquist_audit": "skipped",
     "doc_check": "skipped",
-    "research": "passed:will_embed_in_plan"
+    "research": "passed:will_embed_in_plan",
+    "plan": "passed:present",
+    "plan_check": "passed:present",
+    "plan_review": "passed:present",
+    "execute": "passed:already_complete_if_no_checkpoint"
   },
   "artifacts": {},
   "regate_attempts": {},
@@ -77,6 +85,6 @@
   },
   "checkpoint_log": [],
   "started_at": "2026-08-27T23:00:29.938Z",
-  "updated_at": "2026-08-27T23:00:29.946Z",
+  "updated_at": "2026-08-27T23:04:16.814Z",
   "notes": "Initialized master_flow for phase 3"
 }
