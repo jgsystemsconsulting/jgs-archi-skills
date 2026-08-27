@@ -14,3 +14,5 @@ docs/evidence/<skill-or-scenario-id>/
 Offline smoke: `orchestrator-smoke/` (not a live MCP run).
 
 EVID-01 (orchestrator live E2E): add `docs/evidence/orchestrator-live/` when Archi + Bridge are available.
+
+- `viewpoint-selection-offline/` — v1.1 OBJ-2 offline matrix → trace → view-plan fixture

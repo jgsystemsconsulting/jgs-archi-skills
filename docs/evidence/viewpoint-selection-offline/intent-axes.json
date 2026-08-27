@@ -1,0 +1,16 @@
+{
+  "stakeholders": [
+    "executive",
+    "enterprise-architect",
+    "application-architect"
+  ],
+  "concerns": [
+    "capabilities",
+    "investment",
+    "alignment",
+    "applications",
+    "integration"
+  ],
+  "purpose": "decide",
+  "abstraction": "overview"
+}

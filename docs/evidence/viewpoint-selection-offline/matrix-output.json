@@ -1,0 +1,86 @@
+{
+  "ranked": [
+    {
+      "key": "capability-map",
+      "label": "Capability Map",
+      "score": 8,
+      "matched": [
+        "purpose:decide",
+        "abstraction:overview",
+        "stakeholder:executive",
+        "stakeholder:enterprise-architect",
+        "concern:capabilities",
+        "concern:investment"
+      ]
+    },
+    {
+      "key": "layered",
+      "label": "Layered",
+      "score": 7,
+      "matched": [
+        "purpose:decide",
+        "abstraction:overview",
+        "stakeholder:executive",
+        "stakeholder:enterprise-architect",
+        "concern:alignment"
+      ]
+    },
+    {
+      "key": "application-cooperation",
+      "label": "Application Cooperation",
+      "score": 5,
+      "matched": [
+        "purpose:decide",
+        "abstraction:overview",
+        "concern:integration"
+      ]
+    },
+    {
+      "key": "business-product",
+      "label": "Business Product",
+      "score": 5,
+      "matched": [
+        "purpose:decide",
+        "abstraction:overview",
+        "stakeholder:executive"
+      ]
+    },
+    {
+      "key": "motivation",
+      "label": "Motivation",
+      "score": 5,
+      "matched": [
+        "purpose:decide",
+        "abstraction:overview",
+        "stakeholder:executive"
+      ]
+    },
+    {
+      "key": "implementation-migration",
+      "label": "Implementation and Migration",
+      "score": 4,
+      "matched": [
+        "purpose:decide",
+        "abstraction:overview"
+      ]
+    }
+  ],
+  "threshold": 3,
+  "standard_fit": true,
+  "intent": {
+    "stakeholders": [
+      "executive",
+      "enterprise-architect",
+      "application-architect"
+    ],
+    "concerns": [
+      "capabilities",
+      "investment",
+      "alignment",
+      "applications",
+      "integration"
+    ],
+    "purpose": "decide",
+    "abstraction": "overview"
+  }
+}
