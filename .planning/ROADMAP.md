@@ -27,10 +27,10 @@ Build a ZCode skill suite on the existing JGS Archi Bridge MCP: first stand up i
   1. Install script places suite skills under `~/.zcode/skills/` from this repo
   2. Structural validation helper reports a clear failure when a skill cites an unknown MCP tool or resource name
   3. Docs state MCP default endpoint and the consume-only (no plugin fork) rule
-**Plans:** TBD
+**Plans:** 1 plan
 
 Plans:
-- [ ] 01-01: TBD during plan-phase
+- [ ] 01-01: MCP inventory, validator, install script, docs
 
 ### Phase 2: Orchestrator intent and view plan
 **Goal:** A non-expert can run one orchestrator skill, provide intent, and receive a governed plain-language view plan (OBJ-1 / SEED-001).
