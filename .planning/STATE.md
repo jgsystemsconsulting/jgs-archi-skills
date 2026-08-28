@@ -1,18 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.3
-status: Awaiting next milestone
-last_updated: "2026-08-28T00:11:51.622Z"
+milestone: v1.4
+milestone_name: Compliance validation
+status: planning
+last_updated: "2026-08-28T00:16:32.915Z"
 last_activity: 2026-08-28
-last_activity_desc: Milestone v1.3 completed and archived
-state_head: cf3599224df5a067c9d761f77116d3dbb07e2190
 progress:
-  total_phases: 3
-  completed_phases: 3
-  total_plans: 3
-  completed_plans: 3
-milestone_name: Model coherence and reuse
-current_phase: 15
+  total_phases: 0
+  completed_phases: 0
+  total_plans: 0
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -22,14 +20,15 @@ current_phase: 15
 See: .planning/PROJECT.md (updated 2026-08-27)
 
 **Core value:** A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
-**Current focus:** Awaiting next milestone
+**Current focus:** v1.4 Compliance validation (SEED-005 / OBJ-5)
 
 ## Current Position
 
-Phase: Milestone v1.3 complete
+Phase: 16 — Compliance validation helpers (next)
 Plan: —
-Status: Awaiting next milestone
-Last activity: 2026-08-28 — Milestone v1.3 completed and archived
+Status: Ready to plan
+Last activity: 2026-08-28 — Milestone v1.4 requirements + roadmap defined
+
 
 ## Performance Metrics
 
@@ -92,4 +91,4 @@ See REQUIREMENTS.md v2 section.
 
 ## Operator Next Steps
 
-- Start the next milestone with /gsd-new-milestone
+- `/gsd-plan-phase 16` (or master-flow) — compliance validation helpers
