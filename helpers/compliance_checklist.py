@@ -1,5 +1,9 @@
 #!/usr/bin/env python3
-"""Offline compliance checklist asserts for ArchiMate skill paths. Stdlib only."""
+"""Offline compliance checklist asserts for ArchiMate skill paths. Stdlib only.
+
+Thin boolean gate (COMP-01/02 era). For OBJ-5 depth over model-slice snapshots
+with explain-and-propose findings, use helpers/compliance_validate.py instead.
+"""
 from __future__ import annotations
 
 import argparse
