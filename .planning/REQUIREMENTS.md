@@ -1,31 +1,32 @@
 # Requirements: jgs-archi-skills
 
 **Defined:** 2026-08-28
-**Milestone:** v1.3 Model coherence and reuse (SEED-004 / OBJ-4)
+**Milestone:** v1.4 Compliance validation (SEED-005 / OBJ-5)
 **Core Value:** A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
 
-## v1.3 Requirements
+## v1.4 Requirements
 
-Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning/milestones/v1.0-REQUIREMENTS.md`, `v1.1-REQUIREMENTS.md`, and `v1.2-REQUIREMENTS.md`.
+Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning/milestones/v1.0-REQUIREMENTS.md` through `v1.3-REQUIREMENTS.md`.
 
-### Reuse inspect and naming helpers
+### Compliance validation helpers
 
-- [x] **COH-01**: Stdlib helper `helpers/reuse_inspect.py` accepts a candidate (name, type optional) plus an element inventory snapshot and returns a structured decision `reuse` | `create` | `ambiguous` with matched element IDs and scores; exact name+type match prefers reuse; no MCP calls inside the helper
-- [x] **COH-02**: Stdlib helper `helpers/naming_convention.py` normalizes display names (trim, collapse whitespace, stable case policy) and detects cross-view naming conflicts for the same concept ID or near-duplicate labels; CLI usable offline
-- [x] **COH-03**: Unit tests cover reuse decisions (reuse/create/ambiguous) and naming normalize/conflict cases; suite remains stdlib unittest
+- [ ] **COMP-03**: Stdlib helper deepens offline compliance beyond boolean checklist: accepts a model-slice snapshot (elements, relationships, optional view usages) plus an allowlist/fixture of known types and permitted relationship patterns; returns structured findings; no MCP calls inside the helper; no third-party deps
+- [ ] **COMP-04**: Validator checks element types against the fixture allowlist (unknown/illegal type → finding); fixture is a captured reference snapshot under `docs/` or `helpers/fixtures/`, not a skill-owned ArchiMate catalog dump (NG-4)
+- [ ] **COMP-05**: Validator checks relationship source/target type combinations and relationship type permission against the fixture; illegal combo or type → finding
+- [ ] **COMP-06**: Validator checks abstraction-level consistency signals and cross-view naming consistency (may call or mirror `naming_convention` helpers); inconsistent abstraction or naming → finding
+- [ ] **COMP-07**: Every finding includes: check id, object refs, problem explanation, and at least one proposed compliant alternative; helper never mutates the model or auto-applies fixes (COMP-02 / NG-3)
 
 ### Contract and skill binding
 
-- [x] **COH-04**: `docs/CREATE_PATH.md` gains an OBJ-4 coherence section: mandatory inspect-before-create using inventory tools + optional offline helper; maintain a run-scoped reuse registry (concept key → element ID); naming policy; never auto-merge `ambiguous` without user/orchestrator decision
-- [x] **COH-05**: Mutating layer specialists document calling reuse/naming helpers (or equivalent structured inspect steps) and recording reused vs created IDs in the hand-back payload
-- [x] **COH-06**: `archi-orchestrator` hand-off payload includes `reuse_registry` and `naming_policy` fields; default dispatch still prefers existing IDs across specialists
-- [x] **COH-07**: `archi-model-qa` procedure uses helper-backed duplicate and cross-view naming checks and reports findings with explain-and-propose (no silent illegal fixes)
+- [ ] **COMP-08**: `docs/CREATE_PATH.md` gains an OBJ-5 compliance-depth section: when to run offline validator vs live MCP resource checks; findings must explain-and-propose; never silent-apply
+- [ ] **COMP-09**: `archi-model-qa` procedure binds the deepened validator (and retains coherence helpers); mutating specialists document optional pre-create/post-create compliance check + hand-back of compliance findings
+- [ ] **COMP-10**: `archi-orchestrator` hand-off/summary path documents consuming model-qa compliance findings (no new mutating tools)
 
 ### Evidence and freeze
 
-- [x] **COH-08**: Offline evidence under `docs/evidence/coherence-reuse-offline/` shows multi-view reuse of one element ID, duplicate minimisation path, and naming consistency checks
-- [x] **COH-09**: MCP-ref validator and specialist contract tests stay green; `archi-viewpoint-select` remains frozen at the v1.1 digest
-- [x] **COH-10**: No rework of v1.0 orchestrator intent path or v1.2 specialist modelling cores beyond coherence hooks; NG-1..5 respected
+- [ ] **COMP-11**: Offline evidence under `docs/evidence/compliance-validation-offline/` shows pass and fail slices with explain-and-propose findings (types, illegal relationship, naming/abstraction)
+- [ ] **COMP-12**: Full unit/structural suite green; `archi-viewpoint-select` remains frozen at the v1.1 digest; existing `compliance_checklist` thin gate remains usable or is clearly superseded without breaking callers
+- [ ] **COMP-13**: No rework of v1.0–v1.3 shipped cores beyond compliance hooks; NG-1..5 respected
 
 ## Future Requirements (not this milestone)
 
@@ -37,9 +38,10 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 ### Advanced governance
 
 - **GOV-V2-01**: Organisation-specific viewpoint library persistence pattern (still via model/MCP, not a side DB)
-- **GOV-V2-02**: Batch compliance report across entire model
+- **GOV-V2-02**: Batch compliance report across entire model (beyond slice snapshots)
 - **COH-V2-01**: Fuzzy/semantic duplicate detection beyond deterministic name+type helpers
-- **COMP-V2-01**: Deeper OBJ-5 compliance automation beyond checklist + model-qa procedure
+- **COMP-V2-01**: Live MCP resource refresh of allowlist fixtures as a CI job (still not skill-embedded catalogs)
+- **RAT-01+**: OBJ-6 structured rationale depth and natural-language change regeneration
 
 ## Out of Scope
 
@@ -52,31 +54,31 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 | Support for EA tools other than Archi | NG-5 |
 | Skill-side database or durable local model cache as SoT | Stateless skills policy |
 | Third-party Python dependencies | Stdlib-only policy |
-| Rework of v1.0–v1.2 shipped cores beyond coherence hooks | Already shipped; integrate only |
-| Live Archi E2E as hard gate for v1.3 | Offline fixtures sufficient; live when Bridge up |
-| Silent auto-merge of ambiguous near-matches | NG-3; surface decision |
+| Rework of v1.0–v1.3 shipped cores beyond compliance hooks | Already shipped; integrate only |
+| Live Archi E2E as hard gate for v1.4 | Offline fixtures sufficient; live when Bridge up |
+| Silent auto-apply of compliance fixes | NG-3; surface decision |
+| Full metamodel completeness in fixture | Minimal fixture covering OBJ-5 check dimensions; MCP remains live SoT |
 
 ## Traceability
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| COH-01 | Phase 13 | Complete |
-| COH-02 | Phase 13 | Complete |
-| COH-03 | Phase 13 | Complete |
-| COH-04 | Phase 14 | Complete |
-| COH-05 | Phase 14 | Complete |
-| COH-06 | Phase 14 | Complete |
-| COH-07 | Phase 14 | Complete |
-| COH-08 | Phase 15 | Complete |
-| COH-09 | Phase 15 | Complete |
-| COH-10 | Phase 15 | Complete |
+| COMP-03 | Phase 16 | Pending |
+| COMP-04 | Phase 16 | Pending |
+| COMP-05 | Phase 16 | Pending |
+| COMP-06 | Phase 16 | Pending |
+| COMP-07 | Phase 16 | Pending |
+| COMP-08 | Phase 17 | Pending |
+| COMP-09 | Phase 17 | Pending |
+| COMP-10 | Phase 17 | Pending |
+| COMP-11 | Phase 18 | Pending |
+| COMP-12 | Phase 18 | Pending |
+| COMP-13 | Phase 18 | Pending |
 
 **Coverage:**
 
-- v1.3 requirements: 10 total
-- Mapped to phases: 10
+- v1.4 requirements: 11 total
+- Mapped to phases: 11
 - Unmapped: 0
 
 ---
-*Requirements defined: 2026-08-28*
-*Last updated: 2026-08-28 after SEED-004 new-milestone*
