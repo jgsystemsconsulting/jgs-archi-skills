@@ -126,6 +126,8 @@ After the user **approves** the View Plan (Step 4), modelling may proceed via or
 | layers_in_scope | From View Plan Layers Involved |
 | modelling_sequence | Numbered steps from View Plan |
 | reuse_constraints | Prefer existing IDs; naming notes |
+| reuse_registry | Run-scoped map concept_key → element_id (OBJ-4); seed empty or from prior specialists |
+| naming_policy | Policy id (default title-collapse-v1) + optional overrides |
 | open_questions | Still unresolved items (user-visible) |
 | target_views | Optional known view names |
 
@@ -150,7 +152,7 @@ Parallelism: independent layer specialists may run in parallel when the modellin
 
 ### Shared contract
 
-Every mutating specialist must follow `docs/CREATE_PATH.md`. Inventory tools only. No ArchiMate table dumps (NG-4). User remains governor (NG-3).
+Every mutating specialist must follow `docs/CREATE_PATH.md` including the OBJ-4 coherence section (reuse registry, naming policy, no silent ambiguous merge). Offline assists: `helpers/reuse_inspect.py`, `helpers/naming_convention.py`. Inventory tools only. No ArchiMate table dumps (NG-4). User remains governor (NG-3).
 
 ### Completion
 

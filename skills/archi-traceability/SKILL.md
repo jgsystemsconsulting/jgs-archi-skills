@@ -43,6 +43,9 @@ Views: `create-view`, `add-to-view` for a traceability/overview view when reques
 
 ## Procedure
 
+OBJ-4 coherence: before each create, search existing elements; run `helpers/reuse_inspect.py` on the snapshot when useful; apply `helpers/naming_convention.py` normalize; update run-scoped `reuse_registry`; never auto-merge `ambiguous`. Hand-back must list **reused** vs **created** IDs.
+
+
 ### Step 0 — Gate
 Stop if confirmation is not approved.
 

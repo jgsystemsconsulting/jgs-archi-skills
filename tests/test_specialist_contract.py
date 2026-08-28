@@ -58,6 +58,12 @@ class SpecialistContractTests(unittest.TestCase):
             self.assertIn("## Procedure", text, msg=name)
             self.assertNotIn("Contract stub for suite completeness", text, msg=name)
 
+    def test_create_path_obj4_coherence(self) -> None:
+        text = CREATE.read_text(encoding="utf-8")
+        self.assertIn("Model coherence and reuse", text)
+        self.assertIn("reuse_registry", text)
+        self.assertIn("ambiguous", text.lower())
+
     def test_viewpoint_select_frozen(self) -> None:
         digest = hashlib.sha256(VSEL.read_bytes()).hexdigest()
         self.assertEqual(digest, FROZEN)

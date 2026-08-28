@@ -17,7 +17,7 @@ Create or reuse elements, relationships, and views through the JGS Archi Bridge 
 
 1. **Mutations only after View Plan confirmation** (SPEC-D-15 / NG-3). If confirmation is missing, stop with hand-back; no mutating tools.
 2. **Orchestrator-dispatched only** (SPEC-02 / SPEC-D-13).
-3. **Follow `docs/CREATE_PATH.md`** end to end (inspect-before-create, compliance explain-and-propose, inventory tools only).
+3. **Follow `docs/CREATE_PATH.md`** end to end (inspect-before-create, OBJ-4 coherence/reuse registry, compliance explain-and-propose, inventory tools only).
 4. **No ArchiMate metamodel table dumps** (NG-4 / SPEC-D-14). Read MCP resources; do not paste catalogs into the skill or chat.
 5. **Consume-only** toward jgs-archi-mcp (NG-1). Default endpoint: see `docs/MCP.md`.
 
@@ -32,6 +32,8 @@ From the orchestrator hand-off:
 | Target viewpoints | yes | Names + abstraction from Trace Table / View Plan |
 | Layer scope | yes | This specialist owns **technology** (and explicit adjacencies only when hand-off says so) |
 | Existing model hints | optional | Known element names/IDs to reuse |
+| reuse_registry | optional | Run-scoped concept_key → element_id from orchestrator |
+| naming_policy | optional | Default title-collapse-v1 |
 | Constraints | optional | Naming, folders, exclusions |
 
 ## MCP resources (read before non-trivial views)

@@ -41,6 +41,54 @@ If confirmation is missing or aborted: **stop**. Produce a hand-back note; do no
 3. Keep naming consistent for the same real-world concept.
 4. Prefer `find-concept-usage` / `get-view-contents` when attaching to existing structure.
 
+
+## Model coherence and reuse (OBJ-4 / COH-*)
+
+Binding for inspect-before-create depth beyond the basic search guidance above.
+
+### Offline helpers (deterministic)
+
+- `python helpers/reuse_inspect.py "<Name>" --type <Type> --inventory snapshot.json [--json]`
+  - Input: candidate name/type + element inventory snapshot (`[{id,name,type}, ...]`).
+  - Output decision: `reuse` | `create` | `ambiguous` with match IDs and scores.
+  - Does **not** call MCP. Use after `search-elements` (or on a captured inventory) to record the decision.
+- `python helpers/naming_convention.py normalize "<Name>"`
+- `python helpers/naming_convention.py conflicts usages.json`
+  - Normalize labels (title-collapse-v1) and flag cross-view name divergence or duplicate labels.
+
+### Run-scoped reuse registry
+
+Maintain a **run-scoped** map for the modelling session (orchestrator hand-off field `reuse_registry`):
+
+| concept_key | element_id | decision | notes |
+|-------------|------------|----------|-------|
+| applicationcomponent:customer portal | id-… | reuse | from search |
+
+- `concept_key` = normalized `type:name` (or name-only when type unknown).
+- Every specialist **reads** the registry before create and **writes** new reuse/create outcomes.
+- Prefer registry hit over a second create for the same concept across views.
+
+### Naming policy
+
+- Default policy id: `title-collapse-v1` (trim, collapse whitespace, title case).
+- Orchestrator hand-off field `naming_policy` carries the policy id (and optional overrides).
+- Apply `normalize_name` before create; keep the same display name when reusing an ID across views.
+
+### Ambiguous matches (NG-3)
+
+- **Never** auto-merge `ambiguous` decisions.
+- Surface candidates to the user/orchestrator; wait for an explicit choice (reuse id X, create new, or rename).
+- model-qa reports unresolved ambiguities as findings with explain-and-propose alternatives.
+
+### Live MCP sequence (mutating specialists)
+
+1. `search-elements` (and/or `find-concept-usage`) for the candidate.
+2. Optionally run `reuse_inspect` on the search snapshot for a structured decision record.
+3. On `reuse`: `add-to-view` / relate existing ID; do not `create-element`.
+4. On `create`: `get-or-create-element` or `create-element` with normalized name; register ID.
+5. On `ambiguous`: stop mutating that concept; hand back open question.
+6. Record reused vs created IDs in the specialist hand-back payload.
+
 ## Compliance (COMP-01, COMP-02)
 
 1. Confirm types against MCP resources (`archimate://reference/archimate-layers`, `archimate://reference/archimate-relationships`).

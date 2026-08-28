@@ -18,6 +18,7 @@ Run compliance and coherence checks on the working model/views: element types, r
 3. **Follow `docs/CREATE_PATH.md`** compliance section.
 4. **No metamodel table dumps** (NG-4).
 5. Offline assist: `python helpers/compliance_checklist.py report.json` when a findings file is produced.
+6. Coherence assists (OBJ-4): `python helpers/reuse_inspect.py …`, `python helpers/naming_convention.py conflicts usages.json`.
 
 ## Inputs
 
@@ -41,15 +42,19 @@ Optional authorized fix: `update-element`, `update-relationship`, `create-relati
 
 ## Procedure
 
+OBJ-4 coherence: before each create, search existing elements; run `helpers/reuse_inspect.py` on the snapshot when useful; apply `helpers/naming_convention.py` normalize; update run-scoped `reuse_registry`; never auto-merge `ambiguous`. Hand-back must list **reused** vs **created** IDs.
+
+
 ### Step 1 — Scope gather
 Load target views and related elements/relationships.
 
 ### Step 2 — Check dimensions
 1. Element types coherent with layer/viewpoint purpose
 2. Relationship source/target combinations
-3. Duplicate concepts (same name/type near-matches)
-4. Cross-view naming consistency
+3. Duplicate concepts (same name/type near-matches) — search snapshot + `reuse_inspect` / duplicate_label conflicts
+4. Cross-view naming consistency — `naming_convention.detect_conflicts` on per-view usages
 5. Orphans not justified by hand-off
+6. Unresolved `ambiguous` reuse decisions still open in the registry
 
 ### Step 3 — Findings file
 Write structured findings (markdown + optional JSON for compliance_checklist).
