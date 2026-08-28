@@ -156,7 +156,7 @@ Every mutating specialist must follow `docs/CREATE_PATH.md` including the OBJ-4 
 
 ### Compliance findings (OBJ-5)
 
-After `archi-model-qa` (or a specialist self-check), consume compliance findings in the run summary:
+After the model-qa specialist (or a specialist self-check), consume compliance findings in the run summary:
 
 - Carry forward finding count and any **needs-user** items (illegal types/edges, abstraction or naming conflicts).
 - Do not invent mutating tools to auto-fix; surface alternatives and wait for user/orchestrator choice.
