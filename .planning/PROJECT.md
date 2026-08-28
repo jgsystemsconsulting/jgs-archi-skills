@@ -8,7 +8,7 @@ A suite of ZCode skills that turn the existing JGS Archi Bridge MCP into a gover
 
 A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
 
-## Current Milestone: v1.4 Compliance validation
+## Current Milestone: v1.4 Compliance validation (SHIPPED 2026-08-28)
 
 **Goal:** Deepen OBJ-5: offline-deterministic compliance validation of element types, relationship source/target combinations, permitted relationship types, abstraction levels, cross-view consistency, and naming; every violation is explained with a compliant alternative proposed, never silently applied.
 
@@ -22,6 +22,9 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 ### Validated
 
+- ✓ Offline compliance_validate + allowlist fixture + explain-and-propose findings (SEED-005) — v1.4
+- ✓ CREATE_PATH OBJ-5 + model-qa/specialist/orchestrator compliance binding — v1.4
+- ✓ Offline compliance evidence pack + regression freeze — v1.4
 - ✓ Deterministic reuse_inspect + naming_convention helpers (SEED-004) — v1.3
 - ✓ CREATE_PATH OBJ-4 coherence binding + orchestrator reuse_registry/naming_policy — v1.3
 - ✓ model-qa helper-backed duplicate/naming checks + offline multi-view reuse evidence — v1.3
@@ -41,8 +44,8 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 ### Active
 
-- [ ] OBJ-5 compliance validation depth (SEED-005 / v1.4)
 - [ ] Live Archi MCP E2E evidence for orchestrator + multi-specialist path (when Bridge available)
+- [ ] OBJ-6 structured rationale depth / natural-language change path (later seed)
 
 ### Out of Scope
 
@@ -62,11 +65,12 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 - v1.1 shipped 2026-08-28 (SEED-002 / OBJ-2): matrix + trace schema helpers, full viewpoint-select, orchestrator wiring, offline evidence.
 - v1.2 shipped 2026-08-28 (SEED-003 / OBJ-3): full specialist bodies, CREATE_PATH contract, orchestrator Step 5, offline specialist evidence.
 - v1.3 shipped 2026-08-28 (SEED-004 / OBJ-4): reuse_inspect + naming_convention, CREATE_PATH coherence, offline multi-view reuse evidence.
+- v1.4 shipped 2026-08-28 (SEED-005 / OBJ-5): compliance_validate + fixture allowlist, CREATE_PATH OBJ-5 binding, offline compliance evidence; thin checklist retained.
 - v1.0 COMP-01/COMP-02 shipped a thin checklist gate; v1.4 deepens real validation over snapshots without embedding ArchiMate catalogs (NG-4).
-- Runtime dependency: JGS Archi Bridge MCP at default `http://127.0.0.1:18080/mcp` (inventory default `http://127.0.0.1:18090/mcp`).
+- Runtime dependency: JGS Archi Bridge MCP at default `http://127.0.0.1:18090/mcp`.
 - Delivery: skills under `skills/`, install via `python install.py` to `~/.zcode/skills/`.
 - Python 3.10+ stdlib-only helpers; no third-party deps.
-- Archives: `.planning/milestones/v1.0-*` … `v1.3-*`.
+- Archives: `.planning/milestones/v1.0-*` … `v1.4-*`.
 
 ## Constraints
 
@@ -92,8 +96,8 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 | v1.2 deepens OBJ-3 specialist bodies only | SEED-003; do not rework v1.0/v1.1 shipped surfaces | ✓ Good |
 | Offline specialist evidence fixtures as hard gate | Live MCP soft/deferred until Bridge up | ✓ Good |
 | v1.3 deepens OBJ-4 coherence only | SEED-004; leave v1.0–v1.2 cores intact except coherence hooks | ✓ Good |
-| v1.4 deepens OBJ-5 compliance only | SEED-005; fixture allowlists for offline checks; MCP resources remain SoT live | pending |
-| Compliance findings explain+propose never silent-apply | COMP-02 / NG-3 | pending |
+| v1.4 deepens OBJ-5 compliance only | SEED-005; fixture allowlists for offline checks; MCP resources remain SoT live | ✓ Good |
+| Compliance findings explain+propose never silent-apply | COMP-02 / NG-3 | ✓ Good |
 
 ## Evolution
 
@@ -113,4 +117,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-08-28 after v1.4 milestone start (SEED-005 / OBJ-5)*
+*Last updated: 2026-08-28 after v1.4 milestone closeout*

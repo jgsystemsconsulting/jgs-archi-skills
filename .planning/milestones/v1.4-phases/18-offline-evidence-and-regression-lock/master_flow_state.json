@@ -6,7 +6,7 @@
   "phase_slug": "18-offline-evidence-and-regression-lock",
   "phase_dir": ".planning/phases/18-offline-evidence-and-regression-lock",
   "scope": "milestone",
-  "current_gate": "complete",
+  "current_gate": "retrospective",
   "completed": [
     "research",
     "plan",
@@ -19,7 +19,8 @@
     "security_audit",
     "verify",
     "gap_analysis",
-    "milestone_audit"
+    "milestone_audit",
+    "complete"
   ],
   "skipped": [
     "discuss",
@@ -59,7 +60,8 @@
     "security_audit": "passed:review_wave",
     "verify": "passed",
     "gap_analysis": "passed",
-    "milestone_audit": "passed"
+    "milestone_audit": "passed",
+    "complete": "passed"
   },
   "artifacts": {},
   "regate_attempts": {},
@@ -99,8 +101,16 @@
     "complete_plans": [],
     "pending_checkpoint": null
   },
-  "checkpoint_log": [],
+  "checkpoint_log": [
+    {
+      "at": "2026-08-28T00:31:22.164Z",
+      "id": "v1.4-complete-milestone",
+      "kind": null,
+      "status": "approved",
+      "detail": "auto-closeout consent (audit passed)"
+    }
+  ],
   "started_at": "2026-08-28T00:26:06.291Z",
-  "updated_at": "2026-08-28T00:29:41.009Z",
+  "updated_at": "2026-08-28T00:31:49.581Z",
   "notes": "Initialized master_flow for phase 18"
 }

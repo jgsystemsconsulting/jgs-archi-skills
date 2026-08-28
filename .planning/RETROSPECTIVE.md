@@ -144,14 +144,6 @@
 - Model mix: single worker host inline (no nested Agent tokens)
 - Sessions: SEED-003 kick + resume after complete checkpoint
 
-## Cross-Milestone Trends
-
-| Milestone | Phases | Plans | Notes |
-|-----------|--------|-------|-------|
-| v1.0 | 5 | 5 | First ship; specialist depth deferred |
-| v1.1 | 3 | 3 | OBJ-2 depth; offline-only evidence |
-| v1.2 | 4 | 4 | OBJ-3 full specialist bodies; live MCP still deferred |
-
 ## Milestone: v1.3 — Model coherence and reuse
 
 **Shipped:** 2026-08-28
@@ -196,4 +188,59 @@
 
 - Model mix: single worker host (inline gates); specialist Agent spawns not available
 - Sessions: 1 Ralph worker kick through closeout (+ checkpoint resume)
+
+## Milestone: v1.4 — Compliance validation
+
+**Shipped:** 2026-08-28
+**Phases:** 16-18 | **Plans:** 3
+**Seed:** SEED-005 / OBJ-5
+
+### What Was Built
+
+- compliance_validate helper over model-slice snapshots (types, rel types/endpoints, abstraction, cross-view naming)
+- Minimal compliance_allowlist fixture (NG-4; MCP remains live SoT)
+- Findings always carry problem + proposed_alternative; never silent-apply
+- CREATE_PATH OBJ-5 section; model-qa primary offline path; specialist + orchestrator hooks
+- Offline evidence under docs/evidence/compliance-validation-offline/
+- 46 unit tests green; viewpoint-select digest frozen from v1.1; thin checklist retained
+
+### What Worked
+
+- Continuing phase numbers (16-18) kept archive continuity
+- Reusing CREATE_PATH + model-qa as binding surfaces avoided forked compliance paths
+- Fixture allowlist small enough to test without copying ArchiMate catalogs
+- autoCloseout audit-passed checkpoint unblocked complete without inventing verdicts
+
+### What Was Inefficient
+
+- Nested Agent tool still unavailable; all gates ran inline (degraded tier)
+- milestone.complete auto-extract of accomplishments weak again; fixed manually in MILESTONES.md
+- MCP-ref false positive when backtick-wrapping internal skill package names (fixed wording)
+
+### Patterns Established
+
+- Offline validator + thin boolean checklist pair (depth vs quick gate)
+- Evidence pack: pass-slice / fail-slice / findings JSON / freeze note
+- Explain-and-propose as the only legal fix posture across helpers and skills
+
+### Key Lessons
+
+- Never silent-apply illegal types/edges (NG-3); always propose alternative
+- Keep fixture allowlists minimal; do not embed full metamodel (NG-4)
+- Avoid backtick-wrapped skill names that match TOOL_BT MCP-tool regex
+
+### Cost Observations
+
+- Model mix: single worker host (inline gates); specialist Agent spawns not available
+- Sessions: 1 Ralph worker kick + checkpoint resume for complete-milestone
+
+## Cross-Milestone Trends
+
+| Milestone | Phases | Plans | Notes |
+|-----------|--------|-------|-------|
+| v1.0 | 5 | 5 | First ship; specialist depth deferred |
+| v1.1 | 3 | 3 | OBJ-2 depth; offline-only evidence |
+| v1.2 | 4 | 4 | OBJ-3 full specialist bodies; live MCP still deferred |
+| v1.3 | 3 | 3 | OBJ-4 coherence helpers + evidence |
+| v1.4 | 3 | 3 | OBJ-5 compliance_validate + evidence |
 

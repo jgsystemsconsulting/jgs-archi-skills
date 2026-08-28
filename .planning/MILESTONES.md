@@ -1,5 +1,33 @@
 # Milestones
 
+## v1.4 Compliance validation (Shipped: 2026-08-28)
+
+**Delivered:** OBJ-5 depth — offline compliance_validate over model-slice snapshots; explain-and-propose findings; CREATE_PATH + model-qa/specialist/orchestrator binding; offline pass/fail evidence (SEED-005).
+
+**Phases completed:** 16-18 (3 plans)
+
+**Key accomplishments:**
+
+- helpers/compliance_validate.py (types, relationship legality, abstraction, cross-view naming; findings with problem + proposed_alternative)
+- helpers/fixtures/compliance_allowlist.json (minimal offline fixture; MCP remains live SoT)
+- Thin compliance_checklist retained; 46 tests green
+- docs/CREATE_PATH.md OBJ-5 section; model-qa/specialist/orchestrator compliance hooks
+- docs/evidence/compliance-validation-offline pass/fail slices; viewpoint-select freeze held
+
+**Known gaps:**
+
+- Live Archi MCP E2E still deferred until Bridge is up (EVID-LIVE-*)
+- Nested Agent unavailable this host; gates ran inline (degraded tier)
+- Full metamodel completeness in fixture out of scope; batch whole-model COMP-V2-01 future
+
+**Stats:** 3 phases, 3 plans; stdlib helper + skill docs + evidence
+
+**Git range:** docs v1.4 start → feat(16..18) → audit/closeout
+
+**What is next:** Later seeds for live MCP evidence and/or OBJ-6 rationale depth when Bridge available
+
+---
+
 ## v1.3 Model coherence and reuse (Shipped: 2026-08-28)
 
 **Delivered:** OBJ-4 depth — deterministic reuse inspect + naming helpers; CREATE_PATH coherence binding; specialist/orchestrator reuse registry; offline multi-view reuse evidence (SEED-004).
