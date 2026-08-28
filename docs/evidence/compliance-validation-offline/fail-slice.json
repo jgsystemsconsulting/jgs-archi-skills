@@ -1,0 +1,16 @@
+{
+  "elements": [
+    {"id": "a1", "name": "Claims Clerk", "type": "BusinessRole", "abstraction": "technology"},
+    {"id": "p1", "name": "Handle Claim", "type": "BusinessProcess", "abstraction": "business"},
+    {"id": "x1", "name": "Magic Box", "type": "MagicBox"},
+    {"id": "d1", "name": "Server Rack", "type": "Device", "abstraction": "technology"}
+  ],
+  "relationships": [
+    {"id": "bad1", "type": "Teleportation", "source": "a1", "target": "p1"},
+    {"id": "bad2", "type": "Assignment", "source": "d1", "target": "p1"}
+  ],
+  "view_usages": [
+    {"view_id": "v1", "element_id": "p1", "name": "Handle Claim"},
+    {"view_id": "v2", "element_id": "p1", "name": "Claim Handling"}
+  ]
+}

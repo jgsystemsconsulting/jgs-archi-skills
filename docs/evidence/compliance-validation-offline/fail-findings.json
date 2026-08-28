@@ -1,0 +1,57 @@
+{
+  "findings": [
+    {
+      "check_id": "element_type_known",
+      "object_refs": [
+        "x1"
+      ],
+      "problem": "Element type 'MagicBox' is not in the offline allowlist.",
+      "proposed_alternative": "Replace with a known type from MCP archimate-layers / fixture (e.g. ApplicationComponent, BusinessProcess). Do not invent types.",
+      "element_type": "MagicBox"
+    },
+    {
+      "check_id": "relationship_type_permitted",
+      "object_refs": [
+        "bad1",
+        "a1",
+        "p1"
+      ],
+      "problem": "Relationship type 'Teleportation' is not permitted by the offline allowlist.",
+      "proposed_alternative": "Use a permitted ArchiMate relationship type from MCP archimate-relationships (e.g. Serving, Realization, Assignment). Do not silent-apply an illegal type.",
+      "relationship_type": "Teleportation"
+    },
+    {
+      "check_id": "relationship_endpoints_valid",
+      "object_refs": [
+        "bad2",
+        "d1",
+        "p1"
+      ],
+      "problem": "Relationship endpoints Device -Assignment-> BusinessProcess are not a permitted pattern.",
+      "proposed_alternative": "Illegal combo Device -Assignment-> BusinessProcess. Prefer a permitted pattern such as: ApplicationService -Serving-> BusinessProcess; BusinessRole -Assignment-> BusinessProcess; BusinessProcess -Triggering-> BusinessProcess. Confirm full legality via MCP archimate-relationships before create-relationship.",
+      "source_type": "Device",
+      "target_type": "BusinessProcess",
+      "relationship_type": "Assignment"
+    },
+    {
+      "check_id": "abstraction_level_consistent",
+      "object_refs": [
+        "a1"
+      ],
+      "problem": "Element a1 type 'BusinessRole' declares abstraction 'technology' but fixture expects 'business'.",
+      "proposed_alternative": "Set abstraction/layer to 'business' for type BusinessRole, or correct the element type to match the intended layer.",
+      "declared": "technology",
+      "expected": "business"
+    },
+    {
+      "check_id": "cross_view_naming_consistent",
+      "object_refs": [
+        "p1"
+      ],
+      "problem": "Naming conflict (cross_view_name_divergence): names=['Claim Handling', 'Handle Claim'], normalized=['Claim Handling', 'Handle Claim'], views=['v1', 'v2']",
+      "proposed_alternative": "Pick one canonical display name; update_element to unify. Canonical example: 'Claim Handling'.",
+      "naming_kind": "cross_view_name_divergence"
+    }
+  ],
+  "ok": false
+}
