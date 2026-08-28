@@ -6,11 +6,12 @@
 - ✅ **v1.1 Viewpoint selection grounding** — Phases 6-8 (shipped 2026-08-28)
 - ✅ **v1.2 Full specialist skill set** — Phases 9-12 (shipped 2026-08-28)
 - ✅ **v1.3 Model coherence and reuse** — Phases 13-15 (shipped 2026-08-28)
-- ✅ **v1.4 Compliance validation** — Phases 16-18 (shipped 2026-08-28)
+- ✅ **v1.4 Compliance validation** — Phases 16-18 (SEED-005 / OBJ-5)
+- 🚧 **v1.5 Structured rationale depth** — Phases 19-21 (SEED-006 / OBJ-6)
 
 ## Overview
 
-v1.4 deepens OBJ-5: offline-deterministic compliance validation of element types, relationship source/target combinations, permitted relationship types, abstraction levels, cross-view consistency, and naming. Violations are explained with a compliant alternative proposed; never silently applied. Build on the thin v1.0 checklist and v1.3 coherence helpers. Do not rework v1.0–v1.3 shipped cores beyond compliance hooks. Phase numbering continues from v1.3 (last phase was 15).
+v1.5 deepens OBJ-6: structured view rationale recorded via MCP, natural-language change regeneration that preserves shared model elements, and a completion summary at end of run. Build on the thin v1.0 rationale_schema + archi-documentation contract. Do not rework v1.0–v1.4 shipped cores beyond rationale/documentation hooks. Phase numbering continues from v1.4 (last phase was 18).
 
 ## Phases
 
@@ -61,77 +62,6 @@ Archive: `.planning/milestones/v1.3-*` and `v1.3-phases/`
 
 </details>
 
-- [x] **Phase 16: Compliance validation helpers** — Deterministic offline validator + findings schema + unit tests (COMP-03..07)
- (completed 2026-08-28)
-- [x] **Phase 17: Contract and skill compliance binding** — CREATE_PATH OBJ-5; model-qa / specialists / orchestrator wiring (COMP-08..10) (completed 2026-08-28)
-- [x] **Phase 18: Offline evidence and regression lock** — Compliance evidence pack; green suite; freeze viewpoint-select (COMP-11..13) (completed 2026-08-28)
-
-## Phase Details
-
-### Phase 16: Compliance validation helpers
-
-**Goal**: Ship offline-deterministic compliance validation over model-slice snapshots with explain-and-propose findings, without calling MCP or embedding full ArchiMate catalogs.
-**Depends on**: v1.3 complete
-**Requirements**: COMP-03, COMP-04, COMP-05, COMP-06, COMP-07
-**Success Criteria** (what must be TRUE):
-
-  1. Helper accepts elements/relationships/(optional) view usages + fixture allowlist and returns structured findings
-  2. Checks cover element types, relationship endpoints/types, abstraction signals, cross-view naming
-  3. Each finding explains the violation and proposes a compliant alternative; no silent apply; stdlib unittest coverage
-
-**Plans**: 1 plan
-
-Plans:
-
-- [x] 16-01: Implement compliance validator + fixture + tests
-
-### Phase 17: Contract and skill compliance binding
-
-**Goal**: Bind the validator into CREATE_PATH and live skill surfaces so modelling and QA paths explain-and-propose instead of silent-fixing.
-**Depends on**: Phase 16
-**Requirements**: COMP-08, COMP-09, COMP-10
-**Success Criteria** (what must be TRUE):
-
-  1. CREATE_PATH documents OBJ-5 offline validator + live MCP resource checks and no silent apply
-  2. model-qa and mutating specialists reference the validator / findings hand-back
-  3. Orchestrator documents consumption of compliance findings in hand-off/summary
-
-**Plans**: 1 plan
-
-Plans:
-
-- [x] 17-01: CREATE_PATH + model-qa/specialist/orchestrator compliance wiring
-
-### Phase 18: Offline evidence and regression lock
-
-**Goal**: Prove compliance validation offline and keep the suite green without reworking frozen surfaces.
-**Depends on**: Phase 17
-**Requirements**: COMP-11, COMP-12, COMP-13
-**Success Criteria** (what must be TRUE):
-
-  1. `docs/evidence/compliance-validation-offline/` shows pass/fail slices with explain-and-propose output
-  2. Full unit/structural suite green; viewpoint-select digest unchanged; thin checklist still usable or cleanly superseded
-  3. No NG violations; no rework of v1.0–v1.3 cores beyond compliance hooks
-
-**Plans**: 1 plan
-
-Plans:
-
-- [x] 18-01: Compliance offline evidence + regression lock
-
-## Progress
-
-**Execution Order:** 16 → 17 → 18
-
-| Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
-| 16. Compliance validation helpers | 1/1 | Complete    | 2026-08-28 |
-| 17. Contract and skill compliance binding | 1/1 | Complete    | 2026-08-28 |
-| 18. Offline evidence and regression lock | 1/1 | Complete    | 2026-08-28 |
-
----
-*Roadmap created: 2026-08-28 for milestone v1.4 (SEED-005 / OBJ-5)*
-
 <details>
 <summary>✅ v1.4 Compliance validation (Phases 16-18) — SHIPPED 2026-08-28</summary>
 
@@ -143,9 +73,73 @@ Archive: `.planning/milestones/v1.4-*` and `v1.4-phases/`
 
 </details>
 
-## Next
+- [ ] **Phase 19: Rationale and NL-change helpers** — Deepen offline rationale/completion-summary/NL-impact helpers (RAT-01..04)
+- [ ] **Phase 20: Contract and skill rationale binding** — CREATE_PATH OBJ-6; documentation + orchestrator wiring (RAT-05..07)
+- [ ] **Phase 21: Offline evidence and regression lock** — Rationale/NL-change evidence pack; green suite; freeze prior surfaces (RAT-08..10)
 
-Awaiting next seed/milestone (live MCP evidence and/or OBJ-6+).
+## Phase Details
+
+### Phase 19: Rationale and NL-change helpers
+
+**Goal**: Ship offline-deterministic helpers for deep rationale validation, completion-summary structure, and NL-change impact planning without calling MCP or embedding ArchiMate catalogs.
+**Depends on**: v1.4 complete (phase 18)
+**Requirements**: RAT-01, RAT-02, RAT-03, RAT-04
+**Success Criteria** (what must be TRUE):
+
+  1. Rationale helper rejects missing/empty required sections and accepts valid multi-view bundles
+  2. Completion-summary helper rejects incomplete summaries and accepts required-field packs
+  3. NL-change impact helper returns affected views + must-reuse IDs from a structured inventory + change note without mutating anything
+  4. Unit tests cover pass/fail for each helper; stdlib only
+
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 19-01: Rationale depth, completion-summary, and NL-change impact helpers + tests
+
+### Phase 20: Contract and skill rationale binding
+
+**Goal**: Bind OBJ-6 helpers into CREATE_PATH, archi-documentation, and orchestrator end-of-run without new mutating tools.
+**Depends on**: Phase 19
+**Requirements**: RAT-05, RAT-06, RAT-07
+**Success Criteria** (what must be TRUE):
+
+  1. CREATE_PATH documents OBJ-6 offline helpers + live MCP documentation-field writes and NL reuse-ID rules
+  2. archi-documentation procedure binds helpers and requires impact plan before NL regenerate
+  3. Orchestrator documents consumption of completion summary and optional NL-change loop
+
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 20-01: CREATE_PATH + documentation/orchestrator OBJ-6 wiring
+
+### Phase 21: Offline evidence and regression lock
+
+**Goal**: Prove rationale depth and NL-change safety offline and keep the suite green without reworking frozen surfaces.
+**Depends on**: Phase 20
+**Requirements**: RAT-08, RAT-09, RAT-10
+**Success Criteria** (what must be TRUE):
+
+  1. `docs/evidence/rationale-nl-change-offline/` shows valid/invalid rationale, NL impact plan, completion summary samples
+  2. Full unit/structural suite green; viewpoint-select digest unchanged; thin rationale heading API still usable or cleanly extended
+  3. No NG violations; no rework of v1.0–v1.4 cores beyond rationale hooks
+
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 21-01: Rationale/NL-change offline evidence + regression lock
+
+## Progress
+
+**Execution Order:** 19 → 20 → 21
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 19. Rationale and NL-change helpers | 0/1 | Not started | - |
+| 20. Contract and skill rationale binding | 0/1 | Not started | - |
+| 21. Offline evidence and regression lock | 0/1 | Not started | - |
 
 ---
-*Roadmap closed: 2026-08-28 for milestone v1.4 (SEED-005 / OBJ-5)*
+*Roadmap created: 2026-08-28 for milestone v1.5 (SEED-006 / OBJ-6)*

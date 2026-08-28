@@ -1,18 +1,16 @@
 ---
 gsd_state_version: 1.0
-milestone: v1.4
-milestone_name: Compliance validation
-status: Awaiting next milestone
-last_updated: "2026-08-28T00:31:50.609Z"
+milestone: v1.5
+milestone_name: Structured rationale depth
+status: planning
+last_updated: "2026-08-28T00:40:45.929Z"
 last_activity: 2026-08-28
-last_activity_desc: Milestone v1.4 completed and archived
-state_head: 3b674593ccfa8b53a1f2f5a9ce9d9183338b592a
 progress:
   total_phases: 3
-  completed_phases: 3
+  completed_phases: 0
   total_plans: 3
-  completed_plans: 3
-current_phase: 18
+  completed_plans: 0
+  percent: 0
 ---
 
 # Project State
@@ -22,15 +20,14 @@ current_phase: 18
 See: .planning/PROJECT.md (updated 2026-08-27)
 
 **Core value:** A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
-**Current focus:** Awaiting next milestone
+**Current focus:** v1.5 Structured rationale depth (SEED-006 / OBJ-6)
 
 ## Current Position
 
-Phase: Milestone v1.4 complete
+Phase: Not started (defining requirements)
 Plan: —
-Status: Awaiting next milestone
-Last activity: 2026-08-28 — Milestone v1.4 completed and archived
-
+Status: Defining requirements
+Last activity: 2026-08-28 — Milestone v1.5 started
 
 ## Performance Metrics
 

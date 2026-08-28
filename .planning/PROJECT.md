@@ -8,15 +8,16 @@ A suite of ZCode skills that turn the existing JGS Archi Bridge MCP into a gover
 
 A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
 
-## Current Milestone: v1.4 Compliance validation (SHIPPED 2026-08-28)
+## Current Milestone: v1.5 Structured rationale depth
 
-**Goal:** Deepen OBJ-5: offline-deterministic compliance validation of element types, relationship source/target combinations, permitted relationship types, abstraction levels, cross-view consistency, and naming; every violation is explained with a compliant alternative proposed, never silently applied.
+**Goal:** Deepen OBJ-6: each significant view carries structured rationale (purpose, stakeholders and concerns, viewpoint, questions answered, assumptions, decisions, exclusions, open questions) recorded in the model via MCP; users can request natural-language changes that regenerate views without damaging the shared model; modelling runs end with a completion summary.
 
 **Target features:**
-- Stdlib compliance validator over model-slice snapshots (types, endpoints, permitted relationships, abstraction, cross-view, naming)
-- Structured findings: violation explain + proposed compliant alternative (no silent fix)
-- CREATE_PATH OBJ-5 binding + model-qa / mutating specialist wiring
-- Offline compliance evidence pack; green regression; do not rework v1.0–v1.3 shipped cores beyond compliance hooks
+- Offline-deterministic rationale depth (schema validation beyond bare headings) and multi-view bundle checks
+- NL-change impact planning that names affected views and enforces reuse-of-IDs (no shared-element damage)
+- Completion-summary schema and hand-back contract
+- CREATE_PATH OBJ-6 binding + archi-documentation / orchestrator wiring
+- Offline rationale + NL-change evidence pack; green regression; do not rework v1.0–v1.4 shipped cores beyond rationale hooks
 
 ## Requirements
 
@@ -36,7 +37,7 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 - ✓ Orchestrator intent elicitation and plain-language view plan with confirmation gate — v1.0
 - ✓ Viewpoint trace contracts and specialist dispatch set (12 specialists) — v1.0
 - ✓ Inspect-before-create and compliance checklist path — v1.0
-- ✓ Rationale schema, completion summary pattern, evidence layout — v1.0
+- ✓ Thin rationale schema, completion summary pattern, evidence layout — v1.0
 - ✓ Viewpoint selection matrix helper (axes/keys only, NG-4) — v1.1
 - ✓ Full archi-viewpoint-select Trace Table + org-specific path — v1.1
 - ✓ Orchestrator Step 2b viewpoint grounding before confirmation — v1.1
@@ -44,8 +45,8 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 ### Active
 
+- [ ] OBJ-6 structured rationale depth / natural-language change path / completion summary (SEED-006)
 - [ ] Live Archi MCP E2E evidence for orchestrator + multi-specialist path (when Bridge available)
-- [ ] OBJ-6 structured rationale depth / natural-language change path (later seed)
 
 ### Out of Scope
 
@@ -56,17 +57,18 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 - Support for EA tools other than Archi (NG-5)
 - Database or durable skill-side persistence — skills are stateless; model holds content
 - Persisted organisation-specific viewpoint library as a side store (GOV-V2-01 stays future)
-- Full live MCP metamodel fetch as hard gate for v1.4 — offline fixture allowlists sufficient
-- Silent auto-apply of compliance fixes — NG-3; explain-and-propose only
+- Full live MCP metamodel fetch as hard gate for v1.5 — offline fixtures sufficient
+- Silent auto-apply of compliance or NL-change fixes — NG-3; explain-and-propose / user-governed only
+- Rework of v1.0–v1.4 shipped cores beyond rationale / documentation hooks
 
 ## Context
 
-- v1.0 shipped 2026-08-28: foundations, orchestrator, specialist contracts, thin compliance checklist, rationale/evidence conventions.
+- v1.0 shipped 2026-08-28: foundations, orchestrator, specialist contracts, thin compliance checklist, thin rationale/evidence conventions.
 - v1.1 shipped 2026-08-28 (SEED-002 / OBJ-2): matrix + trace schema helpers, full viewpoint-select, orchestrator wiring, offline evidence.
 - v1.2 shipped 2026-08-28 (SEED-003 / OBJ-3): full specialist bodies, CREATE_PATH contract, orchestrator Step 5, offline specialist evidence.
 - v1.3 shipped 2026-08-28 (SEED-004 / OBJ-4): reuse_inspect + naming_convention, CREATE_PATH coherence, offline multi-view reuse evidence.
 - v1.4 shipped 2026-08-28 (SEED-005 / OBJ-5): compliance_validate + fixture allowlist, CREATE_PATH OBJ-5 binding, offline compliance evidence; thin checklist retained.
-- v1.0 COMP-01/COMP-02 shipped a thin checklist gate; v1.4 deepens real validation over snapshots without embedding ArchiMate catalogs (NG-4).
+- v1.0 RATE-01..03 shipped thin schema + documentation skill contract; v1.5 deepens offline helpers, NL-change safety, CREATE_PATH binding, and offline evidence without live Bridge hard gate.
 - Runtime dependency: JGS Archi Bridge MCP at default `http://127.0.0.1:18090/mcp`.
 - Delivery: skills under `skills/`, install via `python install.py` to `~/.zcode/skills/`.
 - Python 3.10+ stdlib-only helpers; no third-party deps.
@@ -98,6 +100,7 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 | v1.3 deepens OBJ-4 coherence only | SEED-004; leave v1.0–v1.2 cores intact except coherence hooks | ✓ Good |
 | v1.4 deepens OBJ-5 compliance only | SEED-005; fixture allowlists for offline checks; MCP resources remain SoT live | ✓ Good |
 | Compliance findings explain+propose never silent-apply | COMP-02 / NG-3 | ✓ Good |
+| v1.5 deepens OBJ-6 rationale/NL-change/summary only | SEED-006 final VISION objective; offline fixtures hard gate | pending |
 
 ## Evolution
 
@@ -117,4 +120,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-08-28 after v1.4 milestone closeout*
+*Last updated: 2026-08-28 — Milestone v1.5 started (SEED-006 / OBJ-6)*
