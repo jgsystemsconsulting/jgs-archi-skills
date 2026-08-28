@@ -10,11 +10,11 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 ### Compliance validation helpers
 
-- [ ] **COMP-03**: Stdlib helper deepens offline compliance beyond boolean checklist: accepts a model-slice snapshot (elements, relationships, optional view usages) plus an allowlist/fixture of known types and permitted relationship patterns; returns structured findings; no MCP calls inside the helper; no third-party deps
-- [ ] **COMP-04**: Validator checks element types against the fixture allowlist (unknown/illegal type → finding); fixture is a captured reference snapshot under `docs/` or `helpers/fixtures/`, not a skill-owned ArchiMate catalog dump (NG-4)
-- [ ] **COMP-05**: Validator checks relationship source/target type combinations and relationship type permission against the fixture; illegal combo or type → finding
-- [ ] **COMP-06**: Validator checks abstraction-level consistency signals and cross-view naming consistency (may call or mirror `naming_convention` helpers); inconsistent abstraction or naming → finding
-- [ ] **COMP-07**: Every finding includes: check id, object refs, problem explanation, and at least one proposed compliant alternative; helper never mutates the model or auto-applies fixes (COMP-02 / NG-3)
+- [x] **COMP-03**: Stdlib helper deepens offline compliance beyond boolean checklist: accepts a model-slice snapshot (elements, relationships, optional view usages) plus an allowlist/fixture of known types and permitted relationship patterns; returns structured findings; no MCP calls inside the helper; no third-party deps
+- [x] **COMP-04**: Validator checks element types against the fixture allowlist (unknown/illegal type → finding); fixture is a captured reference snapshot under `docs/` or `helpers/fixtures/`, not a skill-owned ArchiMate catalog dump (NG-4)
+- [x] **COMP-05**: Validator checks relationship source/target type combinations and relationship type permission against the fixture; illegal combo or type → finding
+- [x] **COMP-06**: Validator checks abstraction-level consistency signals and cross-view naming consistency (may call or mirror `naming_convention` helpers); inconsistent abstraction or naming → finding
+- [x] **COMP-07**: Every finding includes: check id, object refs, problem explanation, and at least one proposed compliant alternative; helper never mutates the model or auto-applies fixes (COMP-02 / NG-3)
 
 ### Contract and skill binding
 
@@ -63,11 +63,11 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| COMP-03 | Phase 16 | Pending |
-| COMP-04 | Phase 16 | Pending |
-| COMP-05 | Phase 16 | Pending |
-| COMP-06 | Phase 16 | Pending |
-| COMP-07 | Phase 16 | Pending |
+| COMP-03 | Phase 16 | Complete |
+| COMP-04 | Phase 16 | Complete |
+| COMP-05 | Phase 16 | Complete |
+| COMP-06 | Phase 16 | Complete |
+| COMP-07 | Phase 16 | Complete |
 | COMP-08 | Phase 17 | Pending |
 | COMP-09 | Phase 17 | Pending |
 | COMP-10 | Phase 17 | Pending |

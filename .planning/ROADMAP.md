@@ -61,7 +61,7 @@ Archive: `.planning/milestones/v1.3-*` and `v1.3-phases/`
 
 </details>
 
-- [ ] **Phase 16: Compliance validation helpers** — Deterministic offline validator + findings schema + unit tests (COMP-03..07)
+- [x] **Phase 16: Compliance validation helpers** — Deterministic offline validator + findings schema + unit tests (COMP-03..07) (completed 2026-08-28)
 - [ ] **Phase 17: Contract and skill compliance binding** — CREATE_PATH OBJ-5; model-qa / specialists / orchestrator wiring (COMP-08..10)
 - [ ] **Phase 18: Offline evidence and regression lock** — Compliance evidence pack; green suite; freeze viewpoint-select (COMP-11..13)
 
@@ -82,7 +82,7 @@ Archive: `.planning/milestones/v1.3-*` and `v1.3-phases/`
 
 Plans:
 
-- [ ] 16-01: Implement compliance validator + fixture + tests
+- [x] 16-01: Implement compliance validator + fixture + tests
 
 ### Phase 17: Contract and skill compliance binding
 
@@ -124,7 +124,7 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 16. Compliance validation helpers | 0/1 | Not started | - |
+| 16. Compliance validation helpers | 1/1 | Complete    | 2026-08-28 |
 | 17. Contract and skill compliance binding | 0/1 | Not started | - |
 | 18. Offline evidence and regression lock | 0/1 | Not started | - |
 
