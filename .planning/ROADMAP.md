@@ -73,8 +73,8 @@ Archive: `.planning/milestones/v1.4-*` and `v1.4-phases/`
 
 </details>
 
-- [ ] **Phase 19: Rationale and NL-change helpers** — Deepen offline rationale/completion-summary/NL-impact helpers (RAT-01..04)
-- [ ] **Phase 20: Contract and skill rationale binding** — CREATE_PATH OBJ-6; documentation + orchestrator wiring (RAT-05..07)
+- [x] **Phase 19: Rationale and NL-change helpers** — Deepen offline rationale/completion-summary/NL-impact helpers (RAT-01..04) (completed 2026-08-28)
+- [x] **Phase 20: Contract and skill rationale binding** — CREATE_PATH OBJ-6; documentation + orchestrator wiring (RAT-05..07) (completed 2026-08-28)
 - [ ] **Phase 21: Offline evidence and regression lock** — Rationale/NL-change evidence pack; green suite; freeze prior surfaces (RAT-08..10)
 
 ## Phase Details
@@ -95,7 +95,7 @@ Archive: `.planning/milestones/v1.4-*` and `v1.4-phases/`
 
 Plans:
 
-- [ ] 19-01: Rationale depth, completion-summary, and NL-change impact helpers + tests
+- [x] 19-01: Rationale depth, completion-summary, and NL-change impact helpers + tests
 
 ### Phase 20: Contract and skill rationale binding
 
@@ -112,7 +112,7 @@ Plans:
 
 Plans:
 
-- [ ] 20-01: CREATE_PATH + documentation/orchestrator OBJ-6 wiring
+- [x] 20-01: CREATE_PATH + documentation/orchestrator OBJ-6 wiring
 
 ### Phase 21: Offline evidence and regression lock
 
@@ -137,8 +137,8 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 19. Rationale and NL-change helpers | 0/1 | Not started | - |
-| 20. Contract and skill rationale binding | 0/1 | Not started | - |
+| 19. Rationale and NL-change helpers | 1/1 | Complete    | 2026-08-28 |
+| 20. Contract and skill rationale binding | 1/1 | Complete    | 2026-08-28 |
 | 21. Offline evidence and regression lock | 0/1 | Not started | - |
 
 ---

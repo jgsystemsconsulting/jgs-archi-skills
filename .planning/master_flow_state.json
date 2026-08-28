@@ -1,14 +1,10 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 19,
-  "active_phase_dir": ".planning/phases/19-rationale-and-nl-change-helpers",
-  "active_state": ".planning/phases/19-rationale-and-nl-change-helpers/master_flow_state.json",
-  "lock": {
-    "phase": 19,
-    "session_hint": "master-flow",
-    "updated_at": "2026-08-28T00:49:57.553Z"
-  },
-  "updated_at": "2026-08-28T00:49:57.554Z",
-  "notes": "Phase 19 verify passed. Next: 19"
+  "active_phase": 21,
+  "active_phase_dir": ".planning/phases/21-offline-evidence-and-regression-lock",
+  "active_state": ".planning/phases/21-offline-evidence-and-regression-lock/master_flow_state.json",
+  "lock": null,
+  "updated_at": "2026-08-28T00:52:01.878Z",
+  "notes": "Phase 20 verify passed. Next: 21"
 }

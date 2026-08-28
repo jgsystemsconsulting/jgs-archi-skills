@@ -10,16 +10,16 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 ### Rationale and summary helpers
 
-- [ ] **RAT-01**: Stdlib helper deepens offline rationale validation beyond bare H2 presence: required OBJ-6 sections present, non-empty body per section (after strip), stable section order optional warning; no MCP calls; no third-party deps
-- [ ] **RAT-02**: Helper accepts single-view rationale markdown and multi-view bundles (index + per-view files or concatenated docs) and reports per-view findings
-- [ ] **RAT-03**: Stdlib helper validates completion-summary structure (views touched, decisions, open questions, confirmation status, specialists run at minimum); exit non-zero on missing required blocks
-- [ ] **RAT-04**: Stdlib NL-change impact helper accepts a natural-language change note plus a view inventory snapshot and returns: affected view ids/names, proposed regenerate scope, shared-element IDs that must be reused (never recreated), and explicit exclusions; never mutates a model
+- [x] **RAT-01**: Stdlib helper deepens offline rationale validation beyond bare H2 presence: required OBJ-6 sections present, non-empty body per section (after strip), stable section order optional warning; no MCP calls; no third-party deps
+- [x] **RAT-02**: Helper accepts single-view rationale markdown and multi-view bundles (index + per-view files or concatenated docs) and reports per-view findings
+- [x] **RAT-03**: Stdlib helper validates completion-summary structure (views touched, decisions, open questions, confirmation status, specialists run at minimum); exit non-zero on missing required blocks
+- [x] **RAT-04**: Stdlib NL-change impact helper accepts a natural-language change note plus a view inventory snapshot and returns: affected view ids/names, proposed regenerate scope, shared-element IDs that must be reused (never recreated), and explicit exclusions; never mutates a model
 
 ### Contract and skill binding
 
-- [ ] **RAT-05**: `docs/CREATE_PATH.md` gains an OBJ-6 rationale / NL-change / completion-summary section: when to draft and validate rationale, how to write documentation fields via MCP after confirmation, NL-change reuse-ID rules, completion summary required fields
-- [ ] **RAT-06**: `archi-documentation` procedure binds deepened helpers (rationale, completion summary, NL-change impact); Step 4 NL path requires impact plan before regenerate; hand-back includes schema validation status
-- [ ] **RAT-07**: `archi-orchestrator` end-of-run path documents consuming documentation specialist completion summary and optional NL-change loop (no new mutating tools; user-governed)
+- [x] **RAT-05**: `docs/CREATE_PATH.md` gains an OBJ-6 rationale / NL-change / completion-summary section: when to draft and validate rationale, how to write documentation fields via MCP after confirmation, NL-change reuse-ID rules, completion summary required fields
+- [x] **RAT-06**: `archi-documentation` procedure binds deepened helpers (rationale, completion summary, NL-change impact); Step 4 NL path requires impact plan before regenerate; hand-back includes schema validation status
+- [x] **RAT-07**: `archi-orchestrator` end-of-run path documents consuming documentation specialist completion summary and optional NL-change loop (no new mutating tools; user-governed)
 
 ### Evidence and freeze
 
@@ -62,13 +62,13 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| RAT-01 | Phase 19 | Pending |
-| RAT-02 | Phase 19 | Pending |
-| RAT-03 | Phase 19 | Pending |
-| RAT-04 | Phase 19 | Pending |
-| RAT-05 | Phase 20 | Pending |
-| RAT-06 | Phase 20 | Pending |
-| RAT-07 | Phase 20 | Pending |
+| RAT-01 | Phase 19 | Complete |
+| RAT-02 | Phase 19 | Complete |
+| RAT-03 | Phase 19 | Complete |
+| RAT-04 | Phase 19 | Complete |
+| RAT-05 | Phase 20 | Complete |
+| RAT-06 | Phase 20 | Complete |
+| RAT-07 | Phase 20 | Complete |
 | RAT-08 | Phase 21 | Pending |
 | RAT-09 | Phase 21 | Pending |
 | RAT-10 | Phase 21 | Pending |
