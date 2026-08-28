@@ -1,0 +1,1 @@
+Please regenerate the invoice business view with clearer stalls between receipt and posting.

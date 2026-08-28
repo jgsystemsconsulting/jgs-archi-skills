@@ -164,7 +164,7 @@ After the model-qa specialist (or a specialist self-check), consume compliance f
 
 ### Documentation and NL-change loop (OBJ-6)
 
-After modelling content is stable (typically after layout), dispatch `archi-documentation` last:
+After modelling content is stable (typically after layout), dispatch the documentation specialist (archi-documentation) last:
 
 - Consume its **completion summary** (Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run) and schema validation status.
 - If the user requests natural-language changes: run the documentation NL path (impact plan via `nl_change_impact` → user confirm → regenerate with must-reuse IDs → rationale deltas). Do not invent new mutating tools; reuse layer/layout specialists for regenerate scope only.

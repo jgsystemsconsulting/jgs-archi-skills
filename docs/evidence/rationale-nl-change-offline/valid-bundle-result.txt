@@ -1,0 +1,1 @@
+ok: rationale bundle valid (8 sections)

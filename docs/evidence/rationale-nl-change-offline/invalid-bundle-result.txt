@@ -1,0 +1,9 @@
+rationale findings:
+  view=empty-decisions [empty_section] section ## Decisions has empty body
+  view=missing-sections [missing_section] missing required section ## Stakeholders and Concerns
+  view=missing-sections [missing_section] missing required section ## Viewpoint
+  view=missing-sections [missing_section] missing required section ## Questions Answered
+  view=missing-sections [missing_section] missing required section ## Assumptions
+  view=missing-sections [missing_section] missing required section ## Decisions
+  view=missing-sections [missing_section] missing required section ## Exclusions
+  view=missing-sections [missing_section] missing required section ## Open Questions

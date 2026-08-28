@@ -1,0 +1,1 @@
+ok: completion summary has 5 required blocks

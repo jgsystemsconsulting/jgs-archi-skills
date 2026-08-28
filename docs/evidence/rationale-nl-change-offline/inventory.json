@@ -1,0 +1,57 @@
+{
+  "views": [
+    {
+      "id": "v-biz",
+      "name": "Invoice As-Is Business",
+      "keywords": [
+        "invoice",
+        "business",
+        "process"
+      ]
+    },
+    {
+      "id": "v-app",
+      "name": "Invoice Application Support",
+      "keywords": [
+        "invoice",
+        "application",
+        "erp"
+      ]
+    },
+    {
+      "id": "v-tech",
+      "name": "Hosting Baseline",
+      "keywords": [
+        "hosting",
+        "infra"
+      ]
+    }
+  ],
+  "elements": [
+    {
+      "id": "el-customer",
+      "name": "Customer",
+      "shared": true,
+      "view_ids": [
+        "v-biz",
+        "v-app"
+      ]
+    },
+    {
+      "id": "el-invoice-proc",
+      "name": "Handle Invoice",
+      "shared": false,
+      "view_ids": [
+        "v-biz"
+      ]
+    },
+    {
+      "id": "el-host",
+      "name": "App Host",
+      "shared": false,
+      "view_ids": [
+        "v-tech"
+      ]
+    }
+  ]
+}

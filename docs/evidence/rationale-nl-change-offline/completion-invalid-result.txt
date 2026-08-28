@@ -1,0 +1,5 @@
+completion-summary findings:
+  [missing_block] missing required block: Decisions
+  [missing_block] missing required block: Open Questions
+  [missing_block] missing required block: Confirmation Status
+  [missing_block] missing required block: Specialists Run

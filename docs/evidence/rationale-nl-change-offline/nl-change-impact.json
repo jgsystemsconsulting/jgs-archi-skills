@@ -1,0 +1,26 @@
+{
+  "affected_views": [
+    {
+      "id": "v-biz",
+      "name": "Invoice As-Is Business"
+    },
+    {
+      "id": "v-app",
+      "name": "Invoice Application Support"
+    }
+  ],
+  "regenerate_scope": [
+    "v-biz",
+    "v-app"
+  ],
+  "must_reuse_element_ids": [
+    "el-customer"
+  ],
+  "exclusions": [
+    "Do not delete shared structure to refresh visuals",
+    "Do not recreate elements listed in must_reuse_element_ids",
+    "Do not auto-apply NL changes without user confirmation (NG-3)"
+  ],
+  "notes": [],
+  "change_note": "Please regenerate the invoice business view with clearer stalls between receipt and posting."
+}
