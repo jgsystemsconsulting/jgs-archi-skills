@@ -1,9 +1,25 @@
-# VERIFICATION — Phase 19
+---
+status: passed
+phase: 19
+---
+# 19 Verification
 
 **Verdict:** passed
 
-## Notes
-All RAT-01..04 success criteria met. 59 tests OK. Thin rationale API preserved.
+## Evidence
 
-## Scope
-helpers/rationale_schema.py, helpers/completion_summary_schema.py, helpers/nl_change_impact.py, matching tests.
+- `python -m unittest discover -s tests -q` → Ran 59 tests OK
+- Thin CLI: valid rationale exit 0; missing section exit 1
+- completion_summary_schema + nl_change_impact unit tests green
+- Files: helpers/rationale_schema.py, helpers/completion_summary_schema.py, helpers/nl_change_impact.py + tests
+
+## Requirements
+
+| ID | Status |
+|----|--------|
+| RAT-01 | met |
+| RAT-02 | met |
+| RAT-03 | met |
+| RAT-04 | met |
+
+Inline degraded-tier verify (Agent spawn unavailable).
