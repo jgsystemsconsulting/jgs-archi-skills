@@ -24,9 +24,9 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 ### Evidence and freeze
 
-- [ ] **COMP-11**: Offline evidence under `docs/evidence/compliance-validation-offline/` shows pass and fail slices with explain-and-propose findings (types, illegal relationship, naming/abstraction)
-- [ ] **COMP-12**: Full unit/structural suite green; `archi-viewpoint-select` remains frozen at the v1.1 digest; existing `compliance_checklist` thin gate remains usable or is clearly superseded without breaking callers
-- [ ] **COMP-13**: No rework of v1.0–v1.3 shipped cores beyond compliance hooks; NG-1..5 respected
+- [x] **COMP-11**: Offline evidence under `docs/evidence/compliance-validation-offline/` shows pass and fail slices with explain-and-propose findings (types, illegal relationship, naming/abstraction)
+- [x] **COMP-12**: Full unit/structural suite green; `archi-viewpoint-select` remains frozen at the v1.1 digest; existing `compliance_checklist` thin gate remains usable or is clearly superseded without breaking callers
+- [x] **COMP-13**: No rework of v1.0–v1.3 shipped cores beyond compliance hooks; NG-1..5 respected
 
 ## Future Requirements (not this milestone)
 
@@ -71,9 +71,9 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 | COMP-08 | Phase 17 | Complete |
 | COMP-09 | Phase 17 | Complete |
 | COMP-10 | Phase 17 | Complete |
-| COMP-11 | Phase 18 | Pending |
-| COMP-12 | Phase 18 | Pending |
-| COMP-13 | Phase 18 | Pending |
+| COMP-11 | Phase 18 | Complete |
+| COMP-12 | Phase 18 | Complete |
+| COMP-13 | Phase 18 | Complete |
 
 **Coverage:**
 
