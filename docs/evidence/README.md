@@ -23,3 +23,8 @@ EVID-01 (orchestrator live E2E): add `docs/evidence/orchestrator-live/` when Arc
 - `coherence-reuse-offline/` — v1.3 OBJ-4 multi-view reuse + naming fixtures
 - `compliance-validation-offline/` — v1.4 OBJ-5 compliance_validate pass/fail slices + freeze
 - `rationale-nl-change-offline/` — v1.5 OBJ-6 rationale depth + NL-change impact + completion-summary fixtures
+
+- `eval-loop/` — v1.6 eval loop: frozen scenario + baseline (ITERATION-0) and
+  improvement iterations (ITERATION-1) with per-iteration exports, findings,
+  transcripts, rationale bundles, and PNG evidence; final + confirmation
+  snapshots in `iter-final/` and `iter-confirm/`

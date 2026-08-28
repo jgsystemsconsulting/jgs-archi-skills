@@ -1,0 +1,412 @@
+{
+ "usages": [
+  {
+   "id": "id-d432f939da4d46cc847202de5bf493ae",
+   "name": "Chief Operating Officer",
+   "type": "Stakeholder",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-6f34d02c1b0d4cff90dac5fa0fd85af1",
+   "name": "Head of Customer Service",
+   "type": "Stakeholder",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-774544b659fe40558822f502b53f1816",
+   "name": "Chief Financial Officer",
+   "type": "Stakeholder",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-a794500090a048aa93860522c6e9c863",
+   "name": "IT Manager",
+   "type": "Stakeholder",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-9d206ea9dd144f68a0589b856dd7b895",
+   "name": "Customer",
+   "type": "Stakeholder",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-b341b0e84d534d0ca33066de68cb0ad8",
+   "name": "Rising Customer Expectations for Shipment Visibility",
+   "type": "Driver",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-a5483f238f82409aa81d1a4b011fb05f",
+   "name": "Margin Pressure on Brokerage Operations",
+   "type": "Driver",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-b9c59c5e933a44639c1ca294b611cf3b",
+   "name": "Growing Volume of Carrier and Shipment Data",
+   "type": "Driver",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-a1f9b2bff6184750a5135c9ae93dbb89",
+   "name": "Carrier Performance Tracked in Offline Spreadsheets",
+   "type": "Assessment",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-c95b6cb441f34569a49b2f5c30caa3b8",
+   "name": "Customer Service Staff Re-key Order Data Between Systems",
+   "type": "Assessment",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-7ba2574fbd38405e8348ee941b99b7eb",
+   "name": "Reduce Quote Turnaround From 4 Hours to 30 Minutes",
+   "type": "Goal",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-359ccafc090949678a5428283dd5de39",
+   "name": "Increase On-time Delivery Rate to 95 Percent",
+   "type": "Goal",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-9e51c249ce2d4cfe981c376bf55fafa5",
+   "name": "Provide Single Source of Truth for Carrier Data",
+   "type": "Goal",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-91f0771adf8348eba2f9b8fd270477f7",
+   "name": "Reduce Cost Per Shipment by 12 Percent",
+   "type": "Goal",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-cbb6557ac43f4920b0c0c568ab67da20",
+   "name": "Faster, More Consistent Customer Answers",
+   "type": "Outcome",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-b9064796ecb048d996ef3e222e4797a8",
+   "name": "Reduced Operating Cost Per Shipment",
+   "type": "Outcome",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-e47b3557c7654064b43d9e3ff3f0ba0f",
+   "name": "Provide Self-service Shipment Tracking for Customers",
+   "type": "Requirement",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-5e13c4a879504c3591909403d0adb29c",
+   "name": "Integrate Carrier Data Feeds Into One Platform",
+   "type": "Requirement",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-1282d38ff44b40c6ae60cd5313f0ed01",
+   "name": "Standardize Customer Service Process Across Branches",
+   "type": "Requirement",
+   "view": "Motivation Overview"
+  },
+  {
+   "id": "id-3cb4b47707a44688adcaf85a18ae2930",
+   "name": "Shipment Planning",
+   "type": "Capability",
+   "view": "Capability Map"
+  },
+  {
+   "id": "id-4a1aa40c2f7b4e84925c83d85017b804",
+   "name": "Carrier Management",
+   "type": "Capability",
+   "view": "Capability Map"
+  },
+  {
+   "id": "id-12776dccc1c346f5bb83956accd6659d",
+   "name": "Customer Inquiry Handling",
+   "type": "Capability",
+   "view": "Capability Map"
+  },
+  {
+   "id": "id-5df4b6272fa7470ab7f804db96b604e7",
+   "name": "Order Management",
+   "type": "Capability",
+   "view": "Capability Map"
+  },
+  {
+   "id": "id-c9a693679eff4f89ba016e16d886cd16",
+   "name": "Performance Analytics",
+   "type": "Capability",
+   "view": "Capability Map"
+  },
+  {
+   "id": "id-984981566be6434f9d7631af3baf52ac",
+   "name": "Carrier Network",
+   "type": "Resource",
+   "view": "Capability Map"
+  },
+  {
+   "id": "id-746e970ebca0496f82f5384d8c4fa155",
+   "name": "Customer Service Team",
+   "type": "Resource",
+   "view": "Capability Map"
+  },
+  {
+   "id": "id-351c1cbdd4aa448a9a045a4a521511e1",
+   "name": "Integration Platform",
+   "type": "Resource",
+   "view": "Capability Map"
+  },
+  {
+   "id": "id-cf9e87be4a77460eb94365fdfdc8e685",
+   "name": "Customer Service Representative",
+   "type": "BusinessActor",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-6c850f2d8bc9442fab624f2471dc79aa",
+   "name": "Operations Planner",
+   "type": "BusinessActor",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-ba27c5d7e64b4afabbf2672080b7fe5a",
+   "name": "Handle Customer Inquiry",
+   "type": "BusinessProcess",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-4c08a9e32329465cb704f9672301fc77",
+   "name": "Quote Shipment",
+   "type": "BusinessProcess",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-c48dc80ffc0a4418ab31220fc9b36085",
+   "name": "Plan Shipment",
+   "type": "BusinessProcess",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-af63134fdb0242abad134f6797f8671f",
+   "name": "Track Shipment",
+   "type": "BusinessProcess",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-798260538b644116b82948753db91860",
+   "name": "Onboard Carrier",
+   "type": "BusinessProcess",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-01c4b2dd7df14358ade39fcc8284e110",
+   "name": "Quoting Service",
+   "type": "BusinessService",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-1d71f5c9a41f4a37a3a8e3cf1f841ea1",
+   "name": "Tracking Service",
+   "type": "BusinessService",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-f9e05bccdd5c4b359eb917d29596278d",
+   "name": "Carrier Onboarding Service",
+   "type": "BusinessService",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-0c93a8955de741d38e395ccc4adc6145",
+   "name": "Shipment Order",
+   "type": "BusinessObject",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-6d0e7fd4bdf34e84b19e7af4e5b0708b",
+   "name": "Carrier Profile",
+   "type": "BusinessObject",
+   "view": "Customer Service Operations"
+  },
+  {
+   "id": "id-4930c772b60547a692f2620d00f7a63d",
+   "name": "CarrierDesk TMS",
+   "type": "ApplicationComponent",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-51c5b4c1e1da457a9e0517f1ba36bf6c",
+   "name": "SalesCloud CRM",
+   "type": "ApplicationComponent",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-d0e6564de12c4db4b6ceec6f1a0b992f",
+   "name": "TrackIt Customer Portal",
+   "type": "ApplicationComponent",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-a376915c4fb34f5aac284efe357cd03c",
+   "name": "FreightHub Integration Hub",
+   "type": "ApplicationComponent",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-19c56dc7d29e418b9fa655d3d461bd31",
+   "name": "Quote Management Service",
+   "type": "ApplicationService",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-f9146755eb504b92adeb85c61a4e1476",
+   "name": "Shipment Tracking Service",
+   "type": "ApplicationService",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-e4afd685a96b4a2d88b62a0ffe93cb3d",
+   "name": "Carrier Data Management Service",
+   "type": "ApplicationService",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-7c3d4285892545a29c8bd01c64ff2b4c",
+   "name": "Rate Calculation",
+   "type": "ApplicationFunction",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-3b1f7ef03aef42ab93604f0018383eed",
+   "name": "Status Aggregation",
+   "type": "ApplicationFunction",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-2a64bfe28c834bb3bb9ea3730e7c627c",
+   "name": "Shipment Record",
+   "type": "DataObject",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-d8486b13200847ed810aafe30b0e6680",
+   "name": "Carrier Scorecard",
+   "type": "DataObject",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-09d61a96187748bb809ed07a9e6d477c",
+   "name": "Customer Record",
+   "type": "DataObject",
+   "view": "Application Support"
+  },
+  {
+   "id": "id-8b914be58ae24297a2ff30b34947eca5",
+   "name": "Brokerage Application Server",
+   "type": "Node",
+   "view": "Technology Platform"
+  },
+  {
+   "id": "id-07328411bffd4e19b92e624555bacf5c",
+   "name": "Integration Gateway",
+   "type": "Node",
+   "view": "Technology Platform"
+  },
+  {
+   "id": "id-30a8b9af40714def90b3b0c01233862a",
+   "name": "Message Broker",
+   "type": "SystemSoftware",
+   "view": "Technology Platform"
+  },
+  {
+   "id": "id-ebcf0643e452466aa8a0c9299c866219",
+   "name": "API Management Platform",
+   "type": "SystemSoftware",
+   "view": "Technology Platform"
+  },
+  {
+   "id": "id-97478d13542e48eea21d85473ad1fb92",
+   "name": "carrierdesk-tms.ear",
+   "type": "Artifact",
+   "view": "Technology Platform"
+  },
+  {
+   "id": "id-46d47c088fe245c8a97fb4028a7d2a9f",
+   "name": "trackit-portal.war",
+   "type": "Artifact",
+   "view": "Technology Platform"
+  },
+  {
+   "id": "id-cb7c649cfbfa4474b33ad8cb8083ef14",
+   "name": "freighthub-integration.jar",
+   "type": "Artifact",
+   "view": "Technology Platform"
+  },
+  {
+   "id": "id-da14bf9d38cb4140b847c047508d8d47",
+   "name": "Secure Message Transport",
+   "type": "TechnologyService",
+   "view": "Technology Platform"
+  },
+  {
+   "id": "id-b9c59c5e933a44639c1ca294b611cf3b",
+   "name": "Growing Volume of Carrier and Shipment Data",
+   "type": "Driver",
+   "view": "End-to-End Traceability"
+  },
+  {
+   "id": "id-9e51c249ce2d4cfe981c376bf55fafa5",
+   "name": "Provide Single Source of Truth for Carrier Data",
+   "type": "Goal",
+   "view": "End-to-End Traceability"
+  },
+  {
+   "id": "id-5e13c4a879504c3591909403d0adb29c",
+   "name": "Integrate Carrier Data Feeds Into One Platform",
+   "type": "Requirement",
+   "view": "End-to-End Traceability"
+  },
+  {
+   "id": "id-4a1aa40c2f7b4e84925c83d85017b804",
+   "name": "Carrier Management",
+   "type": "Capability",
+   "view": "End-to-End Traceability"
+  },
+  {
+   "id": "id-798260538b644116b82948753db91860",
+   "name": "Onboard Carrier",
+   "type": "BusinessProcess",
+   "view": "End-to-End Traceability"
+  },
+  {
+   "id": "id-e4afd685a96b4a2d88b62a0ffe93cb3d",
+   "name": "Carrier Data Management Service",
+   "type": "ApplicationService",
+   "view": "End-to-End Traceability"
+  },
+  {
+   "id": "id-a376915c4fb34f5aac284efe357cd03c",
+   "name": "FreightHub Integration Hub",
+   "type": "ApplicationComponent",
+   "view": "End-to-End Traceability"
+  },
+  {
+   "id": "id-cb7c649cfbfa4474b33ad8cb8083ef14",
+   "name": "freighthub-integration.jar",
+   "type": "Artifact",
+   "view": "End-to-End Traceability"
+  },
+  {
+   "id": "id-07328411bffd4e19b92e624555bacf5c",
+   "name": "Integration Gateway",
+   "type": "Node",
+   "view": "End-to-End Traceability"
+  }
+ ]
+}

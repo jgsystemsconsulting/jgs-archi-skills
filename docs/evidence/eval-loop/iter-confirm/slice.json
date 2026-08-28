@@ -1,0 +1,1204 @@
+{
+ "elements": [
+  {
+   "id": "id-3584bea09cc540528bbf751aa58f459f",
+   "name": "Shipment Planning",
+   "type": "Capability",
+   "layer": "Strategy",
+   "documentation": "Ability to book carriers and schedule shipments reliably at current volumes."
+  },
+  {
+   "id": "id-67783ffdc5c8417b87173e4afeddeac8",
+   "name": "Carrier Management",
+   "type": "Capability",
+   "layer": "Strategy",
+   "documentation": "Ability to vet, contract, and monitor carriers on current performance data."
+  },
+  {
+   "id": "id-27beb8fd98ab427f98d667b1e7aed70b",
+   "name": "Customer Inquiry Handling",
+   "type": "Capability",
+   "layer": "Strategy",
+   "documentation": "Ability to receive, triage, and answer customer inquiries consistently across branches."
+  },
+  {
+   "id": "id-5f09ff78c9e94e9bac411fc462565d4a",
+   "name": "Order Management",
+   "type": "Capability",
+   "layer": "Strategy",
+   "documentation": "Ability to manage the shipment order lifecycle from quote to delivery confirmation."
+  },
+  {
+   "id": "id-6ae2c789176147c5a2c6b492c2b1461a",
+   "name": "Performance Analytics",
+   "type": "Capability",
+   "layer": "Strategy",
+   "documentation": "Ability to measure carrier and shipment performance on current, governed data."
+  },
+  {
+   "id": "id-929dfa81c21b4366bd0ba88942dd1f3c",
+   "name": "Carrier Network",
+   "type": "Resource",
+   "layer": "Strategy",
+   "documentation": "The contracted carrier base Meridian can plan and book against."
+  },
+  {
+   "id": "id-628b3c4391634877969cb2acd90f7c11",
+   "name": "Customer Service Team",
+   "type": "Resource",
+   "layer": "Strategy",
+   "documentation": "Trained service staff across branches who run inquiry and order handling."
+  },
+  {
+   "id": "id-e022237dc95440e6978bc3722fd44e99",
+   "name": "Integration Platform",
+   "type": "Resource",
+   "layer": "Strategy",
+   "documentation": "The integration capability estate (hub, broker, APIs) available to connect systems."
+  },
+  {
+   "id": "id-aca72e37108c4264b3e79485ff63dc81",
+   "name": "Customer Service Representative",
+   "type": "BusinessActor",
+   "layer": "Business",
+   "documentation": "Front-line employee who takes inquiries, quotes shipments, and updates customers."
+  },
+  {
+   "id": "id-10f2b04ee8dc4046a52258087ce02715",
+   "name": "Operations Planner",
+   "type": "BusinessActor",
+   "layer": "Business",
+   "documentation": "Back-office planner who books carriers, schedules shipments, and onboards carriers."
+  },
+  {
+   "id": "id-63fc7951b923496ca0f2213c96bb7faa",
+   "name": "Handle Customer Inquiry",
+   "type": "BusinessProcess",
+   "layer": "Business",
+   "documentation": "Intake and triage of customer questions; decides whether pricing or tracking is needed."
+  },
+  {
+   "id": "id-8c0c2c936492477496e9e3f10c396a88",
+   "name": "Quote Shipment",
+   "type": "BusinessProcess",
+   "layer": "Business",
+   "documentation": "Produces a priced quote for a shipment request and records the resulting order."
+  },
+  {
+   "id": "id-ce8bf1fef373439d9d2d477c94c2110b",
+   "name": "Plan Shipment",
+   "type": "BusinessProcess",
+   "layer": "Business",
+   "documentation": "Selects a carrier, books capacity, and schedules the shipment."
+  },
+  {
+   "id": "id-af8af9b33e024d1482529a61808a3ddc",
+   "name": "Track Shipment",
+   "type": "BusinessProcess",
+   "layer": "Business",
+   "documentation": "Monitors in-transit shipments and keeps the customer's status record current."
+  },
+  {
+   "id": "id-d0bae9ec337448a2978b035d42b15519",
+   "name": "Onboard Carrier",
+   "type": "BusinessProcess",
+   "layer": "Business",
+   "documentation": "Vets a new carrier, contracts it, and creates its governed carrier profile."
+  },
+  {
+   "id": "id-0f25a0f7cda443b0bdeb32f4a9d885ef",
+   "name": "Quoting Service",
+   "type": "BusinessService",
+   "layer": "Business",
+   "documentation": "The customer-facing service of pricing a shipment request."
+  },
+  {
+   "id": "id-c914d3934cf748f2a664517d830a1dc7",
+   "name": "Tracking Service",
+   "type": "BusinessService",
+   "layer": "Business",
+   "documentation": "The customer-facing service of reporting shipment status."
+  },
+  {
+   "id": "id-18398ca89e094d2896d14b5431632cbb",
+   "name": "Carrier Onboarding Service",
+   "type": "BusinessService",
+   "layer": "Business",
+   "documentation": "The carrier-facing service of contracting and registering new carriers."
+  },
+  {
+   "id": "id-0cb9930533e644c2a9e09e2f1ce930cc",
+   "name": "Shipment Order",
+   "type": "BusinessObject",
+   "layer": "Business",
+   "documentation": "The business record of one booked shipment: parties, terms, and status."
+  },
+  {
+   "id": "id-b6766458e7174b2a87be8db04027f016",
+   "name": "Carrier Profile",
+   "type": "BusinessObject",
+   "layer": "Business",
+   "documentation": "The governed business record describing a carrier: contracts, lanes, performance."
+  },
+  {
+   "id": "id-5556f58b257a4b23904378e7211dfba7",
+   "name": "CarrierDesk TMS",
+   "type": "ApplicationComponent",
+   "layer": "Application",
+   "documentation": "Legacy transport management system holding quoting and shipment planning logic."
+  },
+  {
+   "id": "id-f3f6573ecc054417890c5fec71794b52",
+   "name": "SalesCloud CRM",
+   "type": "ApplicationComponent",
+   "layer": "Application",
+   "documentation": "CRM holding customer records and inquiry history for the service desk."
+  },
+  {
+   "id": "id-2a834cf649e841ec96777f463836bbb5",
+   "name": "TrackIt Customer Portal",
+   "type": "ApplicationComponent",
+   "layer": "Application",
+   "documentation": "Pilot self-service portal where customers track their shipments."
+  },
+  {
+   "id": "id-f9673e9288a442b9bdcd6dfc22e637f4",
+   "name": "FreightHub Integration Hub",
+   "type": "ApplicationComponent",
+   "layer": "Application",
+   "documentation": "New integration layer that connects TMS, CRM, portal, and external carrier feeds."
+  },
+  {
+   "id": "id-e3b4f85645974acab346af59bd2b3008",
+   "name": "Quote Management Service",
+   "type": "ApplicationService",
+   "layer": "Application",
+   "documentation": "Automated service that prices a shipment request using rates and customer data."
+  },
+  {
+   "id": "id-86bb2e262ffc45fe8e8fd9cc97466b64",
+   "name": "Shipment Tracking Service",
+   "type": "ApplicationService",
+   "layer": "Application",
+   "documentation": "Service that aggregates carrier status events into one shipment tracking view."
+  },
+  {
+   "id": "id-c30a0d706dbc41cb834dbd81d1920b98",
+   "name": "Carrier Data Management Service",
+   "type": "ApplicationService",
+   "layer": "Application",
+   "documentation": "Service that maintains the single governed carrier dataset behind carrier processes."
+  },
+  {
+   "id": "id-1bfe5f3605734d26833d228cc0b7b6a3",
+   "name": "Rate Calculation",
+   "type": "ApplicationFunction",
+   "layer": "Application",
+   "documentation": "Function computing shipment prices from tariffs, lanes, and customer agreements."
+  },
+  {
+   "id": "id-9659177de15e4a8d986fd2d7f531f1af",
+   "name": "Status Aggregation",
+   "type": "ApplicationFunction",
+   "layer": "Application",
+   "documentation": "Function collecting carrier status feeds and deriving one shipment status."
+  },
+  {
+   "id": "id-870ecdfcbb334520acfae166cbbfce60",
+   "name": "Shipment Record",
+   "type": "DataObject",
+   "layer": "Application",
+   "documentation": "Application-level data instance of a shipment order used by rating and tracking."
+  },
+  {
+   "id": "id-27c4275b8ab34d1cba251e49323cc132",
+   "name": "Carrier Scorecard",
+   "type": "DataObject",
+   "layer": "Application",
+   "documentation": "Application-level dataset of carrier performance indicators fed by status aggregation."
+  },
+  {
+   "id": "id-a8b3da5cb7b648f7abd86cb1e76a58c1",
+   "name": "Customer Record",
+   "type": "DataObject",
+   "layer": "Application",
+   "documentation": "Application-level customer master data used for pricing tiers and service history."
+  },
+  {
+   "id": "id-d72a8b1646394c5eaba0c6b567838dc8",
+   "name": "Brokerage Application Server",
+   "type": "Node",
+   "layer": "Technology",
+   "documentation": "Server estate hosting the TMS and the customer portal applications."
+  },
+  {
+   "id": "id-6420681aa27a4c9cb5b1036d9096dae1",
+   "name": "Integration Gateway",
+   "type": "Node",
+   "layer": "Technology",
+   "documentation": "Server running the integration hub with message broker and API management."
+  },
+  {
+   "id": "id-ee935920c2194756826cca4df126ff14",
+   "name": "Message Broker",
+   "type": "SystemSoftware",
+   "layer": "Technology",
+   "documentation": "Middleware queuing carrier feed messages for the integration hub."
+  },
+  {
+   "id": "id-91fbbae05200478199b172f71c9a2d59",
+   "name": "API Management Platform",
+   "type": "SystemSoftware",
+   "layer": "Technology",
+   "documentation": "Gateway managing and securing the APIs exposed to carriers and applications."
+  },
+  {
+   "id": "id-241a9013001c4c5ca25da10075d4c14f",
+   "name": "carrierdesk-tms.ear",
+   "type": "Artifact",
+   "layer": "Technology",
+   "documentation": "Deployable enterprise archive of the CarrierDesk TMS application."
+  },
+  {
+   "id": "id-97b00ee0029649aa881939d6b3071590",
+   "name": "trackit-portal.war",
+   "type": "Artifact",
+   "layer": "Technology",
+   "documentation": "Deployable web archive of the TrackIt customer portal."
+  },
+  {
+   "id": "id-531f91014b4a4cb0b718adf888928498",
+   "name": "freighthub-integration.jar",
+   "type": "Artifact",
+   "layer": "Technology",
+   "documentation": "Deployable module implementing the FreightHub integration flows."
+  },
+  {
+   "id": "id-58516bc03d0947e8860118f3e2b8b349",
+   "name": "Secure Message Transport",
+   "type": "TechnologyService",
+   "layer": "Technology",
+   "documentation": "Encrypted transport service used for carrier data feeds into the platform."
+  },
+  {
+   "id": "id-b7014f7eb86741adb4a959338f8f8c0d",
+   "name": "Chief Operating Officer",
+   "type": "Stakeholder",
+   "layer": "Motivation",
+   "documentation": "Owns brokerage operations; sponsors the uplift to protect margin and service levels."
+  },
+  {
+   "id": "id-47e389d02a6240c1b5286ad2a9830e38",
+   "name": "Head of Customer Service",
+   "type": "Stakeholder",
+   "layer": "Motivation",
+   "documentation": "Accountable for inquiry handling quality; worried about slow quotes and manual re-keying."
+  },
+  {
+   "id": "id-ea9a4612c02745258b8decd7502e6f9f",
+   "name": "Chief Financial Officer",
+   "type": "Stakeholder",
+   "layer": "Motivation",
+   "documentation": "Guards profitability; needs cost per shipment to fall measurably."
+  },
+  {
+   "id": "id-119d7a7829a84f7495b0d89f37916528",
+   "name": "IT Manager",
+   "type": "Stakeholder",
+   "layer": "Motivation",
+   "documentation": "Owns the application estate; concerned about integration debt and growing data volumes."
+  },
+  {
+   "id": "id-1b8b720d3ad34ef382326c65c1c46ab3",
+   "name": "Customer",
+   "type": "Stakeholder",
+   "layer": "Motivation",
+   "documentation": "Shippers contracting Meridian; expect transparent, self-service shipment status."
+  },
+  {
+   "id": "id-16c48eaa6437487eab49d0c903fdbfdb",
+   "name": "Rising Customer Expectations for Shipment Visibility",
+   "type": "Driver",
+   "layer": "Motivation",
+   "documentation": "External pressure: shippers compare Meridian's transparency with larger brokers' portals."
+  },
+  {
+   "id": "id-c865e6e8b02f4422b53c3996c2062812",
+   "name": "Margin Pressure on Brokerage Operations",
+   "type": "Driver",
+   "layer": "Motivation",
+   "documentation": "Competitive freight market squeezes brokerage margins on every booking."
+  },
+  {
+   "id": "id-342bb34b06784ed4bb696bbc38426d71",
+   "name": "Growing Volume of Carrier and Shipment Data",
+   "type": "Driver",
+   "layer": "Motivation",
+   "documentation": "More carriers and shipments produce data that spreadsheets can no longer absorb."
+  },
+  {
+   "id": "id-15cb84f1acb34aa496402f691224c017",
+   "name": "Carrier Performance Tracked in Offline Spreadsheets",
+   "type": "Assessment",
+   "layer": "Motivation",
+   "documentation": "Weekly manual scorecard updates lag reality, so carrier selection rests on stale figures."
+  },
+  {
+   "id": "id-3780a97d78ed463490bde6166d2fd33b",
+   "name": "Customer Service Staff Re-key Order Data Between Systems",
+   "type": "Assessment",
+   "layer": "Motivation",
+   "documentation": "Double entry between CRM and TMS wastes time and introduces quoting errors."
+  },
+  {
+   "id": "id-2b5c2d0d61d74ec1a95a3ff1dfe3df22",
+   "name": "Reduce Quote Turnaround From 4 Hours to 30 Minutes",
+   "type": "Goal",
+   "layer": "Motivation",
+   "documentation": "Cut the time from inquiry to priced quote so Meridian stops losing rate-shopped loads."
+  },
+  {
+   "id": "id-48c4504459ac41679f6a3713c8cb0224",
+   "name": "Increase On-time Delivery Rate to 95 Percent",
+   "type": "Goal",
+   "layer": "Motivation",
+   "documentation": "Lift delivery reliability to retain shippers who measure carrier performance."
+  },
+  {
+   "id": "id-61d7d7cb3dc1424ab55010b2c538e312",
+   "name": "Provide Single Source of Truth for Carrier Data",
+   "type": "Goal",
+   "layer": "Motivation",
+   "documentation": "One governed carrier record set feeding every process, ending spreadsheet divergence."
+  },
+  {
+   "id": "id-096b70053f4144c0ae8afe0a9f544591",
+   "name": "Reduce Cost Per Shipment by 12 Percent",
+   "type": "Goal",
+   "layer": "Motivation",
+   "documentation": "Lower operating cost per booking through less manual work and better carrier choices."
+  },
+  {
+   "id": "id-b80b94a14dfb416aabc6ad339c55f153",
+   "name": "Faster, More Consistent Customer Answers",
+   "type": "Outcome",
+   "layer": "Motivation",
+   "documentation": "Customers receive accurate status and quotes in minutes regardless of branch or agent."
+  },
+  {
+   "id": "id-600c9fd75cc645a7861fb02e2b46a5b7",
+   "name": "Reduced Operating Cost Per Shipment",
+   "type": "Outcome",
+   "layer": "Motivation",
+   "documentation": "The measurable end result of the cost goal on Meridian's P&L."
+  },
+  {
+   "id": "id-09fe0ab32aa045588a84236bb3022199",
+   "name": "Provide Self-service Shipment Tracking for Customers",
+   "type": "Requirement",
+   "layer": "Motivation",
+   "documentation": "Customers must see shipment status in a portal without calling the service desk."
+  },
+  {
+   "id": "id-3134d262ce1c4389b577bbcfa1a9abbc",
+   "name": "Integrate Carrier Data Feeds Into One Platform",
+   "type": "Requirement",
+   "layer": "Motivation",
+   "documentation": "Carrier feeds must land in one integration platform instead of per-team spreadsheets."
+  },
+  {
+   "id": "id-e364e6618a404eb999407d6ca696aa69",
+   "name": "Standardize Customer Service Process Across Branches",
+   "type": "Requirement",
+   "layer": "Motivation",
+   "documentation": "All branches follow one inquiry-handling process so service quality stops depending on location."
+  }
+ ],
+ "relationships": [
+  {
+   "id": "id-dc1caa95c5ef4de481b7d210b514c208",
+   "type": "AssociationRelationship",
+   "source": "id-1b8b720d3ad34ef382326c65c1c46ab3",
+   "target": "id-16c48eaa6437487eab49d0c903fdbfdb",
+   "documentation": "Customers' shifting expectations are the human face of the visibility driver."
+  },
+  {
+   "id": "id-038a8b22a4844c319427eabacd37df2b",
+   "type": "AssociationRelationship",
+   "source": "id-47e389d02a6240c1b5286ad2a9830e38",
+   "target": "id-16c48eaa6437487eab49d0c903fdbfdb",
+   "documentation": "The service organization feels visibility demands first through inquiry volume."
+  },
+  {
+   "id": "id-ca3796163d514dc3b769c4ed04b90624",
+   "type": "AssociationRelationship",
+   "source": "id-b7014f7eb86741adb4a959338f8f8c0d",
+   "target": "id-c865e6e8b02f4422b53c3996c2062812",
+   "documentation": "Operations owns the response to margin pressure on brokerage work."
+  },
+  {
+   "id": "id-cd78f3a212184506bcb6f41275114c1e",
+   "type": "AssociationRelationship",
+   "source": "id-ea9a4612c02745258b8decd7502e6f9f",
+   "target": "id-c865e6e8b02f4422b53c3996c2062812",
+   "documentation": "Finance quantifies and monitors the margin squeeze."
+  },
+  {
+   "id": "id-4d0228c143ff40f685697a8adea11c90",
+   "type": "AssociationRelationship",
+   "source": "id-119d7a7829a84f7495b0d89f37916528",
+   "target": "id-342bb34b06784ed4bb696bbc38426d71",
+   "documentation": "IT absorbs the operational impact of growing carrier and shipment data."
+  },
+  {
+   "id": "id-93f9a73aa62243beaf90c902f1d91ca9",
+   "type": "InfluenceRelationship",
+   "source": "id-15cb84f1acb34aa496402f691224c017",
+   "target": "id-342bb34b06784ed4bb696bbc38426d71",
+   "documentation": "Spreadsheet tracking makes data growth an operational risk instead of an asset."
+  },
+  {
+   "id": "id-621e5cfe5e6a4e7882547ed31900a6c6",
+   "type": "InfluenceRelationship",
+   "source": "id-3780a97d78ed463490bde6166d2fd33b",
+   "target": "id-16c48eaa6437487eab49d0c903fdbfdb",
+   "documentation": "Re-keying slows answers, worsening the visibility gap customers feel."
+  },
+  {
+   "id": "id-c3f3c848e0d54561bfb021ad6f6287b2",
+   "type": "InfluenceRelationship",
+   "source": "id-16c48eaa6437487eab49d0c903fdbfdb",
+   "target": "id-2b5c2d0d61d74ec1a95a3ff1dfe3df22",
+   "documentation": "Visibility expectations translate into demand for much faster quotes."
+  },
+  {
+   "id": "id-0613c9b82e774093935bb8a99088849b",
+   "type": "InfluenceRelationship",
+   "source": "id-16c48eaa6437487eab49d0c903fdbfdb",
+   "target": "id-48c4504459ac41679f6a3713c8cb0224",
+   "documentation": "Customers who track shipments hold Meridian to delivery reliability."
+  },
+  {
+   "id": "id-62584caa7b274fecbd0c83b4e9d4c22d",
+   "type": "InfluenceRelationship",
+   "source": "id-c865e6e8b02f4422b53c3996c2062812",
+   "target": "id-096b70053f4144c0ae8afe0a9f544591",
+   "documentation": "Margin pressure converts directly into a cost-per-shipment target."
+  },
+  {
+   "id": "id-ce99a0661c0a44298ef05b9892e3851e",
+   "type": "InfluenceRelationship",
+   "source": "id-c865e6e8b02f4422b53c3996c2062812",
+   "target": "id-61d7d7cb3dc1424ab55010b2c538e312",
+   "documentation": "Protecting margin argues for one efficient carrier data source."
+  },
+  {
+   "id": "id-af50a5153d7a4a7f9d56224b19a39c15",
+   "type": "InfluenceRelationship",
+   "source": "id-342bb34b06784ed4bb696bbc38426d71",
+   "target": "id-61d7d7cb3dc1424ab55010b2c538e312",
+   "documentation": "Data growth makes a single governed carrier source necessary."
+  },
+  {
+   "id": "id-d1c01477f23c4b9b8b9e12a1e3ff0dd0",
+   "type": "InfluenceRelationship",
+   "source": "id-2b5c2d0d61d74ec1a95a3ff1dfe3df22",
+   "target": "id-b80b94a14dfb416aabc6ad339c55f153",
+   "documentation": "Fast quotes are the largest contributor to quicker customer answers."
+  },
+  {
+   "id": "id-a1be9b1e0da64f1b94bc53dfb7e83320",
+   "type": "InfluenceRelationship",
+   "source": "id-096b70053f4144c0ae8afe0a9f544591",
+   "target": "id-600c9fd75cc645a7861fb02e2b46a5b7",
+   "documentation": "Meeting the cost goal produces the reduced-cost outcome."
+  },
+  {
+   "id": "id-04010d0092bf4bf6aab9b2af95aafe7f",
+   "type": "RealizationRelationship",
+   "source": "id-09fe0ab32aa045588a84236bb3022199",
+   "target": "id-48c4504459ac41679f6a3713c8cb0224",
+   "documentation": "Self-service tracking supports reliability by surfacing exceptions early."
+  },
+  {
+   "id": "id-0ec5cda74f0e462b952183e48b0dcb0b",
+   "type": "RealizationRelationship",
+   "source": "id-3134d262ce1c4389b577bbcfa1a9abbc",
+   "target": "id-61d7d7cb3dc1424ab55010b2c538e312",
+   "documentation": "Integrating carrier feeds into one platform is how the single source is realized."
+  },
+  {
+   "id": "id-d035e03202ff4852bdd83114eb19dc3d",
+   "type": "RealizationRelationship",
+   "source": "id-e364e6618a404eb999407d6ca696aa69",
+   "target": "id-2b5c2d0d61d74ec1a95a3ff1dfe3df22",
+   "documentation": "A standardized inquiry process removes branch-specific quoting delays."
+  },
+  {
+   "id": "id-dbb1f745c4b84c699dd1da1872df81ac",
+   "type": "ServingRelationship",
+   "source": "id-929dfa81c21b4366bd0ba88942dd1f3c",
+   "target": "id-67783ffdc5c8417b87173e4afeddeac8",
+   "documentation": "The contracted carrier base is what carrier management manages."
+  },
+  {
+   "id": "id-0ca495817a694d64a6fc2b3d34acf962",
+   "type": "ServingRelationship",
+   "source": "id-628b3c4391634877969cb2acd90f7c11",
+   "target": "id-27beb8fd98ab427f98d667b1e7aed70b",
+   "documentation": "Service staff supply the people power behind inquiry handling."
+  },
+  {
+   "id": "id-36bcc4add0484fb0870b408369d0f147",
+   "type": "ServingRelationship",
+   "source": "id-628b3c4391634877969cb2acd90f7c11",
+   "target": "id-5f09ff78c9e94e9bac411fc462565d4a",
+   "documentation": "Service staff also run the order lifecycle day to day."
+  },
+  {
+   "id": "id-3045b7502ab94991be6f43ee45c76a05",
+   "type": "ServingRelationship",
+   "source": "id-e022237dc95440e6978bc3722fd44e99",
+   "target": "id-67783ffdc5c8417b87173e4afeddeac8",
+   "documentation": "The integration platform carries the carrier data carrier management needs."
+  },
+  {
+   "id": "id-d1c6a55768a34109a3ab4a7e5bfcce9b",
+   "type": "ServingRelationship",
+   "source": "id-e022237dc95440e6978bc3722fd44e99",
+   "target": "id-6ae2c789176147c5a2c6b492c2b1461a",
+   "documentation": "Analytics depends on the platform's feeds and pipelines."
+  },
+  {
+   "id": "id-a96472c262de4d44bb687a67707a7a1c",
+   "type": "RealizationRelationship",
+   "source": "id-67783ffdc5c8417b87173e4afeddeac8",
+   "target": "id-3134d262ce1c4389b577bbcfa1a9abbc",
+   "documentation": "Carrier management capability realizes the carrier-feed integration requirement."
+  },
+  {
+   "id": "id-7880ac08e7f74ba6ac7485b9609728b8",
+   "type": "RealizationRelationship",
+   "source": "id-6ae2c789176147c5a2c6b492c2b1461a",
+   "target": "id-3134d262ce1c4389b577bbcfa1a9abbc",
+   "documentation": "Analytics consumes the integrated feeds, completing the requirement."
+  },
+  {
+   "id": "id-38e47cebadeb40b496889d8cbf4f2115",
+   "type": "RealizationRelationship",
+   "source": "id-27beb8fd98ab427f98d667b1e7aed70b",
+   "target": "id-e364e6618a404eb999407d6ca696aa69",
+   "documentation": "Inquiry handling capability realizes the process standardization requirement."
+  },
+  {
+   "id": "id-93842c087b1f4dfa905827da225b9351",
+   "type": "RealizationRelationship",
+   "source": "id-5f09ff78c9e94e9bac411fc462565d4a",
+   "target": "id-e364e6618a404eb999407d6ca696aa69",
+   "documentation": "Order management capability realizes standardization across branches."
+  },
+  {
+   "id": "id-1189cd0f2c274d08897ae18b1998b0a9",
+   "type": "RealizationRelationship",
+   "source": "id-3584bea09cc540528bbf751aa58f459f",
+   "target": "id-09fe0ab32aa045588a84236bb3022199",
+   "documentation": "Shipment planning capability realizes the tracking requirement through planning data."
+  },
+  {
+   "id": "id-57381bc9599448b5b810178d798d4ec1",
+   "type": "AssignmentRelationship",
+   "source": "id-aca72e37108c4264b3e79485ff63dc81",
+   "target": "id-63fc7951b923496ca0f2213c96bb7faa",
+   "documentation": "Reps perform inquiry intake and triage."
+  },
+  {
+   "id": "id-5e24e690fd294b5ea8c2924d81736548",
+   "type": "AssignmentRelationship",
+   "source": "id-aca72e37108c4264b3e79485ff63dc81",
+   "target": "id-8c0c2c936492477496e9e3f10c396a88",
+   "documentation": "Reps run the quoting conversation with the customer."
+  },
+  {
+   "id": "id-dcf42d574dc7497f98554dbc901df08b",
+   "type": "AssignmentRelationship",
+   "source": "id-aca72e37108c4264b3e79485ff63dc81",
+   "target": "id-af8af9b33e024d1482529a61808a3ddc",
+   "documentation": "Reps keep customers updated from tracking results."
+  },
+  {
+   "id": "id-f5f197cb723b4756a1714e956d6bff9d",
+   "type": "AssignmentRelationship",
+   "source": "id-10f2b04ee8dc4046a52258087ce02715",
+   "target": "id-ce8bf1fef373439d9d2d477c94c2110b",
+   "documentation": "Planners book carriers and schedule shipments."
+  },
+  {
+   "id": "id-0168ae4e29bf4b8788c11964cf367c7f",
+   "type": "AssignmentRelationship",
+   "source": "id-10f2b04ee8dc4046a52258087ce02715",
+   "target": "id-d0bae9ec337448a2978b035d42b15519",
+   "documentation": "Planners vet and contract new carriers."
+  },
+  {
+   "id": "id-95a236e5c95f4404bfce0e1eabc90beb",
+   "type": "TriggeringRelationship",
+   "source": "id-63fc7951b923496ca0f2213c96bb7faa",
+   "target": "id-8c0c2c936492477496e9e3f10c396a88",
+   "documentation": "An inquiry needing pricing triggers the quoting process."
+  },
+  {
+   "id": "id-32560adb54fd478992b578056eab2087",
+   "type": "TriggeringRelationship",
+   "source": "id-8c0c2c936492477496e9e3f10c396a88",
+   "target": "id-ce8bf1fef373439d9d2d477c94c2110b",
+   "documentation": "An accepted quote triggers shipment planning."
+  },
+  {
+   "id": "id-02a682f08ac34028a54d9b0be20d08e5",
+   "type": "TriggeringRelationship",
+   "source": "id-ce8bf1fef373439d9d2d477c94c2110b",
+   "target": "id-af8af9b33e024d1482529a61808a3ddc",
+   "documentation": "A booked shipment starts being tracked."
+  },
+  {
+   "id": "id-8043b21e1d8e4b3c8bafc6e3345b9579",
+   "type": "RealizationRelationship",
+   "source": "id-8c0c2c936492477496e9e3f10c396a88",
+   "target": "id-0f25a0f7cda443b0bdeb32f4a9d885ef",
+   "documentation": "The quoting process delivers the quoting service."
+  },
+  {
+   "id": "id-2cc800561ee6418fa4e09f19f100c4f0",
+   "type": "RealizationRelationship",
+   "source": "id-af8af9b33e024d1482529a61808a3ddc",
+   "target": "id-c914d3934cf748f2a664517d830a1dc7",
+   "documentation": "The tracking process delivers the tracking service."
+  },
+  {
+   "id": "id-76b3ea5007d045d1a5a13d9b402bdd2c",
+   "type": "RealizationRelationship",
+   "source": "id-d0bae9ec337448a2978b035d42b15519",
+   "target": "id-18398ca89e094d2896d14b5431632cbb",
+   "documentation": "The onboarding process delivers the onboarding service."
+  },
+  {
+   "id": "id-64b6c802585b4252af80dd7f92acd8bd",
+   "type": "AccessRelationship",
+   "source": "id-ce8bf1fef373439d9d2d477c94c2110b",
+   "target": "id-0cb9930533e644c2a9e09e2f1ce930cc",
+   "documentation": "Planning writes booking details onto the shipment order."
+  },
+  {
+   "id": "id-80ce42497ab04989b800e3448b4e68ad",
+   "type": "AccessRelationship",
+   "source": "id-af8af9b33e024d1482529a61808a3ddc",
+   "target": "id-0cb9930533e644c2a9e09e2f1ce930cc",
+   "documentation": "Tracking reads the order to know what to monitor."
+  },
+  {
+   "id": "id-9e36c43b945943e099345c81883eb15a",
+   "type": "AccessRelationship",
+   "source": "id-8c0c2c936492477496e9e3f10c396a88",
+   "target": "id-0cb9930533e644c2a9e09e2f1ce930cc",
+   "documentation": "Quoting creates the shipment order when a quote is accepted."
+  },
+  {
+   "id": "id-09e82a5247a44776924b08801f58d43a",
+   "type": "AccessRelationship",
+   "source": "id-d0bae9ec337448a2978b035d42b15519",
+   "target": "id-b6766458e7174b2a87be8db04027f016",
+   "documentation": "Onboarding creates and maintains the carrier profile."
+  },
+  {
+   "id": "id-36e14fd4e8f14b4d83108e467e384fe4",
+   "type": "RealizationRelationship",
+   "source": "id-63fc7951b923496ca0f2213c96bb7faa",
+   "target": "id-27beb8fd98ab427f98d667b1e7aed70b",
+   "documentation": "Inquiry handling work realizes the inquiry-handling capability."
+  },
+  {
+   "id": "id-37f99aa55faf4619a7cb50ef972fbd1a",
+   "type": "RealizationRelationship",
+   "source": "id-ce8bf1fef373439d9d2d477c94c2110b",
+   "target": "id-3584bea09cc540528bbf751aa58f459f",
+   "documentation": "The planning process realizes the shipment planning capability."
+  },
+  {
+   "id": "id-8c7afa06e1794ea0a7cd287f216abf21",
+   "type": "RealizationRelationship",
+   "source": "id-d0bae9ec337448a2978b035d42b15519",
+   "target": "id-67783ffdc5c8417b87173e4afeddeac8",
+   "documentation": "Onboarding work realizes the carrier management capability."
+  },
+  {
+   "id": "id-188653ef344e4a618a2021c79057e75e",
+   "type": "RealizationRelationship",
+   "source": "id-af8af9b33e024d1482529a61808a3ddc",
+   "target": "id-5f09ff78c9e94e9bac411fc462565d4a",
+   "documentation": "Tracking work realizes the order management capability over the order lifecycle."
+  },
+  {
+   "id": "id-0653c58fb0ed48af88d811917f2c7be7",
+   "type": "RealizationRelationship",
+   "source": "id-5556f58b257a4b23904378e7211dfba7",
+   "target": "id-e3b4f85645974acab346af59bd2b3008",
+   "documentation": "The TMS implements the quote management service."
+  },
+  {
+   "id": "id-b33cc5ff580a4f0fbe226b4dc0d1679c",
+   "type": "RealizationRelationship",
+   "source": "id-f9673e9288a442b9bdcd6dfc22e637f4",
+   "target": "id-86bb2e262ffc45fe8e8fd9cc97466b64",
+   "documentation": "The integration hub aggregates feeds behind the tracking service."
+  },
+  {
+   "id": "id-b99b993e10294db8a1a34a2b22a077ab",
+   "type": "RealizationRelationship",
+   "source": "id-f9673e9288a442b9bdcd6dfc22e637f4",
+   "target": "id-c30a0d706dbc41cb834dbd81d1920b98",
+   "documentation": "The hub implements carrier data management as the single source."
+  },
+  {
+   "id": "id-ed306c51e59a4c85b0d734342f135ade",
+   "type": "RealizationRelationship",
+   "source": "id-2a834cf649e841ec96777f463836bbb5",
+   "target": "id-86bb2e262ffc45fe8e8fd9cc97466b64",
+   "documentation": "The portal presents tracking; it co-realizes the tracking service front end."
+  },
+  {
+   "id": "id-32a952253cf949509bf262b73b1401df",
+   "type": "RealizationRelationship",
+   "source": "id-1bfe5f3605734d26833d228cc0b7b6a3",
+   "target": "id-e3b4f85645974acab346af59bd2b3008",
+   "documentation": "Rate calculation is the pricing core of the quote service."
+  },
+  {
+   "id": "id-d195636021194e708ac95eaa1dd654eb",
+   "type": "RealizationRelationship",
+   "source": "id-9659177de15e4a8d986fd2d7f531f1af",
+   "target": "id-86bb2e262ffc45fe8e8fd9cc97466b64",
+   "documentation": "Status aggregation is the data core of the tracking service."
+  },
+  {
+   "id": "id-b8933cd7f1e4480ebf4ffb6ac8c6ce23",
+   "type": "AssignmentRelationship",
+   "source": "id-5556f58b257a4b23904378e7211dfba7",
+   "target": "id-1bfe5f3605734d26833d228cc0b7b6a3",
+   "documentation": "The TMS hosts and executes rate calculation."
+  },
+  {
+   "id": "id-339d8e55c0374e358b14eb3563345040",
+   "type": "AssignmentRelationship",
+   "source": "id-f9673e9288a442b9bdcd6dfc22e637f4",
+   "target": "id-9659177de15e4a8d986fd2d7f531f1af",
+   "documentation": "The hub hosts and executes status aggregation."
+  },
+  {
+   "id": "id-25fe7c039c5b4abca93c6f76712141d5",
+   "type": "AccessRelationship",
+   "source": "id-1bfe5f3605734d26833d228cc0b7b6a3",
+   "target": "id-870ecdfcbb334520acfae166cbbfce60",
+   "documentation": "Rating reads shipment data and writes the computed price."
+  },
+  {
+   "id": "id-3b6a0c331db544e58143c12bcbb81ce3",
+   "type": "AccessRelationship",
+   "source": "id-9659177de15e4a8d986fd2d7f531f1af",
+   "target": "id-27c4275b8ab34d1cba251e49323cc132",
+   "documentation": "Aggregation writes derived indicators into the scorecard."
+  },
+  {
+   "id": "id-4ca628e056b9403c85d1d953290c33c8",
+   "type": "AccessRelationship",
+   "source": "id-9659177de15e4a8d986fd2d7f531f1af",
+   "target": "id-870ecdfcbb334520acfae166cbbfce60",
+   "documentation": "Aggregation reads shipment data to derive status."
+  },
+  {
+   "id": "id-95eebe69071445e29b4d9c58f85c294e",
+   "type": "AccessRelationship",
+   "source": "id-1bfe5f3605734d26833d228cc0b7b6a3",
+   "target": "id-a8b3da5cb7b648f7abd86cb1e76a58c1",
+   "documentation": "Rating reads customer master data for pricing tiers."
+  },
+  {
+   "id": "id-164e44f525ca4a38bbfe5ea512be463c",
+   "type": "ServingRelationship",
+   "source": "id-e3b4f85645974acab346af59bd2b3008",
+   "target": "id-8c0c2c936492477496e9e3f10c396a88",
+   "documentation": "Automated quoting supports the quoting process."
+  },
+  {
+   "id": "id-dba117a6b1f241fdb64e0a71049f8fef",
+   "type": "ServingRelationship",
+   "source": "id-86bb2e262ffc45fe8e8fd9cc97466b64",
+   "target": "id-af8af9b33e024d1482529a61808a3ddc",
+   "documentation": "Aggregated tracking supports the tracking process."
+  },
+  {
+   "id": "id-774c95f2400a4d6ba6642f74668b55c1",
+   "type": "ServingRelationship",
+   "source": "id-c30a0d706dbc41cb834dbd81d1920b98",
+   "target": "id-d0bae9ec337448a2978b035d42b15519",
+   "documentation": "Governed carrier data supports onboarding vetting."
+  },
+  {
+   "id": "id-31a3fffbe30e4ade811f50cbf719b4b4",
+   "type": "ServingRelationship",
+   "source": "id-f3f6573ecc054417890c5fec71794b52",
+   "target": "id-63fc7951b923496ca0f2213c96bb7faa",
+   "documentation": "CRM inquiry history supports inquiry handling."
+  },
+  {
+   "id": "id-02609cfeeeee41018808efd99bf39cf6",
+   "type": "ServingRelationship",
+   "source": "id-2a834cf649e841ec96777f463836bbb5",
+   "target": "id-af8af9b33e024d1482529a61808a3ddc",
+   "documentation": "The portal lets tracking proceed without a service call."
+  },
+  {
+   "id": "id-8629bb2964d6436aa006163eb1230352",
+   "type": "RealizationRelationship",
+   "source": "id-9659177de15e4a8d986fd2d7f531f1af",
+   "target": "id-6ae2c789176147c5a2c6b492c2b1461a",
+   "documentation": "Aggregation realizes the analytics capability on integrated data."
+  },
+  {
+   "id": "id-027a66cd0b054785a2ca6227aa908b1b",
+   "type": "AssignmentRelationship",
+   "source": "id-d72a8b1646394c5eaba0c6b567838dc8",
+   "target": "id-241a9013001c4c5ca25da10075d4c14f",
+   "documentation": "The application server deploys the TMS archive."
+  },
+  {
+   "id": "id-5a9b8b63e41e414fa78924127f4cb84e",
+   "type": "AssignmentRelationship",
+   "source": "id-d72a8b1646394c5eaba0c6b567838dc8",
+   "target": "id-97b00ee0029649aa881939d6b3071590",
+   "documentation": "The application server deploys the portal archive."
+  },
+  {
+   "id": "id-1e123500ec5d4cb09ea40823154f9129",
+   "type": "AssignmentRelationship",
+   "source": "id-6420681aa27a4c9cb5b1036d9096dae1",
+   "target": "id-531f91014b4a4cb0b718adf888928498",
+   "documentation": "The integration gateway deploys the hub module."
+  },
+  {
+   "id": "id-e93e5462d1b24c3b9c7e264785fe5e6b",
+   "type": "AssignmentRelationship",
+   "source": "id-6420681aa27a4c9cb5b1036d9096dae1",
+   "target": "id-ee935920c2194756826cca4df126ff14",
+   "documentation": "The gateway runs the message broker middleware."
+  },
+  {
+   "id": "id-1d9c59509c2240b0bb7ff152910498ed",
+   "type": "AssignmentRelationship",
+   "source": "id-6420681aa27a4c9cb5b1036d9096dae1",
+   "target": "id-91fbbae05200478199b172f71c9a2d59",
+   "documentation": "The gateway runs the API management platform."
+  },
+  {
+   "id": "id-a2617fcb3f02451980c1ba45424f41a1",
+   "type": "RealizationRelationship",
+   "source": "id-241a9013001c4c5ca25da10075d4c14f",
+   "target": "id-5556f58b257a4b23904378e7211dfba7",
+   "documentation": "The archive realizes the deployable TMS application."
+  },
+  {
+   "id": "id-ac7068e4e67f49b6b314584be8e4f2db",
+   "type": "RealizationRelationship",
+   "source": "id-97b00ee0029649aa881939d6b3071590",
+   "target": "id-2a834cf649e841ec96777f463836bbb5",
+   "documentation": "The web archive realizes the deployable portal application."
+  },
+  {
+   "id": "id-a155b8b0fc164435bd7cbdfe0a1b5cae",
+   "type": "RealizationRelationship",
+   "source": "id-531f91014b4a4cb0b718adf888928498",
+   "target": "id-f9673e9288a442b9bdcd6dfc22e637f4",
+   "documentation": "The module realizes the deployable integration hub."
+  },
+  {
+   "id": "id-2c31fb9f0e204c378965eead7068d2bc",
+   "type": "ServingRelationship",
+   "source": "id-58516bc03d0947e8860118f3e2b8b349",
+   "target": "id-f9673e9288a442b9bdcd6dfc22e637f4",
+   "documentation": "Secure transport carries carrier feeds into the hub."
+  }
+ ],
+ "view_usages": [
+  {
+   "view": "Motivation Overview",
+   "element": "id-b7014f7eb86741adb4a959338f8f8c0d"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-47e389d02a6240c1b5286ad2a9830e38"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-ea9a4612c02745258b8decd7502e6f9f"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-119d7a7829a84f7495b0d89f37916528"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-1b8b720d3ad34ef382326c65c1c46ab3"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-16c48eaa6437487eab49d0c903fdbfdb"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-c865e6e8b02f4422b53c3996c2062812"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-342bb34b06784ed4bb696bbc38426d71"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-15cb84f1acb34aa496402f691224c017"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-3780a97d78ed463490bde6166d2fd33b"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-2b5c2d0d61d74ec1a95a3ff1dfe3df22"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-48c4504459ac41679f6a3713c8cb0224"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-61d7d7cb3dc1424ab55010b2c538e312"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-096b70053f4144c0ae8afe0a9f544591"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-b80b94a14dfb416aabc6ad339c55f153"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-600c9fd75cc645a7861fb02e2b46a5b7"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-09fe0ab32aa045588a84236bb3022199"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-3134d262ce1c4389b577bbcfa1a9abbc"
+  },
+  {
+   "view": "Motivation Overview",
+   "element": "id-e364e6618a404eb999407d6ca696aa69"
+  },
+  {
+   "view": "Capability Map",
+   "element": "id-3584bea09cc540528bbf751aa58f459f"
+  },
+  {
+   "view": "Capability Map",
+   "element": "id-67783ffdc5c8417b87173e4afeddeac8"
+  },
+  {
+   "view": "Capability Map",
+   "element": "id-27beb8fd98ab427f98d667b1e7aed70b"
+  },
+  {
+   "view": "Capability Map",
+   "element": "id-5f09ff78c9e94e9bac411fc462565d4a"
+  },
+  {
+   "view": "Capability Map",
+   "element": "id-6ae2c789176147c5a2c6b492c2b1461a"
+  },
+  {
+   "view": "Capability Map",
+   "element": "id-929dfa81c21b4366bd0ba88942dd1f3c"
+  },
+  {
+   "view": "Capability Map",
+   "element": "id-628b3c4391634877969cb2acd90f7c11"
+  },
+  {
+   "view": "Capability Map",
+   "element": "id-e022237dc95440e6978bc3722fd44e99"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-aca72e37108c4264b3e79485ff63dc81"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-10f2b04ee8dc4046a52258087ce02715"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-63fc7951b923496ca0f2213c96bb7faa"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-8c0c2c936492477496e9e3f10c396a88"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-ce8bf1fef373439d9d2d477c94c2110b"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-af8af9b33e024d1482529a61808a3ddc"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-d0bae9ec337448a2978b035d42b15519"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-0f25a0f7cda443b0bdeb32f4a9d885ef"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-c914d3934cf748f2a664517d830a1dc7"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-18398ca89e094d2896d14b5431632cbb"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-0cb9930533e644c2a9e09e2f1ce930cc"
+  },
+  {
+   "view": "Customer Service Operations",
+   "element": "id-b6766458e7174b2a87be8db04027f016"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-5556f58b257a4b23904378e7211dfba7"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-f3f6573ecc054417890c5fec71794b52"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-2a834cf649e841ec96777f463836bbb5"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-f9673e9288a442b9bdcd6dfc22e637f4"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-e3b4f85645974acab346af59bd2b3008"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-86bb2e262ffc45fe8e8fd9cc97466b64"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-c30a0d706dbc41cb834dbd81d1920b98"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-1bfe5f3605734d26833d228cc0b7b6a3"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-9659177de15e4a8d986fd2d7f531f1af"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-870ecdfcbb334520acfae166cbbfce60"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-27c4275b8ab34d1cba251e49323cc132"
+  },
+  {
+   "view": "Application Support",
+   "element": "id-a8b3da5cb7b648f7abd86cb1e76a58c1"
+  },
+  {
+   "view": "Technology Platform",
+   "element": "id-d72a8b1646394c5eaba0c6b567838dc8"
+  },
+  {
+   "view": "Technology Platform",
+   "element": "id-6420681aa27a4c9cb5b1036d9096dae1"
+  },
+  {
+   "view": "Technology Platform",
+   "element": "id-ee935920c2194756826cca4df126ff14"
+  },
+  {
+   "view": "Technology Platform",
+   "element": "id-91fbbae05200478199b172f71c9a2d59"
+  },
+  {
+   "view": "Technology Platform",
+   "element": "id-241a9013001c4c5ca25da10075d4c14f"
+  },
+  {
+   "view": "Technology Platform",
+   "element": "id-97b00ee0029649aa881939d6b3071590"
+  },
+  {
+   "view": "Technology Platform",
+   "element": "id-531f91014b4a4cb0b718adf888928498"
+  },
+  {
+   "view": "Technology Platform",
+   "element": "id-58516bc03d0947e8860118f3e2b8b349"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-342bb34b06784ed4bb696bbc38426d71"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-61d7d7cb3dc1424ab55010b2c538e312"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-3134d262ce1c4389b577bbcfa1a9abbc"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-67783ffdc5c8417b87173e4afeddeac8"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-d0bae9ec337448a2978b035d42b15519"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-c30a0d706dbc41cb834dbd81d1920b98"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-f9673e9288a442b9bdcd6dfc22e637f4"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-531f91014b4a4cb0b718adf888928498"
+  },
+  {
+   "view": "End-to-End Traceability",
+   "element": "id-6420681aa27a4c9cb5b1036d9096dae1"
+  }
+ ]
+}

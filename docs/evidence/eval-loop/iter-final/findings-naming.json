@@ -1,0 +1,10 @@
+{
+  "policy": {
+    "id": "title-collapse-v1",
+    "trim": true,
+    "collapse_whitespace": true,
+    "case": "title"
+  },
+  "conflict_count": 0,
+  "conflicts": []
+}

@@ -1,0 +1,19 @@
+[
+ {
+  "tool": "session",
+  "args": {
+   "model": "JGS Skills Live Smoke",
+   "server": "ArchiMate MCP Server"
+  },
+  "outcome": "ok",
+  "ts": "2026-08-28T11:00:23"
+ },
+ {
+  "tool": "update-model",
+  "args": {
+   "name": "JGS Eval Loop"
+  },
+  "outcome": "ok",
+  "ts": "2026-08-28T11:00:23"
+ }
+]

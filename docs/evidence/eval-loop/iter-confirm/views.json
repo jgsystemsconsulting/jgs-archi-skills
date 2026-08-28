@@ -1,0 +1,2982 @@
+{
+ "views": [
+  {
+   "view": "Motivation Overview",
+   "viewId": "id-65a3c075b26d4d109e26850f97665d74",
+   "objects": [
+    {
+     "id": "id-b7014f7eb86741adb4a959338f8f8c0d",
+     "viewObjectId": null,
+     "name": "Chief Operating Officer",
+     "type": "Stakeholder",
+     "x": 542,
+     "y": 402,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-47e389d02a6240c1b5286ad2a9830e38",
+     "viewObjectId": null,
+     "name": "Head of Customer Service",
+     "type": "Stakeholder",
+     "x": 182,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-ea9a4612c02745258b8decd7502e6f9f",
+     "viewObjectId": null,
+     "name": "Chief Financial Officer",
+     "type": "Stakeholder",
+     "x": 372,
+     "y": 402,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-119d7a7829a84f7495b0d89f37916528",
+     "viewObjectId": null,
+     "name": "IT Manager",
+     "type": "Stakeholder",
+     "x": 202,
+     "y": 402,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-1b8b720d3ad34ef382326c65c1c46ab3",
+     "viewObjectId": null,
+     "name": "Customer",
+     "type": "Stakeholder",
+     "x": 12,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-16c48eaa6437487eab49d0c903fdbfdb",
+     "viewObjectId": null,
+     "name": "Rising Customer Expectations for Shipment Visibility",
+     "type": "Driver",
+     "x": 182,
+     "y": 117,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-c865e6e8b02f4422b53c3996c2062812",
+     "viewObjectId": null,
+     "name": "Margin Pressure on Brokerage Operations",
+     "type": "Driver",
+     "x": 522,
+     "y": 507,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-342bb34b06784ed4bb696bbc38426d71",
+     "viewObjectId": null,
+     "name": "Growing Volume of Carrier and Shipment Data",
+     "type": "Driver",
+     "x": 182,
+     "y": 507,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-15cb84f1acb34aa496402f691224c017",
+     "viewObjectId": null,
+     "name": "Carrier Performance Tracked in Offline Spreadsheets",
+     "type": "Assessment",
+     "x": 32,
+     "y": 402,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-3780a97d78ed463490bde6166d2fd33b",
+     "viewObjectId": null,
+     "name": "Customer Service Staff Re-key Order Data Between Systems",
+     "type": "Assessment",
+     "x": 352,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-2b5c2d0d61d74ec1a95a3ff1dfe3df22",
+     "viewObjectId": null,
+     "name": "Reduce Quote Turnaround From 4 Hours to 30 Minutes",
+     "type": "Goal",
+     "x": 222,
+     "y": 222,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-48c4504459ac41679f6a3713c8cb0224",
+     "viewObjectId": null,
+     "name": "Increase On-time Delivery Rate to 95 Percent",
+     "type": "Goal",
+     "x": 32,
+     "y": 222,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-61d7d7cb3dc1424ab55010b2c538e312",
+     "viewObjectId": null,
+     "name": "Provide Single Source of Truth for Carrier Data",
+     "type": "Goal",
+     "x": 182,
+     "y": 612,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-096b70053f4144c0ae8afe0a9f544591",
+     "viewObjectId": null,
+     "name": "Reduce Cost Per Shipment by 12 Percent",
+     "type": "Goal",
+     "x": 542,
+     "y": 612,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-b80b94a14dfb416aabc6ad339c55f153",
+     "viewObjectId": null,
+     "name": "Faster, More Consistent Customer Answers",
+     "type": "Outcome",
+     "x": 222,
+     "y": 327,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-600c9fd75cc645a7861fb02e2b46a5b7",
+     "viewObjectId": null,
+     "name": "Reduced Operating Cost Per Shipment",
+     "type": "Outcome",
+     "x": 542,
+     "y": 717,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-09fe0ab32aa045588a84236bb3022199",
+     "viewObjectId": null,
+     "name": "Provide Self-service Shipment Tracking for Customers",
+     "type": "Requirement",
+     "x": 12,
+     "y": 117,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-3134d262ce1c4389b577bbcfa1a9abbc",
+     "viewObjectId": null,
+     "name": "Integrate Carrier Data Feeds Into One Platform",
+     "type": "Requirement",
+     "x": 12,
+     "y": 507,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-e364e6618a404eb999407d6ca696aa69",
+     "viewObjectId": null,
+     "name": "Standardize Customer Service Process Across Branches",
+     "type": "Requirement",
+     "x": 352,
+     "y": 117,
+     "width": 120,
+     "height": 55
+    }
+   ],
+   "connections": [
+    {
+     "id": "id-ca3796163d514dc3b769c4ed04b90624",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": 20,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-038a8b22a4844c319427eabacd37df2b",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 0,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-cd78f3a212184506bcb6f41275114c1e",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -150,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 98,
+       "endX": -150,
+       "endY": -7
+      },
+      {
+       "startX": 89,
+       "startY": 98,
+       "endX": -61,
+       "endY": -7
+      },
+      {
+       "startX": 89,
+       "startY": 105,
+       "endX": -61,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-4d0228c143ff40f685697a8adea11c90",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": 20,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-dc1caa95c5ef4de481b7d210b514c208",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -109,
+       "endY": -105
+      },
+      {
+       "startX": 85,
+       "startY": 0,
+       "endX": -85,
+       "endY": -105
+      },
+      {
+       "startX": 85,
+       "startY": 105,
+       "endX": -85,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-c3f3c848e0d54561bfb021ad6f6287b2",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -40,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": -40,
+       "endY": -35
+      },
+      {
+       "startX": 40,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": 40,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-0613c9b82e774093935bb8a99088849b",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 0,
+       "endX": 89,
+       "endY": -105
+      },
+      {
+       "startX": -75,
+       "startY": 0,
+       "endX": 75,
+       "endY": -105
+      },
+      {
+       "startX": -75,
+       "startY": 105,
+       "endX": 75,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-ce99a0661c0a44298ef05b9892e3851e",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 23,
+       "endX": 279,
+       "endY": -82
+      },
+      {
+       "startX": -139,
+       "startY": 23,
+       "endX": 201,
+       "endY": -82
+      },
+      {
+       "startX": -139,
+       "startY": 105,
+       "endX": 201,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-62584caa7b274fecbd0c83b4e9d4c22d",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": -20,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-af50a5153d7a4a7f9d56224b19a39c15",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 0,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-93f9a73aa62243beaf90c902f1d91ca9",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -89,
+       "endY": -105
+      },
+      {
+       "startX": 75,
+       "startY": 0,
+       "endX": -75,
+       "endY": -105
+      },
+      {
+       "startX": 75,
+       "startY": 105,
+       "endX": -75,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-621e5cfe5e6a4e7882547ed31900a6c6",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 68,
+       "endX": 170,
+       "endY": -37
+      },
+      {
+       "startX": -162,
+       "startY": 68,
+       "endX": 8,
+       "endY": -37
+      },
+      {
+       "startX": -162,
+       "startY": 77,
+       "endX": 8,
+       "endY": -28
+      },
+      {
+       "startX": -170,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-d1c01477f23c4b9b8b9e12a1e3ff0dd0",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 0,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-a1be9b1e0da64f1b94bc53dfb7e83320",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 0,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-04010d0092bf4bf6aab9b2af95aafe7f",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": -20,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-0ec5cda74f0e462b952183e48b0dcb0b",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -170,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 105,
+       "endX": -170,
+       "endY": 0
+      },
+      {
+       "startX": 109,
+       "startY": 105,
+       "endX": -61,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-d035e03202ff4852bdd83114eb19dc3d",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 130,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 105,
+       "endX": 130,
+       "endY": 0
+      },
+      {
+       "startX": -69,
+       "startY": 105,
+       "endX": 61,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    }
+   ],
+   "assessment": {
+    "viewId": "id-65a3c075b26d4d109e26850f97665d74",
+    "elementCount": 19,
+    "connectionCount": 17,
+    "overlapCount": 0,
+    "containmentOverlaps": 0,
+    "edgeCrossingCount": 0,
+    "crossingsPerConnection": 0.0,
+    "averageSpacing": 46.1,
+    "alignmentScore": 100,
+    "overallRating": "excellent",
+    "ratingBreakdown": {
+     "overlaps": "pass",
+     "edgeCrossings": "pass",
+     "spacing": "pass",
+     "alignment": "pass",
+     "labelOverlaps": "pass",
+     "passThroughs": "pass",
+     "coincidentSegments": "pass",
+     "nonOrthogonalTerminals": "pass",
+     "nonOrthogonalInteriorSegments": "pass",
+     "connectionThroughNote": "pass",
+     "boundaryViolations": "pass",
+     "parentLabelObscured": "pass",
+     "offCanvas": "pass",
+     "labelTruncations": "pass",
+     "interiorTerminations": "pass",
+     "zigzags": "pass",
+     "connectionEdgeCoincidence": "pass",
+     "hubPortQuality": "pass",
+     "hubNeighbourCrowding": "pass",
+     "overall": "excellent",
+     "overallExcludingAcceptedCosmetics": "excellent"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+     "x": 12.0,
+     "y": 12.0,
+     "width": 650.0,
+     "height": 760.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+     "Layout quality is good \u2014 no immediate improvements needed."
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "excellent",
+    "corridorUtilisationScore": 0.03,
+    "vAxisParallelGapP10": 55.7,
+    "vAxisParallelGapNarrow25Count": 4,
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+     "overlaps": "checked",
+     "containmentOverlaps": "checked",
+     "edgeCrossings": "checked",
+     "spacing": "checked",
+     "alignment": "checked",
+     "labelOverlaps": "checked",
+     "labelOnNote": "checked",
+     "labelOnGroup": "checked",
+     "labelTruncations": "checked",
+     "parentLabelObscured": "checked",
+     "boundaryViolations": "checked",
+     "offCanvas": "checked",
+     "connectionPassThroughs": "checked",
+     "coincidentSegments": "checked",
+     "nonOrthogonalTerminals": "checked",
+     "interiorTerminations": "checked",
+     "zigzags": "checked",
+     "edgeCoincidence": "checked",
+     "hubPortQuality": "checked",
+     "corridorUtilisation": "checked",
+     "corridorCentering": "not-checked",
+     "hubNeighbourCrowding": "checked",
+     "parallelConnectionGap": "checked",
+     "noteOverlap": "checked",
+     "noteClip": "checked",
+     "imageSiblingOverlap": "checked",
+     "connectionThroughNote": "checked",
+     "connectionGrazesVisual": "checked",
+     "redundantBendpoints": "checked",
+     "nonOrthogonalInteriorSegments": "checked",
+     "containerFillRecession": "checked",
+     "offFaceParallelTerminals": "checked",
+     "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 2,
+    "offFaceParallelTerminalDescriptions": [
+     "Connection 'id-649ca43b0076472ebc3d1539d4ff8347' id-c6e929ccda2d4e31bd2cf184aec052ae \u2192 id-7cb018be17474ddf85ab240c4063e7dd: target terminal departs the LEFT face then runs parallel to it (1.0px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead (this face carries several connections, so widening alone will just re-crowd it \u2014 spread them across the element's other faces, or give the element more room so its face ports separate); re-routing alone will not clear it.",
+     "Connection 'id-c8d08bc1fc9147b684b3460bfca73ec3' id-3b2a5c5011424930b0044cde87f72f3d \u2192 id-fdfaf4c993f74784833912a023c15feb: target terminal departs the TOP face then runs parallel to it (0.5px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead (this face carries several connections, so widening alone will just re-crowd it \u2014 spread them across the element's other faces, or give the element more room so its face ports separate); re-routing alone will not clear it."
+    ],
+    "coincidentFacePortCount": 2,
+    "coincidentFacePortDescriptions": [
+     "Element 'Rising Customer Expectations for Shipment Visibility' has 2 connections on its LEFT face collapsing to 1 distinct port (coincident: id-e80e48152b1948d0b6c736027213d809, id-c2a64570c7ba43128cea9f29ad20062f)",
+     "Element 'Rising Customer Expectations for Shipment Visibility' has 2 connections on its TOP face collapsing to 1 distinct port (coincident: id-9662efd81f2848b8aa7685578bc9ab51, id-c8d08bc1fc9147b684b3460bfca73ec3)"
+    ]
+   }
+  },
+  {
+   "view": "Capability Map",
+   "viewId": "id-8cb401d032fd4ed197f7146f5d4ee640",
+   "objects": [
+    {
+     "id": "id-3584bea09cc540528bbf751aa58f459f",
+     "viewObjectId": null,
+     "name": "Shipment Planning",
+     "type": "Capability",
+     "x": 12,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-67783ffdc5c8417b87173e4afeddeac8",
+     "viewObjectId": null,
+     "name": "Carrier Management",
+     "type": "Capability",
+     "x": 32,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-27beb8fd98ab427f98d667b1e7aed70b",
+     "viewObjectId": null,
+     "name": "Customer Inquiry Handling",
+     "type": "Capability",
+     "x": 152,
+     "y": 117,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-5f09ff78c9e94e9bac411fc462565d4a",
+     "viewObjectId": null,
+     "name": "Order Management",
+     "type": "Capability",
+     "x": 322,
+     "y": 117,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-6ae2c789176147c5a2c6b492c2b1461a",
+     "viewObjectId": null,
+     "name": "Performance Analytics",
+     "type": "Capability",
+     "x": 202,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-929dfa81c21b4366bd0ba88942dd1f3c",
+     "viewObjectId": null,
+     "name": "Carrier Network",
+     "type": "Resource",
+     "x": 12,
+     "y": 192,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-628b3c4391634877969cb2acd90f7c11",
+     "viewObjectId": null,
+     "name": "Customer Service Team",
+     "type": "Resource",
+     "x": 172,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-e022237dc95440e6978bc3722fd44e99",
+     "viewObjectId": null,
+     "name": "Integration Platform",
+     "type": "Resource",
+     "x": 182,
+     "y": 192,
+     "width": 120,
+     "height": 55
+    }
+   ],
+   "connections": [
+    {
+     "id": "id-dbb1f745c4b84c699dd1da1872df81ac",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": -20,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-0ca495817a694d64a6fc2b3d34acf962",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": 20,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-36bcc4add0484fb0870b408369d0f147",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -89,
+       "endY": -105
+      },
+      {
+       "startX": 150,
+       "startY": 0,
+       "endX": 0,
+       "endY": -105
+      },
+      {
+       "startX": 150,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-3045b7502ab94991be6f43ee45c76a05",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 0,
+       "endX": 89,
+       "endY": -105
+      },
+      {
+       "startX": -75,
+       "startY": 0,
+       "endX": 75,
+       "endY": -105
+      },
+      {
+       "startX": -75,
+       "startY": 105,
+       "endX": 75,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-d1c6a55768a34109a3ab4a7e5bfcce9b",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": -20,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    }
+   ],
+   "assessment": {
+    "viewId": "id-8cb401d032fd4ed197f7146f5d4ee640",
+    "elementCount": 8,
+    "connectionCount": 5,
+    "overlapCount": 0,
+    "containmentOverlaps": 0,
+    "edgeCrossingCount": 0,
+    "crossingsPerConnection": 0.0,
+    "averageSpacing": 34.6,
+    "alignmentScore": 100,
+    "overallRating": "excellent",
+    "ratingBreakdown": {
+     "overlaps": "pass",
+     "edgeCrossings": "pass",
+     "spacing": "pass",
+     "alignment": "pass",
+     "labelOverlaps": "pass",
+     "passThroughs": "pass",
+     "coincidentSegments": "pass",
+     "nonOrthogonalTerminals": "pass",
+     "nonOrthogonalInteriorSegments": "pass",
+     "connectionThroughNote": "pass",
+     "boundaryViolations": "pass",
+     "parentLabelObscured": "pass",
+     "offCanvas": "pass",
+     "labelTruncations": "pass",
+     "interiorTerminations": "pass",
+     "zigzags": "pass",
+     "connectionEdgeCoincidence": "pass",
+     "hubPortQuality": "pass",
+     "hubNeighbourCrowding": "pass",
+     "overall": "excellent",
+     "overallExcludingAcceptedCosmetics": "excellent"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+     "x": 12.0,
+     "y": 12.0,
+     "width": 430.0,
+     "height": 340.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+     "Layout quality is good \u2014 no immediate improvements needed."
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "excellent",
+    "corridorUtilisationScore": 1.0,
+    "vAxisParallelGapP10": 75.0,
+    "vAxisParallelGapNarrow25Count": 0,
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+     "overlaps": "checked",
+     "containmentOverlaps": "checked",
+     "edgeCrossings": "checked",
+     "spacing": "checked",
+     "alignment": "checked",
+     "labelOverlaps": "checked",
+     "labelOnNote": "checked",
+     "labelOnGroup": "checked",
+     "labelTruncations": "checked",
+     "parentLabelObscured": "checked",
+     "boundaryViolations": "checked",
+     "offCanvas": "checked",
+     "connectionPassThroughs": "checked",
+     "coincidentSegments": "checked",
+     "nonOrthogonalTerminals": "checked",
+     "interiorTerminations": "checked",
+     "zigzags": "checked",
+     "edgeCoincidence": "checked",
+     "hubPortQuality": "checked",
+     "corridorUtilisation": "checked",
+     "corridorCentering": "not-checked",
+     "hubNeighbourCrowding": "checked",
+     "parallelConnectionGap": "checked",
+     "noteOverlap": "checked",
+     "noteClip": "checked",
+     "imageSiblingOverlap": "checked",
+     "connectionThroughNote": "checked",
+     "connectionGrazesVisual": "checked",
+     "redundantBendpoints": "checked",
+     "nonOrthogonalInteriorSegments": "checked",
+     "containerFillRecession": "checked",
+     "offFaceParallelTerminals": "checked",
+     "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 0,
+    "coincidentFacePortCount": 0
+   }
+  },
+  {
+   "view": "Customer Service Operations",
+   "viewId": "id-48e5c472c6b84d31a1b15b1b23984d29",
+   "objects": [
+    {
+     "id": "id-aca72e37108c4264b3e79485ff63dc81",
+     "viewObjectId": null,
+     "name": "Customer Service Representative",
+     "type": "BusinessActor",
+     "x": 522,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-10f2b04ee8dc4046a52258087ce02715",
+     "viewObjectId": null,
+     "name": "Operations Planner",
+     "type": "BusinessActor",
+     "x": 52,
+     "y": 222,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-63fc7951b923496ca0f2213c96bb7faa",
+     "viewObjectId": null,
+     "name": "Handle Customer Inquiry",
+     "type": "BusinessProcess",
+     "x": 437,
+     "y": 117,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-8c0c2c936492477496e9e3f10c396a88",
+     "viewObjectId": null,
+     "name": "Quote Shipment",
+     "type": "BusinessProcess",
+     "x": 457,
+     "y": 222,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-ce8bf1fef373439d9d2d477c94c2110b",
+     "viewObjectId": null,
+     "name": "Plan Shipment",
+     "type": "BusinessProcess",
+     "x": 287,
+     "y": 327,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-af8af9b33e024d1482529a61808a3ddc",
+     "viewObjectId": null,
+     "name": "Track Shipment",
+     "type": "BusinessProcess",
+     "x": 628,
+     "y": 432,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-d0bae9ec337448a2978b035d42b15519",
+     "viewObjectId": null,
+     "name": "Onboard Carrier",
+     "type": "BusinessProcess",
+     "x": 32,
+     "y": 327,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-0f25a0f7cda443b0bdeb32f4a9d885ef",
+     "viewObjectId": null,
+     "name": "Quoting Service",
+     "type": "BusinessService",
+     "x": 457,
+     "y": 327,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-c914d3934cf748f2a664517d830a1dc7",
+     "viewObjectId": null,
+     "name": "Tracking Service",
+     "type": "BusinessService",
+     "x": 648,
+     "y": 537,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-18398ca89e094d2896d14b5431632cbb",
+     "viewObjectId": null,
+     "name": "Carrier Onboarding Service",
+     "type": "BusinessService",
+     "x": 182,
+     "y": 432,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-0cb9930533e644c2a9e09e2f1ce930cc",
+     "viewObjectId": null,
+     "name": "Shipment Order",
+     "type": "BusinessObject",
+     "x": 297,
+     "y": 537,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-b6766458e7174b2a87be8db04027f016",
+     "viewObjectId": null,
+     "name": "Carrier Profile",
+     "type": "BusinessObject",
+     "x": 12,
+     "y": 432,
+     "width": 120,
+     "height": 55
+    }
+   ],
+   "connections": [
+    {
+     "id": "id-57381bc9599448b5b810178d798d4ec1",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 30,
+       "startY": 29,
+       "endX": 115,
+       "endY": -76
+      },
+      {
+       "startX": 30,
+       "startY": 105,
+       "endX": 115,
+       "endY": 0
+      },
+      {
+       "startX": -24,
+       "startY": 105,
+       "endX": 61,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-5e24e690fd294b5ea8c2924d81736548",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 65,
+       "startY": 29,
+       "endX": 130,
+       "endY": -181
+      },
+      {
+       "startX": 65,
+       "startY": 210,
+       "endX": 130,
+       "endY": 0
+      },
+      {
+       "startX": -4,
+       "startY": 210,
+       "endX": 61,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-dcf42d574dc7497f98554dbc901df08b",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -45,
+       "endY": -420
+      },
+      {
+       "startX": 106,
+       "startY": 0,
+       "endX": 0,
+       "endY": -420
+      },
+      {
+       "startX": 106,
+       "startY": 392,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-f5f197cb723b4756a1714e956d6bff9d",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -174,
+       "endY": -105
+      },
+      {
+       "startX": 235,
+       "startY": 0,
+       "endX": 0,
+       "endY": -105
+      },
+      {
+       "startX": 235,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-0168ae4e29bf4b8788c11964cf367c7f",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": 20,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-95a236e5c95f4404bfce0e1eabc90beb",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -20,
+       "endY": -76
+      },
+      {
+       "startX": 20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-32560adb54fd478992b578056eab2087",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 0,
+       "endX": 109,
+       "endY": -105
+      },
+      {
+       "startX": -160,
+       "startY": 0,
+       "endX": 10,
+       "endY": -105
+      },
+      {
+       "startX": -160,
+       "startY": 77,
+       "endX": 10,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-8043b21e1d8e4b3c8bafc6e3345b9579",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 0,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-9e36c43b945943e099345c81883eb15a",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -85,
+       "startY": 0,
+       "endX": 75,
+       "endY": -315
+      },
+      {
+       "startX": -85,
+       "startY": 264,
+       "endX": 75,
+       "endY": -51
+      },
+      {
+       "startX": -160,
+       "startY": 264,
+       "endX": 0,
+       "endY": -51
+      },
+      {
+       "startX": -160,
+       "startY": 287,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-02a682f08ac34028a54d9b0be20d08e5",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 20,
+       "startY": 29,
+       "endX": -321,
+       "endY": -76
+      },
+      {
+       "startX": 20,
+       "startY": 98,
+       "endX": -321,
+       "endY": -7
+      },
+      {
+       "startX": 280,
+       "startY": 98,
+       "endX": -61,
+       "endY": -7
+      },
+      {
+       "startX": 280,
+       "startY": 105,
+       "endX": -61,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-64b6c802585b4252af80dd7f92acd8bd",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 30,
+       "startY": 29,
+       "endX": 20,
+       "endY": -181
+      },
+      {
+       "startX": 30,
+       "startY": 174,
+       "endX": 20,
+       "endY": -36
+      },
+      {
+       "startX": -17,
+       "startY": 174,
+       "endX": -27,
+       "endY": -36
+      },
+      {
+       "startX": -17,
+       "startY": 182,
+       "endX": -27,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-2cc800561ee6418fa4e09f19f100c4f0",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": -20,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": 20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-80ce42497ab04989b800e3448b4e68ad",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 23,
+       "endX": 270,
+       "endY": -82
+      },
+      {
+       "startX": -303,
+       "startY": 23,
+       "endX": 28,
+       "endY": -82
+      },
+      {
+       "startX": -303,
+       "startY": 77,
+       "endX": 28,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-76b3ea5007d045d1a5a13d9b402bdd2c",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -89,
+       "endY": -105
+      },
+      {
+       "startX": 150,
+       "startY": 0,
+       "endX": 0,
+       "endY": -105
+      },
+      {
+       "startX": 150,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-09e82a5247a44776924b08801f58d43a",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": 20,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    }
+   ],
+   "assessment": {
+    "viewId": "id-48e5c472c6b84d31a1b15b1b23984d29",
+    "elementCount": 12,
+    "connectionCount": 15,
+    "overlapCount": 0,
+    "containmentOverlaps": 0,
+    "edgeCrossingCount": 6,
+    "crossingsPerConnection": 0.4,
+    "averageSpacing": 50.0,
+    "alignmentScore": 83,
+    "overallRating": "good",
+    "ratingBreakdown": {
+     "overlaps": "pass",
+     "edgeCrossings": "good",
+     "spacing": "pass",
+     "alignment": "pass",
+     "labelOverlaps": "pass",
+     "passThroughs": "pass",
+     "coincidentSegments": "pass",
+     "nonOrthogonalTerminals": "good",
+     "nonOrthogonalInteriorSegments": "good",
+     "connectionThroughNote": "pass",
+     "boundaryViolations": "pass",
+     "parentLabelObscured": "pass",
+     "offCanvas": "pass",
+     "labelTruncations": "pass",
+     "interiorTerminations": "pass",
+     "zigzags": "pass",
+     "connectionEdgeCoincidence": "pass",
+     "hubPortQuality": "pass",
+     "hubNeighbourCrowding": "pass",
+     "overall": "good",
+     "overallExcludingAcceptedCosmetics": "good"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 1,
+    "contentBounds": {
+     "x": 12.0,
+     "y": 12.0,
+     "width": 756.0,
+     "height": 580.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+     "1 connections have diagonal terminal segments \u2014 re-run auto-route-connections (or use mode='terminals-only' to preserve the routed body) to improve orthogonality"
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "good",
+    "corridorUtilisationScore": 0.18,
+    "vAxisParallelGapP10": 10.0,
+    "vAxisParallelGapNarrow25Count": 6,
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+     "overlaps": "checked",
+     "containmentOverlaps": "checked",
+     "edgeCrossings": "checked",
+     "spacing": "checked",
+     "alignment": "checked",
+     "labelOverlaps": "checked",
+     "labelOnNote": "checked",
+     "labelOnGroup": "checked",
+     "labelTruncations": "checked",
+     "parentLabelObscured": "checked",
+     "boundaryViolations": "checked",
+     "offCanvas": "checked",
+     "connectionPassThroughs": "checked",
+     "coincidentSegments": "checked",
+     "nonOrthogonalTerminals": "checked",
+     "interiorTerminations": "checked",
+     "zigzags": "checked",
+     "edgeCoincidence": "checked",
+     "hubPortQuality": "checked",
+     "corridorUtilisation": "checked",
+     "corridorCentering": "not-checked",
+     "hubNeighbourCrowding": "checked",
+     "parallelConnectionGap": "checked",
+     "noteOverlap": "checked",
+     "noteClip": "checked",
+     "imageSiblingOverlap": "checked",
+     "connectionThroughNote": "checked",
+     "connectionGrazesVisual": "checked",
+     "redundantBendpoints": "checked",
+     "nonOrthogonalInteriorSegments": "checked",
+     "containerFillRecession": "checked",
+     "offFaceParallelTerminals": "checked",
+     "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 1,
+    "nonOrthogonalInteriorSegmentDescriptions": [
+     "Connection 'id-2b4a53df164246bbbd39322e36184c31' id-ce0ec41b0f794fb692932d5885c64776 \u2192 id-e08f5e78f4a04f058a61c12fa26e5f4a: non-orthogonal interior segment at index 1 ((497,174) \u2192 (517,222))"
+    ],
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 2,
+    "offFaceParallelTerminalDescriptions": [
+     "Connection 'id-75e0e7f5f05a47a4afc14efb76f700e8' id-f0c48ed64bd94c54b407aa97439b3169 \u2192 id-e08f5e78f4a04f058a61c12fa26e5f4a: source terminal departs the RIGHT face then runs parallel to it (5.0px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead (this face carries several connections, so widening alone will just re-crowd it \u2014 spread them across the element's other faces, or give the element more room so its face ports separate); re-routing alone will not clear it.",
+     "Connection 'id-e0c40452da6049bc8c54d2aed8317fdf' id-48012fa6b12c4f618dfb358e2709d585 \u2192 id-9353d8feeb9b4d55aac082926dd28a5a: target terminal departs the LEFT face then runs parallel to it (1.0px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead (this face carries several connections, so widening alone will just re-crowd it \u2014 spread them across the element's other faces, or give the element more room so its face ports separate); re-routing alone will not clear it."
+    ],
+    "coincidentFacePortCount": 1,
+    "coincidentFacePortDescriptions": [
+     "Element 'Quote Shipment' has 2 connections on its LEFT face collapsing to 1 distinct port (coincident: id-d329ad3ad7bf4161aa0e7fe55a7331eb, id-34613e2b5f0e4c0e9709e9d60bd24c3f)"
+    ]
+   }
+  },
+  {
+   "view": "Application Support",
+   "viewId": "id-30339d83ef324443a49478ae1cb73592",
+   "objects": [
+    {
+     "id": "id-5556f58b257a4b23904378e7211dfba7",
+     "viewObjectId": null,
+     "name": "CarrierDesk TMS",
+     "type": "ApplicationComponent",
+     "x": 777,
+     "y": 87,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-f3f6573ecc054417890c5fec71794b52",
+     "viewObjectId": null,
+     "name": "SalesCloud CRM",
+     "type": "ApplicationComponent",
+     "x": 12,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-2a834cf649e841ec96777f463836bbb5",
+     "viewObjectId": null,
+     "name": "TrackIt Customer Portal",
+     "type": "ApplicationComponent",
+     "x": 12,
+     "y": 192,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-f9673e9288a442b9bdcd6dfc22e637f4",
+     "viewObjectId": null,
+     "name": "FreightHub Integration Hub",
+     "type": "ApplicationComponent",
+     "x": 357,
+     "y": 87,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-e3b4f85645974acab346af59bd2b3008",
+     "viewObjectId": null,
+     "name": "Quote Management Service",
+     "type": "ApplicationService",
+     "x": 777,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-86bb2e262ffc45fe8e8fd9cc97466b64",
+     "viewObjectId": null,
+     "name": "Shipment Tracking Service",
+     "type": "ApplicationService",
+     "x": 97,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-c30a0d706dbc41cb834dbd81d1920b98",
+     "viewObjectId": null,
+     "name": "Carrier Data Management Service",
+     "type": "ApplicationService",
+     "x": 217,
+     "y": 192,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-1bfe5f3605734d26833d228cc0b7b6a3",
+     "viewObjectId": null,
+     "name": "Rate Calculation",
+     "type": "ApplicationFunction",
+     "x": 607,
+     "y": 192,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-9659177de15e4a8d986fd2d7f531f1af",
+     "viewObjectId": null,
+     "name": "Status Aggregation",
+     "type": "ApplicationFunction",
+     "x": 387,
+     "y": 192,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-870ecdfcbb334520acfae166cbbfce60",
+     "viewObjectId": null,
+     "name": "Shipment Record",
+     "type": "DataObject",
+     "x": 437,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-27c4275b8ab34d1cba251e49323cc132",
+     "viewObjectId": null,
+     "name": "Carrier Scorecard",
+     "type": "DataObject",
+     "x": 267,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-a8b3da5cb7b648f7abd86cb1e76a58c1",
+     "viewObjectId": null,
+     "name": "Customer Record",
+     "type": "DataObject",
+     "x": 607,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    }
+   ],
+   "connections": [
+    {
+     "id": "id-0653c58fb0ed48af88d811917f2c7be7",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 0,
+       "endY": -181
+      },
+      {
+       "startX": -12,
+       "startY": 29,
+       "endX": -12,
+       "endY": -181
+      },
+      {
+       "startX": -12,
+       "startY": 182,
+       "endX": -12,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-b8933cd7f1e4480ebf4ffb6ac8c6ce23",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 0,
+       "endX": 109,
+       "endY": -105
+      },
+      {
+       "startX": -170,
+       "startY": 0,
+       "endX": 0,
+       "endY": -105
+      },
+      {
+       "startX": -170,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-ed306c51e59a4c85b0d734342f135ade",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 67,
+       "startY": 0,
+       "endX": -18,
+       "endY": -105
+      },
+      {
+       "startX": 67,
+       "startY": 77,
+       "endX": -18,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-b33cc5ff580a4f0fbe226b4dc0d1679c",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 0,
+       "endX": 199,
+       "endY": -210
+      },
+      {
+       "startX": -260,
+       "startY": 0,
+       "endX": 0,
+       "endY": -210
+      },
+      {
+       "startX": -260,
+       "startY": 182,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-b99b993e10294db8a1a34a2b22a077ab",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 0,
+       "endX": 79,
+       "endY": -105
+      },
+      {
+       "startX": -61,
+       "startY": 8,
+       "endX": 79,
+       "endY": -97
+      },
+      {
+       "startX": -140,
+       "startY": 8,
+       "endX": 0,
+       "endY": -97
+      },
+      {
+       "startX": -140,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-339d8e55c0374e358b14eb3563345040",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -30,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": -30,
+       "endY": -35
+      },
+      {
+       "startX": 30,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": 30,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-32a952253cf949509bf262b73b1401df",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -109,
+       "endY": -105
+      },
+      {
+       "startX": 178,
+       "startY": 0,
+       "endX": 8,
+       "endY": -105
+      },
+      {
+       "startX": 178,
+       "startY": 77,
+       "endX": 8,
+       "endY": -28
+      },
+      {
+       "startX": 170,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-25fe7c039c5b4abca93c6f76712141d5",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -85,
+       "startY": 0,
+       "endX": 85,
+       "endY": -105
+      },
+      {
+       "startX": -85,
+       "startY": 105,
+       "endX": 85,
+       "endY": 0
+      },
+      {
+       "startX": -109,
+       "startY": 105,
+       "endX": 61,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-95eebe69071445e29b4d9c58f85c294e",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 0,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-d195636021194e708ac95eaa1dd654eb",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -18,
+       "startY": 29,
+       "endX": 272,
+       "endY": -76
+      },
+      {
+       "startX": -18,
+       "startY": 36,
+       "endX": 272,
+       "endY": -69
+      },
+      {
+       "startX": -220,
+       "startY": 36,
+       "endX": 70,
+       "endY": -69
+      },
+      {
+       "startX": -220,
+       "startY": 105,
+       "endX": 70,
+       "endY": 0
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-4ca628e056b9403c85d1d953290c33c8",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": -50,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": -50,
+       "endY": -35
+      },
+      {
+       "startX": 50,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": 50,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-3b6a0c331db544e58143c12bcbb81ce3",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": -61,
+       "startY": 0,
+       "endX": 59,
+       "endY": -105
+      },
+      {
+       "startX": -68,
+       "startY": 0,
+       "endX": 52,
+       "endY": -105
+      },
+      {
+       "startX": -68,
+       "startY": 77,
+       "endX": 52,
+       "endY": -28
+      },
+      {
+       "startX": -120,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    }
+   ],
+   "assessment": {
+    "viewId": "id-30339d83ef324443a49478ae1cb73592",
+    "elementCount": 12,
+    "connectionCount": 12,
+    "overlapCount": 0,
+    "containmentOverlaps": 0,
+    "edgeCrossingCount": 2,
+    "crossingsPerConnection": 0.17,
+    "averageSpacing": 58.0,
+    "alignmentScore": 100,
+    "overallRating": "good",
+    "ratingBreakdown": {
+     "overlaps": "pass",
+     "edgeCrossings": "pass",
+     "spacing": "pass",
+     "alignment": "pass",
+     "labelOverlaps": "pass",
+     "passThroughs": "pass",
+     "coincidentSegments": "pass",
+     "nonOrthogonalTerminals": "pass",
+     "nonOrthogonalInteriorSegments": "pass",
+     "connectionThroughNote": "pass",
+     "boundaryViolations": "pass",
+     "parentLabelObscured": "pass",
+     "offCanvas": "pass",
+     "labelTruncations": "pass",
+     "interiorTerminations": "pass",
+     "zigzags": "pass",
+     "connectionEdgeCoincidence": "good",
+     "hubPortQuality": "pass",
+     "hubNeighbourCrowding": "pass",
+     "overall": "good",
+     "overallExcludingAcceptedCosmetics": "good"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+     "x": 12.0,
+     "y": 12.0,
+     "width": 885.0,
+     "height": 340.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+     "2 connection segments hug element edges within 3px \u2014 consider channel offset or increased element spacing"
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 2,
+    "edgeCoincidenceDescriptions": [
+     "Connection 'id-30f3bb721e6e46b292f0fca41430ff0d' segment (837,144)\u2192(825,144) hugs element 'id-66fbd2fd861d4dd1bd02fff536f91800' edge",
+     "Connection 'id-c613cbb731e04d569b8dea6890219519' segment (379,297)\u2192(327,297) hugs element 'id-d2d0d53f0d494468a97ff044c04352e6' edge"
+    ],
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "good",
+    "corridorUtilisationScore": 0.64,
+    "vAxisParallelGapP10": 18.0,
+    "vAxisParallelGapNarrow25Count": 6,
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+     "overlaps": "checked",
+     "containmentOverlaps": "checked",
+     "edgeCrossings": "checked",
+     "spacing": "checked",
+     "alignment": "checked",
+     "labelOverlaps": "checked",
+     "labelOnNote": "checked",
+     "labelOnGroup": "checked",
+     "labelTruncations": "checked",
+     "parentLabelObscured": "checked",
+     "boundaryViolations": "checked",
+     "offCanvas": "checked",
+     "connectionPassThroughs": "checked",
+     "coincidentSegments": "checked",
+     "nonOrthogonalTerminals": "checked",
+     "interiorTerminations": "checked",
+     "zigzags": "checked",
+     "edgeCoincidence": "checked",
+     "hubPortQuality": "checked",
+     "corridorUtilisation": "checked",
+     "corridorCentering": "not-checked",
+     "hubNeighbourCrowding": "checked",
+     "parallelConnectionGap": "checked",
+     "noteOverlap": "checked",
+     "noteClip": "checked",
+     "imageSiblingOverlap": "checked",
+     "connectionThroughNote": "checked",
+     "connectionGrazesVisual": "checked",
+     "redundantBendpoints": "checked",
+     "nonOrthogonalInteriorSegments": "checked",
+     "containerFillRecession": "checked",
+     "offFaceParallelTerminals": "checked",
+     "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 2,
+    "offFaceParallelTerminalCount": 5,
+    "offFaceParallelTerminalDescriptions": [
+     "Connection 'id-30f3bb721e6e46b292f0fca41430ff0d' id-66fbd2fd861d4dd1bd02fff536f91800 \u2192 id-60a47220069d4716aefa7f010ce9af35: source terminal departs the BOTTOM face then runs parallel to it (1.5px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead; re-routing alone will not clear it.",
+     "Connection 'id-0e475e8ef38e45958b56189e4924fc57' id-ead4311dd3294686816bd09f0468825f \u2192 id-eae7f5ffc25449ccb375eb256504e88d: source terminal departs the RIGHT face then runs parallel to it (7.0px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead; re-routing alone will not clear it.",
+     "Connection 'id-0963dd00663944aa845d07043e8ed55d' id-6bc0aa87154e4540aae16e06f06b786c \u2192 id-5b83ec7d7e7745cba8d41c8732288152: source terminal departs the LEFT face then runs parallel to it (1.0px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead (this face carries several connections, so widening alone will just re-crowd it \u2014 spread them across the element's other faces, or give the element more room so its face ports separate); re-routing alone will not clear it.",
+     "Connection 'id-2038ecf04a714ca283b65516fed5e784' id-dadb39732dfb4729937ced24224d7faf \u2192 id-60a47220069d4716aefa7f010ce9af35: target terminal departs the TOP face then runs parallel to it (0.5px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead (this face carries several connections, so widening alone will just re-crowd it \u2014 spread them across the element's other faces, or give the element more room so its face ports separate); re-routing alone will not clear it.",
+     "Connection 'id-c613cbb731e04d569b8dea6890219519' id-305afb5818c849469536013b0c2aae28 \u2192 id-d2d0d53f0d494468a97ff044c04352e6: target terminal departs the TOP face then runs parallel to it (0.5px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead; re-routing alone will not clear it."
+    ],
+    "coincidentFacePortCount": 1,
+    "coincidentFacePortDescriptions": [
+     "Element 'FreightHub Integration Hub' has 2 connections on its LEFT face collapsing to 1 distinct port (coincident: id-4e46aaa2fe794702b1b3dc48ecd21c89, id-0963dd00663944aa845d07043e8ed55d)"
+    ]
+   }
+  },
+  {
+   "view": "Technology Platform",
+   "viewId": "id-5d200d9d27c84526a05d99db66ac46ee",
+   "objects": [
+    {
+     "id": "id-d72a8b1646394c5eaba0c6b567838dc8",
+     "viewObjectId": null,
+     "name": "Brokerage Application Server",
+     "type": "Node",
+     "x": 172,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-6420681aa27a4c9cb5b1036d9096dae1",
+     "viewObjectId": null,
+     "name": "Integration Gateway",
+     "type": "Node",
+     "x": 42,
+     "y": 192,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-ee935920c2194756826cca4df126ff14",
+     "viewObjectId": null,
+     "name": "Message Broker",
+     "type": "SystemSoftware",
+     "x": 12,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-91fbbae05200478199b172f71c9a2d59",
+     "viewObjectId": null,
+     "name": "API Management Platform",
+     "type": "SystemSoftware",
+     "x": 182,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-241a9013001c4c5ca25da10075d4c14f",
+     "viewObjectId": null,
+     "name": "carrierdesk-tms.ear",
+     "type": "Artifact",
+     "x": 152,
+     "y": 117,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-97b00ee0029649aa881939d6b3071590",
+     "viewObjectId": null,
+     "name": "trackit-portal.war",
+     "type": "Artifact",
+     "x": 322,
+     "y": 117,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-531f91014b4a4cb0b718adf888928498",
+     "viewObjectId": null,
+     "name": "freighthub-integration.jar",
+     "type": "Artifact",
+     "x": 352,
+     "y": 297,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-58516bc03d0947e8860118f3e2b8b349",
+     "viewObjectId": null,
+     "name": "Secure Message Transport",
+     "type": "TechnologyService",
+     "x": 12,
+     "y": 12,
+     "width": 120,
+     "height": 55
+    }
+   ],
+   "connections": [
+    {
+     "id": "id-027a66cd0b054785a2ca6227aa908b1b",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 20,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": 20,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": -20,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-5a9b8b63e41e414fa78924127f4cb84e",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -89,
+       "endY": -105
+      },
+      {
+       "startX": 150,
+       "startY": 0,
+       "endX": 0,
+       "endY": -105
+      },
+      {
+       "startX": 150,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-e93e5462d1b24c3b9c7e264785fe5e6b",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 0,
+       "startY": 29,
+       "endX": 30,
+       "endY": -76
+      },
+      {
+       "startX": 0,
+       "startY": 70,
+       "endX": 30,
+       "endY": -35
+      },
+      {
+       "startX": -30,
+       "startY": 70,
+       "endX": 0,
+       "endY": -35
+      },
+      {
+       "startX": -30,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-1d9c59509c2240b0bb7ff152910498ed",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 23,
+       "endX": -79,
+       "endY": -82
+      },
+      {
+       "startX": 140,
+       "startY": 23,
+       "endX": 0,
+       "endY": -82
+      },
+      {
+       "startX": 140,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    },
+    {
+     "id": "id-1e123500ec5d4cb09ea40823154f9129",
+     "source": null,
+     "target": null,
+     "bendpoints": [
+      {
+       "startX": 61,
+       "startY": 0,
+       "endX": -249,
+       "endY": -105
+      },
+      {
+       "startX": 61,
+       "startY": 8,
+       "endX": -249,
+       "endY": -97
+      },
+      {
+       "startX": 310,
+       "startY": 8,
+       "endX": 0,
+       "endY": -97
+      },
+      {
+       "startX": 310,
+       "startY": 77,
+       "endX": 0,
+       "endY": -28
+      }
+     ],
+     "routed": true
+    }
+   ],
+   "assessment": {
+    "viewId": "id-5d200d9d27c84526a05d99db66ac46ee",
+    "elementCount": 8,
+    "connectionCount": 5,
+    "overlapCount": 0,
+    "containmentOverlaps": 0,
+    "edgeCrossingCount": 0,
+    "crossingsPerConnection": 0.0,
+    "averageSpacing": 40.0,
+    "alignmentScore": 87,
+    "overallRating": "excellent",
+    "ratingBreakdown": {
+     "overlaps": "pass",
+     "edgeCrossings": "pass",
+     "spacing": "pass",
+     "alignment": "pass",
+     "labelOverlaps": "pass",
+     "passThroughs": "pass",
+     "coincidentSegments": "pass",
+     "nonOrthogonalTerminals": "pass",
+     "nonOrthogonalInteriorSegments": "pass",
+     "connectionThroughNote": "pass",
+     "boundaryViolations": "pass",
+     "parentLabelObscured": "pass",
+     "offCanvas": "pass",
+     "labelTruncations": "pass",
+     "interiorTerminations": "pass",
+     "zigzags": "pass",
+     "connectionEdgeCoincidence": "pass",
+     "hubPortQuality": "pass",
+     "hubNeighbourCrowding": "pass",
+     "overall": "excellent",
+     "overallExcludingAcceptedCosmetics": "excellent"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+     "x": 12.0,
+     "y": 12.0,
+     "width": 460.0,
+     "height": 340.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+     "Layout quality is good \u2014 no immediate improvements needed."
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "excellent",
+    "corridorUtilisationScore": 0.14,
+    "vAxisParallelGapP10": 92.6,
+    "vAxisParallelGapNarrow25Count": 0,
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+     "overlaps": "checked",
+     "containmentOverlaps": "checked",
+     "edgeCrossings": "checked",
+     "spacing": "checked",
+     "alignment": "checked",
+     "labelOverlaps": "checked",
+     "labelOnNote": "checked",
+     "labelOnGroup": "checked",
+     "labelTruncations": "checked",
+     "parentLabelObscured": "checked",
+     "boundaryViolations": "checked",
+     "offCanvas": "checked",
+     "connectionPassThroughs": "checked",
+     "coincidentSegments": "checked",
+     "nonOrthogonalTerminals": "checked",
+     "interiorTerminations": "checked",
+     "zigzags": "checked",
+     "edgeCoincidence": "checked",
+     "hubPortQuality": "checked",
+     "corridorUtilisation": "checked",
+     "corridorCentering": "not-checked",
+     "hubNeighbourCrowding": "checked",
+     "parallelConnectionGap": "checked",
+     "noteOverlap": "checked",
+     "noteClip": "checked",
+     "imageSiblingOverlap": "checked",
+     "connectionThroughNote": "checked",
+     "connectionGrazesVisual": "checked",
+     "redundantBendpoints": "checked",
+     "nonOrthogonalInteriorSegments": "checked",
+     "containerFillRecession": "checked",
+     "offFaceParallelTerminals": "checked",
+     "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 1,
+    "offFaceParallelTerminalDescriptions": [
+     "Connection 'id-9dfbf9b27a7c407ea17eee90772e9776' id-ba50249776884acda1cee59beb6f3bc0 \u2192 id-09c4804a62ac480bab180ad96d4eb884: source terminal departs the RIGHT face then runs parallel to it (1.0px clearance, below 8px) \u2014 the route hugs the face it just exited; run auto-route-connections to lift it clear. If that declines the lift as layout-bound (a rolled-back egress lift, warning EGRESS_LIFT_LAYOUT_BOUND), the corridor cannot take the lift without crowding a parallel connection \u2014 increase element spacing here instead (this face carries several connections, so widening alone will just re-crowd it \u2014 spread them across the element's other faces, or give the element more room so its face ports separate); re-routing alone will not clear it."
+    ],
+    "coincidentFacePortCount": 0
+   }
+  },
+  {
+   "view": "End-to-End Traceability",
+   "viewId": "id-4d7baaf91cb54349adc3f624868b33d9",
+   "objects": [
+    {
+     "id": "id-342bb34b06784ed4bb696bbc38426d71",
+     "viewObjectId": null,
+     "name": "Growing Volume of Carrier and Shipment Data",
+     "type": "Driver",
+     "x": 40,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-61d7d7cb3dc1424ab55010b2c538e312",
+     "viewObjectId": null,
+     "name": "Provide Single Source of Truth for Carrier Data",
+     "type": "Goal",
+     "x": 260,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-3134d262ce1c4389b577bbcfa1a9abbc",
+     "viewObjectId": null,
+     "name": "Integrate Carrier Data Feeds Into One Platform",
+     "type": "Requirement",
+     "x": 480,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-67783ffdc5c8417b87173e4afeddeac8",
+     "viewObjectId": null,
+     "name": "Carrier Management",
+     "type": "Capability",
+     "x": 700,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-d0bae9ec337448a2978b035d42b15519",
+     "viewObjectId": null,
+     "name": "Onboard Carrier",
+     "type": "BusinessProcess",
+     "x": 920,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-c30a0d706dbc41cb834dbd81d1920b98",
+     "viewObjectId": null,
+     "name": "Carrier Data Management Service",
+     "type": "ApplicationService",
+     "x": 1140,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-f9673e9288a442b9bdcd6dfc22e637f4",
+     "viewObjectId": null,
+     "name": "FreightHub Integration Hub",
+     "type": "ApplicationComponent",
+     "x": 1360,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-531f91014b4a4cb0b718adf888928498",
+     "viewObjectId": null,
+     "name": "freighthub-integration.jar",
+     "type": "Artifact",
+     "x": 1580,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    },
+    {
+     "id": "id-6420681aa27a4c9cb5b1036d9096dae1",
+     "viewObjectId": null,
+     "name": "Integration Gateway",
+     "type": "Node",
+     "x": 1800,
+     "y": 200,
+     "width": 120,
+     "height": 55
+    }
+   ],
+   "connections": [
+    {
+     "id": "id-af50a5153d7a4a7f9d56224b19a39c15",
+     "source": null,
+     "target": null,
+     "bendpoints": [],
+     "routed": false
+    },
+    {
+     "id": "id-0ec5cda74f0e462b952183e48b0dcb0b",
+     "source": null,
+     "target": null,
+     "bendpoints": [],
+     "routed": false
+    },
+    {
+     "id": "id-a96472c262de4d44bb687a67707a7a1c",
+     "source": null,
+     "target": null,
+     "bendpoints": [],
+     "routed": false
+    },
+    {
+     "id": "id-8c7afa06e1794ea0a7cd287f216abf21",
+     "source": null,
+     "target": null,
+     "bendpoints": [],
+     "routed": false
+    },
+    {
+     "id": "id-774c95f2400a4d6ba6642f74668b55c1",
+     "source": null,
+     "target": null,
+     "bendpoints": [],
+     "routed": false
+    },
+    {
+     "id": "id-b99b993e10294db8a1a34a2b22a077ab",
+     "source": null,
+     "target": null,
+     "bendpoints": [],
+     "routed": false
+    },
+    {
+     "id": "id-a155b8b0fc164435bd7cbdfe0a1b5cae",
+     "source": null,
+     "target": null,
+     "bendpoints": [],
+     "routed": false
+    },
+    {
+     "id": "id-1e123500ec5d4cb09ea40823154f9129",
+     "source": null,
+     "target": null,
+     "bendpoints": [],
+     "routed": false
+    }
+   ],
+   "assessment": {
+    "viewId": "id-4d7baaf91cb54349adc3f624868b33d9",
+    "elementCount": 9,
+    "connectionCount": 8,
+    "overlapCount": 0,
+    "containmentOverlaps": 0,
+    "edgeCrossingCount": 0,
+    "crossingsPerConnection": 0.0,
+    "averageSpacing": 100.0,
+    "alignmentScore": 100,
+    "overallRating": "excellent",
+    "ratingBreakdown": {
+     "overlaps": "pass",
+     "edgeCrossings": "pass",
+     "spacing": "pass",
+     "alignment": "pass",
+     "labelOverlaps": "pass",
+     "passThroughs": "pass",
+     "coincidentSegments": "pass",
+     "nonOrthogonalTerminals": "pass",
+     "nonOrthogonalInteriorSegments": "pass",
+     "connectionThroughNote": "pass",
+     "boundaryViolations": "pass",
+     "parentLabelObscured": "pass",
+     "offCanvas": "pass",
+     "labelTruncations": "pass",
+     "interiorTerminations": "pass",
+     "zigzags": "pass",
+     "connectionEdgeCoincidence": "pass",
+     "hubPortQuality": "pass",
+     "hubNeighbourCrowding": "pass",
+     "overall": "excellent",
+     "overallExcludingAcceptedCosmetics": "excellent"
+    },
+    "labelOverlapCount": 0,
+    "orphanedConnections": 0,
+    "noteOverlapCount": 0,
+    "noteClipCount": 0,
+    "hasGroups": false,
+    "coincidentSegmentCount": 0,
+    "nonOrthogonalTerminalCount": 0,
+    "contentBounds": {
+     "x": 40.0,
+     "y": 200.0,
+     "width": 1880.0,
+     "height": 55.0
+    },
+    "labelTruncationCount": 0,
+    "parentLabelObscuredCount": 0,
+    "imageSiblingOverlapCount": 0,
+    "suggestions": [
+     "Layout quality is good \u2014 no immediate improvements needed."
+    ],
+    "interiorTerminationCount": 0,
+    "zigzagCount": 0,
+    "connectionEdgeCoincidenceCount": 0,
+    "hubPortQualityScore": 1.0,
+    "layoutRating": "excellent",
+    "routingRating": "excellent",
+    "corridorUtilisationScore": 1.0,
+    "vAxisParallelGapNarrow25Count": 0,
+    "hubNeighbourClearanceMin": -1.0,
+    "coverage": {
+     "overlaps": "checked",
+     "containmentOverlaps": "checked",
+     "edgeCrossings": "checked",
+     "spacing": "checked",
+     "alignment": "checked",
+     "labelOverlaps": "checked",
+     "labelOnNote": "checked",
+     "labelOnGroup": "checked",
+     "labelTruncations": "checked",
+     "parentLabelObscured": "checked",
+     "boundaryViolations": "checked",
+     "offCanvas": "checked",
+     "connectionPassThroughs": "checked",
+     "coincidentSegments": "checked",
+     "nonOrthogonalTerminals": "checked",
+     "interiorTerminations": "checked",
+     "zigzags": "checked",
+     "edgeCoincidence": "checked",
+     "hubPortQuality": "checked",
+     "corridorUtilisation": "checked",
+     "corridorCentering": "not-checked",
+     "hubNeighbourCrowding": "checked",
+     "parallelConnectionGap": "checked",
+     "noteOverlap": "checked",
+     "noteClip": "checked",
+     "imageSiblingOverlap": "checked",
+     "connectionThroughNote": "checked",
+     "connectionGrazesVisual": "checked",
+     "redundantBendpoints": "checked",
+     "nonOrthogonalInteriorSegments": "checked",
+     "containerFillRecession": "checked",
+     "offFaceParallelTerminals": "checked",
+     "coincidentFacePorts": "checked"
+    },
+    "connectionThroughNoteCount": 0,
+    "connectionRedundantBendpointCount": 0,
+    "nonOrthogonalInteriorSegmentCount": 0,
+    "containerFillEqualsChildCount": 0,
+    "connectionGrazesVisualCount": 0,
+    "labelOnNoteCount": 0,
+    "labelOnGroupCount": 0,
+    "edgeCoincidenceGrazedElementCount": 0,
+    "offFaceParallelTerminalCount": 0,
+    "coincidentFacePortCount": 0
+   }
+  }
+ ]
+}

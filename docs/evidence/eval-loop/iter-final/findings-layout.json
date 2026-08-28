@@ -1,0 +1,36 @@
+{
+  "findings": [],
+  "stats": [
+    {
+      "view": "Motivation Overview",
+      "connections": 17,
+      "edge_crossings": 0
+    },
+    {
+      "view": "Capability Map",
+      "connections": 5,
+      "edge_crossings": 0
+    },
+    {
+      "view": "Customer Service Operations",
+      "connections": 15,
+      "edge_crossings": 0
+    },
+    {
+      "view": "Application Support",
+      "connections": 12,
+      "edge_crossings": 0
+    },
+    {
+      "view": "Technology Platform",
+      "connections": 5,
+      "edge_crossings": 0
+    },
+    {
+      "view": "End-to-End Traceability",
+      "connections": 8,
+      "edge_crossings": 0
+    }
+  ],
+  "ok": true
+}

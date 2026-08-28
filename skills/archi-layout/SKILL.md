@@ -60,6 +60,21 @@ Stop without approval.
 ### Step 3 — Apply
 Run layout tools; avoid `clear-view` unless hand-off explicitly rebuilds the view.
 
+Route after layout: `auto-layout-and-route` alone often leaves diagonal
+terminal segments that hold `assess-layout` at `fair`. Escalate in this
+order, re-assessing after each step:
+
+1. `auto-route-connections` with `mode=terminals-only` (rectifies terminals,
+   keeps routed bodies).
+2. If terminal findings persist, full `auto-route-connections` (may add a
+   few edge crossings; compare `assess-layout` ratings, not just counts).
+3. If a view is still below `good`, one retry of `auto-layout-and-route`
+   (with `targetRating`) followed by a full route.
+
+Target `excellent`; accept `good` only with a recorded residual reason
+(e.g. structurally inherent crossings). Record every assessment verdict in
+the specialist hand-back.
+
 ### Step 4 — Re-assess
 `assess-layout` again; note residual issues.
 

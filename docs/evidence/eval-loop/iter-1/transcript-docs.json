@@ -1,0 +1,50 @@
+[
+ {
+  "tool": "update-view",
+  "args": {
+   "viewId": "id-1132a1e328d74cc5a3d0da5e4cf148af",
+   "view": "Motivation Overview",
+   "documentation": "rationale:v1-motivation.md"
+  }
+ },
+ {
+  "tool": "update-view",
+  "args": {
+   "viewId": "id-59c9ef5bb2584a5897ba1c03d78fc285",
+   "view": "Capability Map",
+   "documentation": "rationale:v2-capability-map.md"
+  }
+ },
+ {
+  "tool": "update-view",
+  "args": {
+   "viewId": "id-464d006354f1419d826cf2941ab87dd2",
+   "view": "Customer Service Operations",
+   "documentation": "rationale:v3-business-operations.md"
+  }
+ },
+ {
+  "tool": "update-view",
+  "args": {
+   "viewId": "id-4605deedc0c64821821c58dd85c4dc86",
+   "view": "Application Support",
+   "documentation": "rationale:v4-application-support.md"
+  }
+ },
+ {
+  "tool": "update-view",
+  "args": {
+   "viewId": "id-679eaf9b2d7a4b7ebd0a026b78f94f77",
+   "view": "Technology Platform",
+   "documentation": "rationale:v5-technology-platform.md"
+  }
+ },
+ {
+  "tool": "update-view",
+  "args": {
+   "viewId": "id-236b4319e8144f3f823692af60b8209b",
+   "view": "End-to-End Traceability",
+   "documentation": "rationale:v6-traceability.md"
+  }
+ }
+]

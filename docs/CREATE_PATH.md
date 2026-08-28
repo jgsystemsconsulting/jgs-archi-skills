@@ -88,6 +88,14 @@ Maintain a **run-scoped** map for the modelling session (orchestrator hand-off f
 4. On `create`: `get-or-create-element` or `create-element` with normalized name; register ID.
 5. On `ambiguous`: stop mutating that concept; hand back open question.
 6. Record reused vs created IDs in the specialist hand-back payload.
+7. Relationship documentation: `create-relationship` takes no documentation
+   parameter. Set it immediately after create with `update-relationship`
+   (id, documentation); a relationship without documentation is a run defect.
+8. Before hand-back, verify post-conditions against the model, not memory:
+   every planned element and relationship exists (exactly once), and every
+   element and relationship carries a documentation field. Re-read via
+   `search-elements` / `get-relationships`; never trust in-run bookkeeping
+   alone.
 
 ## Compliance (COMP-01, COMP-02, OBJ-5 / COMP-03+)
 
