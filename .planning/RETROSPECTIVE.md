@@ -234,6 +234,43 @@
 - Model mix: single worker host (inline gates); specialist Agent spawns not available
 - Sessions: 1 Ralph worker kick + checkpoint resume for complete-milestone
 
+
+## v1.5 Structured rationale depth (SEED-006 / OBJ-6)
+
+**Shipped:** 2026-08-28
+**Phases:** 19-21 (3 plans)
+
+### What Worked
+
+- Continuing phase numbers (19-21) kept archive continuity with v1.0-v1.4
+- Extending thin rationale_schema API instead of forking a second helper
+- Deterministic NL impact (token/keyword) avoided LLM-in-helper scope creep
+- autoCloseout audit-passed checkpoint unblocked complete without inventing verdicts
+
+### What Was Inefficient
+
+- Nested Agent tool still unavailable; all gates ran inline (degraded tier)
+- milestone.complete auto-extract of accomplishments weak again; polished manually in MILESTONES.md
+- MCP-ref false positive when backtick-wrapping skill package names (fixed wording)
+- Heredoc truncation on large helper writes required Write-tool fallback
+
+### Patterns Established
+
+- OBJ-N depth trilogy: helpers then CREATE_PATH/skill binding then offline evidence + freeze
+- Impact plan before regenerate as NL-change hard gate (must-reuse IDs)
+- Completion-summary schema parallel to rationale schema
+
+### Key Lessons
+
+- Never auto-apply NL changes (NG-3); impact plan + user confirm first
+- Keep helpers deterministic; skill may interpret free text into inventory keywords
+- Avoid backtick-wrapped internal skill names that match MCP tool regex
+
+### Cost Observations
+
+- Model mix: single worker host (inline gates); specialist Agent spawns not available
+- Sessions: 1 Ralph worker kick + checkpoint resume for complete-milestone
+
 ## Cross-Milestone Trends
 
 | Milestone | Phases | Plans | Notes |
@@ -243,4 +280,5 @@
 | v1.2 | 4 | 4 | OBJ-3 full specialist bodies; live MCP still deferred |
 | v1.3 | 3 | 3 | OBJ-4 coherence helpers + evidence |
 | v1.4 | 3 | 3 | OBJ-5 compliance_validate + evidence |
+| v1.5 | 3 | 3 | OBJ-6 rationale/NL/summary; VISION offline complete |
 

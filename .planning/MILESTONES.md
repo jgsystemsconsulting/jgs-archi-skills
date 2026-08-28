@@ -1,5 +1,33 @@
 # Milestones
 
+## v1.5 Structured rationale depth (Shipped: 2026-08-28)
+
+**Delivered:** OBJ-6 depth — offline rationale validation beyond bare headings, completion-summary schema, deterministic NL-change impact with must-reuse IDs; CREATE_PATH + documentation/orchestrator binding; offline evidence pack (SEED-006).
+
+**Phases completed:** 19-21 (3 plans)
+
+**Key accomplishments:**
+
+- helpers/rationale_schema.py deepens empty-section + multi-view bundle checks; thin missing_headings retained
+- helpers/completion_summary_schema.py (RATE-03 required blocks)
+- helpers/nl_change_impact.py (affected views + must_reuse_element_ids; never mutates)
+- docs/CREATE_PATH.md OBJ-6 section; archi-documentation + archi-orchestrator wiring
+- docs/evidence/rationale-nl-change-offline; 59 tests green; viewpoint-select freeze held
+
+**Known gaps:**
+
+- Live Archi MCP E2E still deferred until Bridge is up (EVID-LIVE-*)
+- Nested Agent unavailable this host; gates ran inline (degraded tier)
+- Live rationale write transcript remains EVID-LIVE-03; LLM semantic NL parsing out of helper scope
+
+**Stats:** 3 phases, 3 plans; stdlib helpers + skill docs + evidence
+
+**Git range:** docs v1.5 start → feat(19..21) → audit/closeout
+
+**What is next:** Live MCP evidence when Bridge available (VISION objectives 1-6 offline complete)
+
+---
+
 ## v1.4 Compliance validation (Shipped: 2026-08-28)
 
 **Delivered:** OBJ-5 depth — offline compliance_validate over model-slice snapshots; explain-and-propose findings; CREATE_PATH + model-qa/specialist/orchestrator binding; offline pass/fail evidence (SEED-005).

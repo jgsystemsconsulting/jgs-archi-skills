@@ -35,7 +35,7 @@
     "plan_remediate"
   ],
   "failed": [],
-  "blocked_by": "execute",
+  "blocked_by": null,
   "verdicts": {
     "discuss": "skipped",
     "assumptions": "skipped",
@@ -97,7 +97,7 @@
     "plans_complete": 0,
     "incomplete_plans": [],
     "complete_plans": [],
-    "pending_checkpoint": "complete-milestone"
+    "pending_checkpoint": null
   },
   "checkpoint_log": [
     {
@@ -106,9 +106,16 @@
       "kind": null,
       "status": "set",
       "detail": "v1.5 audit passed; awaiting complete-milestone consent"
+    },
+    {
+      "at": "2026-08-28T00:55:11.750Z",
+      "id": "complete-milestone",
+      "kind": null,
+      "status": "approved",
+      "detail": "auto-closeout consent (audit passed)"
     }
   ],
   "started_at": "2026-08-28T00:52:53.387Z",
-  "updated_at": "2026-08-28T00:54:10.598Z",
+  "updated_at": "2026-08-28T00:55:11.751Z",
   "notes": "Initialized master_flow for phase 21"
 }
