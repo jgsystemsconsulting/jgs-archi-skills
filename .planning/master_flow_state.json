@@ -1,10 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": null,
-  "active_phase_dir": null,
-  "active_state": null,
-  "lock": null,
-  "updated_at": "2026-08-28T00:36:00+00:00",
-  "notes": "Milestone v1.4 closed (complete+retrospective). Awaiting new-milestone. gsd-ship suggested but not invoked."
+  "active_phase": 19,
+  "active_phase_dir": ".planning/phases/19-rationale-and-nl-change-helpers",
+  "active_state": ".planning/phases/19-rationale-and-nl-change-helpers/master_flow_state.json",
+  "lock": {
+    "phase": 19,
+    "session_hint": "master-flow",
+    "updated_at": "2026-08-28T00:45:36.912Z"
+  },
+  "updated_at": "2026-08-28T00:45:36.914Z",
+  "notes": ""
 }
