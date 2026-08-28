@@ -6,7 +6,7 @@
   "phase_slug": "21-offline-evidence-and-regression-lock",
   "phase_dir": ".planning/phases/21-offline-evidence-and-regression-lock",
   "scope": "milestone",
-  "current_gate": "doc_check",
+  "current_gate": "complete",
   "completed": [
     "research",
     "plan",
@@ -18,7 +18,8 @@
     "integration_check",
     "security_audit",
     "gap_analysis",
-    "verify"
+    "verify",
+    "milestone_audit"
   ],
   "skipped": [
     "discuss",
@@ -34,7 +35,7 @@
     "plan_remediate"
   ],
   "failed": [],
-  "blocked_by": null,
+  "blocked_by": "execute",
   "verdicts": {
     "discuss": "skipped",
     "assumptions": "skipped",
@@ -57,7 +58,8 @@
     "integration_check": "passed:review_wave",
     "security_audit": "passed:review_wave",
     "gap_analysis": "passed",
-    "verify": "passed"
+    "verify": "passed",
+    "milestone_audit": "passed"
   },
   "artifacts": {},
   "regate_attempts": {},
@@ -95,10 +97,18 @@
     "plans_complete": 0,
     "incomplete_plans": [],
     "complete_plans": [],
-    "pending_checkpoint": null
+    "pending_checkpoint": "complete-milestone"
   },
-  "checkpoint_log": [],
+  "checkpoint_log": [
+    {
+      "at": "2026-08-28T00:54:10.597Z",
+      "id": "complete-milestone",
+      "kind": null,
+      "status": "set",
+      "detail": "v1.5 audit passed; awaiting complete-milestone consent"
+    }
+  ],
   "started_at": "2026-08-28T00:52:53.387Z",
-  "updated_at": "2026-08-28T00:53:29.587Z",
+  "updated_at": "2026-08-28T00:54:10.598Z",
   "notes": "Initialized master_flow for phase 21"
 }

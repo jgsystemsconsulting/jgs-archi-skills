@@ -1,10 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": null,
-  "active_phase_dir": null,
-  "active_state": null,
-  "lock": null,
-  "updated_at": "2026-08-28T00:53:33.847Z",
+  "active_phase": 21,
+  "active_phase_dir": ".planning/phases/21-offline-evidence-and-regression-lock",
+  "active_state": ".planning/phases/21-offline-evidence-and-regression-lock/master_flow_state.json",
+  "lock": {
+    "phase": 21,
+    "session_hint": "master-flow",
+    "updated_at": "2026-08-28T00:54:10.599Z"
+  },
+  "updated_at": "2026-08-28T00:54:10.600Z",
   "notes": "Phase 21 verify passed. Next: none"
 }
