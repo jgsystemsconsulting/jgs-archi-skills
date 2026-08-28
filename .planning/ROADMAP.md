@@ -6,10 +6,11 @@
 - ✅ **v1.1 Viewpoint selection grounding** — Phases 6-8 (shipped 2026-08-28)
 - ✅ **v1.2 Full specialist skill set** — Phases 9-12 (shipped 2026-08-28)
 - ✅ **v1.3 Model coherence and reuse** — Phases 13-15 (shipped 2026-08-28)
+- 🚧 **v1.4 Compliance validation** — Phases 16-18 (SEED-005 / OBJ-5)
 
 ## Overview
 
-v1.3 deepens OBJ-4: deterministic inspect-before-create, cross-view element reuse, duplicate minimisation, and naming consistency on top of the existing suite. Do not rework v1.0 foundations, v1.1 viewpoint-select, or v1.2 specialist modelling cores beyond coherence hooks. Phase numbering continues from v1.2 (last phase was 12).
+v1.4 deepens OBJ-5: offline-deterministic compliance validation of element types, relationship source/target combinations, permitted relationship types, abstraction levels, cross-view consistency, and naming. Violations are explained with a compliant alternative proposed; never silently applied. Build on the thin v1.0 checklist and v1.3 coherence helpers. Do not rework v1.0–v1.3 shipped cores beyond compliance hooks. Phase numbering continues from v1.3 (last phase was 15).
 
 ## Phases
 
@@ -49,77 +50,6 @@ Archive: `.planning/milestones/v1.2-*` and `v1.2-phases/`
 
 </details>
 
-- [x] **Phase 13: Reuse and naming helpers** — completed 2026-08-28 — Deterministic reuse_inspect + naming_convention stdlib helpers and unit tests (COH-01..03)
-- [x] **Phase 14: Contract and skill coherence binding** — completed 2026-08-28 — CREATE_PATH OBJ-4 section; specialist + orchestrator + model-qa wiring (COH-04..07)
-- [x] **Phase 15: Offline evidence and regression lock** — completed 2026-08-28 — Multi-view reuse evidence pack; green suite; freeze viewpoint-select (COH-08..10)
-
-## Phase Details
-
-### Phase 13: Reuse and naming helpers
-
-**Goal**: Ship offline-deterministic helpers that decide reuse vs create and enforce naming consistency without calling MCP.
-**Depends on**: v1.2 complete
-**Requirements**: COH-01, COH-02, COH-03
-**Success Criteria** (what must be TRUE):
-
-  1. `helpers/reuse_inspect.py` returns reuse|create|ambiguous with match IDs for inventory snapshots
-  2. `helpers/naming_convention.py` normalizes names and flags cross-view conflicts
-  3. Unit tests cover the decision matrix; no third-party deps
-
-**Plans**: 1 plan
-
-Plans:
-
-- [x] 13-01: Implement reuse_inspect + naming_convention helpers and tests
-
-### Phase 14: Contract and skill coherence binding
-
-**Goal**: Bind helpers into CREATE_PATH and the live skill surfaces so every mutating path inspects, reuses, and names consistently.
-**Depends on**: Phase 13
-**Requirements**: COH-04, COH-05, COH-06, COH-07
-**Success Criteria** (what must be TRUE):
-
-  1. CREATE_PATH documents reuse registry, naming policy, and no silent ambiguous merge
-  2. Mutating specialists reference the coherence helpers/steps and report reused vs created
-  3. Orchestrator hand-off carries reuse_registry + naming_policy
-  4. model-qa documents helper-backed duplicate/naming checks
-
-**Plans**: 1 plan
-
-Plans:
-
-- [x] 14-01: CREATE_PATH + specialist/orchestrator/model-qa coherence wiring
-
-### Phase 15: Offline evidence and regression lock
-
-**Goal**: Prove multi-view reuse offline and keep the suite green without reworking frozen surfaces.
-**Depends on**: Phase 14
-**Requirements**: COH-08, COH-09, COH-10
-**Success Criteria** (what must be TRUE):
-
-  1. `docs/evidence/coherence-reuse-offline/` shows shared element ID across views + naming checks
-  2. Full unit/structural suite green; viewpoint-select digest unchanged
-  3. Evidence index/README updated; no NG violations
-
-**Plans**: 1 plan
-
-Plans:
-
-- [x] 15-01: Coherence offline evidence + regression lock
-
-## Progress
-
-**Execution Order:** 13 → 14 → 15
-
-| Phase | Plans Complete | Status | Completed |
-|-------|----------------|--------|-----------|
-| 13. Reuse and naming helpers | 1/1 | Complete    | 2026-08-28 |
-| 14. Contract and skill coherence binding | 1/1 | Complete    | 2026-08-28 |
-| 15. Offline evidence and regression lock | 1/1 | Complete    | 2026-08-28 |
-
----
-*Roadmap created: 2026-08-28 for milestone v1.3 (SEED-004 / OBJ-4)*
-
 <details>
 <summary>✅ v1.3 Model coherence and reuse (Phases 13-15) — SHIPPED 2026-08-28</summary>
 
@@ -131,9 +61,72 @@ Archive: `.planning/milestones/v1.3-*` and `v1.3-phases/`
 
 </details>
 
-## Next
+- [ ] **Phase 16: Compliance validation helpers** — Deterministic offline validator + findings schema + unit tests (COMP-03..07)
+- [ ] **Phase 17: Contract and skill compliance binding** — CREATE_PATH OBJ-5; model-qa / specialists / orchestrator wiring (COMP-08..10)
+- [ ] **Phase 18: Offline evidence and regression lock** — Compliance evidence pack; green suite; freeze viewpoint-select (COMP-11..13)
 
-Awaiting next seed/milestone (live MCP evidence and/or OBJ-5+).
+## Phase Details
+
+### Phase 16: Compliance validation helpers
+
+**Goal**: Ship offline-deterministic compliance validation over model-slice snapshots with explain-and-propose findings, without calling MCP or embedding full ArchiMate catalogs.
+**Depends on**: v1.3 complete
+**Requirements**: COMP-03, COMP-04, COMP-05, COMP-06, COMP-07
+**Success Criteria** (what must be TRUE):
+
+  1. Helper accepts elements/relationships/(optional) view usages + fixture allowlist and returns structured findings
+  2. Checks cover element types, relationship endpoints/types, abstraction signals, cross-view naming
+  3. Each finding explains the violation and proposes a compliant alternative; no silent apply; stdlib unittest coverage
+
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 16-01: Implement compliance validator + fixture + tests
+
+### Phase 17: Contract and skill compliance binding
+
+**Goal**: Bind the validator into CREATE_PATH and live skill surfaces so modelling and QA paths explain-and-propose instead of silent-fixing.
+**Depends on**: Phase 16
+**Requirements**: COMP-08, COMP-09, COMP-10
+**Success Criteria** (what must be TRUE):
+
+  1. CREATE_PATH documents OBJ-5 offline validator + live MCP resource checks and no silent apply
+  2. model-qa and mutating specialists reference the validator / findings hand-back
+  3. Orchestrator documents consumption of compliance findings in hand-off/summary
+
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 17-01: CREATE_PATH + model-qa/specialist/orchestrator compliance wiring
+
+### Phase 18: Offline evidence and regression lock
+
+**Goal**: Prove compliance validation offline and keep the suite green without reworking frozen surfaces.
+**Depends on**: Phase 17
+**Requirements**: COMP-11, COMP-12, COMP-13
+**Success Criteria** (what must be TRUE):
+
+  1. `docs/evidence/compliance-validation-offline/` shows pass/fail slices with explain-and-propose output
+  2. Full unit/structural suite green; viewpoint-select digest unchanged; thin checklist still usable or cleanly superseded
+  3. No NG violations; no rework of v1.0–v1.3 cores beyond compliance hooks
+
+**Plans**: 1 plan
+
+Plans:
+
+- [ ] 18-01: Compliance offline evidence + regression lock
+
+## Progress
+
+**Execution Order:** 16 → 17 → 18
+
+| Phase | Plans Complete | Status | Completed |
+|-------|----------------|--------|-----------|
+| 16. Compliance validation helpers | 0/1 | Not started | - |
+| 17. Contract and skill compliance binding | 0/1 | Not started | - |
+| 18. Offline evidence and regression lock | 0/1 | Not started | - |
 
 ---
-*Roadmap closed: 2026-08-28 for milestone v1.3 (SEED-004 / OBJ-4)*
+*Roadmap created: 2026-08-28 for milestone v1.4 (SEED-005 / OBJ-5)*
