@@ -2,9 +2,9 @@
   "schema_version": 1,
   "kind": "phase",
   "milestone": null,
-  "phase": 13,
-  "phase_slug": "13-reuse-and-naming-helpers",
-  "phase_dir": ".planning/phases/13-reuse-and-naming-helpers",
+  "phase": 14,
+  "phase_slug": "14-contract-and-skill-coherence-binding",
+  "phase_dir": ".planning/phases/14-contract-and-skill-coherence-binding",
   "scope": "milestone",
   "current_gate": "doc_check",
   "completed": [
@@ -94,7 +94,7 @@
     "pending_checkpoint": null
   },
   "checkpoint_log": [],
-  "started_at": "2026-08-28T00:03:19.271Z",
-  "updated_at": "2026-08-28T00:09:54.004Z",
-  "notes": "Initialized master_flow for phase 13"
+  "started_at": "2026-08-28T00:09:56.001Z",
+  "updated_at": "2026-08-28T00:10:02.613Z",
+  "notes": "Initialized master_flow for phase 14"
 }
