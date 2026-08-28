@@ -8,11 +8,16 @@ A suite of ZCode skills that turn the existing JGS Archi Bridge MCP into a gover
 
 A non-expert can state architectural intent and receive a coherent, ArchiMate-compliant multi-view model plan and construction path that stays governed by the user.
 
-## Current Milestone: v1.2 Full specialist skill set (SHIPPED 2026-08-28)
+## Current Milestone: v1.3 Model coherence and reuse (SEED-004 / OBJ-4)
 
-**Goal:** OBJ-3 specialist suite complete offline.
+**Goal:** Before creating an element the agent inspects existing model content; shared concepts are reused as single model elements across multiple views; duplicates minimised; naming consistent.
 
-**Shipped:** Full specialist bodies, CREATE_PATH contract, orchestrator post-confirm dispatch, offline evidence.
+**Target features:**
+- Deterministic offline reuse-inspect helper (match existing elements → reuse | create | ambiguous)
+- Naming-convention helper for normalize + cross-view consistency checks
+- CREATE_PATH and specialist/orchestrator coherence binding (reuse registry, naming policy)
+- model-qa duplicate/naming depth and offline multi-view reuse evidence
+- Green regression; do not rework v1.0–v1.2 shipped cores beyond coherence hooks
 
 
 ## Requirements
@@ -35,8 +40,10 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 
 ### Active
 
+- [ ] Deterministic reuse-inspect + naming-convention helpers (OBJ-4 / SEED-004)
+- [ ] CREATE_PATH + specialist/orchestrator coherence wiring (OBJ-4)
+- [ ] model-qa duplicate/naming depth + offline multi-view reuse evidence (OBJ-4)
 - [ ] Live Archi MCP E2E evidence for orchestrator + multi-specialist path (when Bridge available)
-- [ ] Stronger coherence/naming helpers beyond create-path guidance (OBJ-4+ future)
 
 ### Out of Scope
 
@@ -81,6 +88,7 @@ A non-expert can state architectural intent and receive a coherent, ArchiMate-co
 | Matrix holds selection axes + fixture keys, not metamodel tables | NG-4; MCP recipes remain SoT | ✓ Good |
 | v1.2 deepens OBJ-3 specialist bodies only | SEED-003; do not rework v1.0/v1.1 shipped surfaces | ✓ Good |
 | Offline specialist evidence fixtures as hard gate | Live MCP soft/deferred until Bridge up | ✓ Good |
+| v1.3 deepens OBJ-4 coherence only | SEED-004; leave v1.0–v1.2 cores intact except coherence hooks | pending |
 
 ## Evolution
 
@@ -100,4 +108,4 @@ This document evolves at phase transitions and milestone boundaries.
 4. Update Context with current state
 
 ---
-*Last updated: 2026-08-28 after v1.2 milestone closeout*
+*Last updated: 2026-08-28 starting v1.3 (SEED-004 / OBJ-4)*

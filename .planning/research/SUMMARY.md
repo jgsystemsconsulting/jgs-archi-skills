@@ -2,57 +2,43 @@
 
 **Project:** jgs-archi-skills
 **Domain:** Agent-guided ArchiMate viewpoint creation via ZCode skills + Archi MCP
-**Researched:** 2026-08-28 (v1.2 refresh for SEED-003 / OBJ-3)
+**Researched:** 2026-08-28 (v1.3 refresh for SEED-004 / OBJ-4)
 **Confidence:** HIGH
 
 ## Executive Summary
 
-v1.0 and v1.1 already shipped the orchestrator, viewpoint grounding, shared create-path docs, compliance helpers, and twelve specialist contracts. OBJ-3 still needs full modelling bodies for the eleven non-viewpoint specialists so each can create elements, relationships, and views through the Archi MCP after user confirmation.
-
-No stack change. Stay on ZCode skills, Archi Bridge MCP inventory, Python 3.10+ stdlib helpers, offline structural gates, and offline evidence fixtures. Live MCP E2E remains soft until Bridge is up.
+v1.0–v1.2 shipped orchestrator, viewpoint grounding, full specialist suite, CREATE_PATH inspect-before-create guidance, and offline evidence. OBJ-4 needs *deterministic* coherence depth: inspect existing model content before create, reuse one element across views, minimise duplicates, keep naming consistent. Live MCP remains soft until Bridge is up.
 
 ## Key Findings
 
 ### Recommended Stack
 
-Unchanged from v1.0:
+Unchanged:
 
-- ZCode SKILL.md packages installed via install.py
-- JGS Archi Bridge MCP (http://127.0.0.1:18090/mcp) as sole model I/O
-- Archi as only canvas
-- Stdlib helpers for schema/compliance/manifest/MCP-ref validation
+- ZCode SKILL.md + install.py
+- JGS Archi Bridge MCP inventory tools only (`search-elements`, `get-or-create-element`, `find-concept-usage`, …)
+- Python 3.10+ stdlib helpers for deterministic match/normalize logic
+- Offline fixtures under `docs/evidence/`
 
-### Table Stakes for v1.2
+### Table Stakes for v1.3
 
-- Full specialist bodies for elicit + six layer specialists + four cross-cutting specialists
-- Shared create-path binding (inspect-before-create, recipe reads, explain-and-propose)
-- Orchestrator post-confirm dispatch sequence and hand-off payload
-- Offline evidence fixtures per specialist path
-- Green MCP-ref + unit suite; viewpoint-select frozen
+- `reuse_inspect` helper: given candidate name/type + element inventory snapshot → `reuse` | `create` | `ambiguous` with matched IDs
+- `naming_convention` helper: normalize labels + detect cross-view naming conflicts
+- CREATE_PATH section for reuse registry / naming policy binding
+- Specialist + orchestrator hooks to call helpers and pass reuse registry in hand-off
+- model-qa procedure depth for duplicates/naming using helpers
+- Offline multi-view reuse evidence pack + unit tests
 
 ### Watch Out For
 
-- Reworking v1.0/v1.1 surfaces instead of extending them
-- Copying ArchiMate tables into skill bodies (NG-4)
-- Making specialists user-invoked (SPEC-02)
-- Treating live MCP as a hard gate while Bridge is unavailable
-- Silent illegal relationship fixes in model-qa or layer skills
+- Reworking v1.0–v1.2 cores beyond coherence hooks
+- Embedding ArchiMate metamodel tables (NG-4)
+- Silent merge of ambiguous near-matches (must surface to user)
+- Skill-side durable model cache as SoT (stateless policy)
+- Treating live MCP as hard gate
 
 ## Implications for Roadmap
 
-1. Phase 9: shared contract + elicit + freeze viewpoint-select
-2. Phase 10: six core layer modelling specialists
-3. Phase 11: traceability, model-qa, layout, documentation
-4. Phase 12: orchestrator dispatch wiring + offline evidence + regression
-
-Coarse granularity matches prior milestones (one plan per phase).
-
-## Sources
-
-- VISION.md OBJ-3 and NG-1..NG-5
-- Existing skills stubs + archi-viewpoint-select gold body
-- docs/CREATE_PATH.md, docs/MCP.md, inventory JSON
-- v1.0/v1.1 archives and retrospectives
-
----
-*Research synthesized: 2026-08-28 for v1.2*
+1. Helpers first (testable offline)
+2. Contract + skill wiring second
+3. model-qa + evidence + regression third

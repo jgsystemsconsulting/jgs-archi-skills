@@ -5,10 +5,11 @@
 - ✅ **v1.0 Initial skill suite** — Phases 1-5 (shipped 2026-08-28)
 - ✅ **v1.1 Viewpoint selection grounding** — Phases 6-8 (shipped 2026-08-28)
 - ✅ **v1.2 Full specialist skill set** — Phases 9-12 (shipped 2026-08-28)
+- 🔄 **v1.3 Model coherence and reuse** — Phases 13-15 (in progress)
 
 ## Overview
 
-v1.2 deepens OBJ-3: replace remaining specialist contract stubs with complete modelling bodies that create elements, relationships, and views through the Archi MCP under user confirmation. Do not rework v1.0 foundations or v1.1 viewpoint-select. Phase numbering continues from v1.1 (last phase was 8).
+v1.3 deepens OBJ-4: deterministic inspect-before-create, cross-view element reuse, duplicate minimisation, and naming consistency on top of the existing suite. Do not rework v1.0 foundations, v1.1 viewpoint-select, or v1.2 specialist modelling cores beyond coherence hooks. Phase numbering continues from v1.2 (last phase was 12).
 
 ## Phases
 
@@ -36,101 +37,85 @@ Archive: `.planning/milestones/v1.1-*` and `v1.1-phases/`
 
 </details>
 
-- [x] **Phase 9: Shared specialist contract and elicit body** — Shared create-path binding across specialists; full `archi-elicit`; freeze viewpoint-select as done (completed 2026-08-28)
-- [x] **Phase 10: Core layer modelling specialists** — Full bodies for motivation, capability/strategy, business, application, technology/physical, implementation/migration (completed 2026-08-28)
-- [x] **Phase 11: Cross-cutting specialists** — Full bodies for traceability, model-qa, layout, documentation/rationale (completed 2026-08-28)
-- [x] **Phase 12: Orchestrator dispatch, evidence, regression** — Post-confirm dispatch sequence, offline evidence fixtures, green suite (completed 2026-08-28)
+<details>
+<summary>✅ v1.2 Full specialist skill set (Phases 9-12) — SHIPPED 2026-08-28</summary>
+
+- [x] Phase 9: Shared specialist contract and elicit body
+- [x] Phase 10: Core layer modelling specialists
+- [x] Phase 11: Cross-cutting specialists
+- [x] Phase 12: Orchestrator dispatch, evidence, regression
+
+Archive: `.planning/milestones/v1.2-*` and `v1.2-phases/`
+
+</details>
+
+- [ ] **Phase 13: Reuse and naming helpers** — Deterministic reuse_inspect + naming_convention stdlib helpers and unit tests (COH-01..03)
+- [ ] **Phase 14: Contract and skill coherence binding** — CREATE_PATH OBJ-4 section; specialist + orchestrator + model-qa wiring (COH-04..07)
+- [ ] **Phase 15: Offline evidence and regression lock** — Multi-view reuse evidence pack; green suite; freeze viewpoint-select (COH-08..10)
 
 ## Phase Details
 
-### Phase 9: Shared specialist contract and elicit body
+### Phase 13: Reuse and naming helpers
 
-**Goal**: Lock the shared modelling contract every specialist must follow, ship full `archi-elicit`, and explicitly leave `archi-viewpoint-select` untouched.
-**Depends on**: v1.1 complete
-**Requirements**: SPEC-D-01, SPEC-D-12, SPEC-D-13, SPEC-D-14, SPEC-D-15, SPEC-D-20
+**Goal**: Ship offline-deterministic helpers that decide reuse vs create and enforce naming consistency without calling MCP.
+**Depends on**: v1.2 complete
+**Requirements**: COH-01, COH-02, COH-03
 **Success Criteria** (what must be TRUE):
 
-  1. A single shared create-path / governance section exists (docs and/or skill fragment) that every mutating specialist references
-  2. `archi-elicit` SKILL.md is a complete procedure (not stub) and declares no MCP mutations
-  3. Specialist skills still state orchestrator-dispatched only; MCP-ref validator remains green
-  4. `archi-viewpoint-select` content is unchanged from v1.1 (no drive-by edits)
+  1. `helpers/reuse_inspect.py` returns reuse|create|ambiguous with match IDs for inventory snapshots
+  2. `helpers/naming_convention.py` normalizes names and flags cross-view conflicts
+  3. Unit tests cover the decision matrix; no third-party deps
 
 **Plans**: 1 plan
 
 Plans:
 
-- [x] 09-01: Shared specialist contract + full archi-elicit; leave viewpoint-select frozen
+- [ ] 13-01: Implement reuse_inspect + naming_convention helpers and tests
 
-### Phase 10: Core layer modelling specialists
+### Phase 14: Contract and skill coherence binding
 
-**Goal**: Replace layer-oriented stubs with complete MCP modelling procedures for the six core modelling specialists.
-**Depends on**: Phase 9
-**Requirements**: SPEC-D-02, SPEC-D-03, SPEC-D-04, SPEC-D-05, SPEC-D-06, SPEC-D-07
+**Goal**: Bind helpers into CREATE_PATH and the live skill surfaces so every mutating path inspects, reuses, and names consistently.
+**Depends on**: Phase 13
+**Requirements**: COH-04, COH-05, COH-06, COH-07
 **Success Criteria** (what must be TRUE):
 
-  1. Each of the six skills has Purpose, Inputs, MCP tools/resources, Procedure, Output/return-to-orchestrator sections
-  2. Each procedure includes inspect-before-create, recipe read before non-trivial views, and compliance explain-and-propose
-  3. No skill invents tool/resource names outside the inventory
-  4. Structural MCP-ref check passes on the whole suite
+  1. CREATE_PATH documents reuse registry, naming policy, and no silent ambiguous merge
+  2. Mutating specialists reference the coherence helpers/steps and report reused vs created
+  3. Orchestrator hand-off carries reuse_registry + naming_policy
+  4. model-qa documents helper-backed duplicate/naming checks
 
 **Plans**: 1 plan
 
 Plans:
 
-- [x] 10-01: Full bodies for motivation, capability-strategy, business, application, technology-physical, implementation-migration
+- [ ] 14-01: CREATE_PATH + specialist/orchestrator/model-qa coherence wiring
 
-### Phase 11: Cross-cutting specialists
+### Phase 15: Offline evidence and regression lock
 
-**Goal**: Ship full bodies for traceability, model QA, layout/presentation, and documentation/rationale.
-**Depends on**: Phase 10
-**Requirements**: SPEC-D-08, SPEC-D-09, SPEC-D-10, SPEC-D-11
+**Goal**: Prove multi-view reuse offline and keep the suite green without reworking frozen surfaces.
+**Depends on**: Phase 14
+**Requirements**: COH-08, COH-09, COH-10
 **Success Criteria** (what must be TRUE):
 
-  1. Traceability skill defines how cross-layer traces are created and gap-reported
-  2. Model-qa skill defines check sequence and explain-and-propose output (no silent illegal fixes)
-  3. Layout skill uses inventory layout tools only (Archi canvas)
-  4. Documentation skill binds rationale schema + completion summary and MCP doc-field write path
+  1. `docs/evidence/coherence-reuse-offline/` shows shared element ID across views + naming checks
+  2. Full unit/structural suite green; viewpoint-select digest unchanged
+  3. Evidence index/README updated; no NG violations
 
 **Plans**: 1 plan
 
 Plans:
 
-- [x] 11-01: Full bodies for traceability, model-qa, layout, documentation
-
-### Phase 12: Orchestrator dispatch, evidence, regression
-
-**Goal**: Wire post-confirm specialist dispatch on the orchestrator, add offline evidence fixtures for specialist paths, keep tests green.
-**Depends on**: Phase 11
-**Requirements**: SPEC-D-16, SPEC-D-17, SPEC-D-18, SPEC-D-19
-**Success Criteria** (what must be TRUE):
-
-  1. Orchestrator documents post-confirm hand-off payload and specialist order/decision rules
-  2. `docs/evidence/` contains offline fixtures covering deepened specialist paths (index updated)
-  3. Full unit/structural suite green
-  4. README points at specialist evidence layout
-
-**Plans**: 1 plan
-
-Plans:
-
-- [x] 12-01: Orchestrator post-confirm dispatch + offline evidence + regression lock
+- [ ] 15-01: Coherence offline evidence + regression lock
 
 ## Progress
 
-**Execution Order:** 9 → 10 → 11 → 12
+**Execution Order:** 13 → 14 → 15
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 9. Shared specialist contract and elicit body | 1/1 | Complete    | 2026-08-28 |
-| 10. Core layer modelling specialists | 1/1 | Complete    | 2026-08-28 |
-| 11. Cross-cutting specialists | 1/1 | Complete    | 2026-08-28 |
-| 12. Orchestrator dispatch, evidence, regression | 1/1 | Complete    | 2026-08-28 |
+| 13. Reuse and naming helpers | 0/1 | Not started | - |
+| 14. Contract and skill coherence binding | 0/1 | Not started | - |
+| 15. Offline evidence and regression lock | 0/1 | Not started | - |
 
 ---
-*Roadmap created: 2026-08-28 for milestone v1.2 (SEED-003 / OBJ-3)*
-
-## Next
-
-Awaiting next seed/milestone (live MCP evidence and/or OBJ-4+).
-
-Archive: `.planning/milestones/v1.2-*` and `v1.2-phases/`
+*Roadmap created: 2026-08-28 for milestone v1.3 (SEED-004 / OBJ-4)*
