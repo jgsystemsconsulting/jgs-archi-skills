@@ -1,0 +1,110 @@
+[
+ {
+  "step": "initialize",
+  "detail": "ArchiMate MCP Server 1.0.0"
+ },
+ {
+  "step": "tools/list",
+  "detail": "69 tools"
+ },
+ {
+  "step": "get-model-info",
+  "detail": "JGS Skills Live Smoke"
+ },
+ {
+  "step": "resources/list",
+  "detail": "14 resources"
+ },
+ {
+  "step": "resources/read",
+  "detail": "archimate://reference/archimate-layers (12614 chars)"
+ },
+ {
+  "step": "search-elements 'Customer'",
+  "detail": "2 hits"
+ },
+ {
+  "step": "get-or-create-element Customer",
+  "detail": "id-41c1c2a81d2c4beeaedba607f31c0305 (found_existing)"
+ },
+ {
+  "step": "get-or-create-element Customer (2nd)",
+  "detail": "id-41c1c2a81d2c4beeaedba607f31c0305 (found_existing)"
+ },
+ {
+  "step": "update-element documentation",
+  "detail": "id-41c1c2a81d2c4beeaedba607f31c0305"
+ },
+ {
+  "step": "get-or-create-element BusinessProcess",
+  "detail": "Handle Support Case -> id-57410974be8e4f66a1acd771388eea16"
+ },
+ {
+  "step": "get-or-create-element ApplicationService",
+  "detail": "Customer Support Service -> id-b0b975f8c53b436bb1795f29f8f10558"
+ },
+ {
+  "step": "get-or-create-element ApplicationComponent",
+  "detail": "CRM System -> id-210473a7f81c490585f74da06621bde1"
+ },
+ {
+  "step": "create-relationship",
+  "detail": "AssignmentRelationship -> id-e576f5d49d3a4e939eca51fc10e59c8a"
+ },
+ {
+  "step": "create-relationship",
+  "detail": "ServingRelationship -> id-74fd5f9159654bdfac2455adac780808"
+ },
+ {
+  "step": "create-relationship",
+  "detail": "RealizationRelationship -> id-84ac21e099484b66a3016993a153606c"
+ },
+ {
+  "step": "create-view",
+  "detail": "id-baa8acc69f2c440694c26b786edc8ff0"
+ },
+ {
+  "step": "add-to-view",
+  "detail": "Customer"
+ },
+ {
+  "step": "add-to-view",
+  "detail": "Handle Support Case"
+ },
+ {
+  "step": "add-to-view",
+  "detail": "Customer Support Service"
+ },
+ {
+  "step": "add-to-view",
+  "detail": "CRM System"
+ },
+ {
+  "step": "assess-layout",
+  "detail": "{'viewId': 'id-baa8acc69f2c440694c26b786edc8ff0', 'elementCount': 4, 'connectionCount': 3, 'overlapCount': 0, 'containme"
+ },
+ {
+  "step": "auto-layout-and-route",
+  "detail": "id-baa8acc69f2c440694c26b786edc8ff0"
+ },
+ {
+  "step": "get-view-contents",
+  "detail": "4 objects, 3 connections"
+ },
+ {
+  "step": "export-view png",
+  "detail": "docs\\evidence\\live-archi-smoke"
+ },
+ {
+  "step": "captured slice/inventory/rationale",
+  "detail": "docs\\evidence\\live-archi-smoke"
+ },
+ {
+  "step": "helper compliance_validate",
+  "detail": "pass :: {\n  \"findings\": [],\n  \"ok\": true\n}"
+ },
+ {
+  "step": "helper rationale_schema",
+  "detail": "pass :: {\n  \"findings\": []\n}"
+ }
+]

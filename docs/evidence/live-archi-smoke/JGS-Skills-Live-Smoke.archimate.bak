@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<archimate:model xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:archimate="http://www.archimatetool.com/archimate" name="JGS Skills Live Smoke" id="id-f5c2c810c72943aeb87269a747b271fe" version="5.0.0">
+  <folder name="Strategy" id="id-50497bb3bde548a78a517bbdfbc54a64" type="strategy"/>
+  <folder name="Business" id="id-678f4b1a3ae449ed9accac25d34ce309" type="business"/>
+  <folder name="Application" id="id-1f7b2f5c81e142b4be0f60fe815ffce6" type="application"/>
+  <folder name="Technology &amp; Physical" id="id-5233f413edef469eb6affc2194d540ea" type="technology"/>
+  <folder name="Motivation" id="id-3caecc08b8104ca5a37899edb7b5033d" type="motivation"/>
+  <folder name="Implementation &amp; Migration" id="id-4e051eb7206844739cb48340edeaf4e1" type="implementation_migration"/>
+  <folder name="Other" id="id-dd4b197613494bfc8f9dae76ce3a0e56" type="other"/>
+  <folder name="Relations" id="id-d2df899ff43b44cfac8fb728852d8ea6" type="relations"/>
+  <folder name="Views" id="id-40886375c99c4525b678b9040f216e4f" type="diagrams">
+    <element xsi:type="archimate:ArchimateDiagramModel" name="Default View" id="id-70a01854a8dd4d6ead2931cfa425961c"/>
+  </folder>
+</archimate:model>

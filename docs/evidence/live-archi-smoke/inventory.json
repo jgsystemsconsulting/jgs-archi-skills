@@ -1,0 +1,24 @@
+{
+ "elements": [
+  {
+   "id": "id-41c1c2a81d2c4beeaedba607f31c0305",
+   "name": "Customer",
+   "type": "BusinessActor"
+  },
+  {
+   "id": "id-57410974be8e4f66a1acd771388eea16",
+   "name": "Handle Support Case",
+   "type": "BusinessProcess"
+  },
+  {
+   "id": "id-b0b975f8c53b436bb1795f29f8f10558",
+   "name": "Customer Support Service",
+   "type": "ApplicationService"
+  },
+  {
+   "id": "id-210473a7f81c490585f74da06621bde1",
+   "name": "CRM System",
+   "type": "ApplicationComponent"
+  }
+ ]
+}

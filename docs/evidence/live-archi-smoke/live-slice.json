@@ -1,0 +1,66 @@
+{
+ "elements": [
+  {
+   "id": "id-41c1c2a81d2c4beeaedba607f31c0305",
+   "name": "Customer",
+   "type": "BusinessActor",
+   "abstraction": "business"
+  },
+  {
+   "id": "id-57410974be8e4f66a1acd771388eea16",
+   "name": "Handle Support Case",
+   "type": "BusinessProcess",
+   "abstraction": "business"
+  },
+  {
+   "id": "id-b0b975f8c53b436bb1795f29f8f10558",
+   "name": "Customer Support Service",
+   "type": "ApplicationService",
+   "abstraction": "application"
+  },
+  {
+   "id": "id-210473a7f81c490585f74da06621bde1",
+   "name": "CRM System",
+   "type": "ApplicationComponent",
+   "abstraction": "application"
+  }
+ ],
+ "relationships": [
+  {
+   "id": "id-e576f5d49d3a4e939eca51fc10e59c8a",
+   "type": "AssignmentRelationship",
+   "source": "id-41c1c2a81d2c4beeaedba607f31c0305",
+   "target": "id-57410974be8e4f66a1acd771388eea16"
+  },
+  {
+   "id": "id-74fd5f9159654bdfac2455adac780808",
+   "type": "ServingRelationship",
+   "source": "id-b0b975f8c53b436bb1795f29f8f10558",
+   "target": "id-57410974be8e4f66a1acd771388eea16"
+  },
+  {
+   "id": "id-84ac21e099484b66a3016993a153606c",
+   "type": "RealizationRelationship",
+   "source": "id-210473a7f81c490585f74da06621bde1",
+   "target": "id-b0b975f8c53b436bb1795f29f8f10558"
+  }
+ ],
+ "view_usages": [
+  {
+   "view": "id-baa8acc69f2c440694c26b786edc8ff0",
+   "element": "id-41c1c2a81d2c4beeaedba607f31c0305"
+  },
+  {
+   "view": "id-baa8acc69f2c440694c26b786edc8ff0",
+   "element": "id-57410974be8e4f66a1acd771388eea16"
+  },
+  {
+   "view": "id-baa8acc69f2c440694c26b786edc8ff0",
+   "element": "id-b0b975f8c53b436bb1795f29f8f10558"
+  },
+  {
+   "view": "id-baa8acc69f2c440694c26b786edc8ff0",
+   "element": "id-210473a7f81c490585f74da06621bde1"
+  }
+ ]
+}

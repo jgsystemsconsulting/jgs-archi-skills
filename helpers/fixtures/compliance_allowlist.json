@@ -61,30 +61,131 @@
     "AssociationRelationship"
   ],
   "permitted_patterns": [
-    {"source": "BusinessActor", "relationship": "Assignment", "target": "BusinessRole"},
-    {"source": "BusinessRole", "relationship": "Assignment", "target": "BusinessProcess"},
-    {"source": "BusinessProcess", "relationship": "Triggering", "target": "BusinessProcess"},
-    {"source": "BusinessProcess", "relationship": "Realization", "target": "BusinessService"},
-    {"source": "BusinessService", "relationship": "Serving", "target": "BusinessRole"},
-    {"source": "ApplicationComponent", "relationship": "Realization", "target": "ApplicationService"},
-    {"source": "ApplicationComponent", "relationship": "Assignment", "target": "ApplicationFunction"},
-    {"source": "ApplicationService", "relationship": "Serving", "target": "BusinessProcess"},
-    {"source": "ApplicationFunction", "relationship": "Access", "target": "DataObject"},
-    {"source": "ApplicationComponent", "relationship": "Access", "target": "DataObject"},
-    {"source": "Node", "relationship": "Assignment", "target": "SystemSoftware"},
-    {"source": "Node", "relationship": "Assignment", "target": "Device"},
-    {"source": "SystemSoftware", "relationship": "Realization", "target": "TechnologyService"},
-    {"source": "TechnologyService", "relationship": "Serving", "target": "ApplicationComponent"},
-    {"source": "WorkPackage", "relationship": "Realization", "target": "Deliverable"},
-    {"source": "Plateau", "relationship": "Aggregation", "target": "WorkPackage"},
-    {"source": "Goal", "relationship": "Realization", "target": "Requirement"},
-    {"source": "Capability", "relationship": "Realization", "target": "ApplicationComponent"},
-    {"source": "Capability", "relationship": "Realization", "target": "BusinessProcess"},
-    {"source": "Stakeholder", "relationship": "Association", "target": "Driver"},
-    {"source": "Driver", "relationship": "Influence", "target": "Goal"},
-    {"source": "BusinessActor", "relationship": "Association", "target": "Stakeholder"},
-    {"source": "Grouping", "relationship": "Aggregation", "target": "BusinessProcess"},
-    {"source": "Grouping", "relationship": "Aggregation", "target": "ApplicationComponent"}
+    {
+      "source": "BusinessActor",
+      "relationship": "Assignment",
+      "target": "BusinessRole"
+    },
+    {
+      "source": "BusinessRole",
+      "relationship": "Assignment",
+      "target": "BusinessProcess"
+    },
+    {
+      "source": "BusinessProcess",
+      "relationship": "Triggering",
+      "target": "BusinessProcess"
+    },
+    {
+      "source": "BusinessProcess",
+      "relationship": "Realization",
+      "target": "BusinessService"
+    },
+    {
+      "source": "BusinessService",
+      "relationship": "Serving",
+      "target": "BusinessRole"
+    },
+    {
+      "source": "ApplicationComponent",
+      "relationship": "Realization",
+      "target": "ApplicationService"
+    },
+    {
+      "source": "ApplicationComponent",
+      "relationship": "Assignment",
+      "target": "ApplicationFunction"
+    },
+    {
+      "source": "ApplicationService",
+      "relationship": "Serving",
+      "target": "BusinessProcess"
+    },
+    {
+      "source": "ApplicationFunction",
+      "relationship": "Access",
+      "target": "DataObject"
+    },
+    {
+      "source": "ApplicationComponent",
+      "relationship": "Access",
+      "target": "DataObject"
+    },
+    {
+      "source": "Node",
+      "relationship": "Assignment",
+      "target": "SystemSoftware"
+    },
+    {
+      "source": "Node",
+      "relationship": "Assignment",
+      "target": "Device"
+    },
+    {
+      "source": "SystemSoftware",
+      "relationship": "Realization",
+      "target": "TechnologyService"
+    },
+    {
+      "source": "TechnologyService",
+      "relationship": "Serving",
+      "target": "ApplicationComponent"
+    },
+    {
+      "source": "WorkPackage",
+      "relationship": "Realization",
+      "target": "Deliverable"
+    },
+    {
+      "source": "Plateau",
+      "relationship": "Aggregation",
+      "target": "WorkPackage"
+    },
+    {
+      "source": "Goal",
+      "relationship": "Realization",
+      "target": "Requirement"
+    },
+    {
+      "source": "Capability",
+      "relationship": "Realization",
+      "target": "ApplicationComponent"
+    },
+    {
+      "source": "Capability",
+      "relationship": "Realization",
+      "target": "BusinessProcess"
+    },
+    {
+      "source": "Stakeholder",
+      "relationship": "Association",
+      "target": "Driver"
+    },
+    {
+      "source": "Driver",
+      "relationship": "Influence",
+      "target": "Goal"
+    },
+    {
+      "source": "BusinessActor",
+      "relationship": "Association",
+      "target": "Stakeholder"
+    },
+    {
+      "source": "Grouping",
+      "relationship": "Aggregation",
+      "target": "BusinessProcess"
+    },
+    {
+      "source": "Grouping",
+      "relationship": "Aggregation",
+      "target": "ApplicationComponent"
+    },
+    {
+      "source": "BusinessActor",
+      "relationship": "Assignment",
+      "target": "BusinessProcess"
+    }
   ],
   "abstraction_levels": {
     "Stakeholder": "motivation",
@@ -121,5 +222,5 @@
     "Grouping": "cross",
     "Location": "cross"
   },
-  "notes": "Patterns are a small offline subset for deterministic tests. Agents must still read MCP archimate-relationships live for full legality."
+  "notes": "Patterns are a small offline subset for deterministic tests. Agents must still read MCP archimate-relationships live for full legality. Added BusinessActor-Assignment-BusinessProcess: legal per live MCP archimate://reference/archimate-relationships (active structure -> behaviour) and accepted by live create-relationship on 2026-08-28 live smoke."
 }
