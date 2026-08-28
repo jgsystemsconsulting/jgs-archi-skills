@@ -10,22 +10,22 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 ### Reuse inspect and naming helpers
 
-- [ ] **COH-01**: Stdlib helper `helpers/reuse_inspect.py` accepts a candidate (name, type optional) plus an element inventory snapshot and returns a structured decision `reuse` | `create` | `ambiguous` with matched element IDs and scores; exact name+type match prefers reuse; no MCP calls inside the helper
-- [ ] **COH-02**: Stdlib helper `helpers/naming_convention.py` normalizes display names (trim, collapse whitespace, stable case policy) and detects cross-view naming conflicts for the same concept ID or near-duplicate labels; CLI usable offline
-- [ ] **COH-03**: Unit tests cover reuse decisions (reuse/create/ambiguous) and naming normalize/conflict cases; suite remains stdlib unittest
+- [x] **COH-01**: Stdlib helper `helpers/reuse_inspect.py` accepts a candidate (name, type optional) plus an element inventory snapshot and returns a structured decision `reuse` | `create` | `ambiguous` with matched element IDs and scores; exact name+type match prefers reuse; no MCP calls inside the helper
+- [x] **COH-02**: Stdlib helper `helpers/naming_convention.py` normalizes display names (trim, collapse whitespace, stable case policy) and detects cross-view naming conflicts for the same concept ID or near-duplicate labels; CLI usable offline
+- [x] **COH-03**: Unit tests cover reuse decisions (reuse/create/ambiguous) and naming normalize/conflict cases; suite remains stdlib unittest
 
 ### Contract and skill binding
 
-- [ ] **COH-04**: `docs/CREATE_PATH.md` gains an OBJ-4 coherence section: mandatory inspect-before-create using inventory tools + optional offline helper; maintain a run-scoped reuse registry (concept key → element ID); naming policy; never auto-merge `ambiguous` without user/orchestrator decision
-- [ ] **COH-05**: Mutating layer specialists document calling reuse/naming helpers (or equivalent structured inspect steps) and recording reused vs created IDs in the hand-back payload
-- [ ] **COH-06**: `archi-orchestrator` hand-off payload includes `reuse_registry` and `naming_policy` fields; default dispatch still prefers existing IDs across specialists
-- [ ] **COH-07**: `archi-model-qa` procedure uses helper-backed duplicate and cross-view naming checks and reports findings with explain-and-propose (no silent illegal fixes)
+- [x] **COH-04**: `docs/CREATE_PATH.md` gains an OBJ-4 coherence section: mandatory inspect-before-create using inventory tools + optional offline helper; maintain a run-scoped reuse registry (concept key → element ID); naming policy; never auto-merge `ambiguous` without user/orchestrator decision
+- [x] **COH-05**: Mutating layer specialists document calling reuse/naming helpers (or equivalent structured inspect steps) and recording reused vs created IDs in the hand-back payload
+- [x] **COH-06**: `archi-orchestrator` hand-off payload includes `reuse_registry` and `naming_policy` fields; default dispatch still prefers existing IDs across specialists
+- [x] **COH-07**: `archi-model-qa` procedure uses helper-backed duplicate and cross-view naming checks and reports findings with explain-and-propose (no silent illegal fixes)
 
 ### Evidence and freeze
 
-- [ ] **COH-08**: Offline evidence under `docs/evidence/coherence-reuse-offline/` shows multi-view reuse of one element ID, duplicate minimisation path, and naming consistency checks
-- [ ] **COH-09**: MCP-ref validator and specialist contract tests stay green; `archi-viewpoint-select` remains frozen at the v1.1 digest
-- [ ] **COH-10**: No rework of v1.0 orchestrator intent path or v1.2 specialist modelling cores beyond coherence hooks; NG-1..5 respected
+- [x] **COH-08**: Offline evidence under `docs/evidence/coherence-reuse-offline/` shows multi-view reuse of one element ID, duplicate minimisation path, and naming consistency checks
+- [x] **COH-09**: MCP-ref validator and specialist contract tests stay green; `archi-viewpoint-select` remains frozen at the v1.1 digest
+- [x] **COH-10**: No rework of v1.0 orchestrator intent path or v1.2 specialist modelling cores beyond coherence hooks; NG-1..5 respected
 
 ## Future Requirements (not this milestone)
 
@@ -60,16 +60,16 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 | Requirement | Phase | Status |
 |-------------|-------|--------|
-| COH-01 | Phase 13 | Pending |
-| COH-02 | Phase 13 | Pending |
-| COH-03 | Phase 13 | Pending |
-| COH-04 | Phase 14 | Pending |
-| COH-05 | Phase 14 | Pending |
-| COH-06 | Phase 14 | Pending |
-| COH-07 | Phase 14 | Pending |
-| COH-08 | Phase 15 | Pending |
-| COH-09 | Phase 15 | Pending |
-| COH-10 | Phase 15 | Pending |
+| COH-01 | Phase 13 | Complete |
+| COH-02 | Phase 13 | Complete |
+| COH-03 | Phase 13 | Complete |
+| COH-04 | Phase 14 | Complete |
+| COH-05 | Phase 14 | Complete |
+| COH-06 | Phase 14 | Complete |
+| COH-07 | Phase 14 | Complete |
+| COH-08 | Phase 15 | Complete |
+| COH-09 | Phase 15 | Complete |
+| COH-10 | Phase 15 | Complete |
 
 **Coverage:**
 

@@ -1,0 +1,16 @@
+{
+  "usages": [
+    {
+      "id": "el-portal-1",
+      "name": "Customer Portal",
+      "type": "ApplicationComponent",
+      "view": "Application Structure"
+    },
+    {
+      "id": "el-portal-1",
+      "name": "Customer Portal",
+      "type": "ApplicationComponent",
+      "view": "Application Usage"
+    }
+  ]
+}

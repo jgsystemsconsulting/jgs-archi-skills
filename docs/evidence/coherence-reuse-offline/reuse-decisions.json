@@ -1,0 +1,26 @@
+{
+  "decisions": [
+    {
+      "candidate": {"name": "Customer Portal", "type": "ApplicationComponent"},
+      "decision": "reuse",
+      "matches": [{"id": "el-portal-1", "score": 1.0}],
+      "views": ["Application Structure", "Application Usage"]
+    },
+    {
+      "candidate": {"name": "Billing Engine", "type": "ApplicationComponent"},
+      "decision": "create",
+      "matches": []
+    },
+    {
+      "candidate": {"name": "Payment", "type": "ApplicationService"},
+      "decision": "ambiguous",
+      "note": "near-match Payment Service would surface; do not auto-merge"
+    }
+  ],
+  "reuse_registry": {
+    "applicationcomponent:customer portal": {
+      "element_id": "el-portal-1",
+      "decision": "reuse"
+    }
+  }
+}

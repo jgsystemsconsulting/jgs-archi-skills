@@ -49,9 +49,9 @@ Archive: `.planning/milestones/v1.2-*` and `v1.2-phases/`
 
 </details>
 
-- [ ] **Phase 13: Reuse and naming helpers** — Deterministic reuse_inspect + naming_convention stdlib helpers and unit tests (COH-01..03)
-- [ ] **Phase 14: Contract and skill coherence binding** — CREATE_PATH OBJ-4 section; specialist + orchestrator + model-qa wiring (COH-04..07)
-- [ ] **Phase 15: Offline evidence and regression lock** — Multi-view reuse evidence pack; green suite; freeze viewpoint-select (COH-08..10)
+- [x] **Phase 13: Reuse and naming helpers** — completed 2026-08-28 — Deterministic reuse_inspect + naming_convention stdlib helpers and unit tests (COH-01..03)
+- [x] **Phase 14: Contract and skill coherence binding** — completed 2026-08-28 — CREATE_PATH OBJ-4 section; specialist + orchestrator + model-qa wiring (COH-04..07)
+- [x] **Phase 15: Offline evidence and regression lock** — completed 2026-08-28 — Multi-view reuse evidence pack; green suite; freeze viewpoint-select (COH-08..10)
 
 ## Phase Details
 
@@ -70,7 +70,7 @@ Archive: `.planning/milestones/v1.2-*` and `v1.2-phases/`
 
 Plans:
 
-- [ ] 13-01: Implement reuse_inspect + naming_convention helpers and tests
+- [x] 13-01: Implement reuse_inspect + naming_convention helpers and tests
 
 ### Phase 14: Contract and skill coherence binding
 
@@ -88,7 +88,7 @@ Plans:
 
 Plans:
 
-- [ ] 14-01: CREATE_PATH + specialist/orchestrator/model-qa coherence wiring
+- [x] 14-01: CREATE_PATH + specialist/orchestrator/model-qa coherence wiring
 
 ### Phase 15: Offline evidence and regression lock
 
@@ -105,7 +105,7 @@ Plans:
 
 Plans:
 
-- [ ] 15-01: Coherence offline evidence + regression lock
+- [x] 15-01: Coherence offline evidence + regression lock
 
 ## Progress
 
@@ -113,9 +113,9 @@ Plans:
 
 | Phase | Plans Complete | Status | Completed |
 |-------|----------------|--------|-----------|
-| 13. Reuse and naming helpers | 0/1 | Not started | - |
-| 14. Contract and skill coherence binding | 0/1 | Not started | - |
-| 15. Offline evidence and regression lock | 0/1 | Not started | - |
+| 13. Reuse and naming helpers | 1/1 | Complete    | 2026-08-28 |
+| 14. Contract and skill coherence binding | 1/1 | Complete    | 2026-08-28 |
+| 15. Offline evidence and regression lock | 1/1 | Complete    | 2026-08-28 |
 
 ---
 *Roadmap created: 2026-08-28 for milestone v1.3 (SEED-004 / OBJ-4)*
