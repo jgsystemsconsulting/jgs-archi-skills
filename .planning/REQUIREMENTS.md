@@ -18,9 +18,9 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 ### Contract and skill binding
 
-- [ ] **COMP-08**: `docs/CREATE_PATH.md` gains an OBJ-5 compliance-depth section: when to run offline validator vs live MCP resource checks; findings must explain-and-propose; never silent-apply
-- [ ] **COMP-09**: `archi-model-qa` procedure binds the deepened validator (and retains coherence helpers); mutating specialists document optional pre-create/post-create compliance check + hand-back of compliance findings
-- [ ] **COMP-10**: `archi-orchestrator` hand-off/summary path documents consuming model-qa compliance findings (no new mutating tools)
+- [x] **COMP-08**: `docs/CREATE_PATH.md` gains an OBJ-5 compliance-depth section: when to run offline validator vs live MCP resource checks; findings must explain-and-propose; never silent-apply
+- [x] **COMP-09**: `archi-model-qa` procedure binds the deepened validator (and retains coherence helpers); mutating specialists document optional pre-create/post-create compliance check + hand-back of compliance findings
+- [x] **COMP-10**: `archi-orchestrator` hand-off/summary path documents consuming model-qa compliance findings (no new mutating tools)
 
 ### Evidence and freeze
 
@@ -68,9 +68,9 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 | COMP-05 | Phase 16 | Complete |
 | COMP-06 | Phase 16 | Complete |
 | COMP-07 | Phase 16 | Complete |
-| COMP-08 | Phase 17 | Pending |
-| COMP-09 | Phase 17 | Pending |
-| COMP-10 | Phase 17 | Pending |
+| COMP-08 | Phase 17 | Complete |
+| COMP-09 | Phase 17 | Complete |
+| COMP-10 | Phase 17 | Complete |
 | COMP-11 | Phase 18 | Pending |
 | COMP-12 | Phase 18 | Pending |
 | COMP-13 | Phase 18 | Pending |

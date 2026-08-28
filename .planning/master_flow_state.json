@@ -1,14 +1,14 @@
 {
   "schema_version": 1,
   "kind": "pointer",
-  "active_phase": 17,
-  "active_phase_dir": ".planning/phases/17-contract-and-skill-compliance-binding",
-  "active_state": ".planning/phases/17-contract-and-skill-compliance-binding/master_flow_state.json",
+  "active_phase": 18,
+  "active_phase_dir": ".planning/phases/18-offline-evidence-and-regression-lock",
+  "active_state": ".planning/phases/18-offline-evidence-and-regression-lock/master_flow_state.json",
   "lock": {
-    "phase": 17,
+    "phase": 18,
     "session_hint": "master-flow",
-    "updated_at": "2026-08-28T00:23:44.175Z"
+    "updated_at": "2026-08-28T00:26:06.301Z"
   },
-  "updated_at": "2026-08-28T00:23:44.176Z",
+  "updated_at": "2026-08-28T00:26:06.302Z",
   "notes": ""
 }

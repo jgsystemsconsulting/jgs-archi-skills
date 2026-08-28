@@ -2,18 +2,18 @@
 gsd_state_version: 1.0
 milestone: v1.4
 milestone_name: Compliance validation
-current_phase: 17
-current_phase_name: Contract and skill compliance binding
+current_phase: 18
+current_phase_name: Offline evidence and regression lock
 status: planning
-last_updated: "2026-08-28T00:23:28.551Z"
+last_updated: "2026-08-28T00:26:05.001Z"
 last_activity: 2026-08-28
-last_activity_desc: Phase 16 complete, transitioned to Phase 17
-state_head: 8edb0d0d644ebde48a697abe91fe6955916eab71
+last_activity_desc: Phase 17 complete, transitioned to Phase 18
+state_head: f92adaa88990e89b3d852652249cfb055d7b05b6
 progress:
   total_phases: 3
-  completed_phases: 1
-  total_plans: 1
-  completed_plans: 1
+  completed_phases: 2
+  total_plans: 2
+  completed_plans: 2
 ---
 
 # Project State
@@ -27,16 +27,16 @@ See: .planning/PROJECT.md (updated 2026-08-27)
 
 ## Current Position
 
-Phase: 17 — Contract and skill compliance binding
+Phase: 18 — Offline evidence and regression lock
 Plan: Not started
 Status: Ready to plan
-Last activity: 2026-08-28 — Phase 16 complete, transitioned to Phase 17
+Last activity: 2026-08-28 — Phase 17 complete, transitioned to Phase 18
 
 ## Performance Metrics
 
 **Velocity:**
 
-- Total plans completed: 16
+- Total plans completed: 17
 - Average duration: -
 - Total execution time: 0 hours
 
@@ -60,6 +60,7 @@ Last activity: 2026-08-28 — Phase 16 complete, transitioned to Phase 17
 | 14 | 1 | - | - |
 | 15 | 1 | - | - |
 | 16 | 1 | - | - |
+| 17 | 1 | - | - |
 
 **Recent Trend:**
 
