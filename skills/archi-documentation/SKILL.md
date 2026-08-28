@@ -9,15 +9,16 @@ Orchestrator-dispatched specialist. Not a primary user entrypoint.
 
 ## Purpose
 
-Record structured rationale for significant views into model documentation fields via MCP, support natural-language change notes without destroying shared elements, and produce a completion summary for the modelling run (SPEC-D-11 / RATE-01..03).
+Record structured rationale for significant views into model documentation fields via MCP, support natural-language change notes without destroying shared elements, and produce a completion summary for the modelling run (SPEC-D-11 / RATE-01..03 / OBJ-6).
 
 ## Hard rules
 
 1. **Mutations only after View Plan confirmation** (SPEC-D-15) when writing into the model.
 2. **Orchestrator-dispatched only** (SPEC-02).
-3. **Follow `docs/CREATE_PATH.md`**.
-4. Validate rationale markdown with `python helpers/rationale_schema.py` before write when a file artifact exists.
-5. NL regeneration must reuse element IDs; never recreate shared concepts as duplicates (RATE-02).
+3. **Follow `docs/CREATE_PATH.md`** including the OBJ-6 rationale / NL-change / completion-summary section.
+4. Validate rationale markdown with `python helpers/rationale_schema.py` before write when a file artifact exists (non-empty required sections).
+5. NL regeneration must run an impact plan first and reuse element IDs; never recreate shared concepts as duplicates (RATE-02).
+6. Validate completion summary with `python helpers/completion_summary_schema.py` before hand-back when a file artifact exists.
 
 ## Inputs
 
@@ -28,6 +29,7 @@ Record structured rationale for significant views into model documentation field
 | View Plan + Trace Table | recommended | Purpose, stakeholders, concerns |
 | Modelling decisions | optional | From prior specialists |
 | NL change request | optional | For regenerate path |
+| View/element inventory | optional | For NL impact helper |
 
 ## MCP resources
 
@@ -40,38 +42,56 @@ Read: `get-view-contents`, `get-element`, `get-views`
 Write docs: `update-element`, `update-view`, `update-model` as appropriate for documentation fields  
 Never delete shared structure to refresh text
 
-## Rationale schema (RATE-01)
-
-Required sections (helper-enforced): purpose, stakeholders and concerns, viewpoint, questions answered, assumptions, decisions, exclusions, open questions.
+## Offline helpers (OBJ-6)
 
 ```bash
+# Rationale depth (single file or multi-view bundle)
 python helpers/rationale_schema.py path/to/rationale.md
+python helpers/rationale_schema.py --bundle path/to/dir-or-bundle.json [--json]
+
+# NL-change impact (deterministic; never mutates)
+python helpers/nl_change_impact.py note.txt inventory.json
+
+# Completion summary structure
+python helpers/completion_summary_schema.py path/to/summary.md
 ```
+
+Required rationale sections (helper-enforced): Purpose, Stakeholders and Concerns, Viewpoint, Questions Answered, Assumptions, Decisions, Exclusions, Open Questions. Bodies must be non-empty.
+
+Required completion-summary blocks: Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run.
 
 ## Procedure
 
 OBJ-4 coherence: before each create, search existing elements; run `helpers/reuse_inspect.py` on the snapshot when useful; apply `helpers/naming_convention.py` normalize; update run-scoped `reuse_registry`; never auto-merge `ambiguous`. Hand-back must list **reused** vs **created** IDs.
 
+OBJ-5 compliance: optional `helpers/compliance_validate.py` on a captured slice; explain-and-propose only.
 
 ### Step 0 — Gate
 Stop if writing to model without approval.
 
 ### Step 1 — Draft rationale
-Per significant view, draft rationale markdown covering schema sections from View Plan + specialist results.
+Per significant view, draft rationale markdown covering schema sections from View Plan + specialist results. Prefer non-empty concrete sentences, not placeholders.
 
-### Step 2 — Validate
-Run rationale_schema helper; fix until exit 0.
+### Step 2 — Validate rationale
+Run `rationale_schema` helper (file or `--bundle`); fix until exit 0. Record schema validation status for hand-back.
 
 ### Step 3 — Record in model
-Write validated text into the view/element documentation fields via MCP update tools.
+Write validated text into the view/element documentation fields via MCP update tools. Do not delete shared structure.
 
 ### Step 4 — NL changes (RATE-02)
-If user requested changes: identify affected views; regenerate visuals via layout/layer specialists as needed; reuse IDs; update rationale deltas.
+If user requested changes:
+
+1. Capture or assemble inventory JSON (`views`, `elements` with `shared` / `view_ids`).
+2. Run `helpers/nl_change_impact.py` on the change note + inventory.
+3. Present impact plan (affected views, must-reuse IDs, exclusions) to user/orchestrator; wait for confirmation (NG-3).
+4. Regenerate visuals via layout/layer specialists **only** for `regenerate_scope`; reuse every `must_reuse_element_ids` entry; never recreate shared concepts.
+5. Update rationale deltas for affected views; re-run rationale validation.
 
 ### Step 5 — Completion summary (RATE-03)
-Emit run summary: views touched, decisions, open questions, confirmation status, specialist list.
+Emit run summary covering required blocks. Validate with `completion_summary_schema` when a file artifact exists.
 
 ### Step 6 — Hand-back
+Return Specialist Result including schema validation status, impact plan path/fields when NL path ran, and completion summary.
 
 ## Output template
 
@@ -85,12 +105,21 @@ Emit run summary: views touched, decisions, open questions, confirmation status,
 |------|--------------|---------------------|
 | … | yes | yes/no |
 
+### NL-change impact (if any)
+- Affected views: …
+- Must-reuse element IDs: …
+- User confirmation: pending | approved | aborted
+
 ### Completion summary
-- Views touched: …
+- Views Touched: …
 - Decisions: …
-- Open questions: …
-- Confirmation status: …
-- Specialists run: …
+- Open Questions: …
+- Confirmation Status: …
+- Specialists Run: …
+
+### Schema validation
+- rationale_schema: pass | fail
+- completion_summary_schema: pass | fail
 
 ### Open questions
 - …
@@ -98,5 +127,5 @@ Emit run summary: views touched, decisions, open questions, confirmation status,
 
 ## Return to orchestrator
 
-1. Specialist Result including completion summary
-2. Paths to rationale artifacts under `docs/evidence/` when offline capture is requested
+1. Specialist Result including completion summary and validation status
+2. Paths to rationale / impact / summary artifacts under `docs/evidence/` when offline capture is requested

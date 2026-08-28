@@ -123,6 +123,50 @@ Binding for ArchiMate legality and consistency. Violations are **explained** wit
 
 Every compliance note in specialist/orchestrator payloads must carry: check id (when known), object refs, problem explanation, proposed alternative. Do not auto-apply fixes.
 
+## Rationale, NL-change, and completion summary (OBJ-6 / RATE-01..03)
+
+Binding for structured view rationale, safe natural-language change regeneration, and end-of-run completion summary. Rationale and summary text live in the Archi model documentation fields via MCP (stateless skills). Offline helpers are deterministic and never call MCP.
+
+### Draft and validate rationale (RATE-01)
+
+1. Per significant view, draft markdown with required sections: Purpose, Stakeholders and Concerns, Viewpoint, Questions Answered, Assumptions, Decisions, Exclusions, Open Questions.
+2. Bodies must be non-empty (whitespace-only fails).
+3. Offline validate before write:
+   - Single file: `python helpers/rationale_schema.py path/to/rationale.md`
+   - Multi-view dir or JSON bundle: `python helpers/rationale_schema.py --bundle DIR|bundle.json [--json]`
+4. Fix until exit 0 (warn-only order drift may remain).
+
+### Record in model (live, post-confirm)
+
+1. Mutations only after View Plan confirmation (SPEC-D-15 / NG-3).
+2. Write validated rationale into view (or element) documentation fields via inventory tools only: `update-view`, `update-element`, `update-model` as appropriate.
+3. Never delete shared structure to refresh documentation text.
+4. Prefer one rationale blob per significant view; keep section headings stable so re-validation stays possible offline.
+
+### NL-change regeneration (RATE-02)
+
+1. User supplies a natural-language change note; skill may interpret free text into structured keywords, but offline impact planning stays deterministic.
+2. Build a view/element inventory snapshot (`views[{id,name,keywords?}]`, `elements[{id,name,shared?,view_ids?}]`).
+3. Run impact plan: `python helpers/nl_change_impact.py note.txt inventory.json`
+4. Impact plan fields: `affected_views`, `regenerate_scope`, `must_reuse_element_ids`, `exclusions`, `notes`.
+5. Before regenerate: require the impact plan; reuse every ID in `must_reuse_element_ids`; never recreate shared concepts as duplicates; never auto-apply without user confirmation (NG-3).
+6. Regenerate only listed views (layout/layer specialists as needed); update rationale deltas; re-validate rationale.
+
+### Completion summary (RATE-03)
+
+1. End every modelling run with a completion summary covering at minimum: Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run.
+2. Offline validate: `python helpers/completion_summary_schema.py path/to/summary.md`
+3. Orchestrator consumes the documentation specialist summary in the run closeout; do not invent new mutating tools.
+
+### When to run which (OBJ-6)
+
+| Situation | Action |
+|-----------|--------|
+| After significant views exist | Draft + `rationale_schema` validate; write via MCP if confirmed |
+| User NL change request | `nl_change_impact` plan → user confirm → regenerate with reuse IDs |
+| End of run | `completion_summary_schema` validate; return summary to orchestrator |
+| CI / offline evidence | Fixture packs under `docs/evidence/rationale-nl-change-offline/` |
+
 ## Recipe and reference reads (NG-4 / SPEC-D-14)
 
 Before non-trivial views, **read** (do not copy tables into the skill or chat dumps):

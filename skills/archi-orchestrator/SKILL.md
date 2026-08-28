@@ -152,7 +152,7 @@ Parallelism: independent layer specialists may run in parallel when the modellin
 
 ### Shared contract
 
-Every mutating specialist must follow `docs/CREATE_PATH.md` including the OBJ-4 coherence section (reuse registry, naming policy, no silent ambiguous merge) and the OBJ-5 compliance section (explain-and-propose; never silent-apply). Offline assists: `helpers/reuse_inspect.py`, `helpers/naming_convention.py`, `helpers/compliance_validate.py`. Inventory tools only. No ArchiMate table dumps (NG-4). User remains governor (NG-3).
+Every mutating specialist must follow `docs/CREATE_PATH.md` including the OBJ-4 coherence section (reuse registry, naming policy, no silent ambiguous merge), the OBJ-5 compliance section (explain-and-propose; never silent-apply), and the OBJ-6 rationale / NL-change / completion-summary section. Offline assists: `helpers/reuse_inspect.py`, `helpers/naming_convention.py`, `helpers/compliance_validate.py`, `helpers/rationale_schema.py`, `helpers/nl_change_impact.py`, `helpers/completion_summary_schema.py`. Inventory tools only. No ArchiMate table dumps (NG-4). User remains governor (NG-3).
 
 ### Compliance findings (OBJ-5)
 
@@ -161,6 +161,14 @@ After the model-qa specialist (or a specialist self-check), consume compliance f
 - Carry forward finding count and any **needs-user** items (illegal types/edges, abstraction or naming conflicts).
 - Do not invent mutating tools to auto-fix; surface alternatives and wait for user/orchestrator choice.
 - Optional hand-off field: `compliance_findings` (list of `{check_id, object_refs, problem, proposed_alternative}`).
+
+### Documentation and NL-change loop (OBJ-6)
+
+After modelling content is stable (typically after layout), dispatch `archi-documentation` last:
+
+- Consume its **completion summary** (Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run) and schema validation status.
+- If the user requests natural-language changes: run the documentation NL path (impact plan via `nl_change_impact` → user confirm → regenerate with must-reuse IDs → rationale deltas). Do not invent new mutating tools; reuse layer/layout specialists for regenerate scope only.
+- Optional hand-off fields: `completion_summary`, `rationale_validation`, `nl_change_impact`.
 
 ### Completion
 
@@ -173,4 +181,5 @@ Always end with:
 1. Path or paste of the View Plan
 2. Confirmation status (pending / approved / aborted)
 3. Compliance/QA outcome (pass, findings pending user, or blocked) when model-qa ran
-4. Next recommended action (revise plan, approve, resolve compliance findings, or hand off to specialists when available)
+4. Documentation outcome: completion summary (or path), rationale validation status, NL-change impact if any
+5. Next recommended action (revise plan, approve, resolve compliance findings, NL-change regenerate, or stop)
