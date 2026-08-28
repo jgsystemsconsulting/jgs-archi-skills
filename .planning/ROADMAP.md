@@ -75,7 +75,7 @@ Archive: `.planning/milestones/v1.4-*` and `v1.4-phases/`
 
 - [x] **Phase 19: Rationale and NL-change helpers** — Deepen offline rationale/completion-summary/NL-impact helpers (RAT-01..04) (completed 2026-08-28)
 - [x] **Phase 20: Contract and skill rationale binding** — CREATE_PATH OBJ-6; documentation + orchestrator wiring (RAT-05..07) (completed 2026-08-28)
-- [ ] **Phase 21: Offline evidence and regression lock** — Rationale/NL-change evidence pack; green suite; freeze prior surfaces (RAT-08..10)
+- [x] **Phase 21: Offline evidence and regression lock** — Rationale/NL-change evidence pack; green suite; freeze prior surfaces (RAT-08..10) (completed 2026-08-28)
 
 ## Phase Details
 
@@ -129,7 +129,7 @@ Plans:
 
 Plans:
 
-- [ ] 21-01: Rationale/NL-change offline evidence + regression lock
+- [x] 21-01: Rationale/NL-change offline evidence + regression lock
 
 ## Progress
 
@@ -139,7 +139,7 @@ Plans:
 |-------|----------------|--------|-----------|
 | 19. Rationale and NL-change helpers | 1/1 | Complete    | 2026-08-28 |
 | 20. Contract and skill rationale binding | 1/1 | Complete    | 2026-08-28 |
-| 21. Offline evidence and regression lock | 0/1 | Not started | - |
+| 21. Offline evidence and regression lock | 1/1 | Complete    | 2026-08-28 |
 
 ---
 *Roadmap created: 2026-08-28 for milestone v1.5 (SEED-006 / OBJ-6)*

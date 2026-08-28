@@ -23,9 +23,9 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 
 ### Evidence and freeze
 
-- [ ] **RAT-08**: Offline evidence under `docs/evidence/rationale-nl-change-offline/` shows: valid multi-view rationale pack, invalid rationale (missing/empty section), NL-change impact plan that preserves shared IDs, completion summary pass/fail samples
-- [ ] **RAT-09**: Full unit/structural suite green; `archi-viewpoint-select` remains frozen at the v1.1 digest; thin v1.0 `rationale_schema` heading check remains usable or is cleanly extended without breaking callers
-- [ ] **RAT-10**: No rework of v1.0–v1.4 shipped cores beyond rationale/documentation hooks; NG-1..5 respected
+- [x] **RAT-08**: Offline evidence under `docs/evidence/rationale-nl-change-offline/` shows: valid multi-view rationale pack, invalid rationale (missing/empty section), NL-change impact plan that preserves shared IDs, completion summary pass/fail samples
+- [x] **RAT-09**: Full unit/structural suite green; `archi-viewpoint-select` remains frozen at the v1.1 digest; thin v1.0 `rationale_schema` heading check remains usable or is cleanly extended without breaking callers
+- [x] **RAT-10**: No rework of v1.0–v1.4 shipped cores beyond rationale/documentation hooks; NG-1..5 respected
 
 ## Future Requirements (not this milestone)
 
@@ -69,9 +69,9 @@ Requirements for this milestone only. Prior REQUIREMENTS remain under `.planning
 | RAT-05 | Phase 20 | Complete |
 | RAT-06 | Phase 20 | Complete |
 | RAT-07 | Phase 20 | Complete |
-| RAT-08 | Phase 21 | Pending |
-| RAT-09 | Phase 21 | Pending |
-| RAT-10 | Phase 21 | Pending |
+| RAT-08 | Phase 21 | Complete |
+| RAT-09 | Phase 21 | Complete |
+| RAT-10 | Phase 21 | Complete |
 
 **Coverage:**
 
