@@ -10,7 +10,9 @@ ROOT = Path(__file__).resolve().parents[1]
 CREATE = ROOT / "docs" / "CREATE_PATH.md"
 ELICIT = ROOT / "skills" / "archi-elicit" / "SKILL.md"
 VSEL = ROOT / "skills" / "archi-viewpoint-select" / "SKILL.md"
-FROZEN = "01ad2cc359bb1a4e42a26d8eda383b394fc73a6409373736eba1c5bd6caf94ea"
+# Digest over the canonical LF bytes as stored in git; Windows checkouts use
+# CRLF in the working tree, so line endings are normalized before hashing.
+FROZEN = "95c18a9ac4407d09352b47fc1a3887148353e7a6c09f020dbba5bf1a320b623f"
 
 MUTATING = [
     "archi-motivation",
@@ -65,7 +67,8 @@ class SpecialistContractTests(unittest.TestCase):
         self.assertIn("ambiguous", text.lower())
 
     def test_viewpoint_select_frozen(self) -> None:
-        digest = hashlib.sha256(VSEL.read_bytes()).hexdigest()
+        digest = hashlib.sha256(
+            VSEL.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
         self.assertEqual(digest, FROZEN)
 
 
