@@ -93,8 +93,16 @@
     "complete_plans": [],
     "pending_checkpoint": null
   },
-  "checkpoint_log": [],
+  "checkpoint_log": [
+    {
+      "at": "2026-08-28T00:11:26.671Z",
+      "id": "v13-complete-milestone",
+      "kind": null,
+      "status": "approved",
+      "detail": "auto-closeout consent (audit passed)"
+    }
+  ],
   "started_at": "2026-08-28T00:10:04.558Z",
-  "updated_at": "2026-08-28T00:10:11.150Z",
+  "updated_at": "2026-08-28T00:11:26.672Z",
   "notes": "Initialized master_flow for phase 15"
 }

@@ -151,3 +151,49 @@
 | v1.0 | 5 | 5 | First ship; specialist depth deferred |
 | v1.1 | 3 | 3 | OBJ-2 depth; offline-only evidence |
 | v1.2 | 4 | 4 | OBJ-3 full specialist bodies; live MCP still deferred |
+
+## Milestone: v1.3 — Model coherence and reuse
+
+**Shipped:** 2026-08-28
+**Phases:** 13-15 | **Plans:** 3
+**Seed:** SEED-004 / OBJ-4
+
+### What Was Built
+
+- reuse_inspect helper (reuse|create|ambiguous from inventory snapshots)
+- naming_convention helper (normalize + cross-view / duplicate-label conflicts)
+- CREATE_PATH OBJ-4 coherence section (registry, naming policy, no silent ambiguous merge)
+- Orchestrator + specialist + model-qa coherence hooks
+- Offline multi-view reuse evidence under docs/evidence/coherence-reuse-offline/
+- 38 unit tests green; viewpoint-select digest frozen from v1.1
+
+### What Worked
+
+- Continuing phase numbers (13-15) kept archive continuity
+- Deterministic stdlib helpers testable without live Archi
+- Reusing CREATE_PATH as the single binding surface avoided forked create paths
+- autoCloseout audit-passed checkpoint unblocked close without inventing verdicts
+
+### What Was Inefficient
+
+- Nested Agent tool still unavailable; all gates ran inline (degraded tier)
+- milestone.complete auto-extract of accomplishments was weak (date x3); fixed manually in MILESTONES.md
+- Shell/heredoc friction on Windows for multi-file writes
+
+### Patterns Established
+
+- Helper pair for OBJ slices (decide + normalize) matching matrix/schema pattern from v1.1
+- Run-scoped reuse_registry on orchestrator hand-off
+- Offline evidence pack: inventory to decisions to multi-view usages to conflicts=0
+
+### Key Lessons
+
+- Never auto-merge ambiguous near-matches (NG-3); surface as open questions
+- Keep policy ids out of backtick-wrapped tool-name scanners (MCP-ref false positives)
+- Always write dual N-/0N- VERIFICATION.md with status: passed frontmatter on this GSD build
+
+### Cost Observations
+
+- Model mix: single worker host (inline gates); specialist Agent spawns not available
+- Sessions: 1 Ralph worker kick through closeout (+ checkpoint resume)
+

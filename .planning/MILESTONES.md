@@ -1,5 +1,33 @@
 # Milestones
 
+## v1.3 Model coherence and reuse (Shipped: 2026-08-28)
+
+**Delivered:** OBJ-4 depth — deterministic reuse inspect + naming helpers; CREATE_PATH coherence binding; specialist/orchestrator reuse registry; offline multi-view reuse evidence (SEED-004).
+
+**Phases completed:** 13-15 (3 plans)
+
+**Key accomplishments:**
+
+- helpers/reuse_inspect.py (reuse|create|ambiguous from inventory snapshot)
+- helpers/naming_convention.py (title-collapse-v1 normalize + cross-view conflict detect)
+- docs/CREATE_PATH.md OBJ-4 section (reuse registry, naming policy, no silent ambiguous merge)
+- Orchestrator hand-off fields reuse_registry + naming_policy; specialist + model-qa coherence hooks
+- docs/evidence/coherence-reuse-offline multi-view same-ID fixtures; 38 tests green; viewpoint-select frozen
+
+**Known gaps:**
+
+- Live Archi MCP E2E still deferred until Bridge is up (EVID-LIVE-*)
+- Nested Agent unavailable this host; gates ran inline (degraded tier)
+- Fuzzy/semantic duplicate detection remains COH-V2-01 future
+
+**Stats:** 3 phases, 3 plans; stdlib helpers + skill docs + evidence
+
+**Git range:** docs v1.3 start → feat(13..15) → audit/closeout
+
+**What is next:** Later seeds for live MCP evidence and/or OBJ-5 compliance depth when Bridge available
+
+---
+
 ## v1.2 Full specialist skill set (Shipped: 2026-08-28)
 
 **Delivered:** OBJ-3 depth — full specialist SKILL bodies for all vision-enumerated responsibilities; shared CREATE_PATH contract; orchestrator post-confirm dispatch; offline specialist evidence (SEED-003).

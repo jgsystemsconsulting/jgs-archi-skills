@@ -5,6 +5,6 @@
   "active_phase_dir": null,
   "active_state": null,
   "lock": null,
-  "updated_at": "2026-08-28T00:10:33.981Z",
-  "notes": "Phase 15 verify passed. Next: none"
+  "updated_at": "2026-08-28T00:12:00+00:00",
+  "notes": "Milestone v1.3 closed (complete+retrospective). Awaiting new-milestone. gsd-ship suggested but not invoked."
 }
