@@ -152,7 +152,15 @@ Parallelism: independent layer specialists may run in parallel when the modellin
 
 ### Shared contract
 
-Every mutating specialist must follow `docs/CREATE_PATH.md` including the OBJ-4 coherence section (reuse registry, naming policy, no silent ambiguous merge). Offline assists: `helpers/reuse_inspect.py`, `helpers/naming_convention.py`. Inventory tools only. No ArchiMate table dumps (NG-4). User remains governor (NG-3).
+Every mutating specialist must follow `docs/CREATE_PATH.md` including the OBJ-4 coherence section (reuse registry, naming policy, no silent ambiguous merge) and the OBJ-5 compliance section (explain-and-propose; never silent-apply). Offline assists: `helpers/reuse_inspect.py`, `helpers/naming_convention.py`, `helpers/compliance_validate.py`. Inventory tools only. No ArchiMate table dumps (NG-4). User remains governor (NG-3).
+
+### Compliance findings (OBJ-5)
+
+After `archi-model-qa` (or a specialist self-check), consume compliance findings in the run summary:
+
+- Carry forward finding count and any **needs-user** items (illegal types/edges, abstraction or naming conflicts).
+- Do not invent mutating tools to auto-fix; surface alternatives and wait for user/orchestrator choice.
+- Optional hand-off field: `compliance_findings` (list of `{check_id, object_refs, problem, proposed_alternative}`).
 
 ### Completion
 
@@ -164,4 +172,5 @@ Always end with:
 
 1. Path or paste of the View Plan
 2. Confirmation status (pending / approved / aborted)
-3. Next recommended action (revise plan, approve, or hand off to specialists when available)
+3. Compliance/QA outcome (pass, findings pending user, or blocked) when model-qa ran
+4. Next recommended action (revise plan, approve, resolve compliance findings, or hand off to specialists when available)

@@ -15,9 +15,10 @@ Establish explicit cross-layer traces (motivation to business to application to 
 
 1. **Mutations only after View Plan confirmation** (SPEC-D-15 / NG-3).
 2. **Orchestrator-dispatched only** (SPEC-02 / SPEC-D-13).
-3. **Follow `docs/CREATE_PATH.md`**.
+3. **Follow `docs/CREATE_PATH.md`** (OBJ-4 coherence + OBJ-5 compliance explain-and-propose).
 4. **No ArchiMate metamodel table dumps** (NG-4).
 5. Prefer relating existing elements; create relationship-only structure unless hand-off authorizes new bridging elements.
+6. Optional offline: `python helpers/compliance_validate.py slice.json` on proposed/created edges; never silent-apply illegal combos.
 
 ## Inputs
 
@@ -59,7 +60,7 @@ Build the expected chain from the View Plan modelling sequence.
 Use `get-relationships` / `find-concept-usage` to list current links between endpoints.
 
 ### Step 4 — Fill gaps
-For each missing hop: propose relationship type from MCP relationship reference; create with `create-relationship` when on the approved path. Illegal combo → explain + alternative (COMP-02), never silent-apply.
+For each missing hop: propose relationship type from MCP relationship reference; create with `create-relationship` when on the approved path. Illegal combo → explain + alternative (COMP-02 / OBJ-5), never silent-apply. Optional: validate proposed edges via `helpers/compliance_validate.py` on a slice before create.
 
 ### Step 5 — Gap report
 List untraceable endpoints and broken chains without inventing business meaning.

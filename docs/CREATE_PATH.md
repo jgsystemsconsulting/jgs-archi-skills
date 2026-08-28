@@ -89,11 +89,39 @@ Maintain a **run-scoped** map for the modelling session (orchestrator hand-off f
 5. On `ambiguous`: stop mutating that concept; hand back open question.
 6. Record reused vs created IDs in the specialist hand-back payload.
 
-## Compliance (COMP-01, COMP-02)
+## Compliance (COMP-01, COMP-02, OBJ-5 / COMP-03+)
 
-1. Confirm types against MCP resources (`archimate://reference/archimate-layers`, `archimate://reference/archimate-relationships`).
-2. On violation: **explain** and **propose** a compliant alternative; never silent-apply illegal edges or types.
-3. Optional offline gate: `python helpers/compliance_checklist.py report.json`.
+Binding for ArchiMate legality and consistency. Violations are **explained** with a **compliant alternative proposed**. Never silent-apply illegal types, edges, or renames (COMP-02 / NG-3).
+
+### Live path (preferred when Bridge is up)
+
+1. Confirm element types against MCP `archimate://reference/archimate-layers`.
+2. Confirm relationship types and source/target legality against MCP `archimate://reference/archimate-relationships`.
+3. Read relevant recipes/view-patterns before non-trivial structure (see Recipe section below).
+4. On violation: stop the illegal create; report problem + alternative; wait for user/orchestrator choice.
+
+### Offline depth (OBJ-5)
+
+- Deep validator: `python helpers/compliance_validate.py slice.json [--allowlist path] [--json]`
+  - Input model-slice: `{elements:[{id,name,type,abstraction?}], relationships:[{id,type,source,target}], view_usages?:[…]}`.
+  - Fixture allowlist: `helpers/fixtures/compliance_allowlist.json` (minimal captured subset; **not** a skill-owned ArchiMate catalog — NG-4). Live MCP remains SoT.
+  - Checks: element_type_known, relationship_type_permitted, relationship_endpoints_valid, abstraction_level_consistent, cross_view_naming_consistent.
+  - Output findings: `{check_id, object_refs, problem, proposed_alternative}` — never mutates the model.
+- Thin boolean gate (still valid): `python helpers/compliance_checklist.py report.json` for pre-scored check maps.
+- Coherence helpers remain available: `reuse_inspect`, `naming_convention` (OBJ-4).
+
+### When to run which
+
+| Situation | Action |
+|-----------|--------|
+| Live modelling create | MCP reference resources first; optional offline validate on a captured slice after batch |
+| CI / offline evidence | `compliance_validate` on fixture slices |
+| Quick self-check boolean | `compliance_checklist` if you already have pass/fail map |
+| model-qa pass | Prefer `compliance_validate` findings table; coherence helpers for duplicates/naming |
+
+### Findings hand-back
+
+Every compliance note in specialist/orchestrator payloads must carry: check id (when known), object refs, problem explanation, proposed alternative. Do not auto-apply fixes.
 
 ## Recipe and reference reads (NG-4 / SPEC-D-14)
 

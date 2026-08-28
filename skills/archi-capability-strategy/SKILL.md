@@ -17,7 +17,7 @@ Create or reuse elements, relationships, and views through the JGS Archi Bridge 
 
 1. **Mutations only after View Plan confirmation** (SPEC-D-15 / NG-3). If confirmation is missing, stop with hand-back; no mutating tools.
 2. **Orchestrator-dispatched only** (SPEC-02 / SPEC-D-13).
-3. **Follow `docs/CREATE_PATH.md`** end to end (inspect-before-create, OBJ-4 coherence/reuse registry, compliance explain-and-propose, inventory tools only).
+3. **Follow `docs/CREATE_PATH.md`** end to end (inspect-before-create, OBJ-4 coherence/reuse registry, OBJ-5 compliance explain-and-propose via compliance_validate when useful, inventory tools only).
 4. **No ArchiMate metamodel table dumps** (NG-4 / SPEC-D-14). Read MCP resources; do not paste catalogs into the skill or chat.
 5. **Consume-only** toward jgs-archi-mcp (NG-1). Default endpoint: see `docs/MCP.md`.
 
@@ -96,7 +96,7 @@ For each concept in scope:
 
 1. Every created element appears in at least one intended view (or is justified as shared structure).
 2. Naming consistent; duplicates minimised.
-3. Optional: draft a compliance checklist JSON for `python helpers/compliance_checklist.py` when findings exist.
+3. Optional compliance: build a small model-slice JSON and run `python helpers/compliance_validate.py slice.json` (or thin `compliance_checklist.py`); hand back findings with problem + proposed alternative — never silent-apply.
 
 ### Step 6 — Hand-back
 
