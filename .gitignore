@@ -3,3 +3,4 @@ __pycache__/
 .pytest_cache/
 .unlazy/
 .unlazy-hook-state.json
+.tmp-install-check/
