@@ -24,11 +24,41 @@
 
 
 ## SEED-003: A full specialist skill set covers the vision-enumerated...
-- Status: IN-WORK
+- Status: DONE
 - Priority: 5
 - Source: machine
 - Vision link: OBJ-3
 - Evidence: VISION.md OBJ-3
 - Argument: Deliver OBJ-3 as written. Drafted mechanically by classify from an uncovered objective; edit or reject before review.
+- Est: M     Risk: M
+
+
+## SEED-004: Model coherence and reuse: before creating an element the...
+- Status: DONE
+- Priority: 5
+- Source: machine
+- Vision link: OBJ-4
+- Evidence: VISION.md OBJ-4
+- Argument: Deliver OBJ-4 as written. Drafted mechanically by classify from an uncovered objective; edit or reject before review.
+- Est: M     Risk: M
+
+
+## SEED-005: Compliance validation checks element types, relationship...
+- Status: DONE
+- Priority: 5
+- Source: machine
+- Vision link: OBJ-5
+- Evidence: VISION.md OBJ-5
+- Argument: Deliver OBJ-5 as written. Drafted mechanically by classify from an uncovered objective; edit or reject before review.
+- Est: M     Risk: M
+
+
+## SEED-006: Each significant view carries structured rationale...
+- Status: DONE
+- Priority: 5
+- Source: machine
+- Vision link: OBJ-6
+- Evidence: VISION.md OBJ-6
+- Argument: Deliver OBJ-6 as written. Drafted mechanically by classify from an uncovered objective; edit or reject before review.
 - Est: M     Risk: M
 
