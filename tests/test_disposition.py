@@ -150,6 +150,53 @@ class T(unittest.TestCase):
         findings = validate_ledger(rows)
         self.assertTrue(any(f["check_id"] == "duplicate_candidate" for f in findings))
 
+    def test_two_tables_elements_first(self):
+        doc = """# Specialist Result
+
+| Element | Type | Relationships |
+|---------|------|---------------|
+| CRM | Application Component | realizes |
+
+## Disposition ledger
+
+| Candidate | Disposition | Target | Reason |
+|-----------|-------------|--------|--------|
+| CRM | captured | CRM System @ Application Structure | |
+| DTO pack | folded | CRM System | 12 request DTOs |
+| Payments | needs-user | | one service or two? |
+| Batch jobs | out-of-scope | | confirmed out of this pass |
+"""
+        rows = parse_markdown_table(doc)
+        self.assertEqual(len(rows), 4)
+        self.assertEqual(validate_ledger(rows), [])
+
+    def test_disposition_table_first_then_other_table(self):
+        doc = """| Candidate | Disposition | Target | Reason |
+|-----------|-------------|--------|--------|
+| CRM | captured | CRM System @ Application Structure | |
+
+## Elements
+
+| Element | Type |
+|---------|------|
+| CRM | Application Component |
+"""
+        rows = parse_markdown_table(doc)
+        self.assertEqual(len(rows), 1)
+        self.assertEqual(rows[0]["candidate"], "CRM")
+        self.assertEqual(validate_ledger(rows), [])
+
+    def test_non_disposition_table_ignored(self):
+        doc = """| Element | Type |
+|---------|------|
+| CRM | Application Component |
+"""
+        self.assertEqual(parse_markdown_table(doc), [])
+
+    def test_non_dict_row_reported_not_crash(self):
+        findings = validate_ledger(["not-a-dict"])
+        self.assertTrue(any(f["check_id"] == "invalid_row" for f in findings))
+
 
 if __name__ == "__main__":
     unittest.main()

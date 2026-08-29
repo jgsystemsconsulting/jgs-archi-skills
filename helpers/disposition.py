@@ -7,7 +7,6 @@ from __future__ import annotations
 
 import argparse
 import json
-import sys
 from pathlib import Path
 from typing import Any
 
@@ -25,16 +24,22 @@ def _finding(check_id: str, problem: str, candidate: str = "") -> dict[str, Any]
 
 def parse_markdown_table(text: str) -> list[dict[str, str]]:
     rows: list[dict[str, str]] = []
-    header: list[str] | None = None
+    header: list[str] | None = None  # [] = current table is not a disposition table
     for raw in text.splitlines():
         line = raw.strip()
         if not line.startswith("|"):
+            # Non-table line ends the current table; a new table may follow.
+            header = None
             continue
         cells = [c.strip() for c in line.strip("|").split("|")]
         if not cells:
             continue
         if header is None:
             header = [c.casefold() for c in cells]
+            if "candidate" not in header and "disposition" not in header:
+                header = []  # skip tables that are not disposition ledgers
+            continue
+        if not header:
             continue
         if all(set(c) <= set("-: ") and c for c in cells):
             continue
@@ -58,6 +63,12 @@ def validate_ledger(
         return findings
     seen: dict[str, int] = {}
     for row in rows:
+        if not isinstance(row, dict):
+            findings.append(_finding(
+                "invalid_row",
+                f"ledger row is not an object: {row!r}",
+            ))
+            continue
         name = (row.get("candidate") or "").strip()
         disp = (row.get("disposition") or "").strip().casefold()
         target = (row.get("target") or "").strip()
