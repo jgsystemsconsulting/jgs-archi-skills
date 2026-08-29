@@ -18,6 +18,8 @@ REQUIRED_BLOCKS = [
     "Open Questions",
     "Confirmation Status",
     "Specialists Run",
+    "Deliberately Deferred",
+    "Improve Next",
 ]
 
 ALIASES = {
@@ -32,6 +34,10 @@ ALIASES = {
     "specialists run": "Specialists Run",
     "specialists": "Specialists Run",
     "specialist list": "Specialists Run",
+    "deferred": "Deliberately Deferred",
+    "deliberately deferred": "Deliberately Deferred",
+    "improve next": "Improve Next",
+    "next": "Improve Next",
 }
 
 H2 = re.compile(r"^##\s+(.+?)\s*$", re.M)

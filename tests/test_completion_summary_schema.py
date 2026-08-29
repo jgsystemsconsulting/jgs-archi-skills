@@ -29,6 +29,12 @@ confirmed
 
 ## Specialists Run
 documentation, layout
+
+## Deliberately Deferred
+- Payment release (out of confirmed scope)
+
+## Improve Next
+- Add application cooperation view if payments land
 """
 
 LABEL_VALID = """# Summary
@@ -37,6 +43,26 @@ LABEL_VALID = """# Summary
 - Open Questions: none
 - Confirmation Status: confirmed
 - Specialists Run: documentation
+- Deliberately Deferred: none
+- Improve Next: none
+"""
+
+OLD_FIVE = """# Completion Summary
+
+## Views Touched
+- Business Process Cooperation
+
+## Decisions
+- Model as-is only
+
+## Open Questions
+- Include payment release?
+
+## Confirmation Status
+confirmed
+
+## Specialists Run
+documentation, layout
 """
 
 
@@ -64,14 +90,19 @@ class T(unittest.TestCase):
     def test_ok_labels(self):
         self.assertEqual(validate_completion_summary(LABEL_VALID), [])
 
+    def test_old_five_block_summary_fails(self):
+        findings = validate_completion_summary(OLD_FIVE)
+        missing = {f["block"] for f in findings if f["check_id"] == "missing_block"}
+        self.assertIn("Deliberately Deferred", missing)
+        self.assertIn("Improve Next", missing)
+        self.assertEqual(self._run(OLD_FIVE).returncode, 1)
+
     def test_missing(self):
         findings = validate_completion_summary("## Views Touched\nv1\n")
         self.assertTrue(any(f["check_id"] == "missing_block" for f in findings))
         self.assertEqual(self._run("nope").returncode, 1)
 
     def test_empty_block(self):
-        body = VALID.replace("confirmed", "")
-        # Confirmation Status body empty between headers — replace content line
         body = """## Views Touched
 x
 ## Decisions
@@ -79,8 +110,12 @@ x
 ## Open Questions
 x
 ## Confirmation Status
-
+confirmed
 ## Specialists Run
+x
+## Deliberately Deferred
+
+## Improve Next
 x
 """
         findings = validate_completion_summary(body)
