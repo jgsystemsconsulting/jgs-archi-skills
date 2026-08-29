@@ -88,13 +88,16 @@ Binding for inspect-before-create depth beyond the basic search guidance above.
 
 ### Offline helpers (deterministic)
 
-- `python helpers/reuse_inspect.py "<Name>" --type <Type> --inventory snapshot.json [--json]`
-  - Input: candidate name/type + element inventory snapshot (`[{id,name,type}, ...]`).
-  - Output decision: `reuse` | `create` | `ambiguous` with match IDs and scores.
-  - Does **not** call MCP. Use after `search-elements` (or on a captured inventory) to record the decision.
-- `python helpers/naming_convention.py normalize "<Name>"`
-- `python helpers/naming_convention.py conflicts usages.json`
-  - Normalize labels (title-collapse-v1) and flag cross-view name divergence or duplicate labels.
+```text
+python helpers/reuse_inspect.py "<Name>" --type <Type> --inventory snapshot.json [--json]
+python helpers/naming_convention.py normalize "<Name>"
+python helpers/naming_convention.py conflicts usages.json
+```
+
+- Input: candidate name/type + element inventory snapshot (`[{id,name,type}, ...]`).
+- Output decision: `reuse` | `create` | `ambiguous` with match IDs and scores.
+- Does **not** call MCP. Use after `search-elements` (or on a captured inventory) to record the decision.
+- Normalize labels (title-collapse-v1) and flag cross-view name divergence or duplicate labels.
 
 ### Run-scoped reuse registry
 
@@ -150,11 +153,16 @@ Binding for ArchiMate legality and consistency. Violations are **explained** wit
 
 ### Offline depth (OBJ-5)
 
-- Deep validator: `python helpers/compliance_validate.py slice.json [--allowlist path] [--json]`
-  - Input model-slice: `{elements:[{id,name,type,abstraction?}], relationships:[{id,type,source,target}], view_usages?:[…]}`.
-  - Fixture allowlist: `helpers/fixtures/compliance_allowlist.json` (minimal captured subset; **not** a skill-owned ArchiMate catalog; NG-4). Live MCP remains SoT.
-  - Checks: element_type_known, relationship_type_permitted, relationship_endpoints_valid, abstraction_level_consistent, cross_view_naming_consistent.
-  - Output findings: `{check_id, object_refs, problem, proposed_alternative}`; never mutates the model.
+Deep validator:
+
+```text
+python helpers/compliance_validate.py slice.json [--allowlist path] [--json]
+```
+
+- Input model-slice: `{elements:[{id,name,type,abstraction?}], relationships:[{id,type,source,target}], view_usages?:[…]}`.
+- Fixture allowlist: `helpers/fixtures/compliance_allowlist.json` (minimal captured subset; **not** a skill-owned ArchiMate catalog; NG-4). Live MCP remains SoT.
+- Checks: element_type_known, relationship_type_permitted, relationship_endpoints_valid, abstraction_level_consistent, cross_view_naming_consistent.
+- Output findings: `{check_id, object_refs, problem, proposed_alternative}`; never mutates the model.
 - Thin boolean gate (still valid): `python helpers/compliance_checklist.py report.json` for pre-scored check maps.
 - Coherence helpers remain available: `reuse_inspect`, `naming_convention` (OBJ-4).
 
@@ -180,8 +188,12 @@ Binding for structured view rationale, safe natural-language change regeneration
 1. Per significant view, draft markdown with required sections: Purpose, Stakeholders and Concerns, Viewpoint, Questions Answered, Assumptions, Decisions, Exclusions, Open Questions.
 2. Bodies must be non-empty (whitespace-only fails).
 3. Offline validate before write:
-   - Single file: `python helpers/rationale_schema.py path/to/rationale.md`
-   - Multi-view dir or JSON bundle: `python helpers/rationale_schema.py --bundle DIR|bundle.json [--json]`
+
+```text
+python helpers/rationale_schema.py path/to/rationale.md
+python helpers/rationale_schema.py --bundle DIR|bundle.json [--json]
+```
+
 4. Fix until exit 0 (warn-only order drift may remain).
 
 ### Record in model (live, post-confirm)

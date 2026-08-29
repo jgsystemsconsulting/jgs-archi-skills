@@ -3,6 +3,16 @@
 Milestone history for jgs-archi-skills. Tags follow the milestone convention
 (v1.0 through v1.6). Dates are ship dates.
 
+## Unreleased
+
+Run operating system for specialists, stolen from the repo-to-archi prompt without the reverse-engineering product.
+
+- CREATE_PATH gate manifest CP-G1 through CP-G7, working mode, provenance line, layout footguns
+- `helpers/disposition.py` validates captured / folded / needs-user / out-of-scope ledgers
+- Completion summaries require Deliberately Deferred and Improve Next; first generation is a draft
+- Creating specialists return a candidate disposition table; model-qa flags undispositioned rows
+- archi-layout annotate-last, omit note height, `export-view` close-out
+
 ## v1.6 (2026-08-28)
 
 Eval loop to a senior quality bar, plus the first live end-to-end MCP
