@@ -4,6 +4,9 @@ plan: 01
 status: complete
 requirements: [COMP-03, COMP-04, COMP-05, COMP-06, COMP-07]
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # 16-01 Summary
 
 ## Delivered

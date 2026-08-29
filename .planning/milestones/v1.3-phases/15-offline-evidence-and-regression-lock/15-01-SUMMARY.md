@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Phase 15 Plan 01 Summary
 
 **Date:** 2026-08-28

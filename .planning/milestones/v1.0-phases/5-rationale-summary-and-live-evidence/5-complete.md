@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Milestone complete gate
 
 **Version:** v1.0 Initial skill suite

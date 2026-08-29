@@ -2,6 +2,9 @@
 status: passed
 phase: 14
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # 14-SECURITY_AUDIT.md
 
 **Verdict:** passed

@@ -3,8 +3,18 @@ name: archi-orchestrator
 description: "Elicit architectural intent and produce a plain-language ArchiMate view plan via JGS Archi Bridge MCP (user-governed). Trigger: /archi-orchestrator"
 argument-hint: "[optional free-text intent]"
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # archi-orchestrator
+
+## When to use
+
+User-invoked entrypoint for agent-guided ArchiMate work in Archi. Call this when you have architectural intent and need a View Plan before any model mutations.
+
+## Prerequisites
+
+Archi with the JGS Archi Bridge MCP (see docs/MCP.md). Python 3.10+ for helpers. Follow docs/CREATE_PATH.md. Specialists require View Plan confirmation `approved` before mutations.
 
 User-invoked entrypoint for agent-guided architecture work in Archi. You elicit intent, optionally ground on MCP **resources** (read-only), and produce a **plain-language View Plan**. You do **not** create model elements in this skill's happy path.
 

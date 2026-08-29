@@ -2,8 +2,18 @@
 name: archi-viewpoint-select
 description: "Ground ArchiMate viewpoint choices to stakeholder, concern, purpose, and abstraction level. Orchestrator-dispatched."
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # archi-viewpoint-select
+
+## When to use
+
+Orchestrator-dispatched. Use after a draft View Plan exists and each viewpoint must be traced to stakeholder, concern, purpose, and abstraction. Never user-invoked.
+
+## Prerequisites
+
+Archi with the JGS Archi Bridge MCP (see docs/MCP.md). Python 3.10+ for helpers. Follow docs/CREATE_PATH.md. Specialists require View Plan confirmation `approved` before mutations.
 
 Orchestrator-dispatched specialist. Not a primary user entrypoint.
 

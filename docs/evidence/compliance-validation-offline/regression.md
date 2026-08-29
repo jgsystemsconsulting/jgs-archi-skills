@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Regression lock (v1.4 phase 18)
 
 ## Suite

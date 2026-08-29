@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Phase 1 Integration Check
 
 **Date:** 2026-08-27

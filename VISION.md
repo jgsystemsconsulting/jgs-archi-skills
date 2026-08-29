@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # VISION
 
 > Owner-authored from the "Agent-Guided ArchiMate Viewpoint Creation in Archi" vision paper. A coordinated skill suite that turns the JGS Archi Bridge MCP into a governed, agent-guided architecture-development capability.

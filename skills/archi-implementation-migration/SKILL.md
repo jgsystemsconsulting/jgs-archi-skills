@@ -2,8 +2,18 @@
 name: archi-implementation-migration
 description: "Implementation and migration specialist; orchestrator-dispatched modelling via Archi MCP after View Plan confirmation."
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # archi-implementation-migration
+
+## When to use
+
+Orchestrator-dispatched after View Plan confirmation when the run needs implementation and migration modelling.
+
+## Prerequisites
+
+Archi with the JGS Archi Bridge MCP (see docs/MCP.md). Python 3.10+ for helpers. Follow docs/CREATE_PATH.md. Specialists require View Plan confirmation `approved` before mutations.
 
 Orchestrator-dispatched specialist. Not a primary user entrypoint.
 

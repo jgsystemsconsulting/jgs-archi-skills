@@ -5,6 +5,8 @@ status: passed
 score: 4/4 must-haves verified
 behavior_unverified: 0
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # Phase 6: Viewpoint matrix and trace schema Verification Report
 

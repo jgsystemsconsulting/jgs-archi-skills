@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Evidence: viewpoint-selection-offline
 
 **Milestone:** v1.1 / SEED-002 / OBJ-2

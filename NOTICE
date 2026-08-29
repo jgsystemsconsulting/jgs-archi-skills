@@ -1,0 +1,12 @@
+jgs-archi-skills
+Copyright (c) 2026 JG Systems Consulting Ltd.
+
+This product depends on the following third-party components, each under its
+own license:
+- Archi (https://www.archimatetool.com/), used at runtime by the user; not
+  distributed with this repository.
+- JGS Archi Bridge MCP (https://github.com/jgsystemsconsulting/jgs-archi-mcp),
+  consumed over HTTP at runtime; not distributed with this repository.
+
+Third-party components are not distributed with this repository; they are
+installed from their upstream sources per the install instructions.

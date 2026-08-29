@@ -1,9 +1,12 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Invoice As-Is Business
 ## Purpose
 Explain invoice as-is for AP stakeholders.
 
 ## Stakeholders and Concerns
-AP Manager — cycle time; Finance — auditability.
+AP Manager: cycle time; Finance: auditability.
 
 ## Viewpoint
 Business Process Cooperation

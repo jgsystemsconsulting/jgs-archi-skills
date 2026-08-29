@@ -1,3 +1,5 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 ## Milestone: v1.1 — Viewpoint selection grounding
 

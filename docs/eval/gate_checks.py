@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Gate checks for the eval loop (GATES.md G1, G8, G9 oracles). Stdlib only.
 
 Subcommands:

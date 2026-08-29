@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Live Archi smoke evidence
 
 Recorded 2026-08-28 against a live Archi 5.x instance running the JGS Archi

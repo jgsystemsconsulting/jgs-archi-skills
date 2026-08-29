@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Phase 1 Context — Foundations and MCP contract
 
 **Mode:** auto (Ralph / yolo) — discuss skipped; context derived from VISION + REQUIREMENTS FOUND-*.

@@ -1,17 +1,28 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Changelog
 
-Milestone history for jgs-archi-skills. Tags follow the milestone convention
-(v1.0 through v1.6). Dates are ship dates.
+Milestone history for jgs-archi-skills. From v1.7.0 tags are three-component
+semver (`vMAJOR.MINOR.PATCH`). Tags v1.0 through v1.6 remain as history.
 
-## Unreleased
+## [1.7.0] - 2026-08-29
 
-Run operating system for specialists, stolen from the repo-to-archi prompt without the reverse-engineering product.
+Release Repo Standard v1.9 (Base + RR-S). Proprietary EULA.
 
-- CREATE_PATH gate manifest CP-G1 through CP-G7, working mode, provenance line, layout footguns
-- `helpers/disposition.py` validates captured / folded / needs-user / out-of-scope ledgers
-- Completion summaries require Deliberately Deferred and Improve Next; first generation is a draft
-- Creating specialists return a candidate disposition table; model-qa flags undispositioned rows
-- archi-layout annotate-last, omit note height, `export-view` close-out
+- LICENSE, COPYRIGHT, NOTICE, per-file SPDX headers
+- SECURITY.md (private GitHub advisory; no email)
+- README badge cluster, Install / Usage / Licence / Support, agent-install prompt
+- SKILLS.md, docs/skill-usage.md, docs/other-agents.md, CITATION.cff, RELEASE-INFO.txt
+- Bug-report issue form; blank issues off
+- install.py `--dry-run`, `--agent`, `--list-agents`; install.sh / install.ps1
+- Host manifests: `.claude-plugin/`, `.cursor-plugin/`, `.agents/plugins/marketplace.json`, `gemini-extension.json`
+- Default install stays flat `~/.zcode/skills` (documented RR-S-03 exception); Claude namespaced `jgs/` is first-class
+- `.github/workflows/validate.yml` inline gate (does not execute repo code)
+- docs/index.html landing page + GitHub Pages from master `/docs`
+- Playwright screenshots at 1280px and 390px (untracked `.playwright-mcp/`)
+- RR-B-19 catalogue N/A; RR-B-23 branch protection blocked on private free plan; RR-B-29b directory submissions N/A (proprietary); RR-B-30 one landing page
+- Specialist run OS from the unreleased bucket: CREATE_PATH CP-G1..G7, disposition ledger, draft-first generation, layout footguns
 
 ## v1.6 (2026-08-28)
 

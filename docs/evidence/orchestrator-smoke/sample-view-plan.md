@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Sample View Plan (offline smoke)
 
 Synthetic example for schema + skill dry-run. Not produced against a live Archi model.
@@ -8,15 +11,15 @@ Finance wants a clear picture of how invoice approval works today and what a fut
 
 ## Stakeholders and Concerns
 
-- AP Manager — cycle time and exception handling
-- CFO office — control and auditability
-- IT application owner — integration load on ERP
+- AP Manager: cycle time and exception handling
+- CFO office: control and auditability
+- IT application owner: integration load on ERP
 
 ## Proposed Viewpoints
 
-- Business Process Cooperation — show the invoice flow end to end for AP Manager (overview)
-- Application Cooperation — show systems supporting each step for IT (overview)
-- Motivation (light) — goals and requirements driving the change for CFO (overview)
+- Business Process Cooperation: show the invoice flow end to end for AP Manager (overview)
+- Application Cooperation: show systems supporting each step for IT (overview)
+- Motivation (light): goals and requirements driving the change for CFO (overview)
 
 ## Layers Involved
 

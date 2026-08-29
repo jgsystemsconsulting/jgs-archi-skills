@@ -1,4 +1,7 @@
-# Sample View Plan (headings only — viewpoint selection evidence)
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
+# Sample View Plan (headings only: viewpoint selection evidence)
 
 ## Intent Summary
 Leadership needs a decision-ready landscape of capabilities and supporting applications for an investment call. Scope is overview-level; no facilities or deep technology this pass.
@@ -9,10 +12,10 @@ Leadership needs a decision-ready landscape of capabilities and supporting appli
 - Application architect: integration between systems that realize capabilities
 
 ## Proposed Viewpoints
-- **Capability Map** — purpose decide; abstraction overview; stakeholders as in Trace Table
-- **Layered** — purpose decide; abstraction overview; stakeholders as in Trace Table
-- **Application Cooperation** — purpose decide; abstraction overview; stakeholders as in Trace Table
-- **Motivation** — purpose decide; abstraction overview; stakeholders as in Trace Table
+- **Capability Map**: purpose decide; abstraction overview; stakeholders as in Trace Table
+- **Layered**: purpose decide; abstraction overview; stakeholders as in Trace Table
+- **Application Cooperation**: purpose decide; abstraction overview; stakeholders as in Trace Table
+- **Motivation**: purpose decide; abstraction overview; stakeholders as in Trace Table
 
 ## Layers Involved
 - Motivation and strategy (capability)

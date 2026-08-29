@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Plan-driven model builder for eval iterations. Stdlib only.
 
 Executes a build-plan JSON (the iteration's decision record) through the MCP

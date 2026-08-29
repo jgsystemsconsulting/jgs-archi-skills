@@ -1,4 +1,7 @@
-# ITERATION 1 — Retest after skill and instrument improvements
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
+# ITERATION 1: Retest after skill and instrument improvements
 
 Date: 2026-08-28. Fresh run: `JGS Eval Loop` wiped to verified-empty
 (`transcript-reset.json`), full unattended build from the same frozen
@@ -57,9 +60,9 @@ No changes to the frozen scenario.
 
 ## Evidence
 
-- `iter-1/transcript-reset.json` — verified-empty precondition
-- `iter-1/build-plan.json` — decision record; build + verify pass (console: `verify ok: 59 elements, 73 relationships all present and documented`). Note: the confirmation run reuses the same plan path, so its transcript overwrote `iter-1/transcript-specialists.json`; the retained copy is `iter-confirm/transcript-specialists.json` (identical builder, identical plan).
-- `iter-1/transcript-layout.json` — escalation steps and ratings per view
-- `iter-1/findings-{compliance,naming,docs,layout,rationale}.json` — all zero/pass
+- `iter-1/transcript-reset.json`: verified-empty precondition
+- `iter-1/build-plan.json`: decision record; build + verify pass (console: `verify ok: 59 elements, 73 relationships all present and documented`). Note: the confirmation run reuses the same plan path, so its transcript overwrote `iter-1/transcript-specialists.json`; the retained copy is `iter-confirm/transcript-specialists.json` (identical builder, identical plan).
+- `iter-1/transcript-layout.json`: escalation steps and ratings per view
+- `iter-1/findings-{compliance,naming,docs,layout,rationale}.json`: all zero/pass
 - `iter-1/slice.json`, `iter-1/usages.json`, `iter-1/views.json`, `iter-1/png/`
 - `iter-1/rationale/*.md`, `iter-1/completion-summary.md`

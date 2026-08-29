@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Validate candidate disposition ledgers. Stdlib only.
 
 Does not call MCP. Does not mutate the model.

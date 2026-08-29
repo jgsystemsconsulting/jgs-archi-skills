@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Compliance validation offline evidence (v1.4 / OBJ-5)
 
 Offline pack proving explain-and-propose compliance validation without live Archi MCP.
@@ -8,12 +11,12 @@ Validate a multi-view claims modelling slice: clean pass path, then a fail path 
 
 ## Artifacts
 
-- `pass-slice.json` — compliant model slice
-- `fail-slice.json` — intentional violations across OBJ-5 dimensions
-- `pass-findings.json` — validator output (expect empty findings)
-- `fail-findings.json` — validator output with problem + proposed_alternative per finding
-- `tool-sequence.md` — expected MCP + helper sequence for live/offline paths
-- `regression.md` — suite status + viewpoint-select freeze digest
+- `pass-slice.json`: compliant model slice
+- `fail-slice.json`: intentional violations across OBJ-5 dimensions
+- `pass-findings.json`: validator output (expect empty findings)
+- `fail-findings.json`: validator output with problem + proposed_alternative per finding
+- `tool-sequence.md`: expected MCP + helper sequence for live/offline paths
+- `regression.md`: suite status + viewpoint-select freeze digest
 
 ## Commands
 

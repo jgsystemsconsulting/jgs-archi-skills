@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Tests for helpers.view_plan_schema."""
 from __future__ import annotations
 

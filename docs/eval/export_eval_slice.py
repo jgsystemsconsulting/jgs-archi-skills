@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Export eval artifacts (slice.json, usages.json, views.json, PNGs) from the
 bound eval model via MCP. Stdlib only. Read-only toward the model.
 

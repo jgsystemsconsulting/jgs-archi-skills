@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Validate modelling-run completion summary structure. Stdlib only.
 
 OBJ-6 / RATE-03. Does not call MCP. Does not mutate the model.

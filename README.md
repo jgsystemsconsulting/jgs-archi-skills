@@ -1,9 +1,21 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # jgs-archi-skills
 
-Agent-guided ArchiMate viewpoint creation in Archi: a ZCode skill suite that
-drives the existing JGS Archi Bridge MCP (consume-only). One orchestrator
-skill plus twelve specialists; Archi is the only canvas, and the MCP
-resources are the sole ArchiMate reference.
+<p align="center">
+  <img src="https://img.shields.io/badge/licence-proprietary-lightgrey" alt="Licence: proprietary">
+  <img src="https://img.shields.io/badge/version-1.7.0-green" alt="Version 1.7.0">
+  <img src="https://img.shields.io/badge/skills-13-blueviolet" alt="13 skills">
+  <img src="https://img.shields.io/badge/tested%20with-ZCode-8A2BE2" alt="Tested with ZCode">
+  <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
+  <img src="https://img.shields.io/badge/canvas-Archi-orange" alt="Canvas: Archi">
+</p>
+
+Agent-guided ArchiMate viewpoint creation in Archi: a skill suite that drives
+the existing JGS Archi Bridge MCP (consume-only). One orchestrator plus twelve
+specialists. Archi is the only canvas. MCP resources are the sole ArchiMate
+reference.
 
 ## Prerequisites
 
@@ -12,30 +24,80 @@ resources are the sole ArchiMate reference.
   (`http://127.0.0.1:18090/mcp`, 69 tools, 14 resources)
 - Python 3.10+ (standard library only; no pip packages required)
 
-## Install skills
+## Install
 
 ```bash
 python install.py
 ```
 
 Installs each `skills/<name>/` package that contains `SKILL.md` into
-`~/.zcode/skills/<name>/`.
+`~/.zcode/skills/<name>/` (flat). That default is the binding delivery form.
 
-Optional: `python install.py --link` (symlink when the OS allows; otherwise
-copy).
+```bash
+python install.py --dry-run
+python install.py --agent claude          # ~/.claude/skills/jgs/<skill>/
+python install.py --agent all
+python install.py --list-agents
+python install.py --link                  # symlink when the OS allows
+```
+
+Wrappers: `install.sh`, `install.ps1`. Other hosts: [docs/other-agents.md](docs/other-agents.md).
+
+### Install with your AI agent
+
+Copy this prompt into your coding agent (ZCode, Claude Code, Cursor, etc.):
+
+```text
+Install jgs-archi-skills v1.7.0 from https://github.com/jgsystemsconsulting/jgs-archi-skills.
+1. Read README.md and docs/skill-usage.md first.
+2. Check prerequisites: Archi + JGS Archi Bridge MCP on http://127.0.0.1:18090/mcp, Python 3.10+.
+3. Run `python install.py --dry-run`, then `python install.py` (ZCode, flat ~/.zcode/skills).
+   For Claude Code instead: `python install.py --agent claude`.
+4. Verify each skills/*/SKILL.md landed under the target and the count matches SKILLS.md (13).
+5. Note the proprietary licence in LICENSE before use.
+Flag any step you cannot perform.
+```
 
 ## Usage
 
-Invoke the orchestrator from your ZCode skill runner:
+Invoke the orchestrator from your skill runner:
 
-```
+```text
 /archi-orchestrator <plain-language intent>
 ```
 
 The orchestrator elicits intent, drafts a schema-checked view plan, grounds
-viewpoints via archi-viewpoint-select, and (after your approval) dispatches
-layer specialists, traceability, QA, layout, and documentation in order.
-Specialists are orchestrator-dispatched, not user-invoked.
+viewpoints, and (after your approval) dispatches layer specialists,
+traceability, QA, layout, and documentation. Specialists are
+orchestrator-dispatched, not user-invoked.
+
+```mermaid
+flowchart LR
+  U[User intent] --> O[archi-orchestrator]
+  O --> E[elicit]
+  O --> V[viewpoint-select]
+  O --> G{View Plan approved?}
+  G -->|no| U
+  G -->|yes| L[layer specialists]
+  L --> T[traceability]
+  T --> Q[model-qa]
+  Q --> A[layout]
+  A --> D[documentation]
+```
+
+How to invoke and first-run details: [docs/skill-usage.md](docs/skill-usage.md).
+Skill index: [SKILLS.md](SKILLS.md).
+
+## Licence
+
+Proprietary. Copyright (c) 2026 JG Systems Consulting Ltd. See
+[LICENSE](LICENSE). Free of charge to use; not open source. No right to copy,
+modify, or redistribute except the local install described in the licence.
+
+## Support
+
+Bugs: open a GitHub issue using the bug-report form. Security: see
+[SECURITY.md](SECURITY.md) (private advisory; do not open a public issue).
 
 ## Tests
 
@@ -43,8 +105,8 @@ Specialists are orchestrator-dispatched, not user-invoked.
 python -m unittest discover -s tests -q
 ```
 
-76 tests cover the helpers, specialist contracts, and the offline fixtures.
-Tests never call the MCP; live checks are opt-in via
+Tests cover the helpers, specialist contracts, installer, and offline
+fixtures. They never call the MCP. Live checks are opt-in via
 `python tests/live_mcp_smoke.py` (requires Archi + Bridge running and the
 scratch model bound; see `docs/evidence/live-archi-smoke/README.md`).
 
@@ -60,35 +122,26 @@ in `docs/mcp/archi-bridge-inventory.json`.
 ## Eval loop and gates
 
 `docs/eval/reference-scenario.md` is the frozen evaluation scenario.
-`GATES.md` holds the release gate ledger: metamodel, naming, rationale,
-documentation coverage, and layout checks over an unattended model build,
-plus a fresh-model confirmation run. All 10 gates are met with recorded
-evidence under `docs/evidence/eval-loop/`. Iteration history and scores:
-`ITERATION-0.md` and `ITERATION-1.md` in the same directory. The harness
-that runs the loop lives in `docs/eval/`.
+`GATES.md` holds the release gate ledger. Evidence under
+`docs/evidence/eval-loop/`. The harness lives in `docs/eval/`.
 
 ## Layout
 
 | Path | Role |
 |------|------|
-| `skills/` | ZCode skill packages (`SKILL.md` each) |
+| `skills/` | Skill packages (`SKILL.md` each) |
 | `helpers/` | Stdlib validators, checkers, and matrices |
-| `docs/eval/` | Eval-loop harness (MCP session, builder, exporter, gate checks) |
+| `docs/eval/` | Eval-loop harness |
 | `docs/evidence/` | Offline fixtures, live scenario captures, eval-loop runs |
 | `docs/MCP.md` | Endpoint + consume-only contract |
-| `docs/mcp/archi-bridge-inventory.json` | Offline 69-tool / 14-resource allowlist |
+| `docs/skill-usage.md` | How to invoke after install |
+| `docs/other-agents.md` | Per-agent install targets |
 | `docs/CREATE_PATH.md` | Shared specialist modelling contract |
 | `VISION.md` | Product objectives and non-goals |
 | `GATES.md` | Release gate ledger with evidence |
-| `CHANGELOG.md` | Milestone history (v1.0 through v1.6) |
+| `CHANGELOG.md` | Milestone history |
 | `.planning/` | GSD roadmap and phase state |
 
-## Status
+## Version
 
-Milestone **v1.6**: eval loop complete. Unattended builds from the frozen
-scenario pass metamodel, naming, rationale, documentation-coverage, and
-layout checks with zero findings; a fresh-model confirmation run reproduces
-green. History: v1.0 foundations and orchestrator; v1.1 viewpoint select;
-v1.2 full specialist set; v1.3 coherence and reuse; v1.4 compliance
-validation; v1.5 rationale depth; v1.6 eval loop and live evidence. See
-[CHANGELOG.md](CHANGELOG.md).
+v1.7.0. See [CHANGELOG.md](CHANGELOG.md).

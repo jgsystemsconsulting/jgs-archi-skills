@@ -1,4 +1,7 @@
-# ITERATION 0 — Baseline (unattended run against frozen scenario)
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
+# ITERATION 0: Baseline (unattended run against frozen scenario)
 
 Date: 2026-08-28. Model: `JGS Eval Loop` (wiped to verified-empty before the
 run; see `transcript-reset-rename.json`, `transcript-reset.json`). Input:
@@ -22,7 +25,7 @@ documentation.
 | Motivation-to-technology chain | traceability view contents | **complete** (9 elements, 8 connections) | n/a |
 | Bridge layout ratings (final) | `assess-layout` per view | 4 excellent, 2 good | n/a |
 
-### F1 — Metamodel: 40 findings, all offline-allowlist gaps
+### F1: Metamodel: 40 findings, all offline-allowlist gaps
 
 The bridge's own live validator (ArchiMate 3.2 rules, error
 `RELATIONSHIP_NOT_ALLOWED`) accepted every relationship in the final model;
@@ -44,7 +47,7 @@ fixture is a captured snapshot). Fix: widen
 `helpers/fixtures/compliance_allowlist.json` with these live-verified
 patterns, citing the transcripts.
 
-### F2 — Layout: skill escalation was needed and worked
+### F2: Layout: skill escalation was needed and worked
 
 First pass (`auto-layout-and-route` only): 5 of 6 views rated `fair` by the
 bridge assessor (diagonal terminal segments from ELK). Following
@@ -56,7 +59,7 @@ crossing counts. Final state clean under `layout_check`. Fix: bake the
 escalation order into the `archi-layout` skill so every run reaches
 good/excellent without live discovery.
 
-### F3 — Documentation coverage: harness gap found and fixed
+### F3: Documentation coverage: harness gap found and fixed
 
 12 of 73 relationships initially exported without documentation: an aborted
 first build overwrote its transcript, and `get-relationships`-based
@@ -68,7 +71,7 @@ Also fixed harness bugs: `export_eval_slice.py` joined geometry by the wrong
 key (visualMetadata is keyed by elementId); `layout_check.py` treated
 `null` geometry as present.
 
-### F4 — Instrument gap: no coverage/layout checkers existed
+### F4: Instrument gap: no coverage/layout checkers existed
 
 New stdlib-only helpers `helpers/docs_coverage.py` (missing/placeholder/
 too-short/name-restating documentation on every element and relationship)
@@ -91,10 +94,10 @@ gate set (G6, G7).
 
 ## Evidence
 
-- `iter-0/build-plan.json` — full decision record (59 elements, 73 relationships, 6 views)
-- `iter-0/view-plan.md`, `iter-0/viewpoint-trace.md` — schema-valid
-- `iter-0/transcript-*.json` — every MCP mutation recorded
-- `iter-0/slice.json`, `iter-0/usages.json`, `iter-0/views.json` — exports
-- `iter-0/findings-{compliance,naming,docs,layout,rationale}.json` — raw instrument output
-- `iter-0/rationale/*.md` — validated bundle; `iter-0/completion-summary.md`
-- `iter-0/png/` — final view exports
+- `iter-0/build-plan.json`: full decision record (59 elements, 73 relationships, 6 views)
+- `iter-0/view-plan.md`, `iter-0/viewpoint-trace.md`: schema-valid
+- `iter-0/transcript-*.json`: every MCP mutation recorded
+- `iter-0/slice.json`, `iter-0/usages.json`, `iter-0/views.json`: exports
+- `iter-0/findings-{compliance,naming,docs,layout,rationale}.json`: raw instrument output
+- `iter-0/rationale/*.md`: validated bundle; `iter-0/completion-summary.md`
+- `iter-0/png/`: final view exports

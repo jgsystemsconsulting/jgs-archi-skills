@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Spec: Run operating system for Archi specialists
 
 Steal five operating rules from the repo-to-archi prompt into this suite. Do not steal reverse-engineering: no repo scan, no C4 onion as product, no evidence glyphs, no ISO-25010 aspect catalogue, no Mermaid-in-Archi gate, no `/repo-to-archi` skill.

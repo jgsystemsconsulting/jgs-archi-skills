@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Multi-view reuse narrative
 
 1. Specialist A (application) searches for "Customer Portal" → finds `el-portal-1`.

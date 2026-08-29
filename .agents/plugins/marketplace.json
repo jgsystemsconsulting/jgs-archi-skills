@@ -1,0 +1,10 @@
+{
+  "plugins": [
+    {
+      "name": "jgs-archi-skills",
+      "source": {"path": "./"},
+      "interface": {"displayName": "jgs-archi-skills"},
+      "description": "Agent-guided ArchiMate viewpoint creation in Archi via the JGS Archi Bridge MCP."
+    }
+  ]
+}

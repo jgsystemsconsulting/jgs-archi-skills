@@ -1,0 +1,4 @@
+Product: jgs-archi-skills
+Version: 1.7.0
+Built: 2026-08-29T17:06:50Z
+Tag: v1.7.0

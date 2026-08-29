@@ -2,8 +2,18 @@
 name: archi-traceability
 description: "Cross-layer traceability specialist; orchestrator-dispatched. Creates explicit traces and reports gaps after View Plan confirmation."
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # archi-traceability
+
+## When to use
+
+Orchestrator-dispatched after View Plan confirmation when cross-layer traces must be created or gaps reported.
+
+## Prerequisites
+
+Archi with the JGS Archi Bridge MCP (see docs/MCP.md). Python 3.10+ for helpers. Follow docs/CREATE_PATH.md. Specialists require View Plan confirmation `approved` before mutations.
 
 Orchestrator-dispatched specialist. Not a primary user entrypoint.
 

@@ -5,6 +5,8 @@ status: passed
 score: 3/3 must-haves verified
 behavior_unverified: 0
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # Phase 1: Foundations and MCP contract Verification Report
 

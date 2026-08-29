@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # jgs-archi-skills
 
 Agent-guided ArchiMate viewpoint creation in Archi: an orchestrator plus specialist ZCode skills driving the JGS Archi Bridge MCP.

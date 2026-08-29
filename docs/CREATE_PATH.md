@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Shared specialist modelling contract
 
 Binding contract for orchestrator-dispatched specialists that work the Archi model via the JGS Archi Bridge MCP (OBJ-3 / SPEC-D-12..15). Every specialist skill must follow this document. Do not fork a private create path.

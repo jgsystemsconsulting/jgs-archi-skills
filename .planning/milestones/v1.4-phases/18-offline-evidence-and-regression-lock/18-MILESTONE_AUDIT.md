@@ -3,6 +3,9 @@ status: passed
 milestone: v1.4
 seed: SEED-005
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Milestone Audit — v1.4 Compliance validation
 
 **Date:** 2026-08-28

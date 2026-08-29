@@ -14,6 +14,8 @@ progress:
   completed_plans: 3
 current_phase: 21
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # Project State
 

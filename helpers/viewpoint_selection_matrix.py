@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Rank ArchiMate viewpoint *keys* from intent axes. Stdlib only.
 
 Candidates are fixture keys + axis tags only. Full viewpoint definitions stay on

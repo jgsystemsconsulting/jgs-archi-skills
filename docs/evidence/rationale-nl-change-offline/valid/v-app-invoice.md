@@ -1,9 +1,12 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Invoice Application Support
 ## Purpose
 Show application services supporting invoice handling.
 
 ## Stakeholders and Concerns
-AP Manager — cycle time; Finance — auditability.
+AP Manager: cycle time; Finance: auditability.
 
 ## Viewpoint
 Application Cooperation

@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Specialist suite offline evidence (v1.2 / OBJ-3)
 
 Offline fixtures proving specialist SKILL bodies cover the OBJ-3 path without a live Archi Bridge.

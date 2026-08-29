@@ -4,3 +4,6 @@ __pycache__/
 .unlazy/
 .unlazy-hook-state.json
 .tmp-install-check/
+
+*.bak
+.playwright-mcp/

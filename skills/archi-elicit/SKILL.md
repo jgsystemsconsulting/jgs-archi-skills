@@ -2,8 +2,18 @@
 name: archi-elicit
 description: "Normalize architectural intent into the orchestrator field set. Orchestrator-dispatched; no model mutations."
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # archi-elicit
+
+## When to use
+
+Orchestrator-dispatched. Use when raw intent is incomplete and must be normalized into the orchestrator field set. Never user-invoked.
+
+## Prerequisites
+
+Archi with the JGS Archi Bridge MCP (see docs/MCP.md). Python 3.10+ for helpers. Follow docs/CREATE_PATH.md. Specialists require View Plan confirmation `approved` before mutations.
 
 Orchestrator-dispatched specialist. Not a primary user entrypoint.
 

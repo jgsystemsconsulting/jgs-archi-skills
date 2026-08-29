@@ -2,6 +2,9 @@
 status: passed
 phase: 10
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Verification — Phase 10
 
 **Status:** passed

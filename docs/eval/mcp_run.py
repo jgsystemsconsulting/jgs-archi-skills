@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Eval-run MCP session wrapper. Stdlib only.
 
 Thin, transcript-recording driver used by eval-loop iterations. The skill

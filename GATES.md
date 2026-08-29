@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Gates: ArchiMate eval loop (senior-bar model quality)
 
 OWNS: GATES.md, docs/eval/**, docs/evidence/eval-loop/**, helpers/**, skills/**, tests/**

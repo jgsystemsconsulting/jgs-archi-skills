@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Regression for shared specialist contract (Phase 9 / SPEC-D-*)."""
 from __future__ import annotations
 
@@ -12,7 +14,7 @@ ELICIT = ROOT / "skills" / "archi-elicit" / "SKILL.md"
 VSEL = ROOT / "skills" / "archi-viewpoint-select" / "SKILL.md"
 # Digest over the canonical LF bytes as stored in git; Windows checkouts use
 # CRLF in the working tree, so line endings are normalized before hashing.
-FROZEN = "95c18a9ac4407d09352b47fc1a3887148353e7a6c09f020dbba5bf1a320b623f"
+FROZEN = "186412fc0abe051294499351903d4003dacc5a782b2e1527f2e03ddcb29a50c4"
 
 MUTATING = [
     "archi-motivation",

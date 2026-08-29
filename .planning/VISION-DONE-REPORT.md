@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # VISION-DONE-REPORT
 
 Generated 2026-08-28 by the Ralph wake session. Terminal inspection for VISION.md coverage. All six objectives shipped as milestones v1.0 through v1.5, each archived and tagged. Final test state: 59 passed in tests/ (verified this session).

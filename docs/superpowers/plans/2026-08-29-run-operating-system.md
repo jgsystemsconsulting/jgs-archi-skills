@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Run Operating System Implementation Plan
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
@@ -735,9 +738,9 @@ Every created element starts its `documentation` field with:
 Evidence: stated | inferred | existing - <source>
 ```
 
-- `stated` — the user or the approved View Plan said it
-- `inferred` — the specialist deduced it (keep elicit inferences; do not upgrade them)
-- `existing` — already in the model and reused
+- `stated`: the user or the approved View Plan said it
+- `inferred`: the specialist deduced it (keep elicit inferences; do not upgrade them)
+- `existing`: already in the model and reused
 
 Never write a bare `Rationale:` line for an inferred why. Omit Rationale, or write `Rationale (inferred):`. Do not add evidence specializations or label glyphs.
 
@@ -749,7 +752,7 @@ Creating specialists (motivation, capability-strategy, business, application, te
 After item 6 (Confirmation assumption), add:
 
 ```markdown
-7. **Candidate disposition** — table of every hand-off candidate (creating specialists). `archi-model-qa` treats an undispositioned candidate as a finding; do not silent-fix.
+7. **Candidate disposition**: table of every hand-off candidate (creating specialists). `archi-model-qa` treats an undispositioned candidate as a finding; do not silent-fix.
 ```
 
 - [ ] **Step 6: Layout footguns**
@@ -932,7 +935,7 @@ Notes/groups: `add-group-to-view`, `add-note-to-view`, `update-view-object` when
 Replace the current Step 2 bullet list with:
 
 ```markdown
-### Step 2 — Choose strategy
+### Step 2: Choose strategy
 - Structure views with more than about 10 elements: grouped or nested (`add-group-to-view` / `parentViewObjectId`). Flat needs a recorded reason in the hand-back.
 - Flat structural views (small, or justified): `layout-flat-view` or `auto-layout-and-route`
 - Grouped layered views: `arrange-groups` / `layout-within-group`
@@ -947,16 +950,16 @@ Replace the current Step 2 bullet list with:
 After current Step 4 (Re-assess), or rename it, ensure this sequence exists as Step 4 and Step 5. If Step 5 Hand-back already exists, insert the new steps before Hand-back and keep Hand-back last.
 
 ```markdown
-### Step 4 — Re-assess dimensions
+### Step 4: Re-assess dimensions
 `assess-layout` again. Walk `ratingBreakdown`. Dispose every non-pass dimension (fix or record why accepted). Treat `partial` and `not-checked` as unverified, not passed. Do not sign off on `overallRating` alone.
 
-### Step 5 — Annotate last (CP-G5)
+### Step 5: Annotate last (CP-G5)
 Only after layout and routing are finished, add notes or legends with `add-note-to-view`. Omit `height` so the server auto-fits. Place with `position: below-content`, never `above-content`. Do not run layout, route, or resize after notes. If geometry must change, re-place the note after it.
 
-### Step 6 — Render close-out (CP-G6)
+### Step 6: Render close-out (CP-G6)
 After any add, move, resize, or style, including notes: `assess-layout` then `export-view`. Inspect the PNG. The render wins if the metric under-counts.
 
-### Step 7 — Hand-back
+### Step 7: Hand-back
 ```
 
 Renumber the output template if it still says Step 5 Hand-back only. Keep the Specialist Result template; add a residual-issues column note that it must mention `ratingBreakdown` leftovers.

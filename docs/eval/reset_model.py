@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Reset the eval model to a verified-empty state via MCP. Stdlib only.
 
 "Fresh model" for an eval iteration = the dedicated eval model wiped to zero

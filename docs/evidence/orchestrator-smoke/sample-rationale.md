@@ -1,10 +1,13 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Sample rationale
 
 ## Purpose
 Explain invoice as-is for AP stakeholders.
 
 ## Stakeholders and Concerns
-AP Manager — cycle time.
+AP Manager: cycle time.
 
 ## Viewpoint
 Business Process Cooperation.

@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Reference Scenario: Meridian Freight (FROZEN)
 
 Status: **FROZEN v1.0 (2026-08-28)**. This file is the single fixed input for

@@ -1,3 +1,6 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Summary — 21-01
 **Status:** complete
 **Requirements:** RAT-08, RAT-09, RAT-10

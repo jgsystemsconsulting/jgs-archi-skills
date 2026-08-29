@@ -1,7 +1,10 @@
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+
 # Viewpoint selection offline evidence
 
 Scenario: multi-stakeholder capability investment decision (OBJ-2 / VSEL-11).
-Offline only — no live Archi MCP required.
+Offline only: no live Archi MCP required.
 
 ## Viewpoint Trace Table
 | Viewpoint | Stakeholder | Concern | Purpose | Abstraction | Standard? | Justification |

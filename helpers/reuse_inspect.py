@@ -1,4 +1,6 @@
 #!/usr/bin/env python3
+# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
 """Decide reuse | create | ambiguous from an element inventory snapshot. Stdlib only.
 
 Offline helper for OBJ-4. Does not call MCP. Agents still use search-elements /

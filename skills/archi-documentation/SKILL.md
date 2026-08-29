@@ -2,8 +2,18 @@
 name: archi-documentation
 description: "Documentation/rationale specialist; orchestrator-dispatched. Writes structured rationale and completion summary via MCP."
 ---
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
 
 # archi-documentation
+
+## When to use
+
+Orchestrator-dispatched after View Plan confirmation when rationale and a completion summary must be written into the model.
+
+## Prerequisites
+
+Archi with the JGS Archi Bridge MCP (see docs/MCP.md). Python 3.10+ for helpers. Follow docs/CREATE_PATH.md. Specialists require View Plan confirmation `approved` before mutations.
 
 Orchestrator-dispatched specialist. Not a primary user entrypoint.
 
