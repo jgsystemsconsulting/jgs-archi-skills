@@ -58,7 +58,7 @@ python helpers/completion_summary_schema.py path/to/summary.md
 
 Required rationale sections (helper-enforced): Purpose, Stakeholders and Concerns, Viewpoint, Questions Answered, Assumptions, Decisions, Exclusions, Open Questions. Bodies must be non-empty.
 
-Required completion-summary blocks: Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run.
+Required completion-summary blocks: Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run, Deliberately Deferred, Improve Next. First generation is a draft (CP-G7). A legitimate empty deferred/next block is the word `none`.
 
 ## Procedure
 
@@ -89,6 +89,7 @@ If user requested changes:
 
 ### Step 5 — Completion summary (RATE-03)
 Emit run summary covering required blocks. Validate with `completion_summary_schema` when a file artifact exists.
+Do not present the model as finished. Deferred and Next are required blocks; use `none` when there is nothing to list.
 
 ### Step 6 — Hand-back
 Return Specialist Result including schema validation status, impact plan path/fields when NL path ran, and completion summary.
@@ -116,6 +117,8 @@ Return Specialist Result including schema validation status, impact plan path/fi
 - Open Questions: …
 - Confirmation Status: …
 - Specialists Run: …
+- Deliberately Deferred: …
+- Improve Next: …
 
 ### Schema validation
 - rationale_schema: pass | fail

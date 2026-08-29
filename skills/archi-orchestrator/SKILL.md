@@ -166,13 +166,17 @@ After the model-qa specialist (or a specialist self-check), consume compliance f
 
 After modelling content is stable (typically after layout), dispatch the documentation specialist (archi-documentation) last:
 
-- Consume its **completion summary** (Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run) and schema validation status.
+- Consume its **completion summary** (Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run, Deliberately Deferred, Improve Next) and schema validation status.
 - If the user requests natural-language changes: run the documentation NL path (impact plan via `nl_change_impact` → user confirm → regenerate with must-reuse IDs → rationale deltas). Do not invent new mutating tools; reuse layer/layout specialists for regenerate scope only.
 - Optional hand-off fields: `completion_summary`, `rationale_validation`, `nl_change_impact`.
 
 ### Completion
 
-End the run when documentation specialist returns a completion summary, or earlier if the user aborts. Capture offline evidence under `docs/evidence/` when live MCP is unavailable.
+End the first generation at a **draft checkpoint** (CP-G7). After the documentation specialist returns a valid completion summary, stop and ask the user to confirm, deepen (pick from Improve Next / Deliberately Deferred), or stop. Do not present the model as finished.
+
+Decide-and-log by default. Ask only when the choice is costly to reverse, evidence is missing, and a wrong guess wastes significant work. More than about five open questions means under-deciding; log the reversible ones and continue.
+
+Capture offline evidence under `docs/evidence/` when live MCP is unavailable.
 
 ## Completion summary (when stopping)
 
@@ -181,5 +185,5 @@ Always end with:
 1. Path or paste of the View Plan
 2. Confirmation status (pending / approved / aborted)
 3. Compliance/QA outcome (pass, findings pending user, or blocked) when model-qa ran
-4. Documentation outcome: completion summary (or path), rationale validation status, NL-change impact if any
+4. Documentation outcome: completion summary (or path), including Deliberately Deferred and Improve Next, rationale validation status, NL-change impact if any
 5. Next recommended action (revise plan, approve, resolve compliance findings, NL-change regenerate, or stop)
