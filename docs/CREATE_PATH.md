@@ -19,6 +19,22 @@ Binding contract for orchestrator-dispatched specialists that work the Archi mod
 | `archi-layout` | Yes (post-confirm) | Layout tools on existing views |
 | `archi-documentation` | Yes (post-confirm) | Documentation fields + summary |
 
+## Run gates (hedge-free)
+
+Guidance elsewhere in this file may use "prefer" or "when useful". The table below may not. If a gate is unmet, the draft is not ready unless the specialist names an exception: which gate, which view or element, and why. "Ran long" is not an exception.
+
+| ID | Gate | Pass condition |
+|----|------|----------------|
+| CP-G1 | Confirm-before-mutate | No mutating MCP call unless View Plan confirmation is `approved`. |
+| CP-G2 | Fresh IDs | At the start of every specialist, and after any compaction, re-query IDs with `search-elements` / `get-view-contents`. Identify unnamed notes, images, junctions, and groups by content and geometry, never by batch order. |
+| CP-G3 | Disposition complete | Every candidate in the hand-off is `captured`, `folded`, `needs-user`, or `out-of-scope`. Silence is a fail. |
+| CP-G4 | No invention | Every created element has `Evidence: stated \| inferred \| existing - <source>` as the first documentation line. No on-canvas element without that citation. |
+| CP-G5 | Annotate last | Notes, legends, and images are the last objects placed on a view. Omit `height` on notes. Place notes with `position: below-content`. A later geometry change re-opens CP-G6. |
+| CP-G6 | Render close-out | After any add, move, resize, or style on a view, including notes, the last actions are `assess-layout` (dispose every non-pass `ratingBreakdown` dimension; `partial` and `not-checked` are unverified) and an `export-view` PNG that is inspected. |
+| CP-G7 | First generation is a draft | The documentation specialist ends the run at a draft checkpoint. Do not present the model as finished. |
+
+Offline assist for CP-G3: `python helpers/disposition.py ledger.md`.
+
 ## When mutations are allowed (SPEC-D-15 / NG-3)
 
 1. User has **approved** the orchestrator View Plan confirmation gate.
@@ -27,6 +43,15 @@ Binding contract for orchestrator-dispatched specialists that work the Archi mod
 4. No specialist silently expands scope or locks architectural decisions without surfacing them.
 
 If confirmation is missing or aborted: **stop**. Produce a hand-back note; do not call mutating tools.
+
+## Working mode (the model is the checkpoint)
+
+A modelling run can compact or stop mid-way. Conversation memory is not the ledger.
+
+1. Re-query IDs at the start of every specialist (`search-elements`, `get-view-contents`). Do not reuse IDs remembered from an earlier turn.
+2. Unnamed view objects (notes, images, junctions, groups) have no name to match. Identify them by content and geometry from a fresh `get-view-contents`. Never assume "note 2 of 3" from an earlier `bulk-mutate` batch.
+3. Keep element names stable and domain-derived so `get-or-create-element` / search-before-create stay idempotent.
+4. Optional: write a short run marker with `update-model` (confirmation status, viewpoints in scope, last specialist completed) so the next run diffs against the model.
 
 ## Orchestrator-dispatched only (SPEC-D-13 / SPEC-02)
 
@@ -41,6 +66,21 @@ If confirmation is missing or aborted: **stop**. Produce a hand-back note; do no
 3. Keep naming consistent for the same real-world concept.
 4. Prefer `find-concept-usage` / `get-view-contents` when attaching to existing structure.
 
+## Provenance on create (CP-G4)
+
+Every created element starts its `documentation` field with:
+
+```
+Evidence: stated | inferred | existing - <source>
+```
+
+- `stated`: the user or the approved View Plan said it
+- `inferred`: the specialist deduced it (keep elicit inferences; do not upgrade them)
+- `existing`: already in the model and reused
+
+Never write a bare `Rationale:` line for an inferred why. Omit Rationale, or write `Rationale (inferred):`. Do not add evidence specializations or label glyphs.
+
+Creating specialists (motivation, capability-strategy, business, application, technology-physical, implementation-migration, traceability) include a **Candidate disposition** table in the Specialist Result. Valid dispositions: `captured` (target `element @ view`), `folded` (parent plus reason), `needs-user` (question), `out-of-scope` (why). Validate with `python helpers/disposition.py`.
 
 ## Model coherence and reuse (OBJ-4 / COH-*)
 
@@ -112,9 +152,9 @@ Binding for ArchiMate legality and consistency. Violations are **explained** wit
 
 - Deep validator: `python helpers/compliance_validate.py slice.json [--allowlist path] [--json]`
   - Input model-slice: `{elements:[{id,name,type,abstraction?}], relationships:[{id,type,source,target}], view_usages?:[…]}`.
-  - Fixture allowlist: `helpers/fixtures/compliance_allowlist.json` (minimal captured subset; **not** a skill-owned ArchiMate catalog — NG-4). Live MCP remains SoT.
+  - Fixture allowlist: `helpers/fixtures/compliance_allowlist.json` (minimal captured subset; **not** a skill-owned ArchiMate catalog; NG-4). Live MCP remains SoT.
   - Checks: element_type_known, relationship_type_permitted, relationship_endpoints_valid, abstraction_level_consistent, cross_view_naming_consistent.
-  - Output findings: `{check_id, object_refs, problem, proposed_alternative}` — never mutates the model.
+  - Output findings: `{check_id, object_refs, problem, proposed_alternative}`; never mutates the model.
 - Thin boolean gate (still valid): `python helpers/compliance_checklist.py report.json` for pre-scored check maps.
 - Coherence helpers remain available: `reuse_inspect`, `naming_convention` (OBJ-4).
 
@@ -162,7 +202,7 @@ Binding for structured view rationale, safe natural-language change regeneration
 
 ### Completion summary (RATE-03)
 
-1. End every modelling run with a completion summary covering at minimum: Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run.
+1. End every modelling run with a completion summary covering at minimum: Views Touched, Decisions, Open Questions, Confirmation Status, Specialists Run, Deliberately Deferred, Improve Next. First generation is a draft (CP-G7).
 2. Offline validate: `python helpers/completion_summary_schema.py path/to/summary.md`
 3. Orchestrator consumes the documentation specialist summary in the run closeout; do not invent new mutating tools.
 
@@ -193,7 +233,17 @@ Use only tool names listed in the inventory. Common modelling set:
 
 `search-elements`, `get-or-create-element`, `create-element`, `create-relationship`, `create-view`, `add-to-view`, `get-view-contents`, `get-element`, `get-relationships`, `find-concept-usage`, `update-element`, `update-view`
 
-Layout set (layout specialist): `auto-layout-and-route`, `layout-flat-view`, `assess-layout`, `apply-positions`, and related inventory layout tools.
+Layout set (layout specialist): `auto-layout-and-route`, `layout-flat-view`, `assess-layout`, `apply-positions`, `export-view`, `update-view-object`, `add-note-to-view`, `get-view-contents`, and related inventory layout tools.
+
+Layout footguns (layout specialist; recipes remain source of truth):
+
+- Grouped or nested default for structure views with more than about 10 elements; flat needs a recorded reason
+- Annotate last (CP-G5): omit `height` on `add-note-to-view` and note `update-view-object`; `position: below-content`, never `above-content`
+- Junctions about 14 by 14; do not pass a layer-folder `folderId` for a Junction
+- Nested hub (six or more connections): resize the hub, then `auto-route-connections`; re-route alone is inert
+- Walk `ratingBreakdown`; do not sign off on `overallRating` alone; `partial` and `not-checked` are unverified
+- Last action includes `export-view`; the PNG is authoritative where the metric under-counts
+- Literal `&` in names and labels, never `&amp;`
 
 Do not invent tool names.
 
@@ -201,12 +251,13 @@ Do not invent tool names.
 
 Every specialist ends with a structured hand-back:
 
-1. **Status** — completed / blocked / needs-user
-2. **Views touched** — names/IDs created or updated
-3. **Elements/relationships** — created or reused (IDs when known)
-4. **Compliance notes** — violations found and alternatives proposed
-5. **Open questions** — decisions still needing the user
-6. **Confirmation assumption** — restate that work ran under approved View Plan (or that no mutations ran)
+1. **Status:** completed / blocked / needs-user
+2. **Views touched:** names/IDs created or updated
+3. **Elements/relationships:** created or reused (IDs when known)
+4. **Compliance notes:** violations found and alternatives proposed
+5. **Open questions:** decisions still needing the user
+6. **Confirmation assumption:** restate that work ran under approved View Plan (or that no mutations ran)
+7. **Candidate disposition:** table of every hand-off candidate (creating specialists). `archi-model-qa` treats an undispositioned candidate as a finding; do not silent-fix.
 
 ## Hard non-goals
 
