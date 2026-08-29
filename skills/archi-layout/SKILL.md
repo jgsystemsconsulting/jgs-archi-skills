@@ -35,11 +35,11 @@ Improve readability of target Archi views using inventory layout and presentatio
 
 ## MCP tools
 
-Assess: `assess-layout`, `get-view-contents`, `detect-hub-elements`  
-Layout: `auto-layout-and-route`, `layout-flat-view`, `layout-within-group`, `arrange-groups`, `optimize-group-order`, `apply-positions`  
-Spacing: `adjust-view-spacing`, `apply-spacing-recommendations`, `apply-element-spacing-recommendations`, `apply-group-spacing-recommendations`, `resize-elements-to-fit`  
-Connections: `auto-route-connections`, `auto-connect-view`  
-Notes/groups: `add-group-to-view`, `add-note-to-view` when hand-off allows
+Assess: `assess-layout`, `get-view-contents`, `detect-hub-elements`, `export-view`
+Layout: `auto-layout-and-route`, `layout-flat-view`, `layout-within-group`, `arrange-groups`, `optimize-group-order`, `apply-positions`
+Spacing: `adjust-view-spacing`, `apply-spacing-recommendations`, `apply-element-spacing-recommendations`, `apply-group-spacing-recommendations`, `resize-elements-to-fit`
+Connections: `auto-route-connections`, `auto-connect-view`
+Notes/groups: `add-group-to-view`, `add-note-to-view`, `update-view-object` when hand-off allows
 
 ## Procedure
 
@@ -53,9 +53,13 @@ Stop without approval.
 `get-view-contents` + `assess-layout` on each target view. Record issues (overlaps, hubs, spacing).
 
 ### Step 2 — Choose strategy
-- Flat structural views: `layout-flat-view` or `auto-layout-and-route`
+- Structure views with more than about 10 elements: grouped or nested (`add-group-to-view` / `parentViewObjectId`). Flat needs a recorded reason in the hand-back.
+- Flat structural views (small, or justified): `layout-flat-view` or `auto-layout-and-route`
 - Grouped layered views: `arrange-groups` / `layout-within-group`
 - Connection spaghetti: `auto-route-connections` after positions stable
+- Nested hub (six or more connections): resize the hub, then `auto-route-connections`. Re-route alone is inert.
+- Junctions: about 14 by 14. Do not pass a layer-folder `folderId` for a Junction.
+- Literal `&` in names and labels, never `&amp;`.
 
 ### Step 3 — Apply
 Run layout tools; avoid `clear-view` unless hand-off explicitly rebuilds the view.
@@ -75,10 +79,16 @@ Target `excellent`; accept `good` only with a recorded residual reason
 (e.g. structurally inherent crossings). Record every assessment verdict in
 the specialist hand-back.
 
-### Step 4 — Re-assess
-`assess-layout` again; note residual issues.
+### Step 4 — Re-assess dimensions
+`assess-layout` again. Walk `ratingBreakdown`. Dispose every non-pass dimension (fix or record why accepted). Treat partial and not-checked as unverified, not passed. Do not sign off on overallRating alone.
 
-### Step 5 — Hand-back
+### Step 5 — Annotate last (CP-G5)
+Only after layout and routing are finished, add notes or legends with `add-note-to-view`. Omit `height` so the server auto-fits. Place with `position: below-content`, never above-content. Do not run layout, route, or resize after notes. If geometry must change, re-place the note after it.
+
+### Step 6 — Render close-out (CP-G6)
+After any add, move, resize, or style, including notes: `assess-layout` then `export-view`. Inspect the PNG. The render wins if the metric under-counts.
+
+### Step 7 — Hand-back
 
 ## Output template
 
@@ -90,7 +100,7 @@ the specialist hand-back.
 ### Views laid out
 | View | Tools used | Residual issues |
 |------|------------|-----------------|
-| … | … | … |
+| … | … | ratingBreakdown leftovers or none |
 
 ### Open questions
 - …
