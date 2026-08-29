@@ -5,11 +5,12 @@
 
 ## Reporting a vulnerability
 
-Report security issues privately via a GitHub security advisory on this
-repository (Security, Advisories, New advisory). Do not open a public issue
-for a suspected vulnerability. The `/new` advisory URL is omitted here
-because this repository is private and that path 404s for unauthenticated
-link checks.
+Report security issues privately via GitHub security advisories on this
+repository (Security, Advisories, New advisory), or open a pull request with
+the fix when that is safe. Do not open a public issue for a suspected
+vulnerability. The `/security/advisories/new` URL is omitted here because
+this repository is private and that path 404s for unauthenticated link
+checks.
 
 We aim to acknowledge reports within 5 business days. Include the affected
 version (see RELEASE-INFO.txt), reproduction steps, and impact.
