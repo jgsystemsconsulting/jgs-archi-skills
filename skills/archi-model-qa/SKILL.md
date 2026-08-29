@@ -58,6 +58,7 @@ Load target views and related elements/relationships into a slice snapshot when 
 5. Cross-view naming consistency — `naming_convention.detect_conflicts` and/or validator cross_view_naming_consistent
 6. Orphans not justified by hand-off
 7. Unresolved `ambiguous` reuse decisions still open in the registry
+8. Undispositioned hand-off candidates (CP-G3). A candidate with no captured / folded / needs-user / out-of-scope row is a finding; explain and propose (ask the user, or fold with a reason). Never silent-drop.
 
 ### Step 3 — Findings file
 Write structured findings (markdown + optional slice JSON for `compliance_validate` / thin checklist JSON).

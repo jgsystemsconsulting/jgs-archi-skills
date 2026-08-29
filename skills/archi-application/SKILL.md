@@ -79,6 +79,7 @@ For each concept in scope:
 2. Reuse IDs when the same real-world concept already exists.
 3. Create only when missing; keep names consistent across views.
 4. Prefer types appropriate to the **application** layer per MCP reference resources.
+5. Set the first documentation line to `Evidence: stated | inferred | existing - <source>` (CP-G4). Do not write a bare Rationale for an inferred why.
 
 ### Step 3 — Relationships
 
@@ -124,6 +125,11 @@ Return the CREATE_PATH payload: status, views touched, elements/relationships cr
 ### Open questions
 - …
 
+### Candidate disposition
+| Candidate | Disposition | Target | Reason |
+|-----------|-------------|--------|--------|
+| … | captured \| folded \| needs-user \| out-of-scope | element @ view, or parent | one line |
+
 ### Next specialist hint
 - …
 ```
@@ -133,3 +139,4 @@ Return the CREATE_PATH payload: status, views touched, elements/relationships cr
 1. Specialist Result markdown
 2. IDs needed by downstream specialists (traceability, layout, documentation)
 3. Explicit statement that work stayed inside confirmed scope
+4. Candidate disposition table (every hand-off candidate; validate with `python helpers/disposition.py` when a file artifact exists)

@@ -62,6 +62,8 @@ Use `get-relationships` / `find-concept-usage` to list current links between end
 ### Step 4 — Fill gaps
 For each missing hop: propose relationship type from MCP relationship reference; create with `create-relationship` when on the approved path. Illegal combo → explain + alternative (COMP-02 / OBJ-5), never silent-apply. Optional: validate proposed edges via `helpers/compliance_validate.py` on a slice before create.
 
+5. Set the first documentation line to `Evidence: stated | inferred | existing - <source>` (CP-G4). Do not write a bare Rationale for an inferred why.
+
 ### Step 5 — Gap report
 List untraceable endpoints and broken chains without inventing business meaning.
 
@@ -93,6 +95,11 @@ CREATE_PATH payload plus a Trace Gap Table.
 
 ### Open questions
 - …
+
+### Candidate disposition
+| Candidate | Disposition | Target | Reason |
+|-----------|-------------|--------|--------|
+| … | captured \| folded \| needs-user \| out-of-scope | element @ view, or parent | one line |
 ```
 
 ## Return to orchestrator
@@ -100,3 +107,4 @@ CREATE_PATH payload plus a Trace Gap Table.
 1. Specialist Result with Trace Gap Table
 2. IDs of new relationships
 3. Whether critical paths are complete
+4. Candidate disposition table (every hand-off candidate; validate with `python helpers/disposition.py` when a file artifact exists)

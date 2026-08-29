@@ -127,3 +127,4 @@ Hand back:
 1. Normalized Intent markdown (and optional JSON)
 2. List of fields still `unknown`
 3. Confirmation that **no MCP mutations** were performed
+4. Inferred fields stay `inferred`. Downstream specialists must carry them as `Evidence: inferred - elicit` (or a more specific source). Do not upgrade an inference to stated.
