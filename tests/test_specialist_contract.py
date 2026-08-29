@@ -27,6 +27,16 @@ MUTATING = [
     "archi-documentation",
 ]
 
+CREATING = [
+    "archi-motivation",
+    "archi-capability-strategy",
+    "archi-business",
+    "archi-application",
+    "archi-technology-physical",
+    "archi-implementation-migration",
+    "archi-traceability",
+]
+
 
 class SpecialistContractTests(unittest.TestCase):
     def test_create_path_markers(self) -> None:
@@ -70,6 +80,69 @@ class SpecialistContractTests(unittest.TestCase):
         digest = hashlib.sha256(
             VSEL.read_bytes().replace(b"\r\n", b"\n")).hexdigest()
         self.assertEqual(digest, FROZEN)
+
+    def test_create_path_gate_manifest(self) -> None:
+        text = CREATE.read_text(encoding="utf-8")
+        for gate in ("CP-G1", "CP-G2", "CP-G3", "CP-G4", "CP-G5", "CP-G6", "CP-G7"):
+            self.assertIn(gate, text, msg=f"CREATE_PATH missing {gate}")
+        self.assertIn("captured", text)
+        self.assertIn("folded", text)
+        self.assertIn("needs-user", text)
+        self.assertIn("out-of-scope", text)
+        self.assertIn("Evidence: stated | inferred | existing", text)
+        self.assertIn("below-content", text)
+        self.assertIn("export-view", text)
+        self.assertIn("Deliberately Deferred", text)
+        self.assertIn("Improve Next", text)
+
+    def test_creating_specialists_have_disposition_table(self) -> None:
+        for name in CREATING:
+            text = (ROOT / "skills" / name / "SKILL.md").read_text(encoding="utf-8")
+            self.assertIn(
+                "Candidate disposition",
+                text,
+                msg=f"{name} missing Candidate disposition",
+            )
+            self.assertIn("captured", text, msg=name)
+            self.assertIn("folded", text, msg=name)
+            self.assertIn("needs-user", text, msg=name)
+            self.assertIn("out-of-scope", text, msg=name)
+
+    def test_layout_footguns(self) -> None:
+        text = (ROOT / "skills" / "archi-layout" / "SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("export-view", text)
+        self.assertIn("omit", text.casefold())
+        self.assertIn("height", text.casefold())
+        self.assertIn("below-content", text)
+        self.assertIn("ratingBreakdown", text)
+        self.assertIn("14", text)
+
+    def test_documentation_draft_blocks(self) -> None:
+        text = (
+            ROOT / "skills" / "archi-documentation" / "SKILL.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("Deliberately Deferred", text)
+        self.assertIn("Improve Next", text)
+
+    def test_orchestrator_draft_checkpoint(self) -> None:
+        text = (
+            ROOT / "skills" / "archi-orchestrator" / "SKILL.md"
+        ).read_text(encoding="utf-8")
+        self.assertIn("Deliberately Deferred", text)
+        self.assertIn("Improve Next", text)
+        self.assertIn("draft", text.casefold())
+
+    def test_model_qa_undispositioned(self) -> None:
+        text = (ROOT / "skills" / "archi-model-qa" / "SKILL.md").read_text(
+            encoding="utf-8"
+        )
+        self.assertIn("undispositioned", text.casefold())
+
+    def test_elicit_inferences_survive(self) -> None:
+        text = ELICIT.read_text(encoding="utf-8")
+        self.assertIn("Evidence:", text)
 
 
 if __name__ == "__main__":
