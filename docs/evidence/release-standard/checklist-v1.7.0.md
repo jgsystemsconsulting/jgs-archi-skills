@@ -17,7 +17,7 @@ Date: 2026-08-29.
 | 7 | Tagged release | PASS (this ship) | Intended tag `v1.7.0` in RELEASE-INFO. Historical tags v1.0..v1.6 left immutable. |
 | 8 | Catalogue RR-B-19 | N/A | Maintainer: JGSC does not maintain a public product catalogue. No pricing in the repo. |
 | 9 | Multi-agent install RR-S-15 | PASS | `install.py --list-agents` / `--agent` / `--dry-run`. Default zcode flat. README + docs/other-agents.md. |
-| 10 | Landing page RR-B-20 | PASS (files) | `docs/index.html` + `docs/.nojekyll`. Self-contained, self-hosted fonts, title/description/canonical/OG, what-it-is, skill chain, agents, install, first-run. Pages enablement via `scripts/configure_repo.sh`. |
+| 10 | Landing page RR-B-20 | PASS (files); Pages N/A until public | `docs/index.html` + `docs/.nojekyll` shipped. Self-contained, self-hosted fonts, title/description/canonical/OG, what-it-is, skill chain, agents, install, first-run. GitHub Pages create returned HTTP 422: "Your current plan does not support GitHub Pages for this repository" while the repo is private on the free plan. Homepage is set to the intended Pages URL. Enable Pages from `master:/docs` when the repo is public or on Pro. |
 | 11 | About metadata RR-B-21 | PASS (script) | `scripts/configure_repo.sh` sets description, homepage, 7 topics. |
 | 12a | Marketplace manifests RR-B-29a | PASS | `.claude-plugin/`, `.cursor-plugin/`, `.agents/plugins/marketplace.json`, `gemini-extension.json`. `claude plugin validate` passed. |
 | 12b | Directory submissions RR-B-29b | N/A | Proprietary EULA. OSS-only directories ineligible. Human-only; not claimed done. |

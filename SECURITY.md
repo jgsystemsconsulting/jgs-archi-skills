@@ -5,9 +5,11 @@
 
 ## Reporting a vulnerability
 
-Report security issues privately via a
-[GitHub security advisory](https://github.com/jgsystemsconsulting/jgs-archi-skills/security/advisories/new).
-Do not open a public issue for a suspected vulnerability.
+Report security issues privately via a GitHub security advisory on this
+repository (Security, Advisories, New advisory). Do not open a public issue
+for a suspected vulnerability. The `/new` advisory URL is omitted here
+because this repository is private and that path 404s for unauthenticated
+link checks.
 
 We aim to acknowledge reports within 5 business days. Include the affected
 version (see RELEASE-INFO.txt), reproduction steps, and impact.

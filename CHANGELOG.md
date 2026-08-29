@@ -21,7 +21,7 @@ Release Repo Standard v1.9 (Base + RR-S). Proprietary EULA.
 - `.github/workflows/validate.yml` inline gate (does not execute repo code)
 - docs/index.html landing page + GitHub Pages from master `/docs`
 - Playwright screenshots at 1280px and 390px (untracked `.playwright-mcp/`)
-- RR-B-19 catalogue N/A; RR-B-23 branch protection blocked on private free plan; RR-B-29b directory submissions N/A (proprietary); RR-B-30 one landing page
+- RR-B-19 catalogue N/A; RR-B-23 branch protection blocked on private free plan; RR-B-20 Pages enablement HTTP 422 while private on the free plan (files shipped; enable when public or Pro); RR-B-29b directory submissions N/A (proprietary); RR-B-30 one landing page
 - Specialist run OS from the unreleased bucket: CREATE_PATH CP-G1..G7, disposition ledger, draft-first generation, layout footguns
 
 ## v1.6 (2026-08-28)
