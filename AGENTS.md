@@ -16,3 +16,15 @@ Agent-guided ArchiMate viewpoint creation in Archi: an orchestrator plus special
 
 Constraints inherited from VISION.md: never modify jgs-archi-mcp, never duplicate ArchiMate reference material into skills, Archi is the only canvas, the user governs scope and architectural decisions, no EA tools other than Archi.
 <!-- ralph-setup:implementation end -->
+
+## Planning (this repo)
+
+This workspace is brownfield updates, not a GSD greenfield or new-milestone cycle. User-scope Track 2 (`gsd-new-milestone`, `gsd-master-flow`, `gsd-new-project`) is off here even if `.planning/` exists.
+
+For any multi-step change, run this pipeline in one session without pausing for confirmation. Do not invent a chat outline. Do not stop after the plan exists.
+
+1. Plan: load **writing-plans** for a spec or bounded feature (write the plan file), or **unlazy** for a long autonomous build or audit (`GATES.md` + Depth Tree first). Use **using-superpowers** only to pick the matching superpowers skill; it does not replace this pipeline.
+2. Review: load **adversarial-review-loop** on that plan or gates document. Fix until the merged verdict has no CRITICAL or MAJOR issues.
+3. Execute: load **subagent-driven-development** when subagents are available; otherwise **executing-plans**. Run the reviewed plan to completion.
+
+Skip this pipeline only for questions, read-only investigation, or a few-line one-file change with no design choice.
