@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Live end-to-end smoke of the archi skill-suite contract against a running
 JGS Archi Bridge inside Archi. Stdlib only. Mirrors the orchestrator flow:
 inspect model, reuse gate, create, relate, view, rationale, layout, validate,

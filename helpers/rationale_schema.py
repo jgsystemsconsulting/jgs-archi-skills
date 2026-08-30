@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Validate structured view rationale markdown sections. Stdlib only.
 
 OBJ-6 depth: required sections present, non-empty bodies, multi-view bundles.

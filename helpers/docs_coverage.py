@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Documentation coverage checker over model-slice snapshots. Stdlib only.
 
 Eval-loop gate helper. Verifies that every element and relationship in the

@@ -22,7 +22,8 @@ jobs:
           import pathlib, sys
           required = [
               "LICENSE", "COPYRIGHT", "NOTICE", "README.md", "CHANGELOG.md",
-              "RELEASE-INFO.txt", "CITATION.cff", "SECURITY.md", ".gitignore",
+              "RELEASE-INFO.txt", "CITATION.cff", "SECURITY.md",
+              "CONTRIBUTING.md", "CODE_OF_CONDUCT.md", ".gitignore",
               "SKILLS.md", "docs/skill-usage.md", "docs/other-agents.md",
               "docs/MCP.md", "install.py", "install.sh", "install.ps1",
               ".claude-plugin/marketplace.json", ".claude-plugin/plugin.json",

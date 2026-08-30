@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """View layout checker over exported view snapshots. Stdlib only.
 
 Consumes a views.json snapshot (list of views with nested elements and bounds):

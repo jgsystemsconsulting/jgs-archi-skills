@@ -1,10 +1,10 @@
 <!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
-<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+<!-- SPDX-License-Identifier: MIT -->
 
 # jgs-archi-skills
 
 <p align="center">
-  <img src="https://img.shields.io/badge/licence-proprietary-lightgrey" alt="Licence: proprietary">
+  <img src="https://img.shields.io/badge/licence-MIT-green" alt="Licence: MIT">
   <img src="https://img.shields.io/badge/version-1.0.0-green" alt="Version 1.0.0">
   <img src="https://img.shields.io/badge/skills-13-blueviolet" alt="13 skills">
   <img src="https://img.shields.io/badge/tested%20with-ZCode-8A2BE2" alt="Tested with ZCode">
@@ -54,7 +54,7 @@ Install jgs-archi-skills v1.0.0 from https://github.com/jgsystemsconsulting/jgs-
 3. Run `python install.py --dry-run`, then `python install.py` (ZCode, flat ~/.zcode/skills).
    For Claude Code instead: `python install.py --agent claude`.
 4. Verify each skills/*/SKILL.md landed under the target and the count matches SKILLS.md (13).
-5. Note the proprietary licence in LICENSE before use.
+5. Note the MIT licence in LICENSE before use.
 Flag any step you cannot perform.
 ```
 
@@ -90,9 +90,9 @@ Skill index: [SKILLS.md](SKILLS.md).
 
 ## Licence
 
-Proprietary. Copyright (c) 2026 JG Systems Consulting Ltd. See
-[LICENSE](LICENSE). Free of charge to use; not open source. No right to copy,
-modify, or redistribute except the local install described in the licence.
+MIT. Copyright (c) 2026 JG Systems Consulting Ltd. See [LICENSE](LICENSE).
+Fork, customise skills, and redistribute under the same terms. See
+[CONTRIBUTING.md](CONTRIBUTING.md).
 
 ## Support
 

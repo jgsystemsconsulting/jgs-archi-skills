@@ -3,7 +3,7 @@ name: archi-technology-physical
 description: "Technology and physical specialist; orchestrator-dispatched modelling via Archi MCP after View Plan confirmation."
 ---
 <!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
-<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+<!-- SPDX-License-Identifier: MIT -->
 
 # archi-technology-physical
 

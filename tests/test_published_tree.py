@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Published tree: end-user files only; no machine-local paths."""
 from __future__ import annotations
 
@@ -57,6 +57,8 @@ class PublishedTreeTests(unittest.TestCase):
             if not path.is_file():
                 continue
             if path.suffix.lower() in {".png", ".woff2", ".archimate"}:
+                continue
+            if rel.replace("\\", "/") == "tests/test_published_tree.py":
                 continue
             text = path.read_text(encoding="utf-8", errors="ignore")
             for marker in LOCAL_MARKERS:

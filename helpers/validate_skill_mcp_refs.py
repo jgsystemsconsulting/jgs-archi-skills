@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Scan skills for MCP tool/resource refs; fail on names absent from inventory.
 
 Stdlib only. Offline. Exit 0 if clean or no skills; exit 1 on unknown refs.

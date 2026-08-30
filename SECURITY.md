@@ -1,5 +1,5 @@
 <!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
-<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+<!-- SPDX-License-Identifier: MIT -->
 
 # Security Policy
 
@@ -8,9 +8,8 @@
 Report security issues privately via GitHub security advisories on this
 repository (Security, Advisories, New advisory), or open a pull request with
 the fix when that is safe. Do not open a public issue for a suspected
-vulnerability. The `/security/advisories/new` URL is omitted here because
-this repository is private and that path 404s for unauthenticated link
-checks.
+vulnerability. Use GitHub Security, Advisories, New advisory on this
+repository.
 
 We aim to acknowledge reports within 5 business days. Include the affected
 version (see RELEASE-INFO.txt), reproduction steps, and impact.

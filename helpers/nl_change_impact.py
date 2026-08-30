@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """NL-change impact planning over a view/element inventory. Stdlib only.
 
 OBJ-6 / RATE-02 offline helper. Deterministic token/keyword match only.

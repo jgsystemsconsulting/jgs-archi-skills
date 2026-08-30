@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Install in-repo skills into a coding agent (RR-S-02/03/15).
 
 Default (zcode): copy each skills/<name>/ package into ~/.zcode/skills/<name>/

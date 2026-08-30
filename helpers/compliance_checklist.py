@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Offline compliance checklist asserts for ArchiMate skill paths. Stdlib only.
 
 Thin boolean gate (COMP-01/02 era). For OBJ-5 depth over model-slice snapshots

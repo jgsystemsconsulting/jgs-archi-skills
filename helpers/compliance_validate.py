@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Offline compliance validation over model-slice snapshots. Stdlib only.
 
 OBJ-5 depth beyond the thin boolean checklist. Does not call MCP. Does not
