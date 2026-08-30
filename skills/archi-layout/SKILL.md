@@ -3,7 +3,7 @@ name: archi-layout
 description: "Layout/presentation specialist; orchestrator-dispatched. Archi-native layout tools only after confirmation."
 ---
 <!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
-<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+<!-- SPDX-License-Identifier: MIT -->
 
 # archi-layout
 

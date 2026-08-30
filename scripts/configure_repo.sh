@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 # Idempotent platform configuration (RR-B-21/23) via the gh CLI.
 set -euo pipefail
 

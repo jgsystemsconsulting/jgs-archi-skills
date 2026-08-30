@@ -3,7 +3,7 @@ name: archi-model-qa
 description: "Model QA specialist; orchestrator-dispatched. Compliance and coherence checks with explain-and-propose fixes."
 ---
 <!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
-<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+<!-- SPDX-License-Identifier: MIT -->
 
 # archi-model-qa
 

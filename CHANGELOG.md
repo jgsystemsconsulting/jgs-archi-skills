@@ -1,5 +1,5 @@
 <!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
-<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+<!-- SPDX-License-Identifier: MIT -->
 
 # Changelog
 
@@ -7,10 +7,14 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 (`vMAJOR.MINOR.PATCH`). This file starts at [1.0.0]; earlier private
 milestones are not retained.
 
+## [Unreleased]
+
+Relicense to MIT so forks and local skill customisation are allowed.
+
 ## [1.0.0] - 2026-08-30
 
 First public release. Agent-guided ArchiMate viewpoint creation in Archi via
-the JGS Archi Bridge MCP. Proprietary EULA.
+the JGS Archi Bridge MCP.
 
 - Orchestrator plus twelve specialists; user-governed View Plan confirmation
 - Shared CREATE_PATH contract with run gates CP-G1 through CP-G7, candidate

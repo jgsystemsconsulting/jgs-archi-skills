@@ -1,5 +1,5 @@
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Tests for helpers/docs_coverage.py (eval-loop documentation gate)."""
 import unittest
 

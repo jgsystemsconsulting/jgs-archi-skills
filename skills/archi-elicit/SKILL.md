@@ -3,7 +3,7 @@ name: archi-elicit
 description: "Normalize architectural intent into the orchestrator field set. Orchestrator-dispatched; no model mutations."
 ---
 <!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
-<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+<!-- SPDX-License-Identifier: MIT -->
 
 # archi-elicit
 

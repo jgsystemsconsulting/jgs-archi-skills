@@ -1,5 +1,5 @@
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Release gate (RR-B-15): required files, forbidden paths, forbidden
 content, headers present. Exits non-zero on any failure.
 
@@ -24,6 +24,8 @@ REQUIRED = [
     "RELEASE-INFO.txt",
     "CITATION.cff",
     "SECURITY.md",
+    "CONTRIBUTING.md",
+    "CODE_OF_CONDUCT.md",
     ".gitignore",
     "SKILLS.md",
     "docs/skill-usage.md",

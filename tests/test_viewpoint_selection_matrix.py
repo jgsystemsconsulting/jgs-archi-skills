@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Tests for helpers.viewpoint_selection_matrix."""
 from __future__ import annotations
 

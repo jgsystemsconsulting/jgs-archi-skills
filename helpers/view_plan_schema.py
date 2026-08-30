@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 # Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
-# SPDX-License-Identifier: LicenseRef-JGSC-Proprietary
+# SPDX-License-Identifier: MIT
 """Validate that a View Plan markdown file has required H2 sections.
 
 Stdlib only. Exit 0 if all required headings present; exit 1 listing missing.

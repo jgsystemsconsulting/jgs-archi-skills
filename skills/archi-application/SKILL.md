@@ -3,7 +3,7 @@ name: archi-application
 description: "Application layer specialist; orchestrator-dispatched modelling via Archi MCP after View Plan confirmation."
 ---
 <!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
-<!-- SPDX-License-Identifier: LicenseRef-JGSC-Proprietary -->
+<!-- SPDX-License-Identifier: MIT -->
 
 # archi-application
 
