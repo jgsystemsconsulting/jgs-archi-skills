@@ -1,0 +1,21 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.unlazy/
+.unlazy-hook-state.json
+.tmp-install-check/
+
+*.bak
+.playwright-mcp/
+.worktrees/
+live-smoke-out/
+
+# Maintainer-only (kept on disk, not published)
+.planning/
+.claude/
+docs/eval/
+docs/evidence/
+docs/superpowers/
+docs/specs/
+GATES.md
+scripts/add_headers.py
