@@ -1,0 +1,31 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.unlazy/
+.unlazy-hook-state.json
+.tmp-install-check/
+
+*.bak
+.playwright-mcp/
+.worktrees/
+live-smoke-out/
+
+# Archify visual-check sidecars (generated; HTML + JSON spec are the artifact)
+docs/diagrams/*.visual-check.*
+
+# Maintainer-only (kept on disk, not published)
+.planning/
+.claude/
+.superpowers/
+docs/eval/
+docs/evidence/
+docs/superpowers/
+docs/specs/
+GATES.md
+AGENTS.md
+scripts/add_headers.py
+scripts/configure_repo.sh
+helpers/layout_check.py
+helpers/specialist_manifest.py
+tests/test_layout_check.py
+tests/test_specialist_manifest.py

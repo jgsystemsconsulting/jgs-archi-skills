@@ -1,0 +1,1162 @@
+{
+  "elements": [
+    {
+      "id": "sm-st-installer",
+      "name": "Installer",
+      "type": "Stakeholder",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-st-architect",
+      "name": "Architect",
+      "type": "Stakeholder",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-st-reviewer",
+      "name": "Reviewer",
+      "type": "Stakeholder",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-dr-gap",
+      "name": "Missing Architectural Reasoning",
+      "type": "Driver",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-g-obj1",
+      "name": "OBJ-1 Intent and View Plan",
+      "type": "Goal",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-g-obj2",
+      "name": "OBJ-2 Viewpoint Grounding",
+      "type": "Goal",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-g-obj3",
+      "name": "OBJ-3 Specialist Coverage",
+      "type": "Goal",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-g-obj4",
+      "name": "OBJ-4 Shared Concepts",
+      "type": "Goal",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-g-obj5",
+      "name": "OBJ-5 Compliance Checks",
+      "type": "Goal",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-g-obj6",
+      "name": "OBJ-6 Rationale Records",
+      "type": "Goal",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-ng1",
+      "name": "NG-1 Consume-Only MCP",
+      "type": "Constraint",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-ng2",
+      "name": "NG-2 Archi Only Canvas",
+      "type": "Constraint",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-ng3",
+      "name": "NG-3 User Governs Decisions",
+      "type": "Constraint",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-ng4",
+      "name": "NG-4 No Metamodel Dumps",
+      "type": "Constraint",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-ng5",
+      "name": "NG-5 Archi Only EA Tool",
+      "type": "Constraint",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-as-code",
+      "name": "Code Is Source of Truth",
+      "type": "Assessment",
+      "abstraction": "motivation"
+    },
+    {
+      "id": "sm-app-orch",
+      "name": "Archi Orchestrator",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-elicit",
+      "name": "Archi Elicit",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-vsel",
+      "name": "Archi Viewpoint Select",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-mot",
+      "name": "Archi Motivation",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-cap",
+      "name": "Archi Capability Strategy",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-biz",
+      "name": "Archi Business",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-apl",
+      "name": "Archi Application",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-tech",
+      "name": "Archi Technology Physical",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-impl",
+      "name": "Archi Implementation Migration",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-tr",
+      "name": "Archi Traceability",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-qa",
+      "name": "Archi Model QA",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-lay",
+      "name": "Archi Layout",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-doc",
+      "name": "Archi Documentation",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-mcp",
+      "name": "JGS Archi Bridge MCP",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-app-archi",
+      "name": "Archi",
+      "type": "ApplicationComponent",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-do-plan",
+      "name": "View Plan",
+      "type": "DataObject",
+      "abstraction": "application"
+    },
+    {
+      "id": "sm-grp-suite",
+      "name": "jgs-archi-skills",
+      "type": "Grouping",
+      "abstraction": "cross"
+    },
+    {
+      "id": "sm-grp-layer",
+      "name": "Layer Specialists",
+      "type": "Grouping",
+      "abstraction": "cross"
+    },
+    {
+      "id": "sm-grp-close",
+      "name": "Closing Specialists",
+      "type": "Grouping",
+      "abstraction": "cross"
+    },
+    {
+      "id": "sm-act-user",
+      "name": "Modelling User",
+      "type": "BusinessActor",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-p-elicit",
+      "name": "Elicit Intent",
+      "type": "BusinessProcess",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-p-vsel",
+      "name": "Select Viewpoints",
+      "type": "BusinessProcess",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-p-draft",
+      "name": "Draft View Plan",
+      "type": "BusinessProcess",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-ev-gate",
+      "name": "View Plan Confirmation",
+      "type": "BusinessEvent",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-p-layers",
+      "name": "Model Layers",
+      "type": "BusinessProcess",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-p-trace",
+      "name": "Trace Across Layers",
+      "type": "BusinessProcess",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-p-qa",
+      "name": "Run Model QA",
+      "type": "BusinessProcess",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-p-layout",
+      "name": "Layout Views",
+      "type": "BusinessProcess",
+      "abstraction": "business"
+    },
+    {
+      "id": "sm-p-docs",
+      "name": "Record Rationale",
+      "type": "BusinessProcess",
+      "abstraction": "business"
+    }
+  ],
+  "relationships": [
+    {
+      "id": "r-st1",
+      "type": "Association",
+      "source": "sm-st-installer",
+      "target": "sm-dr-gap"
+    },
+    {
+      "id": "r-st2",
+      "type": "Association",
+      "source": "sm-st-architect",
+      "target": "sm-dr-gap"
+    },
+    {
+      "id": "r-st3",
+      "type": "Association",
+      "source": "sm-st-reviewer",
+      "target": "sm-dr-gap"
+    },
+    {
+      "id": "r-as1",
+      "type": "Influence",
+      "source": "sm-as-code",
+      "target": "sm-dr-gap"
+    },
+    {
+      "id": "r-dg1",
+      "type": "Influence",
+      "source": "sm-dr-gap",
+      "target": "sm-g-obj1"
+    },
+    {
+      "id": "r-dg2",
+      "type": "Influence",
+      "source": "sm-dr-gap",
+      "target": "sm-g-obj2"
+    },
+    {
+      "id": "r-dg3",
+      "type": "Influence",
+      "source": "sm-dr-gap",
+      "target": "sm-g-obj3"
+    },
+    {
+      "id": "r-dg4",
+      "type": "Influence",
+      "source": "sm-dr-gap",
+      "target": "sm-g-obj4"
+    },
+    {
+      "id": "r-dg5",
+      "type": "Influence",
+      "source": "sm-dr-gap",
+      "target": "sm-g-obj5"
+    },
+    {
+      "id": "r-dg6",
+      "type": "Influence",
+      "source": "sm-dr-gap",
+      "target": "sm-g-obj6"
+    },
+    {
+      "id": "r-ng1",
+      "type": "Influence",
+      "source": "sm-ng1",
+      "target": "sm-g-obj3"
+    },
+    {
+      "id": "r-ng2",
+      "type": "Influence",
+      "source": "sm-ng2",
+      "target": "sm-g-obj3"
+    },
+    {
+      "id": "r-ng3",
+      "type": "Influence",
+      "source": "sm-ng3",
+      "target": "sm-g-obj1"
+    },
+    {
+      "id": "r-ng4",
+      "type": "Influence",
+      "source": "sm-ng4",
+      "target": "sm-g-obj5"
+    },
+    {
+      "id": "r-ng5",
+      "type": "Influence",
+      "source": "sm-ng5",
+      "target": "sm-g-obj3"
+    },
+    {
+      "id": "r-gs1",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-orch"
+    },
+    {
+      "id": "r-gs2",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-elicit"
+    },
+    {
+      "id": "r-gs3",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-vsel"
+    },
+    {
+      "id": "r-gs4",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-mot"
+    },
+    {
+      "id": "r-gs5",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-cap"
+    },
+    {
+      "id": "r-gs6",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-biz"
+    },
+    {
+      "id": "r-gs7",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-apl"
+    },
+    {
+      "id": "r-gs8",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-tech"
+    },
+    {
+      "id": "r-gs9",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-impl"
+    },
+    {
+      "id": "r-gs10",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-tr"
+    },
+    {
+      "id": "r-gs11",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-qa"
+    },
+    {
+      "id": "r-gs12",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-lay"
+    },
+    {
+      "id": "r-gs13",
+      "type": "Aggregation",
+      "source": "sm-grp-suite",
+      "target": "sm-app-doc"
+    },
+    {
+      "id": "r-gl1",
+      "type": "Aggregation",
+      "source": "sm-grp-layer",
+      "target": "sm-app-mot"
+    },
+    {
+      "id": "r-gl2",
+      "type": "Aggregation",
+      "source": "sm-grp-layer",
+      "target": "sm-app-cap"
+    },
+    {
+      "id": "r-gl3",
+      "type": "Aggregation",
+      "source": "sm-grp-layer",
+      "target": "sm-app-biz"
+    },
+    {
+      "id": "r-gl4",
+      "type": "Aggregation",
+      "source": "sm-grp-layer",
+      "target": "sm-app-apl"
+    },
+    {
+      "id": "r-gl5",
+      "type": "Aggregation",
+      "source": "sm-grp-layer",
+      "target": "sm-app-tech"
+    },
+    {
+      "id": "r-gl6",
+      "type": "Aggregation",
+      "source": "sm-grp-layer",
+      "target": "sm-app-impl"
+    },
+    {
+      "id": "r-gc3",
+      "type": "Aggregation",
+      "source": "sm-grp-close",
+      "target": "sm-app-tr"
+    },
+    {
+      "id": "r-gc4",
+      "type": "Aggregation",
+      "source": "sm-grp-close",
+      "target": "sm-app-qa"
+    },
+    {
+      "id": "r-gc5",
+      "type": "Aggregation",
+      "source": "sm-grp-close",
+      "target": "sm-app-lay"
+    },
+    {
+      "id": "r-gc6",
+      "type": "Aggregation",
+      "source": "sm-grp-close",
+      "target": "sm-app-doc"
+    },
+    {
+      "id": "r-d1",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-elicit"
+    },
+    {
+      "id": "r-d2",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-vsel"
+    },
+    {
+      "id": "r-d3",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-mot"
+    },
+    {
+      "id": "r-d4",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-cap"
+    },
+    {
+      "id": "r-d5",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-biz"
+    },
+    {
+      "id": "r-d6",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-apl"
+    },
+    {
+      "id": "r-d7",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-tech"
+    },
+    {
+      "id": "r-d8",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-impl"
+    },
+    {
+      "id": "r-d9",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-tr"
+    },
+    {
+      "id": "r-d10",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-qa"
+    },
+    {
+      "id": "r-d11",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-lay"
+    },
+    {
+      "id": "r-d12",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-app-doc"
+    },
+    {
+      "id": "r-c1",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-orch"
+    },
+    {
+      "id": "r-c2",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-elicit"
+    },
+    {
+      "id": "r-c3",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-vsel"
+    },
+    {
+      "id": "r-c4",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-mot"
+    },
+    {
+      "id": "r-c5",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-cap"
+    },
+    {
+      "id": "r-c6",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-biz"
+    },
+    {
+      "id": "r-c7",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-apl"
+    },
+    {
+      "id": "r-c8",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-tech"
+    },
+    {
+      "id": "r-c9",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-impl"
+    },
+    {
+      "id": "r-c10",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-tr"
+    },
+    {
+      "id": "r-c11",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-qa"
+    },
+    {
+      "id": "r-c12",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-lay"
+    },
+    {
+      "id": "r-c13",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-doc"
+    },
+    {
+      "id": "r-mcp-archi",
+      "type": "Serving",
+      "source": "sm-app-mcp",
+      "target": "sm-app-archi"
+    },
+    {
+      "id": "r-orch-plan",
+      "type": "Access",
+      "source": "sm-app-orch",
+      "target": "sm-do-plan"
+    },
+    {
+      "id": "r-u1",
+      "type": "Assignment",
+      "source": "sm-act-user",
+      "target": "sm-p-elicit"
+    },
+    {
+      "id": "r-t1",
+      "type": "Triggering",
+      "source": "sm-p-elicit",
+      "target": "sm-p-vsel"
+    },
+    {
+      "id": "r-t2",
+      "type": "Triggering",
+      "source": "sm-p-vsel",
+      "target": "sm-p-draft"
+    },
+    {
+      "id": "r-t3",
+      "type": "Triggering",
+      "source": "sm-p-draft",
+      "target": "sm-ev-gate"
+    },
+    {
+      "id": "r-t4",
+      "type": "Triggering",
+      "source": "sm-ev-gate",
+      "target": "sm-p-layers"
+    },
+    {
+      "id": "r-t5",
+      "type": "Triggering",
+      "source": "sm-p-layers",
+      "target": "sm-p-trace"
+    },
+    {
+      "id": "r-t6",
+      "type": "Triggering",
+      "source": "sm-p-trace",
+      "target": "sm-p-qa"
+    },
+    {
+      "id": "r-t7",
+      "type": "Triggering",
+      "source": "sm-p-qa",
+      "target": "sm-p-layout"
+    },
+    {
+      "id": "r-t8",
+      "type": "Triggering",
+      "source": "sm-p-layout",
+      "target": "sm-p-docs"
+    },
+    {
+      "id": "r-s1",
+      "type": "Serving",
+      "source": "sm-app-elicit",
+      "target": "sm-p-elicit"
+    },
+    {
+      "id": "r-s2",
+      "type": "Serving",
+      "source": "sm-app-vsel",
+      "target": "sm-p-vsel"
+    },
+    {
+      "id": "r-s3",
+      "type": "Serving",
+      "source": "sm-app-orch",
+      "target": "sm-p-draft"
+    },
+    {
+      "id": "r-s4",
+      "type": "Serving",
+      "source": "sm-app-mot",
+      "target": "sm-p-layers"
+    },
+    {
+      "id": "r-s5",
+      "type": "Serving",
+      "source": "sm-app-biz",
+      "target": "sm-p-layers"
+    },
+    {
+      "id": "r-s6",
+      "type": "Serving",
+      "source": "sm-app-apl",
+      "target": "sm-p-layers"
+    },
+    {
+      "id": "r-s7",
+      "type": "Serving",
+      "source": "sm-app-tr",
+      "target": "sm-p-trace"
+    },
+    {
+      "id": "r-s8",
+      "type": "Serving",
+      "source": "sm-app-qa",
+      "target": "sm-p-qa"
+    },
+    {
+      "id": "r-s9",
+      "type": "Serving",
+      "source": "sm-app-lay",
+      "target": "sm-p-layout"
+    },
+    {
+      "id": "r-s10",
+      "type": "Serving",
+      "source": "sm-app-doc",
+      "target": "sm-p-docs"
+    },
+    {
+      "id": "r-tr1",
+      "type": "Influence",
+      "source": "sm-ng1",
+      "target": "sm-app-mcp"
+    },
+    {
+      "id": "r-tr2",
+      "type": "Influence",
+      "source": "sm-ng2",
+      "target": "sm-app-archi"
+    },
+    {
+      "id": "r-tr3",
+      "type": "Influence",
+      "source": "sm-ng3",
+      "target": "sm-app-orch"
+    },
+    {
+      "id": "r-tr4",
+      "type": "Influence",
+      "source": "sm-ng4",
+      "target": "sm-app-qa"
+    },
+    {
+      "id": "r-tr5",
+      "type": "Influence",
+      "source": "sm-ng5",
+      "target": "sm-app-archi"
+    }
+  ],
+  "views": [
+    {
+      "id": "v-mot",
+      "name": "Self-Model Motivation",
+      "element_ids": [
+        "sm-st-installer",
+        "sm-st-architect",
+        "sm-st-reviewer",
+        "sm-dr-gap",
+        "sm-g-obj1",
+        "sm-g-obj2",
+        "sm-g-obj3",
+        "sm-g-obj4",
+        "sm-g-obj5",
+        "sm-g-obj6",
+        "sm-ng1",
+        "sm-ng2",
+        "sm-ng3",
+        "sm-ng4",
+        "sm-ng5",
+        "sm-as-code"
+      ]
+    },
+    {
+      "id": "v-coop",
+      "name": "Self-Model Application Cooperation",
+      "element_ids": [
+        "sm-app-orch",
+        "sm-app-elicit",
+        "sm-app-vsel",
+        "sm-app-mot",
+        "sm-app-cap",
+        "sm-app-biz",
+        "sm-app-apl",
+        "sm-app-tech",
+        "sm-app-impl",
+        "sm-app-tr",
+        "sm-app-qa",
+        "sm-app-lay",
+        "sm-app-doc",
+        "sm-app-mcp",
+        "sm-app-archi",
+        "sm-do-plan",
+        "sm-grp-suite",
+        "sm-grp-layer",
+        "sm-grp-close"
+      ]
+    },
+    {
+      "id": "v-proc",
+      "name": "Self-Model Business Process",
+      "element_ids": [
+        "sm-act-user",
+        "sm-p-elicit",
+        "sm-p-vsel",
+        "sm-p-draft",
+        "sm-ev-gate",
+        "sm-p-layers",
+        "sm-p-trace",
+        "sm-p-qa",
+        "sm-p-layout",
+        "sm-p-docs",
+        "sm-app-orch",
+        "sm-app-elicit",
+        "sm-app-vsel",
+        "sm-app-mot",
+        "sm-app-biz",
+        "sm-app-apl",
+        "sm-app-tr",
+        "sm-app-qa",
+        "sm-app-lay",
+        "sm-app-doc"
+      ]
+    }
+  ],
+  "view_usages": [
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-st-installer",
+      "name": "Installer"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-st-architect",
+      "name": "Architect"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-st-reviewer",
+      "name": "Reviewer"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-dr-gap",
+      "name": "Missing Architectural Reasoning"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-g-obj1",
+      "name": "OBJ-1 Intent and View Plan"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-g-obj2",
+      "name": "OBJ-2 Viewpoint Grounding"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-g-obj3",
+      "name": "OBJ-3 Specialist Coverage"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-g-obj4",
+      "name": "OBJ-4 Shared Concepts"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-g-obj5",
+      "name": "OBJ-5 Compliance Checks"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-g-obj6",
+      "name": "OBJ-6 Rationale Records"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-ng1",
+      "name": "NG-1 Consume-Only MCP"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-ng2",
+      "name": "NG-2 Archi Only Canvas"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-ng3",
+      "name": "NG-3 User Governs Decisions"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-ng4",
+      "name": "NG-4 No Metamodel Dumps"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-ng5",
+      "name": "NG-5 Archi Only EA Tool"
+    },
+    {
+      "view_id": "v-mot",
+      "element_id": "sm-as-code",
+      "name": "Code Is Source of Truth"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-orch",
+      "name": "Archi Orchestrator"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-elicit",
+      "name": "Archi Elicit"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-vsel",
+      "name": "Archi Viewpoint Select"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-mot",
+      "name": "Archi Motivation"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-cap",
+      "name": "Archi Capability Strategy"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-biz",
+      "name": "Archi Business"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-apl",
+      "name": "Archi Application"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-tech",
+      "name": "Archi Technology Physical"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-impl",
+      "name": "Archi Implementation Migration"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-tr",
+      "name": "Archi Traceability"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-qa",
+      "name": "Archi Model QA"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-lay",
+      "name": "Archi Layout"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-doc",
+      "name": "Archi Documentation"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-mcp",
+      "name": "JGS Archi Bridge MCP"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-app-archi",
+      "name": "Archi"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-do-plan",
+      "name": "View Plan"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-grp-suite",
+      "name": "jgs-archi-skills"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-grp-layer",
+      "name": "Layer Specialists"
+    },
+    {
+      "view_id": "v-coop",
+      "element_id": "sm-grp-close",
+      "name": "Closing Specialists"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-act-user",
+      "name": "Modelling User"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-p-elicit",
+      "name": "Elicit Intent"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-p-vsel",
+      "name": "Select Viewpoints"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-p-draft",
+      "name": "Draft View Plan"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-ev-gate",
+      "name": "View Plan Confirmation"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-p-layers",
+      "name": "Model Layers"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-p-trace",
+      "name": "Trace Across Layers"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-p-qa",
+      "name": "Run Model QA"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-p-layout",
+      "name": "Layout Views"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-p-docs",
+      "name": "Record Rationale"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-orch",
+      "name": "Archi Orchestrator"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-elicit",
+      "name": "Archi Elicit"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-vsel",
+      "name": "Archi Viewpoint Select"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-mot",
+      "name": "Archi Motivation"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-biz",
+      "name": "Archi Business"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-apl",
+      "name": "Archi Application"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-tr",
+      "name": "Archi Traceability"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-qa",
+      "name": "Archi Model QA"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-lay",
+      "name": "Archi Layout"
+    },
+    {
+      "view_id": "v-proc",
+      "element_id": "sm-app-doc",
+      "name": "Archi Documentation"
+    }
+  ]
+}

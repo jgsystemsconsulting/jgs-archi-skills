@@ -1,0 +1,79 @@
+{
+  "schema_version": 1,
+  "diagram_type": "architecture",
+  "meta": {
+    "title": "jgs-archi-skills cooperation",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "run-path",
+        "label": "Intent to Archi",
+        "focus": ["user", "orch", "gate", "specialists", "archi"],
+        "note": "One orchestrator plus specialists drive the local JGS Archi Bridge MCP. Archi is the only canvas."
+      },
+      {
+        "id": "confirmation",
+        "label": "User governs",
+        "focus": ["user", "orch", "gate"],
+        "note": "No MCP mutations until the View Plan is approved."
+      },
+      {
+        "id": "write-path",
+        "label": "Write via MCP",
+        "focus": ["specialists", "archi"],
+        "note": "Specialists consume MCP tools and resources. They never copy ArchiMate tables and never patch the bridge."
+      }
+    ]
+  },
+  "layout": {
+    "mode": "grid",
+    "cols": 5,
+    "gapX": 56,
+    "gapY": 72,
+    "cellW": 148,
+    "cellH": 64
+  },
+  "components": [
+    { "id": "user", "type": "external", "label": "User", "sublabel": "plain-language intent", "row": 0, "col": 0 },
+    { "id": "orch", "type": "backend", "label": "archi-orchestrator", "sublabel": "elicit + View Plan", "tag": "user-invoked", "row": 0, "col": 1 },
+    { "id": "gate", "type": "security", "label": "Confirmation Gate", "sublabel": "approve or revise", "tag": "no mutations yet", "row": 0, "col": 2 },
+    { "id": "specialists", "type": "backend", "label": "Layer specialists", "sublabel": "twelve, dispatched", "row": 0, "col": 3 },
+    { "id": "archi", "type": "frontend", "label": "Archi", "sublabel": "live model canvas", "tag": "via MCP", "row": 0, "col": 4 }
+  ],
+  "boundaries": [
+    { "kind": "region", "label": "Agent host", "wraps": ["orch", "gate", "specialists"] }
+  ],
+  "connections": [
+    { "id": "intent", "from": "user", "to": "orch", "label": "intent", "variant": "emphasis" },
+    { "id": "plan", "from": "orch", "to": "gate", "label": "View Plan" },
+    { "id": "approved", "from": "gate", "to": "specialists", "label": "approved", "variant": "emphasis" },
+    { "id": "write-archi", "from": "specialists", "to": "archi", "label": "via MCP", "variant": "emphasis" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Two entrypoints",
+      "items": [
+        "Invoke /archi-orchestrator. Specialists are dispatched, not user-invoked.",
+        "Fourteen skills (orchestrator, twelve specialists, feedback utility). Archi is the only canvas.",
+        "Pack defects: /jgs-upstream-feedback."
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "User governs",
+      "items": [
+        "No MCP mutations until you approve the View Plan.",
+        "Revise returns to the orchestrator. Abort ends the run."
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Consume-only MCP",
+      "items": [
+        "Skills drive the existing JGS Archi Bridge on loopback.",
+        "They never copy ArchiMate tables and never patch the bridge."
+      ]
+    }
+  ]
+}

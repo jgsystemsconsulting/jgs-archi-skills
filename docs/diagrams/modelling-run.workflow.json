@@ -1,0 +1,90 @@
+{
+  "schema_version": 2,
+  "diagram_type": "workflow",
+  "meta": {
+    "title": "jgs-archi-skills modelling run",
+    "quality_profile": "showcase",
+    "views": [
+      {
+        "id": "happy-path",
+        "label": "Intent to Archi",
+        "focus": ["user", "orch", "ground", "gate", "layers", "close"],
+        "note": "Follow a confirmed run from plain-language intent to rationale in the Archi model."
+      },
+      {
+        "id": "confirmation-gate",
+        "label": "User governs",
+        "focus": ["ground", "gate", "revise", "orch"],
+        "note": "No MCP mutations until the View Plan is approved. Revise loops back."
+      },
+      {
+        "id": "write-to-archi",
+        "label": "Specialists write",
+        "focus": ["gate", "layers", "close"],
+        "note": "After approval, layer specialists model, then trace, QA, layout, and documentation close the run."
+      }
+    ]
+  },
+  "lanes": [
+    { "id": "user", "label": "User" },
+    { "id": "orch", "label": "Orchestrator" },
+    { "id": "policy", "label": "Confirmation", "variant": "exception" },
+    { "id": "model", "label": "Specialists + Archi" }
+  ],
+  "phases": [
+    { "id": "intake", "label": "Intake", "fromCol": 0, "toCol": 1 },
+    { "id": "plan", "label": "Plan + ground", "fromCol": 2, "toCol": 2, "variant": "emphasis" },
+    { "id": "confirm", "label": "Confirm", "fromCol": 3, "toCol": 3, "variant": "security" },
+    { "id": "write", "label": "Model in Archi", "fromCol": 4, "toCol": 5, "variant": "dashed" }
+  ],
+  "groups": [
+    { "id": "plan_loop", "label": "View Plan", "lane": "orch", "fromCol": 1, "toCol": 2, "variant": "emphasis" },
+    { "id": "gate_group", "label": "User gate", "lane": "policy", "fromCol": 3, "toCol": 4, "variant": "security" },
+    { "id": "write_group", "label": "Write via MCP", "lane": "model", "fromCol": 4, "toCol": 5, "variant": "dashed" }
+  ],
+  "mainPath": ["user", "orch", "ground", "gate", "layers", "close"],
+  "nodes": [
+    { "id": "user", "lane": "user", "col": 0, "type": "external", "label": "User", "sublabel": "plain-language intent", "width": 132 },
+    { "id": "orch", "lane": "orch", "col": 1, "type": "backend", "label": "archi-orchestrator", "sublabel": "elicit + View Plan", "tag": "user-invoked", "width": 148 },
+    { "id": "ground", "lane": "orch", "col": 2, "type": "backend", "label": "elicit + viewpoint-select", "sublabel": "stakeholder, concern, purpose", "width": 168 },
+    { "id": "gate", "lane": "policy", "col": 3, "type": "security", "label": "Confirmation Gate", "sublabel": "approve / revise / abort", "tag": "no mutations yet", "width": 148 },
+    { "id": "revise", "lane": "policy", "col": 4, "type": "security", "label": "Revise or abort", "sublabel": "user decision", "width": 132 },
+    { "id": "layers", "lane": "model", "col": 4, "type": "backend", "label": "Layer specialists", "sublabel": "motivation to migration", "width": 148 },
+    { "id": "close", "lane": "model", "col": 5, "type": "cloud", "label": "Trace, QA, layout, docs", "sublabel": "write into Archi via MCP", "tag": "Archi canvas", "width": 168 }
+  ],
+  "edges": [
+    { "id": "intent-in", "from": "user", "to": "orch", "label": "intent" },
+    { "id": "draft-plan", "from": "orch", "to": "ground", "label": "draft View Plan", "variant": "emphasis" },
+    { "id": "ground-gate", "from": "ground", "to": "gate", "label": "grounded viewpoints" },
+    { "id": "approved", "from": "gate", "to": "layers", "label": "approved", "variant": "emphasis" },
+    { "id": "specialists-close", "from": "layers", "to": "close", "label": "trace then close" },
+    { "id": "denied", "from": "gate", "to": "revise", "label": "revise or abort", "variant": "security", "role": "error" },
+    { "id": "loop-back", "from": "revise", "to": "orch", "label": "revise plan", "variant": "dashed", "role": "branch" }
+  ],
+  "cards": [
+    {
+      "dot": "cyan",
+      "title": "Two entrypoints",
+      "items": [
+        "Fourteen skills. Modelling invoke: /archi-orchestrator. Pack defects: /jgs-upstream-feedback.",
+        "Specialists are dispatched after the View Plan is approved"
+      ]
+    },
+    {
+      "dot": "rose",
+      "title": "User governs",
+      "items": [
+        "No create-element or other MCP mutations until you confirm",
+        "Revise returns to the orchestrator; abort ends the run"
+      ]
+    },
+    {
+      "dot": "emerald",
+      "title": "Archi is the canvas",
+      "items": [
+        "Skills consume the JGS Archi Bridge MCP on loopback",
+        "Rationale is written into the model, not a second diagramming tool"
+      ]
+    }
+  ]
+}

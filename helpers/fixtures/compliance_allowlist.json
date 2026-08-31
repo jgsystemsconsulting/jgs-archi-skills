@@ -1,0 +1,327 @@
+{
+ "id": "compliance-allowlist-v1",
+ "source": "minimal offline fixture for OBJ-5 tests; live SoT remains MCP archimate resources (NG-4)",
+ "element_types": [
+  "Stakeholder",
+  "Driver",
+  "Goal",
+  "Requirement",
+  "Capability",
+  "Resource",
+  "CourseOfAction",
+  "BusinessActor",
+  "BusinessRole",
+  "BusinessProcess",
+  "BusinessService",
+  "BusinessObject",
+  "ApplicationComponent",
+  "ApplicationService",
+  "ApplicationFunction",
+  "DataObject",
+  "Node",
+  "Device",
+  "SystemSoftware",
+  "TechnologyService",
+  "Artifact",
+  "Path",
+  "CommunicationNetwork",
+  "Equipment",
+  "Facility",
+  "Material",
+  "WorkPackage",
+  "Deliverable",
+  "ImplementationEvent",
+  "Plateau",
+  "Gap",
+  "Grouping",
+  "Location",
+  "Assessment",
+  "Outcome",
+  "Principle",
+  "Constraint",
+  "Meaning",
+  "Value",
+  "BusinessEvent",
+  "BusinessFunction",
+  "BusinessInteraction",
+  "BusinessInterface",
+  "ApplicationInteraction",
+  "ApplicationInterface",
+  "AndJunction",
+  "OrJunction"
+ ],
+ "relationship_types": [
+  "Composition",
+  "Aggregation",
+  "Assignment",
+  "Realization",
+  "Serving",
+  "Access",
+  "Influence",
+  "Triggering",
+  "Flow",
+  "Specialization",
+  "Association",
+  "AggregationRelationship",
+  "CompositionRelationship",
+  "AssignmentRelationship",
+  "RealizationRelationship",
+  "ServingRelationship",
+  "AccessRelationship",
+  "InfluenceRelationship",
+  "TriggeringRelationship",
+  "FlowRelationship",
+  "SpecializationRelationship",
+  "AssociationRelationship"
+ ],
+ "permitted_patterns": [
+  {
+   "source": "BusinessActor",
+   "relationship": "Assignment",
+   "target": "BusinessRole"
+  },
+  {
+   "source": "BusinessRole",
+   "relationship": "Assignment",
+   "target": "BusinessProcess"
+  },
+  {
+   "source": "BusinessProcess",
+   "relationship": "Triggering",
+   "target": "BusinessProcess"
+  },
+  {
+   "source": "BusinessProcess",
+   "relationship": "Realization",
+   "target": "BusinessService"
+  },
+  {
+   "source": "BusinessService",
+   "relationship": "Serving",
+   "target": "BusinessRole"
+  },
+  {
+   "source": "ApplicationComponent",
+   "relationship": "Realization",
+   "target": "ApplicationService"
+  },
+  {
+   "source": "ApplicationComponent",
+   "relationship": "Assignment",
+   "target": "ApplicationFunction"
+  },
+  {
+   "source": "ApplicationService",
+   "relationship": "Serving",
+   "target": "BusinessProcess"
+  },
+  {
+   "source": "ApplicationFunction",
+   "relationship": "Access",
+   "target": "DataObject"
+  },
+  {
+   "source": "ApplicationComponent",
+   "relationship": "Access",
+   "target": "DataObject"
+  },
+  {
+   "source": "Node",
+   "relationship": "Assignment",
+   "target": "SystemSoftware"
+  },
+  {
+   "source": "Node",
+   "relationship": "Assignment",
+   "target": "Device"
+  },
+  {
+   "source": "SystemSoftware",
+   "relationship": "Realization",
+   "target": "TechnologyService"
+  },
+  {
+   "source": "TechnologyService",
+   "relationship": "Serving",
+   "target": "ApplicationComponent"
+  },
+  {
+   "source": "WorkPackage",
+   "relationship": "Realization",
+   "target": "Deliverable"
+  },
+  {
+   "source": "Plateau",
+   "relationship": "Aggregation",
+   "target": "WorkPackage"
+  },
+  {
+   "source": "Goal",
+   "relationship": "Realization",
+   "target": "Requirement"
+  },
+  {
+   "source": "Capability",
+   "relationship": "Realization",
+   "target": "ApplicationComponent"
+  },
+  {
+   "source": "Capability",
+   "relationship": "Realization",
+   "target": "BusinessProcess"
+  },
+  {
+   "source": "Stakeholder",
+   "relationship": "Association",
+   "target": "Driver"
+  },
+  {
+   "source": "Driver",
+   "relationship": "Influence",
+   "target": "Goal"
+  },
+  {
+   "source": "BusinessActor",
+   "relationship": "Association",
+   "target": "Stakeholder"
+  },
+  {
+   "source": "Grouping",
+   "relationship": "Aggregation",
+   "target": "BusinessProcess"
+  },
+  {
+   "source": "Grouping",
+   "relationship": "Aggregation",
+   "target": "ApplicationComponent"
+  },
+  {
+   "source": "BusinessActor",
+   "relationship": "Assignment",
+   "target": "BusinessProcess"
+  },
+  {
+   "source": "Assessment",
+   "relationship": "Influence",
+   "target": "Driver"
+  },
+  {
+   "source": "Goal",
+   "relationship": "Influence",
+   "target": "Outcome"
+  },
+  {
+   "source": "Requirement",
+   "relationship": "Realization",
+   "target": "Goal"
+  },
+  {
+   "source": "Resource",
+   "relationship": "Serving",
+   "target": "Capability"
+  },
+  {
+   "source": "Capability",
+   "relationship": "Realization",
+   "target": "Requirement"
+  },
+  {
+   "source": "BusinessProcess",
+   "relationship": "Access",
+   "target": "BusinessObject"
+  },
+  {
+   "source": "BusinessProcess",
+   "relationship": "Realization",
+   "target": "Capability"
+  },
+  {
+   "source": "ApplicationFunction",
+   "relationship": "Realization",
+   "target": "ApplicationService"
+  },
+  {
+   "source": "ApplicationComponent",
+   "relationship": "Serving",
+   "target": "BusinessProcess"
+  },
+  {
+   "source": "ApplicationFunction",
+   "relationship": "Realization",
+   "target": "Capability"
+  },
+  {
+   "source": "Node",
+   "relationship": "Assignment",
+   "target": "Artifact"
+  },
+  {
+   "source": "Artifact",
+   "relationship": "Realization",
+   "target": "ApplicationComponent"
+  },
+  {
+   "source": "Constraint",
+   "relationship": "Influence",
+   "target": "Goal"
+  },
+  {
+   "source": "Constraint",
+   "relationship": "Influence",
+   "target": "ApplicationComponent"
+  },
+  {
+   "source": "ApplicationComponent",
+   "relationship": "Serving",
+   "target": "ApplicationComponent"
+  },
+  {
+   "source": "BusinessProcess",
+   "relationship": "Triggering",
+   "target": "BusinessEvent"
+  },
+  {
+   "source": "BusinessEvent",
+   "relationship": "Triggering",
+   "target": "BusinessProcess"
+  }
+ ],
+ "abstraction_levels": {
+  "Stakeholder": "motivation",
+  "Driver": "motivation",
+  "Goal": "motivation",
+  "Requirement": "motivation",
+  "Capability": "strategy",
+  "Resource": "strategy",
+  "CourseOfAction": "strategy",
+  "BusinessActor": "business",
+  "BusinessRole": "business",
+  "BusinessProcess": "business",
+  "BusinessService": "business",
+  "BusinessObject": "business",
+  "ApplicationComponent": "application",
+  "ApplicationService": "application",
+  "ApplicationFunction": "application",
+  "DataObject": "application",
+  "Node": "technology",
+  "Device": "technology",
+  "SystemSoftware": "technology",
+  "TechnologyService": "technology",
+  "Artifact": "technology",
+  "Path": "technology",
+  "CommunicationNetwork": "technology",
+  "Equipment": "physical",
+  "Facility": "physical",
+  "Material": "physical",
+  "WorkPackage": "implementation",
+  "Deliverable": "implementation",
+  "ImplementationEvent": "implementation",
+  "Plateau": "implementation",
+  "Gap": "implementation",
+  "Grouping": "cross",
+  "Location": "cross",
+  "Constraint": "motivation",
+  "BusinessEvent": "business"
+ },
+ "notes": "Patterns are a small offline subset for deterministic tests. Agents must still read MCP archimate-relationships live for full legality. Added BusinessActor-Assignment-BusinessProcess: legal per live MCP archimate://reference/archimate-relationships (active structure -> behaviour) and accepted by live create-relationship on 2026-08-28 live smoke. Eval-loop iter-0 widening: types Assessment, Outcome, Principle, Constraint, Meaning, Value, BusinessEvent, BusinessFunction, BusinessInteraction, BusinessInterface, ApplicationInteraction, ApplicationInterface, AndJunction, OrJunction and patterns Assessment-Influence-Driver, Goal-Influence-Outcome, Requirement-Realization-Goal, Resource-Serving-Capability, Capability-Realization-Requirement, BusinessProcess-Access-BusinessObject, BusinessProcess-Realization-Capability, ApplicationFunction-Realization-ApplicationService, ApplicationComponent-Serving-BusinessProcess, ApplicationFunction-Realization-Capability, Node-Assignment-Artifact, Artifact-Realization-ApplicationComponent accepted by the live bridge validator (ArchiMate 3.2 rules) during the Meridian Freight run."
+}

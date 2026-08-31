@@ -1,0 +1,201 @@
+<!doctype html>
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: MIT -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>jgs-archi-skills: agent-guided ArchiMate modelling</title>
+<meta name="description" content="Fourteen skills (orchestrator, twelve specialists, one feedback utility) that elicit intent, plan ArchiMate viewpoints, and model in Archi via the local JGS Archi Bridge MCP. User-governed and consume-only.">
+<link rel="canonical" href="https://jgsystemsconsulting.github.io/jgs-archi-skills/">
+<link rel="icon" href="data:,">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://jgsystemsconsulting.github.io/jgs-archi-skills/">
+<meta property="og:title" content="jgs-archi-skills: agent-guided ArchiMate modelling">
+<meta property="og:description" content="Fourteen skills (orchestrator, twelve specialists, one feedback utility) that elicit intent, plan ArchiMate viewpoints, and model in Archi via the local JGS Archi Bridge MCP. User-governed and consume-only.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="jgs-archi-skills">
+<meta name="twitter:description" content="Fourteen skills (orchestrator, twelve specialists, one feedback utility) that elicit architectural intent, plan ArchiMate viewpoints, and model in Archi via the local JGS Archi Bridge MCP.">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"SoftwareApplication","name":"jgs-archi-skills","applicationCategory":"DeveloperApplication","operatingSystem":"Windows, macOS, Linux","softwareVersion":"1.0.0","license":"https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/LICENSE","url":"https://jgsystemsconsulting.github.io/jgs-archi-skills/","codeRepository":"https://github.com/jgsystemsconsulting/jgs-archi-skills","author":{"@type":"Organization","name":"JG Systems Consulting Ltd"}}
+</script>
+<style>
+@font-face{font-family:'JetBrains Mono';font-weight:400;font-style:normal;font-display:swap;src:url('fonts/jetbrains-mono-400.woff2') format('woff2');}
+@font-face{font-family:'JetBrains Mono';font-weight:700;font-style:normal;font-display:swap;src:url('fonts/jetbrains-mono-700.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-weight:400;font-style:normal;font-display:swap;src:url('fonts/inter-400.woff2') format('woff2');}
+@font-face{font-family:'Inter';font-weight:600;font-style:normal;font-display:swap;src:url('fonts/inter-600.woff2') format('woff2');}
+:root{
+  --ink:#0a0a0b; --ink-2:#111113; --ink-3:#16171a; --ink-4:#1e2024;
+  --line:#2a2d33; --line-2:#3a3e46;
+  --mute:#6b7078; --mute-2:#8b9099;
+  --text:#c7ccd3; --text-hi:#e8ebf0;
+  --paper:#f4f2ec; --paper-ink:#0a0a0b;
+  --mono:'JetBrains Mono',ui-monospace,'SFMono-Regular',Menlo,Consolas,monospace;
+  --sans:'Inter',ui-sans-serif,system-ui,sans-serif;
+  --pad-x:clamp(24px,4vw,80px); --pad-section:clamp(48px,6vw,96px);
+}
+*{box-sizing:border-box;margin:0;padding:0;}
+html{background:var(--ink);}
+body{background:var(--ink);color:var(--mute-2);font:400 16px/1.7 var(--sans);-webkit-font-smoothing:antialiased;}
+.wrap{max-width:1200px;margin:0 auto;padding:0 var(--pad-x);}
+a{color:var(--text-hi);text-decoration:none;border-bottom:1px solid var(--line-2);}
+a:hover{border-color:var(--paper);}
+:focus-visible{outline:2px solid var(--paper);outline-offset:2px;}
+.label{font:700 .6875rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);}
+h1,h2,h3{color:var(--text-hi);font-family:var(--mono);font-weight:700;letter-spacing:-0.02em;}
+.masthead{border-bottom:1px solid var(--line);}
+.masthead .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;padding-top:14px;padding-bottom:14px;}
+.masthead span{font:700 .625rem/1 var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mute);}
+.masthead b{color:var(--text);font-weight:700;}
+.hero{padding:var(--pad-section) 0;border-bottom:1px solid var(--line);}
+.hero h1{font-size:clamp(2rem,5vw,3.5rem);line-height:1.05;margin-bottom:1.25rem;}
+.hero p{max-width:62ch;font-size:1.0625rem;color:var(--text);}
+.hero .sub{margin-top:.5rem;color:var(--mute-2);}
+.cta{display:flex;flex-wrap:wrap;gap:14px;margin-top:2rem;}
+.btn{font:700 .8125rem/1 var(--mono);letter-spacing:.06em;text-transform:uppercase;padding:14px 20px;border:1px solid var(--line);display:inline-flex;gap:.6em;align-items:center;transition:background .15s,border-color .15s,color .15s;}
+.btn-primary{background:var(--paper);color:var(--paper-ink);border-color:var(--paper);}
+.btn-primary:hover{background:#fff;}
+.btn-ghost{background:transparent;color:var(--text-hi);}
+.btn-ghost:hover{border-color:var(--paper);}
+section{padding:var(--pad-section) 0;border-bottom:1px solid var(--line);}
+.shead{margin-bottom:2rem;}
+.shead .label{display:block;margin-bottom:.6rem;}
+.shead h2{font-size:clamp(1.4rem,3vw,2rem);}
+.lead{max-width:70ch;color:var(--text);}
+.grid{display:grid;gap:1px;background:var(--line);border:1px solid var(--line);}
+.g3{grid-template-columns:repeat(3,1fr);}
+.g2{grid-template-columns:repeat(2,1fr);}
+.cell{background:var(--ink-2);padding:24px;}
+.cell h3{font-size:.95rem;margin-bottom:.5rem;}
+.cell p{font-size:.9375rem;color:var(--mute-2);}
+.num{font:700 3rem/1 var(--mono);color:var(--line-2);display:block;margin-bottom:.5rem;}
+.cell code{font:400 .8125rem var(--mono);color:var(--text);}
+.sheet{background:var(--ink-2);border:1px solid var(--line);padding:24px;overflow:auto;}
+.sheet pre{font:400 .875rem/1.7 var(--mono);color:var(--text);white-space:pre;}
+.sheet .c{color:var(--mute);}
+footer{padding:var(--pad-section) 0;}
+.tblock{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);border:1px solid var(--line);}
+.tblock div{background:var(--ink-2);padding:18px 24px;}
+.tblock .label{display:block;margin-bottom:.4rem;}
+.tblock b{color:var(--text);font:700 .875rem var(--mono);}
+.foot-note{margin-top:1.5rem;font:400 .8125rem/1.6 var(--mono);color:var(--mute);}
+nav.site{border-bottom:1px solid var(--line);}
+nav.site .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:.75rem 1.5rem;padding-top:12px;padding-bottom:12px;}
+nav.site a{font:700 .6875rem/1 var(--mono);letter-spacing:.12em;text-transform:uppercase;border:0;color:var(--mute-2);}
+nav.site a:hover{color:var(--text-hi);}
+@media (max-width:860px){
+  .g3,.g2,.tblock{grid-template-columns:1fr;}
+}
+@media (prefers-reduced-motion:reduce){
+  *{transition:none!important;}
+}
+</style>
+</head>
+<body>
+
+<header class="masthead"><div class="wrap">
+  <span>CLASSIFICATION: <b>PUBLIC</b></span>
+  <span>LICENCE: <b>MIT</b></span>
+  <span>DOC-ID: <b>JGS-ARCHI-SKILLS</b></span>
+  <span>REV <b>1.0.0</b></span>
+</div></header>
+
+<nav class="site" aria-label="Site"><div class="wrap">
+  <a href="#what">What it is</a>
+  <a href="#chain">Skill chain</a>
+  <a href="diagrams/cooperation.html">Cooperation</a>
+  <a href="diagrams/modelling-run.html">Modelling run</a>
+  <a href="#agents">Agents</a>
+  <a href="#install">Install</a>
+  <a href="#use">First run</a>
+  <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills">Repository</a>
+  <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/LICENSE">Licence</a>
+  <a href="https://labs.jgsystemsconsulting.com/licensing.html">Request a licence</a>
+</div></nav>
+
+<main>
+<div class="hero"><div class="wrap">
+  <h1>jgs-archi-skills</h1>
+  <p>Agent-guided ArchiMate viewpoint creation in Archi. One orchestrator skill plus twelve specialists drive the existing JGS Archi Bridge MCP, plus the jgs-upstream-feedback utility. Archi is the only canvas.</p>
+  <p class="sub">You govern scope. The skills consume the MCP; they never copy ArchiMate tables and never patch the bridge.</p>
+  <div class="cta">
+    <a class="btn btn-primary" href="https://github.com/jgsystemsconsulting/jgs-archi-skills">View on GitHub <span aria-hidden="true">&rarr;</span></a>
+    <a class="btn btn-ghost" href="#install">Install <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</div></div>
+
+<section id="what"><div class="wrap">
+  <div class="shead"><span class="label">§01 · What it is</span><h2>A modelling run, not a diagram toy</h2></div>
+  <p class="lead">You give the orchestrator a plain-language intent. It drafts a View Plan, grounds each viewpoint, and stops until you approve. Only then do layer specialists create or reuse elements in the live Archi model. MCP resources stay the ArchiMate reference. Skills never dump metamodel catalogs into chat.</p>
+  <div class="cta" style="margin-top:2rem">
+    <a class="btn btn-ghost" href="diagrams/cooperation.html">Open cooperation <span aria-hidden="true">&rarr;</span></a>
+  </div>
+</div></section>
+
+<section id="chain"><div class="wrap">
+  <div class="shead"><span class="label">§02 · Skill chain</span><h2>Fourteen skills, two entrypoints</h2></div>
+  <div class="grid g3">
+    <div class="cell"><span class="num">01</span><h3>archi-orchestrator</h3><p>User-invoked. Elicits intent and produces the View Plan. No mutations until you confirm.</p></div>
+    <div class="cell"><span class="num">02</span><h3>elicit + viewpoint-select</h3><p>Normalize fields. Trace each viewpoint to stakeholder, concern, purpose, and abstraction.</p></div>
+    <div class="cell"><span class="num">03</span><h3>layer specialists</h3><p>Motivation, capability/strategy, business, application, technology/physical, implementation/migration.</p></div>
+    <div class="cell"><span class="num">04</span><h3>traceability</h3><p>Explicit cross-layer traces. Gaps reported, not invented.</p></div>
+    <div class="cell"><span class="num">05</span><h3>model-qa + layout</h3><p>Compliance explain-and-propose. Archi-native layout only. No other canvas.</p></div>
+    <div class="cell"><span class="num">06</span><h3>documentation</h3><p>Structured rationale and a completion summary written into the model via MCP.</p></div>
+  </div>
+  <div class="cta" style="margin-top:2rem">
+    <a class="btn btn-ghost" href="diagrams/modelling-run.html">Open the modelling run <span aria-hidden="true">&rarr;</span></a>
+  </div>
+  <p class="lead" style="margin-top:1.5rem">Index: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/SKILLS.md">SKILLS.md</a>. Shared contract: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/CREATE_PATH.md">CREATE_PATH.md</a>.</p>
+</div></section>
+
+<section id="agents"><div class="wrap">
+  <div class="shead"><span class="label">§03 · Supported agents</span><h2>Default ZCode, others first-class</h2></div>
+  <div class="grid g3">
+    <div class="cell"><h3>ZCode (default)</h3><p>Flat <code>~/.zcode/skills/&lt;skill&gt;/</code>. Binding delivery form for this pack.</p></div>
+    <div class="cell"><h3>Native folders</h3><p>Claude Code (namespaced <code>jgs/</code>), OpenClaw, Copilot CLI, Codex: copy the skill folder unchanged.</p></div>
+    <div class="cell"><h3>Transform</h3><p>Gemini CLI as an extension. Cursor as project-local <code>.mdc</code> rules. See <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/other-agents.md">other-agents.md</a>.</p></div>
+  </div>
+</div></section>
+
+<section id="install"><div class="wrap">
+  <div class="shead"><span class="label">§04 · Install</span><h2>Clone and install</h2></div>
+  <div class="sheet"><pre><span class="c"># Python 3.10+, stdlib only. Archi + JGS Archi Bridge on loopback.</span>
+git clone https://github.com/jgsystemsconsulting/jgs-archi-skills
+cd jgs-archi-skills
+python install.py                 <span class="c"># ZCode, flat ~/.zcode/skills</span>
+python install.py --dry-run
+python install.py --agent claude  <span class="c"># ~/.claude/skills/jgs/</span>
+python install.py --list-agents</pre></div>
+  <p class="lead" style="margin-top:1.5rem">Prerequisites: Archi with the JGS Archi Bridge plugin, MCP at <code>http://127.0.0.1:18090/mcp</code>. Usage guide: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/skill-usage.md">docs/skill-usage.md</a>.</p>
+</div></section>
+
+<section id="use"><div class="wrap">
+  <div class="shead"><span class="label">§05 · First run</span><h2>Invoke the orchestrator</h2></div>
+  <p class="lead">Restart the agent so it discovers the skills. Then call the orchestrator. Specialists are dispatched for you; do not invoke them yourself.</p>
+  <div class="sheet" style="margin-top:1.5rem"><pre><span class="c"># load the orchestrator</span>
+/archi-orchestrator
+<span class="c"># or pass intent in one shot</span>
+/archi-orchestrator invoice-to-cash capability map for finance and ops
+<span class="c"># more starters: docs/prompts/README.md</span>
+/archi-orchestrator board pack: drivers, goals, and outcomes for cutting quote time from 4 hours to 30 minutes. No applications.
+/archi-orchestrator move the legacy TMS to a cloud landing zone; plateaus and work packages only. Do not redesign the business.</pre></div>
+  <p class="lead" style="margin-top:1.5rem">It stops at a confirmation gate. Approve the View Plan before anything is written into Archi.</p>
+  <p class="lead" style="margin-top:1.5rem">Starter catalog: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/prompts/README.md">docs/prompts/README.md</a>.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="tblock">
+    <div><span class="label">Product</span><b>jgs-archi-skills</b></div>
+    <div><span class="label">Rev</span><b>1.0.0</b></div>
+    <div><span class="label">Licence</span><b>MIT</b></div>
+    <div><span class="label">Repository</span><b><a href="https://github.com/jgsystemsconsulting/jgs-archi-skills">github.com/jgsystemsconsulting</a></b></div>
+    <div><span class="label">Canvas</span><b>Archi</b></div>
+    <div><span class="label">Owner</span><b>JG Systems Consulting Ltd</b></div>
+  </div>
+  <p class="foot-note">&copy; 2026 JG Systems Consulting Ltd. MIT Licence. See LICENSE. To request a commercial or academic licence for JGSC Labs products, or if you are unsure which licence you need, use <a href="https://labs.jgsystemsconsulting.com/licensing.html">labs.jgsystemsconsulting.com/licensing.html</a>. ArchiMate is a trademark of The Open Group.</p>
+</div></footer>
+
+</body>
+</html>

@@ -1,0 +1,14 @@
+{
+  "name": "jgs-archi-skills",
+  "owner": {"name": "JG Systems Consulting Ltd"},
+  "metadata": {
+    "description": "Agent-guided ArchiMate viewpoint creation in Archi via the JGS Archi Bridge MCP."
+  },
+  "plugins": [
+    {
+      "name": "jgs-archi-skills",
+      "source": ".",
+      "description": "Agent-guided ArchiMate viewpoint creation in Archi via the JGS Archi Bridge MCP."
+    }
+  ]
+}

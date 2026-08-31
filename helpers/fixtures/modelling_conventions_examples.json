@@ -1,0 +1,40 @@
+{
+  "names": [
+    {"name": "Handle Customer Inquiry", "type": "BusinessProcess", "ok": true},
+    {"name": "Quote Shipment", "type": "BusinessProcess", "ok": true},
+    {"name": "Invoice", "type": "BusinessProcess", "ok": false, "hint": "behaviour_not_verb_noun"},
+    {"name": "CRM", "type": "ApplicationComponent", "ok": true},
+    {"name": "CRM Application", "type": "ApplicationComponent", "ok": false, "hint": "structure_type_suffix"},
+    {"name": "Customer Service Representative", "type": "BusinessActor", "ok": true},
+    {"name": "Billing Actor", "type": "BusinessActor", "ok": false, "hint": "structure_type_suffix"},
+    {"name": "NHS", "type": "BusinessActor", "ok": true},
+    {"name": "Claims Portal", "type": "ApplicationComponent", "ok": true},
+    {"name": "Onboard Carrier", "type": "BusinessProcess", "ok": true}
+  ],
+  "docs": [
+    {
+      "name": "CRM",
+      "type": "ApplicationComponent",
+      "documentation": "Evidence: stated - View Plan\nSystem of record for customer accounts and cases.",
+      "ok": true
+    },
+    {
+      "name": "CRM",
+      "type": "ApplicationComponent",
+      "documentation": "System of record for customer accounts and cases.",
+      "ok": false
+    },
+    {
+      "name": "CRM",
+      "type": "ApplicationComponent",
+      "documentation": "Evidence: stated - View Plan\napplication component application",
+      "ok": false
+    },
+    {
+      "name": "Handle Customer Inquiry",
+      "type": "BusinessProcess",
+      "documentation": "Evidence: inferred - elicit notes\nIntake and triage of customer questions across branches.",
+      "ok": true
+    }
+  ]
+}

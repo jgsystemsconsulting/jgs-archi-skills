@@ -1,0 +1,35 @@
+name: Skill improvement
+description: Pack defect or missing skill path that any user would hit
+labels: [skill-improvement]
+body:
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: From RELEASE-INFO.txt
+    validations: {required: true}
+  - type: input
+    id: skill
+    attributes:
+      label: Skill
+      description: Skill name, or unknown
+    validations: {required: true}
+  - type: textarea
+    id: outcome_blocked
+    attributes:
+      label: Outcome the pack could not enable
+      description: One or two sentences. No model names, element names, or client nouns.
+    validations: {required: true}
+  - type: textarea
+    id: proposed_change
+    attributes:
+      label: Proposed change to the pack
+      description: Skill text, flow, or MCP contract. Must help every user, not one model.
+    validations: {required: true}
+  - type: checkboxes
+    id: hygiene
+    attributes:
+      label: Hygiene
+      options:
+        - label: I confirm this report contains no model content, tokens, keys, or credentials.
+          required: true
