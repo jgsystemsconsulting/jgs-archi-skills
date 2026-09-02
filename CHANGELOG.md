@@ -8,8 +8,11 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 
 ## [Unreleased]
 
-- Companion GitHub Pages hub (altitudes, how you ask, eval, examples, install)
-  plus a six-layer guide written for a technology architect
+- Companion GitHub Pages hub (altitudes, agents, how you ask, why, eval,
+  examples, install) plus a six-layer guide written for a technology architect
+- Hub names every install host (ZCode, Claude Code, Cursor, Gemini CLI,
+  OpenAI Codex, GitHub Copilot CLI) and points pack feedback plus Discussions
+  as the public room
 
 ## [1.0.0] - 2026-08-31
 

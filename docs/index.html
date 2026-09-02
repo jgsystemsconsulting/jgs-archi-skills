@@ -34,7 +34,9 @@
 <nav class="site" aria-label="Site"><div class="wrap">
   <a href="#what">What it is</a>
   <a href="#altitudes">Altitudes</a>
+  <a href="#agents">Agents</a>
   <a href="#ask">How you ask</a>
+  <a href="#why">Why</a>
   <a href="#eval">Eval</a>
   <a href="#examples">Examples</a>
   <a href="#install">Install</a>
@@ -80,11 +82,24 @@
     </tbody>
   </table>
   </div>
-  <p class="lead" style="margin-top:1.5rem">Full layer treatment: <a href="guide.html">guide.html</a>.</p>
+  <p class="lead" style="margin-top:1.5rem">Full layer treatment: <a href="guide.html">the layer guide</a>.</p>
+</div></section>
+
+<section id="agents"><div class="wrap">
+  <div class="shead"><span class="label">§03 · Agents</span><h2>One pack, every main host</h2></div>
+  <p class="lead"><code>install.py</code> already targets the main coding agents. Native folder copy for ZCode, Claude Code, OpenAI Codex, GitHub Copilot CLI, and OpenClaw. Gemini CLI as an extension. Cursor as project-local rules. Run <code>python install.py --agent all</code> for the user-global hosts, then <code>--agent cursor</code> in the repo that needs rules. Per-path table: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/other-agents.md">docs/other-agents.md</a>.</p>
+  <div class="grid g3" style="margin-top:1.5rem">
+    <div class="cell"><h3>ZCode</h3><p>Native folder. <code>~/.zcode/skills/&lt;skill&gt;/</code>. <code>--agent zcode</code></p></div>
+    <div class="cell"><h3>Claude Code</h3><p>Native folder, namespaced. <code>~/.claude/skills/jgs/&lt;skill&gt;/</code>. <code>--agent claude</code></p></div>
+    <div class="cell"><h3>Cursor</h3><p>Project-local <code>.mdc</code> rules. Run in the repo you want. <code>--agent cursor</code></p></div>
+    <div class="cell"><h3>Gemini CLI</h3><p>Extension under <code>~/.gemini/extensions/</code>. <code>--agent gemini</code></p></div>
+    <div class="cell"><h3>OpenAI Codex</h3><p>Native folder. <code>~/.agents/skills/jgs/&lt;skill&gt;/</code>. <code>--agent codex</code></p></div>
+    <div class="cell"><h3>GitHub Copilot CLI</h3><p>Native folder. <code>~/.copilot/skills/jgs/&lt;skill&gt;/</code>. <code>--agent copilot</code></p></div>
+  </div>
 </div></section>
 
 <section id="ask"><div class="wrap">
-  <div class="shead"><span class="label">§03 · How you ask</span><h2>Plain language. One entrypoint.</h2></div>
+  <div class="shead"><span class="label">§04 · How you ask</span><h2>Plain language. One entrypoint.</h2></div>
   <div class="grid g3">
     <div class="cell"><span class="num">01</span><h3>Capability map</h3><p>Finance and ops agree which capabilities run quote to cash, and which applications already cover them.</p><p>Altitudes: strategy / capability, business, application.</p><p><code>/archi-orchestrator invoice-to-cash capability map for finance and ops</code></p></div>
     <div class="cell"><span class="num">02</span><h3>Merger current vs target</h3><p>Two onboarding journeys, a dual-run plateau, work packages that retire a core without a silent cutover.</p><p>Altitudes: motivation, business, application, implementation / migration.</p><p><code>/archi-orchestrator Northridge and Vale insurance merger: current vs target customer onboarding, with a migration roadmap</code></p></div>
@@ -96,8 +111,15 @@
   <p class="lead" style="margin-top:1.5rem"><code>/archi-orchestrator</code> is the only modelling entrypoint. <code>/jgs-upstream-feedback</code> is the pack-defect door. Do not invoke layer specialists yourself.</p>
 </div></section>
 
+<section id="why"><div class="wrap">
+  <div class="shead"><span class="label">§05 · Why</span><h2>A shared pack that gets better in public</h2></div>
+  <p class="lead">Use this when you want ArchiMate in Archi, not a slide deck the model cannot replay. You approve the View Plan. Specialists write only the layers you named. The language reference stays on the Bridge MCP.</p>
+  <p class="lead" style="margin-top:1rem">The other reason is the loop. When a run hits a pack or MCP-contract hole that any user would hit, the orchestrator can offer to file it, or you invoke <code>/jgs-upstream-feedback</code>. That issue lands on GitHub. Fixes ship in the next pack. Everyone who installed the skills gets the same improvement. Local architecture stays local. Only agnostic defects go upstream.</p>
+  <p class="lead" style="margin-top:1rem">Questions, worked runs, and "has anyone modelled this" belong on <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/discussions">GitHub Discussions</a>. Defects that should change the pack stay on Issues. There is no separate Discord yet. Discussions is the public room.</p>
+</div></section>
+
 <section id="eval"><div class="wrap">
-  <div class="shead"><span class="label">§04 · Eval</span><h2>Frozen scenario, dedicated model</h2></div>
+  <div class="shead"><span class="label">§06 · Eval</span><h2>Frozen scenario, dedicated model</h2></div>
   <p class="lead">Maintainer loop on the frozen Meridian Freight scenario in a dedicated eval model (JGS Eval Loop). This is not a public skill-versus-no-skill A/B. Iter-0 metamodel findings of 40 were largely an allowlist gap on an already bridge-legal model. The instrument and CREATE_PATH rules tightened. Treat the loop as a lower bound on pack quality, not a marketed score.</p>
   <div class="sheet" style="margin-top:1.5rem;padding:0;overflow:auto">
   <table class="data">
@@ -118,7 +140,7 @@
 </div></section>
 
 <section id="examples"><div class="wrap">
-  <div class="shead"><span class="label">§05 · Examples</span><h2>Three frozen jobs</h2></div>
+  <div class="shead"><span class="label">§07 · Examples</span><h2>Three frozen jobs</h2></div>
   <p class="lead">Prompt cards on GitHub. No pretend Archi screenshots. Live runs still stop at the View Plan gate.</p>
   <div class="grid g3" style="margin-top:1.5rem">
     <div class="cell">
@@ -146,15 +168,15 @@
 </div></section>
 
 <section id="install"><div class="wrap">
-  <div class="shead"><span class="label">§06 · Install</span><h2>Clone, install, restart, ask</h2></div>
-  <p class="lead">Prerequisites: Archi with the JGS Archi Bridge plugin, MCP at <code>http://127.0.0.1:18090/mcp</code>, Python 3.10+ (stdlib only). ZCode is the default install target. Other hosts: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/other-agents.md">docs/other-agents.md</a>. The long agent-install prompt stays in the <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/README.md">README</a>.</p>
+  <div class="shead"><span class="label">§08 · Install</span><h2>Clone, install, restart, ask</h2></div>
+  <p class="lead">Prerequisites: Archi with the JGS Archi Bridge plugin, MCP at <code>http://127.0.0.1:18090/mcp</code>, Python 3.10+ (stdlib only). Install into every user-global host, or pick one. Cursor is project-local, so run it in the repo that needs rules. Paths: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/other-agents.md">docs/other-agents.md</a>. The long agent-install prompt stays in the <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/README.md">README</a>.</p>
   <div class="sheet" style="margin-top:1.5rem"><pre><span class="c"># Python 3.10+, stdlib only. Archi + JGS Archi Bridge on loopback.</span>
 git clone https://github.com/jgsystemsconsulting/jgs-archi-skills
 cd jgs-archi-skills
-python install.py                 <span class="c"># ZCode, flat ~/.zcode/skills</span>
-python install.py --dry-run
-python install.py --agent claude  <span class="c"># ~/.claude/skills/jgs/</span>
-python install.py --list-agents</pre></div>
+python install.py --agent all     <span class="c"># ZCode, Claude Code, Codex, Copilot, OpenClaw, Gemini</span>
+python install.py --agent cursor  <span class="c"># project-local .cursor/rules</span>
+python install.py --list-agents
+python install.py --dry-run</pre></div>
   <p class="lead" style="margin-top:1.5rem">Restart the agent so it discovers the skills. Then call the orchestrator. It stops at a confirmation gate. Approve the View Plan before anything is written into Archi.</p>
   <div class="sheet" style="margin-top:1.5rem"><pre><span class="c"># technology-architect pair; full catalog: docs/prompts/README.md</span>
 /archi-orchestrator invoice-to-cash capability map for finance and ops

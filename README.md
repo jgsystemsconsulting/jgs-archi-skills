@@ -45,21 +45,23 @@ MCP resources are the sole ArchiMate reference.
 ## Install
 
 ```bash
-python install.py
+python install.py --agent all
 ```
 
-Installs each `skills/<name>/` package that contains `SKILL.md` into
-`~/.zcode/skills/<name>/` (flat). That default is the binding delivery form.
+Installs each `skills/<name>/` package that contains `SKILL.md` into the
+user-global hosts (ZCode, Claude Code, OpenAI Codex, GitHub Copilot CLI,
+OpenClaw, Gemini CLI). Cursor is project-local:
 
 ```bash
+python install.py --agent cursor          # ./.cursor/rules/<skill>.mdc
 python install.py --dry-run
 python install.py --agent claude          # ~/.claude/skills/jgs/<skill>/
-python install.py --agent all
 python install.py --list-agents
 python install.py --link                  # symlink when the OS allows
 ```
 
-Wrappers: `install.sh`, `install.ps1`. Other hosts: [docs/other-agents.md](docs/other-agents.md).
+Bare `python install.py` still writes the ZCode folder. Wrappers:
+`install.sh`, `install.ps1`. Paths: [docs/other-agents.md](docs/other-agents.md).
 
 ### Install with your AI agent
 
@@ -175,8 +177,9 @@ are unsure which licence you need, see
 ## Support
 
 Bugs: open a GitHub issue using the bug-report form. Pack improvements: skill-improvement
-form, or yes on an in-session draft. Bridge defects: jgs-archi-mcp issues, not this tracker.
-Security: see
+form, or yes on an in-session draft. Questions and worked runs:
+[Discussions](https://github.com/jgsystemsconsulting/jgs-archi-skills/discussions).
+Bridge defects: jgs-archi-mcp issues, not this tracker. Security: see
 [SECURITY.md](SECURITY.md) (private advisory; do not open a public issue).
 
 ## Tests

@@ -14,7 +14,24 @@ INDEX = DOCS / "index.html"
 GUIDE = DOCS / "guide.html"
 CSS = DOCS / "site.css"
 
-LANDING_IDS = ("what", "altitudes", "ask", "eval", "examples", "install")
+LANDING_IDS = (
+    "what",
+    "altitudes",
+    "agents",
+    "ask",
+    "why",
+    "eval",
+    "examples",
+    "install",
+)
+AGENT_NAMES = (
+    "ZCode",
+    "Claude Code",
+    "Cursor",
+    "Gemini CLI",
+    "OpenAI Codex",
+    "GitHub Copilot CLI",
+)
 GUIDE_IDS = (
     "theory",
     "layer-motivation",
@@ -73,7 +90,10 @@ class CompanionSiteTests(unittest.TestCase):
         for sid in LANDING_IDS:
             self.assertIn(f'id="{sid}"', text, f"landing missing id={sid}")
         self.assertNotIn('id="chain"', text)
-        self.assertNotIn('id="agents"', text)
+        agents = _section(text, "agents")
+        for name in AGENT_NAMES:
+            self.assertIn(name, agents, f"agents section missing {name}")
+        self.assertNotIn("ZCode is the default install target", text)
 
     def test_guide_section_ids(self) -> None:
         text = GUIDE.read_text(encoding="utf-8")

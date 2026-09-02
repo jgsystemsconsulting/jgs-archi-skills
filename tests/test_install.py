@@ -32,7 +32,15 @@ class InstallTests(unittest.TestCase):
     def test_list_agents(self) -> None:
         proc = run(["--list-agents"])
         self.assertEqual(proc.returncode, 0, proc.stderr)
-        for name in ("zcode", "claude", "codex", "gemini", "cursor"):
+        for name in (
+            "zcode",
+            "claude",
+            "codex",
+            "gemini",
+            "cursor",
+            "copilot",
+            "openclaw",
+        ):
             self.assertIn(name, proc.stdout)
 
     def test_dry_run_default_zcode(self) -> None:
