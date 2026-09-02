@@ -12,6 +12,24 @@
   <img src="https://img.shields.io/badge/canvas-Archi-orange" alt="Canvas: Archi">
 </p>
 
+**Sign the view plan. Archi stays the system of record.**
+
+Delivery ships weekly. Architecture views lag by sprints. SOAM is a governed
+run in Archi: plain-language intent, a view plan you approve, then specialists
+write only the layers you named. Traceability, QA, layout, and documentation
+sit on the path. The ArchiMate language stays in the MCP bridge, not in the
+prompt. You still own the architecture.
+
+```text
+/archi-orchestrator invoice-to-cash capability map for finance and ops
+/archi-orchestrator manufacturing plant: as-is shop floor and the CRM programme that is supposed to fix order visibility
+/archi-orchestrator move the legacy TMS to a cloud landing zone; plateaus and work packages only. Do not redesign the business.
+```
+
+Paste-install (Bridge + skills) is below. Practice write-up:
+[docs/papers/ieee/soam-ieee-software.pdf](docs/papers/ieee/soam-ieee-software.pdf).
+Landing copy and talk abstract: [docs/papers/landing.md](docs/papers/landing.md).
+
 Agent-guided ArchiMate viewpoint creation in Archi: a skill suite that drives
 the existing JGS Archi Bridge MCP (consume-only). One orchestrator plus twelve
 specialists plus the jgs-upstream-feedback utility. Archi is the only canvas.
@@ -134,6 +152,9 @@ Interactive diagrams (Archify):
 [cooperation](https://jgsystemsconsulting.github.io/jgs-archi-skills/diagrams/cooperation.html)
 and
 [modelling run](https://jgsystemsconsulting.github.io/jgs-archi-skills/diagrams/modelling-run.html).
+
+Companion site: [hub](https://jgsystemsconsulting.github.io/jgs-archi-skills/)
+and [layer guide](https://jgsystemsconsulting.github.io/jgs-archi-skills/guide.html).
 
 Pack defects that any user would hit can be raised from the session (orchestrator
 offers, or `/jgs-upstream-feedback`). Local model issues stay local.

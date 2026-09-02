@@ -8,6 +8,9 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 
 ## [Unreleased]
 
+- Companion GitHub Pages hub (altitudes, how you ask, eval, examples, install)
+  plus a six-layer guide written for a technology architect
+
 ## [1.0.0] - 2026-08-31
 
 First public release. Agent-guided ArchiMate viewpoint creation in Archi via
