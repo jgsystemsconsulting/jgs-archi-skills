@@ -155,8 +155,9 @@ Interactive diagrams (Archify):
 and
 [modelling run](https://jgsystemsconsulting.github.io/jgs-archi-skills/diagrams/modelling-run.html).
 
-Companion site: [hub](https://jgsystemsconsulting.github.io/jgs-archi-skills/)
-and [layer guide](https://jgsystemsconsulting.github.io/jgs-archi-skills/guide.html).
+Companion site: [hub](https://jgsystemsconsulting.github.io/jgs-archi-skills/),
+[layer guide](https://jgsystemsconsulting.github.io/jgs-archi-skills/guide.html),
+and [engagement](https://jgsystemsconsulting.github.io/jgs-archi-skills/engage.html).
 
 Pack defects that any user would hit can be raised from the session (orchestrator
 offers, or `/jgs-upstream-feedback`). Local model issues stay local.
