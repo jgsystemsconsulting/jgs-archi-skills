@@ -13,6 +13,7 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 - Hub names every install host (ZCode, Claude Code, Cursor, Gemini CLI,
   OpenAI Codex, GitHub Copilot CLI) and points pack feedback plus Discussions
   as the public room
+- Companion Engagement page: standup, named viewpoint packages, and enablement, with no rate card on the page
 
 ## [1.0.0] - 2026-08-31
 
