@@ -1,0 +1,174 @@
+<!doctype html>
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- SPDX-License-Identifier: MIT -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="dark">
+<title>The bottleneck was never ArchiMate</title>
+<meta name="description" content="An adoption brief for SOAM, Skill-Orchestrated ArchiMate Modelling, in Archi.">
+<link rel="canonical" href="https://jgsystemsconsulting.github.io/jgs-archi-skills/why-soam.html">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="site.css">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://jgsystemsconsulting.github.io/jgs-archi-skills/why-soam.html">
+<meta property="og:title" content="The bottleneck was never ArchiMate">
+<meta property="og:description" content="An adoption brief for SOAM, Skill-Orchestrated ArchiMate Modelling, in Archi.">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="The bottleneck was never ArchiMate">
+<meta name="twitter:description" content="An adoption brief for SOAM, Skill-Orchestrated ArchiMate Modelling, in Archi.">
+</head>
+<body>
+
+<header class="masthead"><div class="wrap">
+  <span>CLASSIFICATION: <b>PUBLIC</b></span>
+  <span>LICENCE: <b>MIT</b></span>
+  <span>DOC-ID: <b>JGS-ARCHI-SKILLS</b></span>
+  <span>REV <b>1.0.0</b></span>
+</div></header>
+
+<nav class="site" aria-label="Site"><div class="wrap">
+  <a href="index.html">Hub</a>
+  <a href="guide.html">Guide</a>
+  <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/papers/why-soam.md">Markdown source</a>
+  <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills">Repository</a>
+</div></nav>
+
+<main>
+<div class="hero"><div class="wrap">
+  <h1>The bottleneck was never ArchiMate</h1>
+  <p>An adoption brief for SOAM, Skill-Orchestrated ArchiMate Modelling, in Archi. What it is, what changed to make it possible, what it brings over manual modelling, and what it does not claim.</p>
+  <p class="sub">If you are an enterprise architect, read sections 3 to 5. If you are an engineering manager, read 4 and 6. If you are an open-source or tooling person, read 2 and 7.</p>
+</div></div>
+
+<section id="problem"><div class="wrap">
+  <div class="shead"><span class="label">§01 · The problem</span><h2>The problem you already have</h2></div>
+  <p class="lead">Delivery ships weekly. Architecture views lag by sprints. That lag is not a shortage of the ArchiMate language, and it is not a shortage of Archi. The method lives in the architect's head. The tool is a canvas.</p>
+  <p class="lead" style="margin-top:1rem">The loop is familiar on most programmes. Stakeholder workshop. Tacit viewpoint choice. Days of placing boxes. A review that finds the wrong cut. A slide deck that holds the rationale the model never did. Cross-layer traces (capability through process to application to node to work package) are the first labour dropped under deadline. Juniors invent illegal relations; seniors lint after the fact. The next programme opens the slides, not the model.</p>
+  <p class="lead" style="margin-top:1rem">ArchiMate already names stakeholders, viewpoints, and layers. Archi already holds a real model. The dominant practice does not instrument the method inside that model, so architecture work cannot keep cadence with engineering. Throughput is why an engineering organisation should care. Throughput here is a reason, not a measured result.</p>
+</div></section>
+
+<section id="changed"><div class="wrap">
+  <div class="shead"><span class="label">§02 · What changed</span><h2>What changed</h2></div>
+  <p class="lead">Language-model tools have been tried on modelling for years. The dominant failure mode is stable and documented. The model stays unchanged. The metamodel is copied or approximated in a prompt. The agent emits a picture beside the system of record: PlantUML, JSON, a screenshot, a Draw.io file. The architect is asked to bless a drawing after the fact. Cámara et al. (2023) reported mixed reliability on UML tasks outside a controlled prompt. Fill, Fettke, and Köpke (2023) reported conceptual-modelling experiments in which models emit plausible diagrams that are not the organisation's model. That line of work generates a parallel artefact.</p>
+  <p class="lead" style="margin-top:1rem">Two surfaces undercut that failure mode. Model Context Protocol (MCP) made a live tool surface agent-operable. Agentic coding hosts (ZCode, Claude Code, Cursor, and peers) can call tools in a session rather than only emit text. An agent can now write into the system of record instead of pasting a picture next to it.</p>
+  <p class="lead" style="margin-top:1rem">What matters is governance, not generation. An agent that can mutate Archi without a gate is more dangerous than one that draws PlantUML. Skill-Orchestrated ArchiMate Modelling (SOAM) is the method on that surface: plain-language intent in, a view plan the architect signs, specialists dispatched only for named layers, writes only through the JGS Archi Bridge MCP into Archi. The language stays in MCP resources. Skills orchestrate; they do not carry a stale copy of ArchiMate tables.</p>
+</div></section>
+
+<section id="run"><div class="wrap">
+  <div class="shead"><span class="label">§03 · One run</span><h2>One run, end to end</h2></div>
+  <p class="lead">Take a mid-size manufacturer. Quotes go out by email. Orders land in the ERP. Collections are chased from a spreadsheet. Finance cannot see cash in flight. Operations cannot see which capabilities actually run quote, order, invoice, and collect. Stakeholders on the brief: CFO, head of operations, IT manager, credit controller. In scope: capabilities, order-to-cash processes, supporting applications. Out of scope: shop floor, physical distribution, payroll, ERP replacement. Target: one capability map finance and operations agree on, with as-is processes and the applications that realize them.</p>
+  <p class="lead" style="margin-top:1rem">You type a plain-language job into the host that has the skill pack installed:</p>
+  <div class="sheet" style="margin-top:1.5rem"><pre>/archi-orchestrator invoice-to-cash capability map for finance and ops</pre></div>
+  <p class="lead" style="margin-top:1.5rem">The orchestrator runs elicitation and viewpoint selection. It drafts a view plan. The plan names views, stakeholders, concerns, and which layer specialists will run. On this brief the views are Capability Map, Order-to-Cash Operations, and Application Support. Specialists named on the plan: elicit, viewpoint-select, capability-strategy, business, application, then traceability, model-qa, layout, and documentation. Technology and physical are not on the plan. The method must not invent a mill.</p>
+  <p class="lead" style="margin-top:1rem">Stop here. Read the plan the way you would read a statement of work. If you would not sign it, reject it. Nothing has been written. Rejection returns to intent with no half-written model. A rejection is a successful first run: the gate worked, the canvas is clean, and you still own the cut.</p>
+  <p class="lead" style="margin-top:1rem">If you approve, only the named specialists run. They write elements, relations, views, and documentation fields through the bridge into Archi. Traceability must leave at least one path from a capability through a process to an application. Documentation fields carry an evidence line (stated, inferred, or existing), not a restatement of the element name. The first generation ends at a draft checkpoint. Completing a specialist does not mean the architecture is finished. The ERP is already there; the run maps what it covers versus spreadsheet work. It does not propose a replacement programme.</p>
+  <p class="lead" style="margin-top:1rem">Two other frozen briefs sit in the method papers for coverage you will not walk here: a plant CRM programme that must not swallow the MES, and a TMS landing-zone move that forbids business redesign. Same gate. Same rule that a refused layer is method behaviour.</p>
+</div></section>
+
+<section id="manual"><div class="wrap">
+  <div class="shead"><span class="label">§04 · Manual modelling</span><h2>What it brings over manual modelling</h2></div>
+  <p class="lead">Manual Archi practice loses cycle time in recurring ways. Table 1 names each waste, what it costs, and the SOAM stage built to hit it. The rows are unchanged from the IEEE Software practice write-up.</p>
+  <div class="sheet" style="margin-top:1.5rem;padding:0;overflow:auto">
+  <table class="data">
+    <thead>
+      <tr><th>Waste</th><th>What it costs</th><th>SOAM stage</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Viewpoint chosen from habit</td><td>Wrong audience, kitchen-sink diagrams, rework</td><td>Viewpoint select and view-plan approval</td></tr>
+      <tr><td>Elicitation decoupled from modelling</td><td>Notes go stale; review finds the wrong scope</td><td>Elicit, then plan; no mutate yet</td></tr>
+      <tr><td>Drawing as the main effort</td><td>Allowed relations live in the modeller's head</td><td>Layer specialists via MCP</td></tr>
+      <tr><td>Cross-layer traces optional</td><td>Motivation to mill equipment breaks first</td><td>Traceability</td></tr>
+      <tr><td>Docs as a second artefact</td><td>Rationale in slides; model becomes pictures</td><td>Documentation fields in the model</td></tr>
+      <tr><td>Language not executable</td><td>Juniors invent illegal relations; seniors lint</td><td>MCP resources and model QA</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="lead" style="margin-top:1.5rem">Waste classes are only half the comparison. Entry cost, reversibility, and exit cost decide whether a shop will try the method at all.</p>
+  <div class="sheet" style="margin-top:1.5rem;padding:0;overflow:auto">
+  <table class="data">
+    <thead>
+      <tr><th>Criterion</th><th>Manual practice</th><th>SOAM run</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>Cost of entry</td><td>New licence, new tool adoption cycle, training</td><td>Archi already installed, paste-install prompt, MIT, Python 3.10+ standard library only</td></tr>
+      <tr><td>Reversibility</td><td>Rework discovered at review, after days of boxes</td><td>Nothing mutates before the view plan is approved; first generation ends at a draft checkpoint</td></tr>
+      <tr><td>Exit cost</td><td>Model tied to the suite that drew it</td><td>Delete the skills folder; the model stays a valid, open ArchiMate model in Archi</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="lead" style="margin-top:1.5rem">These tables are qualitative. There is no stopwatch on this page. SOAM compresses elicit, plan, model, QA, and document into one governed run; that claim is reasoned from the waste table, not timed against a bake-off. Per the honesty bar in the method papers, treat design-for-adoption as a design choice, not as evidence of uptake.</p>
+</div></section>
+
+<section id="new"><div class="wrap">
+  <div class="shead"><span class="label">§05 · What is new</span><h2>What is new versus the AI tools you have seen</h2></div>
+  <p class="lead">Four claims separate SOAM from "describe your enterprise and let AI draw it." Each claim names where you verify it.</p>
+  <ol class="lead" style="margin-top:1rem;padding-left:1.5rem;max-width:70ch">
+    <li style="margin-bottom:.75rem">Writes into the real model through the bridge MCP, with no parallel artefact. Verify in section 2 above and in the bridge repository <code>jgs-archi-mcp</code>.</li>
+    <li style="margin-bottom:.75rem">The ArchiMate language is never copied into prompts. MCP resources are the sole source of truth, and a structural validator reports fourteen skill files with zero unknown tool references on v1.0.0. Verify in the repository README section "Structural validation"; command <code>python helpers/validate_skill_mcp_refs.py</code>.</li>
+    <li style="margin-bottom:.75rem">Governance is the method. Specialists are dispatched, not user-invoked, and a refused layer is success. Verify in the repository README usage section and in <code>SKILLS.md</code>.</li>
+    <li style="margin-bottom:.75rem">Traceability, model QA, layout, and documentation run as pipeline stages: the labour that dies first under deadline. Verify in <code>docs/CREATE_PATH.md</code>, the shared specialist contract.</li>
+  </ol>
+  <p class="lead" style="margin-top:1rem">A prompt that says "draw ArchiMate" has none of these rules. MCP is the tool protocol those agents can speak. It is not a modelling method by itself. SOAM is the method on that protocol.</p>
+</div></section>
+
+<section id="status"><div class="wrap">
+  <div class="shead"><span class="label">§06 · Status</span><h2>Status, honestly</h2></div>
+  <div class="sheet" style="margin-top:0;padding:0;overflow:auto">
+  <table class="data">
+    <thead>
+      <tr><th>Works now</th><th>Evidence pending</th><th>Community dependent</th></tr>
+    </thead>
+    <tbody>
+      <tr><td>v1.0.0 pack, 14 skills, offline test suite, structural validation of MCP references, seven install targets, opt-in live MCP smoke</td><td>Timing study against hand modelling on the same brief; second-architect repeat runs for stable element names; one anonymised client run; QA defect-class comparison against a senior architect</td><td>Issue flow on the pack, worked-run reports on Discussions, recipe and convention contributions</td></tr>
+    </tbody>
+  </table>
+  </div>
+  <p class="lead" style="margin-top:1.5rem">Unknown stays unknown. The walks so far are frozen briefs by the method authors, not client engagements. They show method coverage. They do not show organisational uptake. Language-model output is non-deterministic; the same intent can yield different element names. Governance (approval gate, QA, no-invention rule) is the control, not model temperature. The implementation is one bridge, one skill suite, Archi only. The argument does not generalise to Sparx or LeanIX. Throughput is unmeasured. Those future measurements match the list in the IEEE practice write-up. They are not results on this page.</p>
+</div></section>
+
+<section id="opensource"><div class="wrap">
+  <div class="shead"><span class="label">§07 · Open source</span><h2>Why open source makes it safer, not just cheaper</h2></div>
+  <p class="lead">The pack is MIT. You can fork it, pin it, or vendor the skills folder. Bug-report and skill-improvement issue forms sit on the tracker so defects arrive structured. In-session upstream feedback drafting (<code>/jgs-upstream-feedback</code>) turns a pack defect found mid-run into a draft the maintainer can act on; local model issues stay local. GitHub Discussions hold worked runs and questions that are not bugs. <code>CITATION.cff</code> gives academic credit a stable target.</p>
+  <p class="lead" style="margin-top:1rem">Skills are reviewable markdown. Many-eyes applies to method text, not only to code. A house that needs different naming, folder layout, or evidence rules can fork and encode those rules in <code>docs/MODELLING_CONVENTIONS.md</code> without waiting on a vendor roadmap. The loop is simple: one user's run surfaces a defect, the fix lands in the next release, every user's next run gets it.</p>
+  <p class="lead" style="margin-top:1rem">Open source is a safety property for a method that mutates the system of record. You can read the gate, the specialist contract, and the MCP allow-list before you approve a plan. You can delete the skills and keep the model.</p>
+</div></section>
+
+<section id="try"><div class="wrap">
+  <div class="shead"><span class="label">§08 · Try it</span><h2>Try it in one afternoon</h2></div>
+  <p class="lead">Prerequisites:</p>
+  <ul class="lead" style="margin-top:.5rem;padding-left:1.5rem;max-width:70ch">
+    <li style="margin-bottom:.5rem">Archi 5.7 or later</li>
+    <li style="margin-bottom:.5rem">JGS Archi Bridge plugin, MCP at <code>http://127.0.0.1:18090/mcp</code> by default</li>
+    <li style="margin-bottom:.5rem">Python 3.10 or later, standard library only (no extra modelling engine)</li>
+  </ul>
+  <p class="lead" style="margin-top:1rem">Point your agent host at the paste-install prompt in the repository README: <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills">https://github.com/jgsystemsconsulting/jgs-archi-skills</a>. The prompt installs the bridge and the skill pack; read each README and follow it. Do not invent steps.</p>
+  <p class="lead" style="margin-top:1rem">First contact after install:</p>
+  <div class="sheet" style="margin-top:1.5rem"><pre>/archi-orchestrator invoice-to-cash capability map for finance and ops</pre></div>
+  <p class="lead" style="margin-top:1.5rem">Stop at the view plan. If you would not sign it, reject it. Nothing was written. That is the whole first afternoon: wire the bridge, install the skills, reach the gate, exercise a rejection. Generation after approval is a second session, on a brief you own.</p>
+</div></section>
+
+<section id="claims"><div class="wrap">
+  <div class="shead"><span class="label">§09 · What we do not claim</span><h2>What we do not claim</h2></div>
+  <p class="lead">No speedup percentage. No replacement for the enterprise architect. No industry-adoption claim. ArchiMate is not incomplete, and architects are not slow. Given ArchiMate and Archi, the dominant practice does not instrument the method. Cadence of architecture work is the reason an engineering organisation should care; measure it later.</p>
+  <p class="lead" style="margin-top:1rem">The method write-up that backs these boundaries is the IEEE Software practice cut <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/papers/ieee/soam-ieee-software.pdf"><code>ieee/soam-ieee-software.pdf</code></a> (markdown working copy <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/papers/soam-ieee-software.md"><code>soam-ieee-software.md</code></a>). The longer preprint is <a href="https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/master/docs/papers/ieee/soam-ieee-long.pdf"><code>ieee/soam-ieee-long.pdf</code></a>. Both name the same refusals this brief inherits: parallel-artefact generation is not the method, MCP is not a modelling method by itself, the walks are frozen briefs by the authors, throughput is unmeasured, and design-for-adoption is not evidence of uptake.</p>
+  <p class="lead" style="margin-top:1rem">Canonical web page for this brief: <a href="https://jgsystemsconsulting.github.io/jgs-archi-skills/why-soam.html">https://jgsystemsconsulting.github.io/jgs-archi-skills/why-soam.html</a>.</p>
+  <p class="lead" style="margin-top:1rem">Sign the view plan. Archi stays the system of record.</p>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="tblock">
+    <div><span class="label">Product</span><b>jgs-archi-skills</b></div>
+    <div><span class="label">Rev</span><b>1.0.0</b></div>
+    <div><span class="label">Licence</span><b>MIT</b></div>
+    <div><span class="label">Repository</span><b><a href="https://github.com/jgsystemsconsulting/jgs-archi-skills">github.com/jgsystemsconsulting</a></b></div>
+    <div><span class="label">Canvas</span><b>Archi</b></div>
+    <div><span class="label">Owner</span><b>JG Systems Consulting Ltd</b></div>
+  </div>
+  <p class="foot-note">&copy; 2026 JG Systems Consulting Ltd. MIT Licence. See LICENSE. To request a commercial or academic licence for JGSC Labs products, or if you are unsure which licence you need, use <a href="https://labs.jgsystemsconsulting.com/licensing.html">labs.jgsystemsconsulting.com/licensing.html</a>. ArchiMate is a trademark of The Open Group.</p>
+</div></footer>
+
+</body>
+</html>
