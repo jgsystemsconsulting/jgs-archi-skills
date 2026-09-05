@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE.
 # SPDX-License-Identifier: MIT
 """Regression for shared specialist contract (Phase 9 / SPEC-D-*)."""
 from __future__ import annotations
@@ -14,7 +14,7 @@ ELICIT = ROOT / "skills" / "archi-elicit" / "SKILL.md"
 VSEL = ROOT / "skills" / "archi-viewpoint-select" / "SKILL.md"
 # Digest over the canonical LF bytes as stored in git; Windows checkouts use
 # CRLF in the working tree, so line endings are normalized before hashing.
-FROZEN = "17eb278636fe196928d1aa19e70e0ee919564db7fee7a23c497e8ebe5a59a1d2"
+FROZEN = "3fa7f235d168d6037b1448f9ce440e7c67a37ca120f17ab95b934b2593e56534"
 
 MUTATING = [
     "archi-motivation",

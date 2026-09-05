@@ -1,4 +1,4 @@
-# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE.
 # SPDX-License-Identifier: MIT
 """Release gate (RR-B-15): required files, forbidden paths, forbidden
 content, headers present. Exits non-zero on any failure.

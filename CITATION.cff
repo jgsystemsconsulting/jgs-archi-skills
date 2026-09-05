@@ -5,6 +5,7 @@ version: "1.0.0"
 date-released: "2026-08-31"
 authors:
   - name: "JG Systems Consulting Ltd"
+    email: "support@jgsystemsconsulting.com"
 repository-code: "https://github.com/jgsystemsconsulting/jgs-archi-skills"
 url: "https://jgsystemsconsulting.github.io/jgs-archi-skills/"
 license: MIT

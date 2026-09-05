@@ -2,7 +2,7 @@
 name: archi-traceability
 description: "Cross-layer traceability specialist; orchestrator-dispatched. Creates explicit traces and reports gaps after View Plan confirmation."
 ---
-<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE. -->
 <!-- SPDX-License-Identifier: MIT -->
 
 # archi-traceability

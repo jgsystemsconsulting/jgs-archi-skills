@@ -3,7 +3,7 @@ name: archi-orchestrator
 description: "Elicit architectural intent and produce a plain-language ArchiMate view plan via JGS Archi Bridge MCP (user-governed). Trigger: /archi-orchestrator"
 argument-hint: "[optional free-text intent]"
 ---
-<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE. -->
 <!-- SPDX-License-Identifier: MIT -->
 
 # archi-orchestrator
