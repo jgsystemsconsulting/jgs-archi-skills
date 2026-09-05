@@ -75,7 +75,7 @@ Four claims separate SOAM from "describe your enterprise and let AI draw it." Ea
 
 A prompt that says "draw ArchiMate" has none of these rules. MCP is the tool protocol those agents can speak. It is not a modelling method by itself. SOAM is the method on that protocol.
 
-## Status, honestly {#status}
+## Status {#status}
 
 | Works now | Evidence pending | Community dependent |
 |---|---|---|
