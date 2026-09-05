@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE.
 # SPDX-License-Identifier: MIT
 """Install in-repo skills into a coding agent (RR-S-02/03/15).
 

@@ -1,4 +1,4 @@
-<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE. -->
 <!-- SPDX-License-Identifier: MIT -->
 
 # jgs-archi-skills
@@ -182,6 +182,7 @@ form, or yes on an in-session draft. Questions and worked runs:
 [Discussions](https://github.com/jgsystemsconsulting/jgs-archi-skills/discussions).
 Bridge defects: jgs-archi-mcp issues, not this tracker. Security: see
 [SECURITY.md](SECURITY.md) (private advisory; do not open a public issue).
+Product and support email: support@jgsystemsconsulting.com.
 
 ## Tests
 

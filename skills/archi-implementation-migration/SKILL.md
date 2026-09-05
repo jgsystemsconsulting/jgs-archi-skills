@@ -2,7 +2,7 @@
 name: archi-implementation-migration
 description: "Implementation and migration specialist; orchestrator-dispatched modelling via Archi MCP after View Plan confirmation."
 ---
-<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE. -->
 <!-- SPDX-License-Identifier: MIT -->
 
 # archi-implementation-migration

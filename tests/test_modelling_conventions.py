@@ -1,4 +1,4 @@
-# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE.
 # SPDX-License-Identifier: MIT
 """Contract tests for JGS modelling house style (not ArchiMate reference)."""
 from __future__ import annotations
@@ -62,7 +62,7 @@ class ModellingConventionsDocTests(unittest.TestCase):
         text = DOC.read_text(encoding="utf-8")
         self.assertTrue(
             text.startswith(
-                "<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->"
+                "<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE. -->"
             )
         )
 

@@ -2,7 +2,7 @@
 name: archi-viewpoint-select
 description: "Ground ArchiMate viewpoint choices to stakeholder, concern, purpose, and abstraction level. Orchestrator-dispatched."
 ---
-<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE. -->
 <!-- SPDX-License-Identifier: MIT -->
 
 # archi-viewpoint-select

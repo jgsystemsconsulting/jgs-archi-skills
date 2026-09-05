@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE.
 # SPDX-License-Identifier: MIT
 """Unit tests for helpers/reuse_inspect.py (COH-01/03)."""
 from __future__ import annotations

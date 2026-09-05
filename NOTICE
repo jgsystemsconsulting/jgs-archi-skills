@@ -1,6 +1,13 @@
 jgs-archi-skills
 Copyright (c) 2026 JG Systems Consulting Ltd.
 
+Canonical source: https://github.com/jgsystemsconsulting/jgs-archi-skills
+Companion site: https://jgsystemsconsulting.github.io/jgs-archi-skills/
+Contact: support@jgsystemsconsulting.com, or GitHub Discussions at the
+canonical source above. Licence questions:
+https://labs.jgsystemsconsulting.com/licensing.html
+Licence: MIT. See LICENSE.
+
 This product depends on the following third-party components, each under its
 own license:
 - Archi (https://www.archimatetool.com/), used at runtime by the user; not

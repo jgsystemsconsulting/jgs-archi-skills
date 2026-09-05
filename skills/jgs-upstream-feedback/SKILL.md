@@ -3,7 +3,7 @@ name: jgs-upstream-feedback
 description: "File an agnostic pack or MCP-contract issue on GitHub after one user yes. Trigger: /jgs-upstream-feedback"
 argument-hint: "[optional gap note]"
 ---
-<!-- Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE. -->
+<!-- Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE. -->
 <!-- SPDX-License-Identifier: MIT -->
 
 # jgs-upstream-feedback

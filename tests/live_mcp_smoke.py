@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.
+# Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE.
 # SPDX-License-Identifier: MIT
 """Live end-to-end smoke of the archi skill-suite contract against a running
 JGS Archi Bridge inside Archi. Stdlib only. Mirrors the orchestrator flow:
