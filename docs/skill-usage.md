@@ -39,6 +39,8 @@ It elicits intent, drafts a schema-checked View Plan, grounds viewpoints, and
 stops at a confirmation gate. Specialists run only after you approve the plan.
 Do not invoke layer specialists yourself.
 
+The orchestrator classifies the invoke as a named deliverable or an outcome to chase. Approving the View Plan also signs the Done When section (stop rule, pass checks, MUST NOT). The run stops when those hold, not when the agent can still think of another layer.
+
 If a run hits a pack or MCP-contract hole that any user would hit, the
 orchestrator may offer to raise a GitHub issue. You can also invoke
 `/jgs-upstream-feedback` later.
