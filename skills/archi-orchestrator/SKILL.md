@@ -141,7 +141,7 @@ If the plan is written to a file, run:
 python helpers/view_plan_schema.py path/to/view-plan.md
 ```
 
-Fix missing headings until exit 0. For chat-only drafts, self-check the ten required H2 titles plus the Done When labels (Stop rule, Pass checks, MUST NOT).
+Fix headings and Done When body until exit 0. For chat-only drafts, self-check the ten required H2 titles plus the Done When labels (Stop rule, Pass checks, MUST NOT).
 
 ## Step 4 — Confirmation (ORCH-04)
 
