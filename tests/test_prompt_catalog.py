@@ -248,5 +248,26 @@ class ProductDocsTests(unittest.TestCase):
         self.assertIn("docs/prompts", html)
 
 
+POINTER = (
+    "A sequenced Hatherley Plate worked example (plant as-is plus CRM "
+    "visibility, five orchestrator jobs) is maintained privately. It will be "
+    "published after the first live run."
+)
+
+
+class HatherleyPointerTests(unittest.TestCase):
+    def test_hatherley_pointer_present_without_private_repo_name(self) -> None:
+        skill_usage = ROOT / "docs" / "skill-usage.md"
+        readme = ROOT / "README.md"
+        for path in (readme, skill_usage):
+            text = path.read_text(encoding="utf-8")
+            self.assertIn(POINTER, text, f"{path.name} missing Hatherley pointer")
+            self.assertNotIn(
+                "jgs-archi-skills-we",
+                text,
+                f"{path.name} must not name the private repository",
+            )
+
+
 if __name__ == "__main__":
     unittest.main()
