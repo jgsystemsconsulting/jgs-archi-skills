@@ -8,6 +8,10 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 
 ## [Unreleased]
 
+- Orchestrator View Plan gains a Done When section: named-deliverable or
+  outcome-until stop rule, signed pass checks, and MUST NOT. Approve signs
+  the exit. Schema helper requires the tenth heading.
+
 - Companion GitHub Pages hub (altitudes, agents, how you ask, why, eval,
   examples, install) plus a six-layer guide written for a technology architect
 - Hub names every install host (ZCode, Claude Code, Cursor, Gemini CLI,
