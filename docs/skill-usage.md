@@ -67,6 +67,8 @@ P0 examples:
 
 Do not invoke specialists yourself. Do not paste element-create commands.
 
+A sequenced Hatherley Plate worked example (plant as-is plus CRM visibility, five orchestrator jobs) is maintained privately. It will be published after the first live run.
+
 ## What it does, in order
 
 1. Elicit and normalize intent (`archi-elicit`).

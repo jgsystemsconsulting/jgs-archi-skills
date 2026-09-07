@@ -136,6 +136,8 @@ Starter prompts (copy one line): [docs/prompts/README.md](docs/prompts/README.md
 /archi-orchestrator board pack: drivers, goals, and outcomes for cutting quote time from 4 hours to 30 minutes. No applications.
 ```
 
+A sequenced Hatherley Plate worked example (plant as-is plus CRM visibility, five orchestrator jobs) is maintained privately. It will be published after the first live run.
+
 ```mermaid
 flowchart LR
   U[User intent] --> O[archi-orchestrator]
