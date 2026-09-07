@@ -57,22 +57,22 @@ Remaining args is the raw invoke text after `/archi-orchestrator`. Prefixes matc
 
 Two stop rules. The user does not have to name a mode.
 
-- `named-deliverable` (default): named views or layers exist, MUST NOT holds, then stop.
-- `outcome-until`: keep in-scope specialists until the signed pass checks are true on the model, then stop.
+- named-deliverable (default): named views or layers exist, MUST NOT holds, then stop.
+- outcome-until: keep in-scope specialists until the signed pass checks are true on the model, then stop.
 
-Signals for `named-deliverable`: `only`, `just`, `this view`, `do not add`, a view list, a single layer, a named artifact (`capability map`, `relayout`, `plateaus and work packages`).
+Signals for named-deliverable: `only`, `just`, `this view`, `do not add`, a view list, a single layer, a named artifact (`capability map`, `relayout`, `plateaus and work packages`).
 
-Signals for `outcome-until`: `until`, `so that`, `we need to be able to`, success criteria with no view list.
+Signals for outcome-until: `until`, `so that`, `we need to be able to`, success criteria with no view list.
 
 Procedure:
 
-1. If remaining args start with `only:` or `just:`, lock `named-deliverable`.
-2. Else if remaining args start with `until:` or `goal:`, lock `outcome-until`.
-3. Else if both a named deliverable and an outcome are present, lock `named-deliverable`. The named job is the work. The outcome is the why.
+1. If remaining args start with `only:` or `just:`, lock named-deliverable.
+2. Else if remaining args start with `until:` or `goal:`, lock outcome-until.
+3. Else if both a named deliverable and an outcome are present, lock named-deliverable. The named job is the work. The outcome is the why.
 4. Else if only named-deliverable signals, lock that.
 5. Else if only outcome-until signals, lock that.
 6. Else if neither is clear, ask one question, then lock. Example: "Stop when the capability map exists, or keep going until finance and ops can trace quote to cash on the model?"
-7. If still unset after that, default `named-deliverable`. Over-run is the failure this product already forbids.
+7. If still unset after that, default named-deliverable. Over-run is the failure this product already forbids.
 
 Do not invent a `/archi-orchestrator-goal` trigger. Do not keep mining extra MUST NOT items after the plan is approved unless the user revises the plan.
 
@@ -103,7 +103,7 @@ Write a markdown View Plan with **exactly** these H2 headings (schema-checked):
 - **Dependencies** — what must be true before later steps (data, decisions, existing model content).
 - **Validation Points** — how we will know the model is good enough (questions answered, checks to run), including house-style checks (names, descriptions, folders) per docs/MODELLING_CONVENTIONS.md.
 - **Done When:** stop rule token, pass checks, and MUST NOT. Approving the plan approves this section.
-  - **Stop rule:** exactly `named-deliverable` or `outcome-until` on its own line. Next line: one sentence in the user's words so they can reject the classification.
+  - **Stop rule:** exactly named-deliverable or outcome-until on its own line. Next line: one sentence in the user's words so they can reject the classification.
   - **Pass checks:** observable on the model or the run, not "agent cannot think of more". Named-deliverable: the named views exist, MUST NOT holds. Outcome-until: the signed outcome is visible on those views.
   - **MUST NOT:** the out-scope and the do-not, front-loaded. Derive once from invoke plus scope-out. Missing MUST NOT fails the schema.
 - **Open Questions for User** — unresolved decisions; never hide them.
@@ -172,7 +172,7 @@ After the user **approves** the View Plan (Step 4), modelling may proceed via or
 | naming_policy | Policy id (default title-collapse-v1) + optional overrides |
 | open_questions | Still unresolved items (user-visible) |
 | target_views | Optional known view names |
-| stop_rule | `named-deliverable` or `outcome-until` from Done When |
+| stop_rule | named-deliverable or outcome-until from Done When |
 | pass_checks | bullets from Done When |
 | must_not | bullets from Done When |
 
@@ -183,7 +183,7 @@ Skip specialists whose layer/concern is out of confirmed scope.
 Evaluate pass checks and MUST NOT after each specialist returns, then again after the close path. A full plan-order pass is complete when every in-scope specialist has been dispatched once (out-of-scope specialists are skipped, not counted). Exit the dispatch loop when any of these is true:
 
 1. Every pass check holds and every MUST NOT still holds.
-2. A `needs-user` item is an architectural decision only the user can make. Surface it. Do not invent the answer. The user governs unresolved architectural decisions.
+2. A needs-user item is an architectural decision only the user can make. Surface it. Do not invent the answer. The user governs unresolved architectural decisions.
 3. User aborts. Skip the close path and the draft checkpoint.
 4. One full plan-order pass plus the close path has run, and a pass check still fails or a MUST NOT was violated. Stop and surface the unmet items. Do not re-dispatch specialists.
 
