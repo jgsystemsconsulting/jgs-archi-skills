@@ -180,6 +180,13 @@ Binding for ArchiMate legality and consistency. Violations are **explained** wit
 3. Read relevant recipes/view-patterns before non-trivial structure (see Recipe section below).
 4. On violation: stop the illegal create; report problem + alternative; wait for user/orchestrator choice.
 
+### Known rejections and legal forms (targeted)
+
+- Node → ApplicationComponent is never Assignment (rejected). Legal form: `create-relationship` **Realization** from the Node to the ApplicationComponent, and nest the application element on the node in the view (`add-to-view` with the node as parent).
+- No Flow and no Association between sibling sequenced elements (Capabilities and similar stage-ordered sets) — the language rejects them. Sequence is placement, not edges: `add-to-view` order reads left-to-right; `archi-layout` preserves it; record reading order in an annotation note (annotations last per CP-G5).
+- Genuine cross-element dependencies that seem to need those edges are `needs-user` open questions resolved against `archimate://reference/archimate-relationships`; never silent-apply (COMP-02 / NG-3).
+- Scope note: `archimate://reference/archimate-relationships` remains source of truth; this list is targeted known-failure guidance, not a metamodel catalog (NG-4 — no table dumps).
+
 ### Offline depth (OBJ-5)
 
 Deep validator:
