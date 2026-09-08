@@ -8,6 +8,8 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 
 ## [Unreleased]
 
+- Paper sources split executed mill CRM from unexecuted invoice-to-cash and landing-zone briefs. Companion mill walk remains the public pictures. Rebuild IEEE PDFs from `docs/papers/ieee/build.sh` and `build-long.sh`.
+
 - Companion mill walk page (`docs/hatherley.html`) with five Hatherley Plate view exports. Author-run frozen brief. Refuse at the View Plan gate is the method.
 
 - Orchestrator View Plan gains a Done When section: named-deliverable or

@@ -6,6 +6,15 @@ __pycache__/
 .tmp-install-check/
 
 *.bak
+
+# LaTeX build sidecars (keep .tex .bib and the built PDF)
+docs/papers/ieee/*.aux
+docs/papers/ieee/*.bbl
+docs/papers/ieee/*.blg
+docs/papers/ieee/*.log
+docs/papers/ieee/*.out
+docs/papers/ieee/*.synctex.gz
+docs/papers/ieee/_preview/
 .playwright-mcp/
 .worktrees/
 live-smoke-out/
