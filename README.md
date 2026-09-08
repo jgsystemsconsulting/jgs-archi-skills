@@ -35,18 +35,6 @@ the existing JGS Archi Bridge MCP (consume-only). One orchestrator plus twelve
 specialists plus the jgs-upstream-feedback utility. Archi is the only canvas.
 MCP resources are the sole ArchiMate reference.
 
-## What lives where
-
-Three pieces. They stay separate.
-
-| Piece | Where | Owns |
-|------|------|------|
-| Archi MCP plugin | [jgs-archi-mcp](https://github.com/jgsystemsconsulting/jgs-archi-mcp) | Tools, resources, ArchiMate language tables. Skills consume this. They never patch it. |
-| Skill pack (this repo) | jgs-archi-skills | Orchestrator, specialists, install, papers, companion mill-walk pictures, frozen prompt cards. |
-| Worked examples | sibling checkout, not this zip | Seed and working `.archimate` files, sequenced job pastes, run logs. |
-
-The mill walk page is pictures for the public pack. Open the Archi file from the worked-examples checkout if you have it. Invoice-to-cash and the landing-zone refuse stay prompt cards until they have an author-run model.
-
 ## Prerequisites
 
 - Archi with the JGS Archi Bridge plugin
