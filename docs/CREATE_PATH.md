@@ -35,8 +35,11 @@ Guidance elsewhere in this file may use "prefer" or "when useful". The table bel
 | CP-G5 | Annotate last | Notes, legends, and images are the last objects placed on a view. Omit `height` on notes. Place notes with `position: below-content`. A later geometry change re-opens CP-G6. |
 | CP-G6 | Render close-out | After any add, move, resize, or style on a view, including notes, the last actions are `assess-layout` (dispose every non-pass `ratingBreakdown` dimension; `partial` and `not-checked` are unverified) and an `export-view` PNG that is inspected. |
 | CP-G7 | First generation is a draft | The documentation specialist ends the run at a draft checkpoint. Do not present the model as finished. |
+| CP-G8 | First-mutate readiness | The first mutating MCP call of every specialist run is a single small view call — `create-view`, or `add-to-view` on the confirmed target view — never a batch or bulk call. |
 
 Offline assist for CP-G3: `python helpers/disposition.py ledger.md`.
+
+Recovery for CP-G8: on a failed mutating call with the UI-thread error (MUTATION_FAILED), stop mutating, restart the Bridge connection from the host, re-verify state with read tools per CP-G2 fresh IDs, retry the call once, then hand back (status blocked) if it fails again.
 
 ## When mutations are allowed (SPEC-D-15 / NG-3)
 
