@@ -252,19 +252,21 @@ POINTER = (
     "A sequenced Hatherley Plate mill walk is on the companion page"
 )
 
+WE_REPO_URL = "https://github.com/jgsystemsconsulting/jgs-archi-skills-we"
+
 
 class HatherleyPointerTests(unittest.TestCase):
-    def test_hatherley_pointer_present_without_private_repo_name(self) -> None:
+    def test_hatherley_pointer_present_with_public_repo_link(self) -> None:
         skill_usage = ROOT / "docs" / "skill-usage.md"
         readme = ROOT / "README.md"
         for path in (readme, skill_usage):
             text = path.read_text(encoding="utf-8")
             self.assertIn(POINTER, text, f"{path.name} missing Hatherley pointer")
             self.assertIn("hatherley.html", text, f"{path.name} missing mill walk page")
-            self.assertNotIn(
-                "jgs-archi-skills-we",
+            self.assertIn(
+                WE_REPO_URL,
                 text,
-                f"{path.name} must not name the private repository",
+                f"{path.name} missing public worked-example repository link",
             )
 
 
