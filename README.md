@@ -5,7 +5,7 @@
 
 <p align="center">
   <img src="https://img.shields.io/badge/licence-MIT-green" alt="Licence: MIT">
-  <img src="https://img.shields.io/badge/version-1.0.0-green" alt="Version 1.0.0">
+  <img src="https://img.shields.io/badge/version-1.0.1-green" alt="Version 1.0.1">
   <img src="https://img.shields.io/badge/skills-14-blueviolet" alt="14 skills">
   <img src="https://img.shields.io/badge/tested%20with-ZCode-8A2BE2" alt="Tested with ZCode">
   <img src="https://img.shields.io/badge/tested%20with-Claude%20Code-8A2BE2" alt="Tested with Claude Code">
@@ -221,4 +221,4 @@ in `docs/mcp/archi-bridge-inventory.json`.
 
 ## Version
 
-v1.0.0. See [CHANGELOG.md](CHANGELOG.md).
+v1.0.1. See [CHANGELOG.md](CHANGELOG.md).

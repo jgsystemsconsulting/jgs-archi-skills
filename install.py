@@ -115,7 +115,7 @@ def install_gemini(src: Path, dest: Path, *, dry: bool) -> None:
     desc, body = _skill_parts(src)
     manifest = {
         "name": f"{NS}-{src.name}",
-        "version": "1.0.0",
+        "version": "1.0.1",
         "description": desc,
         "contextFileName": "GEMINI.md",
     }

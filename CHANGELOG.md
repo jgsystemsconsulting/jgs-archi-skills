@@ -8,18 +8,26 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 
 ## [Unreleased]
 
-- Companion mill walk page (`docs/hatherley.html`) with five Hatherley Plate view exports. Author-run frozen brief. Refuse at the View Plan gate is the method.
+## [1.0.1] - 2026-09-08
 
-- Orchestrator View Plan gains a Done When section: named-deliverable or
-  outcome-until stop rule, signed pass checks, and MUST NOT. Approve signs
-  the exit. Schema helper requires the tenth heading.
+The orchestrator now has a goal path. Same `/archi-orchestrator`. Start the
+invoke with `goal:` or `until:` to lock outcome-until: keep going until the
+signed outcome is visible on the model. Named deliverable stays the default.
+Landing How you ask and skill-usage document both stop rules. Prompt card p15
+is the copy-paste `until:` job.
 
+- Done When on the View Plan: named-deliverable or outcome-until, signed pass
+  checks, and MUST NOT. Approve signs the exit.
+- Companion mill walk page (`docs/hatherley.html`) with five Hatherley Plate
+  view exports. Author-run frozen brief. Refuse at the View Plan gate is the
+  method.
 - Companion GitHub Pages hub (altitudes, agents, how you ask, why, eval,
   examples, install) plus a six-layer guide written for a technology architect
 - Hub names every install host (ZCode, Claude Code, Cursor, Gemini CLI,
   OpenAI Codex, GitHub Copilot CLI) and points pack feedback plus Discussions
   as the public room
-- Companion Engagement page: standup, named viewpoint packages, and enablement, with no rate card on the page
+- Companion Engagement page: standup, named viewpoint packages, and
+  enablement, with no rate card on the page
 
 ## [1.0.0] - 2026-08-31
 
