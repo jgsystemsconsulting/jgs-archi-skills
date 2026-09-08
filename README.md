@@ -137,7 +137,7 @@ Starter prompts (copy one line): [docs/prompts/README.md](docs/prompts/README.md
 /archi-orchestrator until: finance and ops can trace quote to cash on the model from a capability through a process to an application
 ```
 
-A sequenced Hatherley Plate mill walk is on the companion page [hatherley.html](docs/hatherley.html). Five views. CRM must not swallow MES. Author-run frozen brief. Rejecting the View Plan writes nothing.
+A sequenced Hatherley Plate mill walk is on the companion page [hatherley.html](docs/hatherley.html). Five views. CRM must not swallow MES. Author-run frozen brief. Rejecting the View Plan writes nothing. The working models and paste fences live in [jgs-archi-skills-we](https://github.com/jgsystemsconsulting/jgs-archi-skills-we).
 
 ```mermaid
 flowchart LR

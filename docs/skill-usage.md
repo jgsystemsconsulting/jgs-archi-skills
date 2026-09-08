@@ -84,7 +84,7 @@ P0 examples:
 
 Do not invoke specialists yourself. Do not paste element-create commands.
 
-A sequenced Hatherley Plate mill walk is on the companion page [hatherley.html](hatherley.html). Five views. CRM must not swallow MES. Author-run frozen brief. Rejecting the View Plan writes nothing.
+A sequenced Hatherley Plate mill walk is on the companion page [hatherley.html](hatherley.html). Five views. CRM must not swallow MES. Author-run frozen brief. Rejecting the View Plan writes nothing. The working models and paste fences live in [jgs-archi-skills-we](https://github.com/jgsystemsconsulting/jgs-archi-skills-we).
 
 ## What it does, in order
 
