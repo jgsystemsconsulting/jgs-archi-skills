@@ -13,6 +13,8 @@ DOCS = ROOT / "docs"
 INDEX = DOCS / "index.html"
 GUIDE = DOCS / "guide.html"
 ENGAGE = DOCS / "engage.html"
+WHY = DOCS / "why-soam.html"
+HATHERLEY = DOCS / "hatherley.html"
 CSS = DOCS / "site.css"
 README = ROOT / "README.md"
 
@@ -128,9 +130,11 @@ class CompanionSiteTests(unittest.TestCase):
         self.assertTrue(INDEX.is_file(), "docs/index.html missing")
         self.assertTrue(GUIDE.is_file(), "docs/guide.html missing")
         self.assertTrue(ENGAGE.is_file(), "docs/engage.html missing")
+        self.assertTrue(WHY.is_file(), "docs/why-soam.html missing")
+        self.assertTrue(HATHERLEY.is_file(), "docs/hatherley.html missing")
 
     def test_html_links_shared_css(self) -> None:
-        for path in (INDEX, GUIDE, ENGAGE):
+        for path in (INDEX, GUIDE, ENGAGE, WHY, HATHERLEY):
             text = path.read_text(encoding="utf-8")
             self.assertIn('href="site.css"', text, f"{path.name} missing site.css link")
 
@@ -169,7 +173,7 @@ class CompanionSiteTests(unittest.TestCase):
             self.assertIn(name, body, f"{sid} missing {name}")
 
     def test_no_copied_catalog(self) -> None:
-        for path in (INDEX, GUIDE, ENGAGE):
+        for path in (INDEX, GUIDE, ENGAGE, WHY, HATHERLEY):
             text = path.read_text(encoding="utf-8")
             if "archimate://reference/archimate-layers" in text:
                 idx = text.index("archimate://reference/archimate-layers")
@@ -178,7 +182,7 @@ class CompanionSiteTests(unittest.TestCase):
             self.assertNotIn("Access relationship", text)
 
     def test_no_em_dash_outside_comments(self) -> None:
-        for path in (INDEX, GUIDE, ENGAGE):
+        for path in (INDEX, GUIDE, ENGAGE, WHY, HATHERLEY):
             visible = _strip_comments(path.read_text(encoding="utf-8"))
             self.assertNotIn("\u2014", visible, f"em dash in {path.name}")
 

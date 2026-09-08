@@ -8,6 +8,8 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 
 ## [Unreleased]
 
+- Companion mill walk page (`docs/hatherley.html`) with five Hatherley Plate view exports. Author-run frozen brief. Refuse at the View Plan gate is the method.
+
 - Orchestrator View Plan gains a Done When section: named-deliverable or
   outcome-until stop rule, signed pass checks, and MUST NOT. Approve signs
   the exit. Schema helper requires the tenth heading.

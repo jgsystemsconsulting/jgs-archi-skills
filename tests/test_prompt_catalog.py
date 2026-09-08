@@ -249,9 +249,7 @@ class ProductDocsTests(unittest.TestCase):
 
 
 POINTER = (
-    "A sequenced Hatherley Plate worked example (plant as-is plus CRM "
-    "visibility, five orchestrator jobs) is maintained privately. It will be "
-    "published after the first live run."
+    "A sequenced Hatherley Plate mill walk is on the companion page"
 )
 
 
@@ -262,6 +260,7 @@ class HatherleyPointerTests(unittest.TestCase):
         for path in (readme, skill_usage):
             text = path.read_text(encoding="utf-8")
             self.assertIn(POINTER, text, f"{path.name} missing Hatherley pointer")
+            self.assertIn("hatherley.html", text, f"{path.name} missing mill walk page")
             self.assertNotIn(
                 "jgs-archi-skills-we",
                 text,
