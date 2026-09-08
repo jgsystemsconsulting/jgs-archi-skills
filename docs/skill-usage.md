@@ -39,7 +39,22 @@ It elicits intent, drafts a schema-checked View Plan, grounds viewpoints, and
 stops at a confirmation gate. Specialists run only after you approve the plan.
 Do not invoke layer specialists yourself.
 
-The orchestrator classifies the invoke as a named deliverable or an outcome to chase. Approving the View Plan also signs the Done When section (stop rule, pass checks, MUST NOT). The run stops when those hold, not when the agent can still think of another layer.
+### Stop rules
+
+The same command. Two ways a run stops. Approving the View Plan signs Done When (stop rule, pass checks, MUST NOT). The run stops when those hold, not when the agent can still think of another layer.
+
+Named deliverable (default): named views or layers exist, MUST NOT holds, then stop. Lock it by starting the invoke with `only:` or `just:`.
+
+Outcome until: keep in-scope specialists until the signed pass checks are true on the model, then stop. Lock it by starting the invoke with `until:`. `goal:` is the same lock. Prefer `until:`. `goal:` collides with an ArchiMate Goal.
+
+If the line names both a deliverable and an outcome, named-deliverable wins. The named job is the work. The outcome is the why. If neither is clear, the orchestrator asks one question, then defaults to named-deliverable.
+
+```text
+/archi-orchestrator only: invoice-to-cash capability map for finance and ops
+/archi-orchestrator until: finance and ops can trace quote to cash on the model from a capability through a process to an application
+```
+
+Copy-paste card for the second shape: [p15-outcome-until.md](prompts/p15-outcome-until.md).
 
 If a run hits a pack or MCP-contract hole that any user would hit, the
 orchestrator may offer to raise a GitHub issue. You can also invoke

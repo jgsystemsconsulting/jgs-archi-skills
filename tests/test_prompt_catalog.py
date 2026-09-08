@@ -140,9 +140,9 @@ class SchemaUnitTests(unittest.TestCase):
 
 
 class CatalogTests(unittest.TestCase):
-    def test_fourteen_cards(self) -> None:
+    def test_fifteen_cards(self) -> None:
         cards = iter_cards(PROMPTS)
-        self.assertEqual(len(cards), 14, [p.name for p in cards])
+        self.assertEqual(len(cards), 15, [p.name for p in cards])
 
     def test_each_card_valid(self) -> None:
         cards = iter_cards(PROMPTS)
@@ -157,12 +157,12 @@ class CatalogTests(unittest.TestCase):
         for path in iter_cards(PROMPTS):
             pri = sections(path.read_text(encoding="utf-8"))["Priority"].strip()
             counts[pri] += 1
-        self.assertEqual(counts, {"P0": 4, "P1": 6, "P2": 4})
+        self.assertEqual(counts, {"P0": 4, "P1": 7, "P2": 4})
 
-    def test_filenames_p01_to_p14(self) -> None:
+    def test_filenames_p01_to_p15(self) -> None:
         names = [p.name for p in iter_cards(PROMPTS)]
         prefixes = [n[:3] for n in names]
-        self.assertEqual(prefixes, [f"p{i:02d}" for i in range(1, 15)])
+        self.assertEqual(prefixes, [f"p{i:02d}" for i in range(1, 16)])
 
     def test_all_specialists_covered(self) -> None:
         listed: set[str] = set()

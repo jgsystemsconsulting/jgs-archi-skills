@@ -134,6 +134,7 @@ Starter prompts (copy one line): [docs/prompts/README.md](docs/prompts/README.md
 /archi-orchestrator on the current model, add a second CRM for the European branch and show impact; do not duplicate shared customer data
 /archi-orchestrator move the legacy TMS to a cloud landing zone; plateaus and work packages only. Do not redesign the business.
 /archi-orchestrator board pack: drivers, goals, and outcomes for cutting quote time from 4 hours to 30 minutes. No applications.
+/archi-orchestrator until: finance and ops can trace quote to cash on the model from a capability through a process to an application
 ```
 
 A sequenced Hatherley Plate mill walk is on the companion page [hatherley.html](docs/hatherley.html). Five views. CRM must not swallow MES. Author-run frozen brief. Rejecting the View Plan writes nothing.
