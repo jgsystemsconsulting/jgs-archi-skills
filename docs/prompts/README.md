@@ -30,6 +30,7 @@ How to invoke: [skill-usage.md](../skill-usage.md).
 /archi-orchestrator move the legacy TMS to a cloud landing zone; plateaus and work packages only. Do not redesign the business.
 /archi-orchestrator customer portal needs zero-trust access: identity, API gateway, and the rule that customers see only their own shipments
 /archi-orchestrator the Application Support view is unreadable. Relayout it and report compliance issues. Do not add elements.
+/archi-orchestrator until: finance and ops can trace quote to cash on the model from a capability through a process to an application
 ```
 
 ## P2 (same skeleton, new domain)
@@ -66,6 +67,7 @@ python helpers/prompt_card_schema.py docs/prompts
 | Planning permits | [p12-planning-permits.md](p12-planning-permits.md) |
 | Bank onboarding | [p13-bank-onboarding.md](p13-bank-onboarding.md) |
 | Conference event | [p14-conference-event.md](p14-conference-event.md) |
+| Quote to cash until traceable | [p15-outcome-until.md](p15-outcome-until.md) |
 
 The maintainer eval-loop frozen scenario (Meridian Freight) stays under
 `docs/eval/` and is not this pack. Do not edit it to add prompts.
