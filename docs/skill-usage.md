@@ -69,7 +69,7 @@ P0 examples:
 
 Do not invoke specialists yourself. Do not paste element-create commands.
 
-A sequenced Hatherley Plate worked example (plant as-is plus CRM visibility, five orchestrator jobs) is maintained privately. It will be published after the first live run.
+A sequenced Hatherley Plate mill walk is on the companion page [hatherley.html](hatherley.html). Five views. CRM must not swallow MES. Author-run frozen brief. Rejecting the View Plan writes nothing.
 
 ## What it does, in order
 

@@ -136,7 +136,7 @@ Starter prompts (copy one line): [docs/prompts/README.md](docs/prompts/README.md
 /archi-orchestrator board pack: drivers, goals, and outcomes for cutting quote time from 4 hours to 30 minutes. No applications.
 ```
 
-A sequenced Hatherley Plate worked example (plant as-is plus CRM visibility, five orchestrator jobs) is maintained privately. It will be published after the first live run.
+A sequenced Hatherley Plate mill walk is on the companion page [hatherley.html](docs/hatherley.html). Five views. CRM must not swallow MES. Author-run frozen brief. Rejecting the View Plan writes nothing.
 
 ```mermaid
 flowchart LR
