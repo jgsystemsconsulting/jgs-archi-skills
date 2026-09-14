@@ -35,3 +35,15 @@ graphify-out/
 .planning/graphs/.rebuild.lock
 .planning/graphs/.last-build-status.json
 .planning/graphs/.last-build-snapshot.json
+
+# TeX build debris and preview scratch under docs/papers/ieee
+docs/papers/ieee/*.aux
+docs/papers/ieee/*.bbl
+docs/papers/ieee/*.blg
+docs/papers/ieee/*.log
+docs/papers/ieee/*.out
+docs/papers/ieee/_preview/
+docs/papers/ieee/soam-ieee-software-2026-09-07.pdf
+docs/papers/ieee/soam-ieee-long-2026-09-07.pdf
+# Draft images stay out of the published tree
+docs/images/drafts/

@@ -8,6 +8,20 @@ Single-source history for jgs-archi-skills. Tags are three-component semver
 
 ## [Unreleased]
 
+- Papers and adoption pack lands in the tracked tree: `docs/papers/` markdown
+  set, `docs/papers/landing.md`, both IEEE PDFs, both TeX sources, `soam.bib`,
+  and the two build scripts, so README and companion links resolve on GitHub.
+- `docs/papers/ieee/build.sh` and `build-long.sh` now call `pdflatex` and
+  `bibtex` from PATH; the machine-local MiKTeX absolute paths are gone.
+- TeX debris (`*.aux`, `*.bbl`, `*.blg`, `*.log`, `*.out` under
+  `docs/papers/ieee/`), the `_preview/` scratch directory, both dated preview
+  PDFs, and `docs/images/drafts/` are gitignored; the `soam-workshop.md`
+  leftover and the internal FCL triage log are deleted, and the pack README
+  drops the workshop link.
+- `docs/papers/why-soam.md` honesty edit is now tracked: invoice-to-cash is
+  first-contact only, the IEEE walks are the mill and the range, the TMS
+  starter stays unexecuted.
+
 ## [1.0.1] - 2026-09-08
 
 The orchestrator now has a goal path. Same `/archi-orchestrator`. Start the

@@ -39,7 +39,7 @@ Stop here. Read the plan the way you would read a statement of work. If you woul
 
 If you approve, only the named specialists run. They write elements, relations, views, and documentation fields through the bridge into Archi. Traceability must leave at least one path from a capability through a process to an application. Documentation fields carry an evidence line (stated, inferred, or existing), not a restatement of the element name. The first generation ends at a draft checkpoint. Completing a specialist does not mean the architecture is finished. The ERP is already there; the run maps what it covers versus spreadsheet work. It does not propose a replacement programme.
 
-Two other frozen briefs sit in the method papers for coverage you will not walk here: a plant CRM programme that must not swallow the MES, and a TMS landing-zone move that forbids business redesign. Same gate. Same rule that a refused layer is method behaviour.
+Invoice-to-cash is install first-contact only: stop at the gate. The IEEE paper walks are two author-run models in the we-repo (Hatherley Plate mill CRM that must not swallow the MES, and Moorfield Range where RangePlan must not swallow GroundOS or AirStack). A TMS landing-zone refuse remains an unexecuted starter prompt. Same gate on every brief. A refused layer is method behaviour.
 
 ## What it brings over manual modelling {#manual}
 
@@ -79,7 +79,7 @@ A prompt that says "draw ArchiMate" has none of these rules. MCP is the tool pro
 
 | Works now | Evidence pending | Community dependent |
 |---|---|---|
-| v1.0.0 pack, 14 skills, offline test suite, structural validation of MCP references, seven install targets, opt-in live MCP smoke | Timing study against hand modelling on the same brief; second-architect repeat runs for stable element names; one anonymised client run; QA defect-class comparison against a senior architect | Issue flow on the pack, worked-run reports on Discussions, recipe and convention contributions |
+| v1.0.0 pack, 14 skills, offline test suite, structural validation of MCP references, seven install targets, opt-in live MCP smoke. Evidence: two public author-run frozen-brief models with replayable pastes in [jgs-archi-skills-we](https://github.com/jgsystemsconsulting/jgs-archi-skills-we) | Timing study against hand modelling on the same brief; second-architect repeat runs for stable element names; one anonymised client run; QA defect-class comparison against a senior architect | Issue flow on the pack, community worked-run reports on Discussions, recipe and convention contributions |
 
 Unknown stays unknown. The walks so far are frozen briefs by the method authors, not client engagements. They show method coverage. They do not show organisational uptake. Language-model output is non-deterministic; the same intent can yield different element names. Governance (approval gate, QA, no-invention rule) is the control, not model temperature. The implementation is one bridge, one skill suite, Archi only. The argument does not generalise to Sparx or LeanIX. Throughput is unmeasured. Those future measurements match the list in the IEEE practice write-up. They are not results on this page.
 
@@ -113,7 +113,7 @@ Stop at the view plan. If you would not sign it, reject it. Nothing was written.
 
 No speedup percentage. No replacement for the enterprise architect. No industry-adoption claim. ArchiMate is not incomplete, and architects are not slow. Given ArchiMate and Archi, the dominant practice does not instrument the method. Cadence of architecture work is the reason an engineering organisation should care; measure it later.
 
-The method write-up that backs these boundaries is the IEEE Software practice cut [`ieee/soam-ieee-software.pdf`](ieee/soam-ieee-software.pdf) (markdown working copy [`soam-ieee-software.md`](soam-ieee-software.md)). The longer preprint is [`ieee/soam-ieee-long.pdf`](ieee/soam-ieee-long.pdf). Both name the same refusals this brief inherits: parallel-artefact generation is not the method, MCP is not a modelling method by itself, the walks are frozen briefs by the authors, throughput is unmeasured, and design-for-adoption is not evidence of uptake.
+The method write-up that backs these boundaries is the IEEE Software practice cut [`ieee/soam-ieee-software.pdf`](ieee/soam-ieee-software.pdf) (markdown working copy [`soam-ieee-software.md`](soam-ieee-software.md)). The longer preprint is [`ieee/soam-ieee-long.pdf`](ieee/soam-ieee-long.pdf). Both name the same refusals this brief inherits: parallel-artefact generation is not the method, MCP is not a modelling method by itself, the IEEE walks are two author-run frozen briefs (mill and range), throughput is unmeasured, and design-for-adoption is not evidence of uptake. Invoice-to-cash on this page is first-contact install practice, not an IEEE walk.
 
 Canonical web page for this brief: [https://jgsystemsconsulting.github.io/jgs-archi-skills/why-soam.html](https://jgsystemsconsulting.github.io/jgs-archi-skills/why-soam.html).
 
