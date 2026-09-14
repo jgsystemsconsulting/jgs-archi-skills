@@ -104,6 +104,29 @@ META_DESCRIPTION = (
 )
 BANNED_VISIBLE = ("\u2014", "£", "$", "GBP", "price", "day rate")
 
+WHY_MD = DOCS / "papers" / "why-soam.md"
+PAPERS = DOCS / "papers"
+WE_REPO_HREF = "https://github.com/jgsystemsconsulting/jgs-archi-skills-we"
+GITHUB_BLOB_PREFIX = "https://github.com/jgsystemsconsulting/jgs-archi-skills/blob/"
+BLOB_BRANCH = "master"
+REQUIRED_PARITY_FRAGMENTS = (
+    "Invoice-to-cash is install first-contact only",
+    "The IEEE paper walks are two author-run models in the we-repo",
+    "Hatherley Plate mill CRM that must not swallow the MES",
+    "Moorfield Range where RangePlan must not swallow GroundOS or AirStack",
+    "A TMS landing-zone refuse remains an unexecuted starter prompt",
+    "A refused layer is method behaviour",
+    "Evidence: two public author-run frozen-brief models with replayable pastes in",
+    "the IEEE walks are two author-run frozen briefs (mill and range)",
+    "Invoice-to-cash on this page is first-contact install practice, not an IEEE walk",
+)
+BANNED_PARITY_FRAGMENTS = (
+    "Two other frozen briefs sit in the method papers",
+    "a plant CRM programme that must not swallow the MES",
+    "a TMS landing-zone move that forbids business redesign",
+    "the walks are frozen briefs by the authors",
+)
+
 
 def _strip_comments(html: str) -> str:
     return re.sub(r"<!--.*?-->", "", html, flags=re.S)
@@ -268,6 +291,36 @@ class CompanionSiteTests(unittest.TestCase):
         not_sold = _section(text, "not-sold")
         for line in NOT_SOLD:
             self.assertIn(line, not_sold)
+
+
+class WhySoamParityTests(unittest.TestCase):
+    def test_parity_fragments_in_md_and_html(self) -> None:
+        md = WHY_MD.read_text(encoding="utf-8")
+        html = WHY.read_text(encoding="utf-8")
+        for frag in REQUIRED_PARITY_FRAGMENTS:
+            self.assertIn(frag, md, f"md missing parity fragment: {frag}")
+            self.assertIn(frag, html, f"html missing parity fragment: {frag}")
+        for frag in BANNED_PARITY_FRAGMENTS:
+            self.assertNotIn(frag, md, f"stale fragment in md: {frag}")
+            self.assertNotIn(frag, html, f"stale fragment in html: {frag}")
+
+    def test_paper_targets_resolve(self) -> None:
+        md = WHY_MD.read_text(encoding="utf-8")
+        html = WHY.read_text(encoding="utf-8")
+        self.assertIn(WE_REPO_HREF, md, "md missing we-repo href")
+        self.assertIn(WE_REPO_HREF, html, "html missing we-repo href")
+        for target in re.findall(r"\]\(([^)\s]+)\)", md):
+            if not (target.endswith(".pdf") or target.endswith(".md")):
+                continue
+            self.assertNotIn("://", target, f"relative md link must not carry a scheme: {target}")
+            self.assertTrue((PAPERS / target).is_file(), f"md link target missing: {target}")
+        for href in re.findall(r'href="([^"]+)"', html):
+            if not href.startswith(GITHUB_BLOB_PREFIX):
+                continue
+            branch, _, rel = href[len(GITHUB_BLOB_PREFIX):].partition("/")
+            self.assertEqual(branch, BLOB_BRANCH, f"unexpected blob branch: {href}")
+            self.assertTrue(rel, f"blob href without path: {href}")
+            self.assertTrue((ROOT / rel).is_file(), f"blob href target missing: {href}")
 
 
 if __name__ == "__main__":
