@@ -1,10 +1,21 @@
 # Copyright (c) 2026 JG Systems Consulting Ltd. Source: https://github.com/jgsystemsconsulting/jgs-archi-skills. See LICENSE.
 # SPDX-License-Identifier: MIT
-"""Release gate (RR-B-15): required files, forbidden paths, forbidden
-content, headers present. Exits non-zero on any failure.
+"""Release gate (RR-B-15). Run locally: python scripts/check_release.py
 
-CI (validate.yml) inlines the same checks and MUST NOT execute this file.
-Run locally: python scripts/check_release.py
+Local coverage: required files, forbidden tracked paths, forbidden-content
+leak sentinels, Python headers and SPDX, UTF-8 BOM in parser-critical files,
+version consistency across the six version-bearing sources, and SKILL.md
+frontmatter lint.
+
+CI (.github/workflows/validate.yml) runs equivalent inline checks and is the
+authority. CI must not execute checkout code, so the two implementations are
+kept in sync by comment cross-references in this file, not by shared code.
+
+Both sides skip `.github/` in the content scan because workflow files
+legitimately discuss secret plumbing. Residual risk: a real secret pasted
+into a workflow file, or into an unscanned file extension, passes this gate.
+
+Exits non-zero on any failure.
 """
 from __future__ import annotations
 
@@ -12,8 +23,6 @@ import pathlib
 import re
 import subprocess
 import sys
-
-fails: list[str] = []
 
 REQUIRED = [
     "LICENSE",
@@ -43,13 +52,7 @@ REQUIRED = [
     ".agents/plugins/marketplace.json",
     "gemini-extension.json",
 ]
-for f in REQUIRED:
-    if not pathlib.Path(f).is_file():
-        fails.append(f"required file missing: {f}")
 
-tracked = subprocess.run(
-    ["git", "ls-files"], capture_output=True, text=True, check=True
-).stdout.splitlines()
 FORBIDDEN_PATH_PARTS = [
     "__pycache__",
     ".venv",
@@ -58,39 +61,107 @@ FORBIDDEN_PATH_PARTS = [
     ".ruff_cache",
     ".bak",
 ]
-for f in tracked:
-    if any(part in f for part in FORBIDDEN_PATH_PARTS):
-        fails.append(f"forbidden tracked path: {f}")
 
+# keep in sync with .github/workflows/validate.yml (Forbidden content)
 FORBIDDEN_CONTENT = [
     re.compile(r"BEGIN [A-Z ]*PRIVATE KEY"),
     re.compile(r"CONFIDENTIAL\s+[-—]\s+Not for external distribution"),
 ]
-for f in tracked:
-    if f.startswith(".github/"):
-        continue
-    if not f.endswith(
-        (".py", ".md", ".txt", ".yml", ".yaml", ".json", ".cff", ".html")
-    ):
-        continue
-    text = pathlib.Path(f).read_text(encoding="utf-8", errors="ignore")
-    for rx in FORBIDDEN_CONTENT:
-        if rx.search(text):
-            fails.append(f"forbidden content in {f}: {rx.pattern}")
 
 HEADER_SENTINEL = "Copyright (c) 2026 JG Systems Consulting Ltd"
-for f in tracked:
-    if not f.endswith(".py"):
-        continue
-    head = pathlib.Path(f).read_text(encoding="utf-8", errors="ignore")[:600]
-    if HEADER_SENTINEL not in head:
-        fails.append(f"header missing: {f}")
-    if "SPDX-License-Identifier" not in head:
-        fails.append(f"SPDX missing: {f}")
 
-if fails:
-    print("RELEASE GATE FAILED:")
-    for f in fails:
-        print(f"  - {f}")
-    sys.exit(1)
-print("release gate: PASS")
+
+def tracked_files(cwd: pathlib.Path | None = None) -> list[str]:
+    """Git-tracked files relative to cwd.
+
+    Fails closed: any git failure or an empty listing raises RuntimeError.
+    """
+    try:
+        proc = subprocess.run(
+            ["git", "ls-files"],
+            capture_output=True,
+            text=True,
+            check=True,
+            cwd=str(cwd) if cwd is not None else None,
+        )
+    except (subprocess.CalledProcessError, OSError) as exc:
+        detail = getattr(exc, "stderr", None)
+        if isinstance(detail, str) and detail.strip():
+            msg = detail.strip()
+        else:
+            msg = str(exc)
+        raise RuntimeError(f"git ls-files failed: {msg}") from exc
+    tracked = proc.stdout.splitlines()
+    if not tracked:
+        raise RuntimeError("git ls-files returned no files; refusing to pass")
+    return tracked
+
+
+def check_required_files(root: pathlib.Path) -> list[str]:
+    return [
+        f"required file missing: {f}"
+        for f in REQUIRED
+        if not (root / f).is_file()
+    ]
+
+
+def check_forbidden_paths(tracked: list[str]) -> list[str]:
+    return [
+        f"forbidden tracked path: {f}"
+        for f in tracked
+        if any(part in f for part in FORBIDDEN_PATH_PARTS)
+    ]
+
+
+def check_forbidden_content(root: pathlib.Path, tracked: list[str]) -> list[str]:
+    fails: list[str] = []
+    for f in tracked:
+        if f.startswith(".github/"):
+            continue
+        if not f.endswith(
+            (".py", ".md", ".txt", ".yml", ".yaml", ".json", ".cff", ".html")
+        ):
+            continue
+        text = (root / f).read_text(encoding="utf-8", errors="ignore")
+        for rx in FORBIDDEN_CONTENT:
+            if rx.search(text):
+                fails.append(f"forbidden content in {f}: {rx.pattern}")
+    return fails
+
+
+def check_headers(root: pathlib.Path, tracked: list[str]) -> list[str]:
+    fails: list[str] = []
+    for f in tracked:
+        if not f.endswith(".py"):
+            continue
+        head = (root / f).read_text(encoding="utf-8", errors="ignore")[:600]
+        if HEADER_SENTINEL not in head:
+            fails.append(f"header missing: {f}")
+        if "SPDX-License-Identifier" not in head:
+            fails.append(f"SPDX missing: {f}")
+    return fails
+
+
+def main() -> int:
+    root = pathlib.Path(".")
+    try:
+        tracked = tracked_files()
+    except RuntimeError as exc:
+        print(f"RELEASE GATE FAILED:\n  - {exc}")
+        return 1
+    fails: list[str] = []
+    fails += check_required_files(root)
+    fails += check_forbidden_paths(tracked)
+    fails += check_forbidden_content(root, tracked)
+    fails += check_headers(root, tracked)
+    if fails:
+        print("RELEASE GATE FAILED:")
+        for f in fails:
+            print(f"  - {f}")
+        return 1
+    print("release gate: PASS")
+    return 0
+
+
+if __name__ == "__main__":
+    sys.exit(main())
