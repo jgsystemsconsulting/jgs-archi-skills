@@ -142,6 +142,20 @@ def check_headers(root: pathlib.Path, tracked: list[str]) -> list[str]:
     return fails
 
 
+# keep in sync with .github/workflows/validate.yml (BOM check)
+# Local difference: tracked files only, because a local checkout has .venv/
+# with hundreds of vendored .json files a blind rglob would drown the signal.
+# On a clean checkout tracked files and rglob agree, so parity holds in CI.
+def check_bom(root: pathlib.Path, tracked: list[str]) -> list[str]:
+    fails: list[str] = []
+    for f in tracked:
+        if not f.endswith((".toml", ".json", ".yaml", ".yml", ".cff")):
+            continue
+        if (root / f).read_bytes()[:3] == b"\xef\xbb\xbf":
+            fails.append(f"UTF-8 BOM in parser-critical file: {f}")
+    return fails
+
+
 def main() -> int:
     root = pathlib.Path(".")
     try:
@@ -154,6 +168,7 @@ def main() -> int:
     fails += check_forbidden_paths(tracked)
     fails += check_forbidden_content(root, tracked)
     fails += check_headers(root, tracked)
+    fails += check_bom(root, tracked)
     if fails:
         print("RELEASE GATE FAILED:")
         for f in fails:

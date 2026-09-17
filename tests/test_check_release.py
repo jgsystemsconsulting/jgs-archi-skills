@@ -104,5 +104,20 @@ class HeadersTest(CheckReleaseBase):
         self.assertEqual(check_release.check_headers(self.root, ["good.py"]), [])
 
 
+class BomTest(CheckReleaseBase):
+    def test_bom_flagged(self) -> None:
+        (self.root / "data.json").write_bytes(b"\xef\xbb\xbf{}")
+        fails = check_release.check_bom(self.root, ["data.json"])
+        self.assertEqual(fails, ["UTF-8 BOM in parser-critical file: data.json"])
+
+    def test_clean_file_passes(self) -> None:
+        (self.root / "data.json").write_text("{}", encoding="utf-8")
+        self.assertEqual(check_release.check_bom(self.root, ["data.json"]), [])
+
+    def test_unscoped_extension_ignored(self) -> None:
+        (self.root / "notes.md").write_bytes(b"\xef\xbb\xbf# hi")
+        self.assertEqual(check_release.check_bom(self.root, ["notes.md"]), [])
+
+
 if __name__ == "__main__":
     unittest.main()
