@@ -19,6 +19,7 @@ Exits non-zero on any failure.
 """
 from __future__ import annotations
 
+import json
 import pathlib
 import re
 import subprocess
@@ -156,6 +157,52 @@ def check_bom(root: pathlib.Path, tracked: list[str]) -> list[str]:
     return fails
 
 
+# keep in sync with .github/workflows/validate.yml (Version consistency)
+def check_versions(root: pathlib.Path) -> list[str]:
+    def changelog_top() -> str | None:
+        p = root / "CHANGELOG.md"
+        if not p.is_file():
+            return None
+        t = p.read_text(encoding="utf-8")
+        m = re.search(r"^##\s*\[?v?(\d+\.\d+\.\d+)", t, re.M)
+        return m.group(1) if m else None
+
+    def release_info() -> str | None:
+        p = root / "RELEASE-INFO.txt"
+        if not p.is_file():
+            return None
+        t = p.read_text(encoding="utf-8")
+        m = re.search(r"^Version:\s*(\d+\.\d+\.\d+)", t, re.M)
+        return m.group(1) if m else None
+
+    def citation() -> str | None:
+        p = root / "CITATION.cff"
+        if not p.is_file():
+            return None
+        t = p.read_text(encoding="utf-8")
+        m = re.search(r"^version:\s*[\"']?(\d+\.\d+\.\d+)", t, re.M)
+        return m.group(1) if m else None
+
+    def plugin(path: str) -> str | None:
+        p = root / path
+        if not p.is_file():
+            return None
+        return json.loads(p.read_text(encoding="utf-8")).get("version")
+
+    vals = {
+        "CHANGELOG": changelog_top(),
+        "RELEASE-INFO": release_info(),
+        "CITATION.cff": citation(),
+        "claude plugin.json": plugin(".claude-plugin/plugin.json"),
+        "cursor plugin.json": plugin(".cursor-plugin/plugin.json"),
+        "gemini-extension.json": plugin("gemini-extension.json"),
+    }
+    uniq = {v for v in vals.values() if v}
+    if None in vals.values() or len(uniq) != 1:
+        return [f"version mismatch across sources: {vals}"]
+    return []
+
+
 def main() -> int:
     root = pathlib.Path(".")
     try:
@@ -169,6 +216,7 @@ def main() -> int:
     fails += check_forbidden_content(root, tracked)
     fails += check_headers(root, tracked)
     fails += check_bom(root, tracked)
+    fails += check_versions(root)
     if fails:
         print("RELEASE GATE FAILED:")
         for f in fails:

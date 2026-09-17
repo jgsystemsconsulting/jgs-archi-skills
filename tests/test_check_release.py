@@ -119,5 +119,38 @@ class BomTest(CheckReleaseBase):
         self.assertEqual(check_release.check_bom(self.root, ["notes.md"]), [])
 
 
+class VersionsTest(CheckReleaseBase):
+    V = "1.2.3"
+
+    def write_all(self, version: str) -> None:
+        self.write("CHANGELOG.md", f"# Changelog\n\n## [v{version}] 2026-01-01\n")
+        self.write("RELEASE-INFO.txt", f"Version: {version}\n")
+        self.write("CITATION.cff", f"cff-version: 1.2.0\nversion: {version}\n")
+        for path in (
+            ".claude-plugin/plugin.json",
+            ".cursor-plugin/plugin.json",
+            "gemini-extension.json",
+        ):
+            self.write(path, f'{{"version": "{version}"}}\n')
+
+    def test_agreement_passes(self) -> None:
+        self.write_all(self.V)
+        self.assertEqual(check_release.check_versions(self.root), [])
+
+    def test_mismatch_flagged(self) -> None:
+        self.write_all(self.V)
+        self.write("gemini-extension.json", '{"version": "9.9.9"}\n')
+        fails = check_release.check_versions(self.root)
+        self.assertEqual(len(fails), 1)
+        self.assertIn("version mismatch across sources", fails[0])
+
+    def test_missing_source_flagged(self) -> None:
+        self.write_all(self.V)
+        (self.root / "CITATION.cff").unlink()
+        fails = check_release.check_versions(self.root)
+        self.assertEqual(len(fails), 1)
+        self.assertIn("version mismatch across sources", fails[0])
+
+
 if __name__ == "__main__":
     unittest.main()
