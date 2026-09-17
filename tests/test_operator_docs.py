@@ -34,5 +34,13 @@ class TestZCodeWire(unittest.TestCase):
         self.assertIn("docs/MCP.md#attach-from-zcode", text("README.md"))
 
 
+class TestEntryLinks(unittest.TestCase):
+    def test_readme_links_runbook(self):
+        self.assertIn("docs/live-mcp-smoke.md", text("README.md"))
+
+    def test_contributing_references_runbook(self):
+        self.assertIn("docs/live-mcp-smoke.md", text("CONTRIBUTING.md"))
+
+
 if __name__ == "__main__":
     unittest.main()

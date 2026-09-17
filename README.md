@@ -198,6 +198,8 @@ python -m unittest discover -s tests -q
 Tests cover the helpers, specialist contracts, installer, and offline
 fixtures. They never call the MCP. Live checks are opt-in via
 `python tests/live_mcp_smoke.py` (requires Archi + Bridge running).
+Runbook: [docs/live-mcp-smoke.md](docs/live-mcp-smoke.md) covers the scratch
+model (`JGS Skills Live Smoke`), Approval Mode handling, and failure symptoms.
 
 ## Structural validation
 

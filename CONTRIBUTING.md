@@ -17,7 +17,8 @@ python scripts/check_release.py
 ```
 
 Live MCP checks need Archi plus the JGS Archi Bridge. They are opt-in:
-`python tests/live_mcp_smoke.py`.
+`python tests/live_mcp_smoke.py`. Runbook:
+[docs/live-mcp-smoke.md](docs/live-mcp-smoke.md).
 
 ## In-session issues
 
