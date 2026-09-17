@@ -67,6 +67,8 @@ FORBIDDEN_PATH_PARTS = [
 FORBIDDEN_CONTENT = [
     re.compile(r"BEGIN [A-Z ]*PRIVATE KEY"),
     re.compile(r"CONFIDENTIAL\s+[-—]\s+Not for external distribution"),
+    re.compile(r"AKIA[0-9A-Z]{16}"),
+    re.compile(r"xox[baprs]-[0-9A-Za-z-]{10,}"),
 ]
 
 HEADER_SENTINEL = "Copyright (c) 2026 JG Systems Consulting Ltd"

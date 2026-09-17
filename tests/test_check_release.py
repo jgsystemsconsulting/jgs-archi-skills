@@ -88,6 +88,33 @@ class ForbiddenContentTest(CheckReleaseBase):
         )
 
 
+LEAK_SAMPLES = [
+    "BEGIN" + " RSA " + "PRIVATE " + "KEY",
+    "CONFIDENTIAL" + " - " + "Not for external distribution",
+    "AKIA" + "IOSFODNN7EXAMPLE",
+    "xox" + "b-" + "123456789012",
+]
+
+
+class LeakRegexTest(CheckReleaseBase):
+    def test_four_patterns_each_hit_sample_and_pass_benign(self) -> None:
+        benign = "no secrets here, see AKIA docs or the xox docs page"
+        self.assertEqual(len(check_release.FORBIDDEN_CONTENT), 4)
+        for rx, sample in zip(check_release.FORBIDDEN_CONTENT, LEAK_SAMPLES):
+            with self.subTest(pattern=rx.pattern):
+                self.assertIsNotNone(rx.search(sample))
+                self.assertIsNone(rx.search(benign))
+
+    def test_widened_patterns_flagged_by_scan(self) -> None:
+        for sample in LEAK_SAMPLES[2:]:
+            with self.subTest(sample=sample[:6]):
+                self.write("probe.md", sample)
+                fails = check_release.check_forbidden_content(
+                    self.root, ["probe.md"]
+                )
+                self.assertEqual(len(fails), 1)
+
+
 class HeadersTest(CheckReleaseBase):
     HEADER = (
         "# Copyright (c) 2026 JG Systems Consulting Ltd. See LICENSE.\n"

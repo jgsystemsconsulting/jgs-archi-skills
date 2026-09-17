@@ -62,6 +62,8 @@ jobs:
           ).stdout.splitlines()
           rx_key = re.compile(r"BEGIN [A-Z ]*PRIVATE KEY")
           rx_conf = re.compile(r"CONFIDENTIAL\s+[-—]\s+Not for external distribution")
+          rx_aws = re.compile(r"AKIA[0-9A-Z]{16}")
+          rx_slack = re.compile(r"xox[baprs]-[0-9A-Za-z-]{10,}")
           hits = []
           for f in tracked:
               if f.startswith(".github/"):
@@ -70,7 +72,10 @@ jobs:
                                  ".json", ".cff", ".html")):
                   continue
               text = pathlib.Path(f).read_text(encoding="utf-8", errors="ignore")
-              if rx_key.search(text) or rx_conf.search(text):
+              if any(
+                  rx.search(text)
+                  for rx in (rx_key, rx_conf, rx_aws, rx_slack)
+              ):
                   hits.append(f)
           if hits:
               print("::error::leak sentinel in: " + ", ".join(hits[:20]))
