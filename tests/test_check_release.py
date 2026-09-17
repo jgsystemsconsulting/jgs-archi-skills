@@ -152,5 +152,49 @@ class VersionsTest(CheckReleaseBase):
         self.assertIn("version mismatch across sources", fails[0])
 
 
+class FrontmatterTest(CheckReleaseBase):
+    GOOD_FM = "name: test-skill\ndescription: Does a thing.\n"
+    GOOD_BODY = "## When to use\n\nUse it.\n\nPrerequisites: none.\n"
+
+    def skill(self, name: str, fm: str, body: str) -> None:
+        self.write(f"skills/{name}/SKILL.md", f"---\n{fm}\n---\n\n{body}\n")
+
+    def test_valid_skill_passes(self) -> None:
+        self.skill("test-skill", self.GOOD_FM, self.GOOD_BODY)
+        self.assertEqual(check_release.check_frontmatter(self.root), [])
+
+    def test_no_skills_flagged(self) -> None:
+        self.assertEqual(
+            check_release.check_frontmatter(self.root),
+            ["no skills/*/SKILL.md found"],
+        )
+
+    def test_missing_name_flagged(self) -> None:
+        self.skill("test-skill", "description: x\n", self.GOOD_BODY)
+        fails = check_release.check_frontmatter(self.root)
+        self.assertIn(
+            "skills/test-skill/SKILL.md: frontmatter missing name", fails
+        )
+
+    def test_name_dir_mismatch_flagged(self) -> None:
+        self.skill("test-skill", "name: other-skill\ndescription: x\n", self.GOOD_BODY)
+        fails = check_release.check_frontmatter(self.root)
+        self.assertTrue(
+            any("name 'other-skill' != dir 'test-skill'" in f for f in fails)
+        )
+
+    def test_non_kebab_name_flagged(self) -> None:
+        self.skill("Test_Skill", "name: Test_Skill\ndescription: x\n", self.GOOD_BODY)
+        fails = check_release.check_frontmatter(self.root)
+        self.assertTrue(any("not kebab-case" in f for f in fails))
+
+    def test_missing_when_to_use_flagged(self) -> None:
+        self.skill(
+            "test-skill", self.GOOD_FM, "## Elsewhere\n\nPrerequisites: none.\n"
+        )
+        fails = check_release.check_frontmatter(self.root)
+        self.assertIn("skills/test-skill/SKILL.md: missing ## When to use", fails)
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -203,6 +203,46 @@ def check_versions(root: pathlib.Path) -> list[str]:
     return []
 
 
+# keep in sync with .github/workflows/validate.yml (SKILL.md frontmatter lint)
+def check_frontmatter(root: pathlib.Path) -> list[str]:
+    fails: list[str] = []
+    skills = sorted((root / "skills").glob("*/SKILL.md"))
+    if not skills:
+        return ["no skills/*/SKILL.md found"]
+    for p in skills:
+        t = p.read_text(encoding="utf-8")
+        m = re.match(r"^---\s*\n(.*?)\n---\s*\n", t, re.S)
+        if not m:
+            fails.append(f"{p.relative_to(root).as_posix()}: missing YAML frontmatter")
+            continue
+        fm = m.group(1)
+        body = t[m.end():]
+        nm = re.search(r"^name:\s*(\S+)", fm, re.M)
+        if not nm:
+            fails.append(f"{p.relative_to(root).as_posix()}: frontmatter missing name")
+        else:
+            name = nm.group(1).strip().strip('"').strip("'")
+            if name != p.parent.name:
+                fails.append(
+                    f"{p.relative_to(root).as_posix()}: name {name!r} != dir {p.parent.name!r}"
+                )
+            if not re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", name):
+                fails.append(
+                    f"{p.relative_to(root).as_posix()}: name not kebab-case: {name}"
+                )
+        if not re.search(r"^description:\s*\S", fm, re.M):
+            fails.append(
+                f"{p.relative_to(root).as_posix()}: frontmatter missing description"
+            )
+        if "## When to use" not in body:
+            fails.append(f"{p.relative_to(root).as_posix()}: missing ## When to use")
+        if not re.search(r"Prerequisites|Requirements|^compatibility:", body, re.M):
+            fails.append(
+                f"{p.relative_to(root).as_posix()}: missing prerequisites marker"
+            )
+    return fails
+
+
 def main() -> int:
     root = pathlib.Path(".")
     try:
@@ -217,6 +257,7 @@ def main() -> int:
     fails += check_headers(root, tracked)
     fails += check_bom(root, tracked)
     fails += check_versions(root)
+    fails += check_frontmatter(root)
     if fails:
         print("RELEASE GATE FAILED:")
         for f in fails:
