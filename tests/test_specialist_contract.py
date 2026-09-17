@@ -85,8 +85,21 @@ class SpecialistContractTests(unittest.TestCase):
 
     def test_create_path_gate_manifest(self) -> None:
         text = CREATE.read_text(encoding="utf-8")
-        for gate in ("CP-G1", "CP-G2", "CP-G3", "CP-G4", "CP-G5", "CP-G6", "CP-G7"):
+        for gate in (
+            "CP-G1", "CP-G2", "CP-G3", "CP-G4", "CP-G5", "CP-G6", "CP-G7", "CP-G8",
+        ):
             self.assertIn(gate, text, msg=f"CREATE_PATH missing {gate}")
+        # Row-unique: recovery paragraph also says CP-G8, so bare token is not enough.
+        self.assertIn(
+            "| CP-G8 |",
+            text,
+            msg="CREATE_PATH missing CP-G8 gate row",
+        )
+        self.assertIn(
+            "MUTATION_FAILED",
+            text,
+            msg="CREATE_PATH missing CP-G8 recovery marker",
+        )
         self.assertIn("captured", text)
         self.assertIn("folded", text)
         self.assertIn("needs-user", text)
