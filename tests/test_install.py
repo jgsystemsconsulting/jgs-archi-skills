@@ -132,6 +132,70 @@ class InstallTests(unittest.TestCase):
             self.assertIn("RELEASE-INFO.txt", proc.stderr)
             self.assertFalse(dest.exists())
 
+    def test_agent_gemini_refuses_unsafe_overwrite(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ext = Path(tmp) / "jgs-archi-orchestrator"
+            ext.mkdir(parents=True)
+            keepme = ext / "keepme.txt"
+            keepme.write_text("keep me", encoding="utf-8")
+            proc = run(["--agent", "gemini", "--dest", str(tmp)])
+            self.assertNotEqual(proc.returncode, 0)
+            self.assertIn("refusing to overwrite non-Gemini-extension path", proc.stderr)
+            self.assertTrue(keepme.is_file())
+            self.assertEqual(keepme.read_text(encoding="utf-8"), "keep me")
+            self.assertEqual(sorted(p.name for p in ext.iterdir()), ["keepme.txt"])
+
+    def test_agent_gemini_reinstall_over_prior_extension(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ext = Path(tmp) / "jgs-archi-orchestrator"
+            ext.mkdir(parents=True)
+            (ext / "GEMINI.md").write_text("stale", encoding="utf-8")
+            (ext / "SKILL.md").write_text("stale", encoding="utf-8")
+            (ext / "gemini-extension.json").write_text(
+                '{"version": "0.0.0"}', encoding="utf-8"
+            )
+            (ext / "stale-extra.txt").write_text("leftover", encoding="utf-8")
+            proc = run(["--agent", "gemini", "--dest", str(tmp)])
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+            manifest = json.loads(
+                (ext / "gemini-extension.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(manifest["version"], repo_release_version())
+            self.assertNotEqual(
+                (ext / "GEMINI.md").read_text(encoding="utf-8"), "stale"
+            )
+            self.assertEqual(
+                (ext / "SKILL.md").read_text(encoding="utf-8"),
+                (ROOT / "skills" / "archi-orchestrator" / "SKILL.md").read_text(
+                    encoding="utf-8"
+                ),
+            )
+            self.assertFalse((ext / "stale-extra.txt").exists())
+
+    def test_agent_gemini_empty_dir_dest(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ext = Path(tmp) / "jgs-archi-orchestrator"
+            ext.mkdir()
+            proc = run(["--agent", "gemini", "--dest", str(tmp)])
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+            self.assertTrue((ext / "GEMINI.md").is_file())
+            self.assertTrue((ext / "SKILL.md").is_file())
+            manifest = json.loads(
+                (ext / "gemini-extension.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(manifest["version"], repo_release_version())
+
+    def test_agent_gemini_refuses_plain_file_dest(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            ext = Path(tmp) / "jgs-archi-orchestrator"
+            ext.write_text("not a directory", encoding="utf-8")
+            before = ext.read_text(encoding="utf-8")
+            proc = run(["--agent", "gemini", "--dest", str(tmp)])
+            self.assertNotEqual(proc.returncode, 0)
+            self.assertIn("refusing to overwrite non-Gemini-extension path", proc.stderr)
+            self.assertTrue(ext.is_file())
+            self.assertEqual(ext.read_text(encoding="utf-8"), before)
+
 
 if __name__ == "__main__":
     unittest.main()

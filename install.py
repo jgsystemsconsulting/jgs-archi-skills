@@ -135,7 +135,27 @@ def install_gemini(src: Path, dest: Path, *, dry: bool) -> None:
     if dry:
         print(f"  would install extension {src.name} -> {dest}")
         return
-    replace_dir(dest)
+    if dest.exists():
+        known = (
+            dest.is_symlink()
+            or (
+                dest.is_dir()
+                and (
+                    (dest / "gemini-extension.json").is_file()
+                    or (
+                        (dest / "GEMINI.md").is_file()
+                        and (dest / "SKILL.md").is_file()
+                    )
+                    or not any(dest.iterdir())
+                )
+            )
+        )
+        if known:
+            replace_dir(dest)
+        else:
+            raise SystemExit(
+                f"refusing to overwrite non-Gemini-extension path: {dest}"
+            )
     dest.mkdir(parents=True)
     (dest / "GEMINI.md").write_text(body, encoding="utf-8")
     shutil.copy2(src / "SKILL.md", dest / "SKILL.md")
