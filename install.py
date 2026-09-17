@@ -21,6 +21,7 @@ from __future__ import annotations
 import argparse
 import json
 import os
+import re
 import shutil
 import sys
 from pathlib import Path
@@ -28,6 +29,18 @@ from pathlib import Path
 NS = "jgs"
 HOME = Path.home()
 ROOT = Path(__file__).resolve().parent
+
+
+def read_release_version() -> str:
+    path = ROOT / "RELEASE-INFO.txt"
+    try:
+        text = path.read_text(encoding="utf-8")
+    except OSError as e:
+        raise SystemExit(f"cannot read version from RELEASE-INFO.txt: {e}") from e
+    m = re.search(r"^Version:\s*(\d+\.\d+\.\d+)\s*$", text, re.M)
+    if not m:
+        raise SystemExit("cannot read version from RELEASE-INFO.txt")
+    return m.group(1)
 
 
 def claude_home() -> Path:
@@ -115,7 +128,7 @@ def install_gemini(src: Path, dest: Path, *, dry: bool) -> None:
     desc, body = _skill_parts(src)
     manifest = {
         "name": f"{NS}-{src.name}",
-        "version": "1.0.1",
+        "version": read_release_version(),
         "description": desc,
         "contextFileName": "GEMINI.md",
     }

@@ -4,7 +4,10 @@
 """Installer flags: dry-run, list-agents, dest layout, agent targets."""
 from __future__ import annotations
 
+import json
 import os
+import re
+import shutil
 import subprocess
 import sys
 import tempfile
@@ -15,12 +18,23 @@ ROOT = Path(__file__).resolve().parents[1]
 INSTALL = ROOT / "install.py"
 
 
-def run(args: list[str], env: dict | None = None) -> subprocess.CompletedProcess:
+def repo_release_version() -> str:
+    text = (ROOT / "RELEASE-INFO.txt").read_text(encoding="utf-8")
+    match = re.search(r"^Version:\s*(\d+\.\d+\.\d+)\s*$", text, re.M)
+    assert match is not None, "RELEASE-INFO.txt Version field missing or malformed"
+    return match.group(1)
+
+
+def run(
+    args: list[str],
+    env: dict | None = None,
+    install: Path = INSTALL,
+) -> subprocess.CompletedProcess:
     e = os.environ.copy()
     if env:
         e.update(env)
     return subprocess.run(
-        [sys.executable, str(INSTALL), *args],
+        [sys.executable, str(install), *args],
         capture_output=True,
         text=True,
         cwd=str(ROOT),
@@ -71,6 +85,52 @@ class InstallTests(unittest.TestCase):
     def test_unknown_agent(self) -> None:
         proc = run(["--agent", "nope"])
         self.assertNotEqual(proc.returncode, 0)
+
+    def test_agent_gemini_install_version_matches_release(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            dest = Path(tmp) / "ext"
+            proc = run(["--agent", "gemini", "--dest", str(dest)])
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+            ext = dest / "jgs-archi-orchestrator"
+            self.assertTrue((ext / "GEMINI.md").is_file())
+            self.assertTrue((ext / "SKILL.md").is_file())
+            manifest = json.loads(
+                (ext / "gemini-extension.json").read_text(encoding="utf-8")
+            )
+            self.assertEqual(manifest["name"], "jgs-archi-orchestrator")
+            self.assertEqual(manifest["contextFileName"], "GEMINI.md")
+            self.assertEqual(manifest["version"], repo_release_version())
+
+    def test_agent_gemini_healthy_dry_run(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            dest = Path(tmp) / "ext"
+            proc = run(["--agent", "gemini", "--dest", str(dest), "--dry-run"])
+            self.assertEqual(proc.returncode, 0, proc.stderr)
+            self.assertFalse(dest.exists() and any(dest.iterdir()))
+
+    def test_agent_gemini_missing_release_info_fails_dry_run(self) -> None:
+        with tempfile.TemporaryDirectory() as tmp:
+            src_root = Path(tmp) / "src"
+            (src_root / "skills").mkdir(parents=True)
+            shutil.copy2(INSTALL, src_root / "install.py")
+            shutil.copytree(
+                ROOT / "skills" / "archi-orchestrator",
+                src_root / "skills" / "archi-orchestrator",
+            )
+            self.assertFalse((src_root / "RELEASE-INFO.txt").exists())
+            dest = Path(tmp) / "ext"
+            proc = run(
+                [
+                    "--agent", "gemini",
+                    "--skills-root", str(src_root / "skills"),
+                    "--dest", str(dest),
+                    "--dry-run",
+                ],
+                install=src_root / "install.py",
+            )
+            self.assertNotEqual(proc.returncode, 0)
+            self.assertIn("RELEASE-INFO.txt", proc.stderr)
+            self.assertFalse(dest.exists())
 
 
 if __name__ == "__main__":
