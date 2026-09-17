@@ -13,6 +13,43 @@ http://127.0.0.1:18090/mcp
 
 Skills and agents talk to the running JGS Archi Bridge inside Archi. Do not hard-code alternate hosts in skill logic without documenting the override.
 
+## Attach from ZCode
+
+ZCode reads MCP servers from `~/.zcode/cli/config.json` (user scope) or
+`<repo>/.zcode/config.json` (workspace scope; a same-named user entry
+overrides the workspace entry). Add the bridge under `mcp.servers`:
+
+```json
+{
+  "mcp": {
+    "servers": {
+      "archi": {
+        "type": "http",
+        "url": "http://127.0.0.1:18090/mcp"
+      }
+    }
+  }
+}
+```
+
+Merge into an existing `mcp.servers` object if one is present; do not
+replace unrelated servers. Restart the ZCode session after editing, then
+check Settings, MCP: `archi` should show connected. A failed status almost
+always means the bridge is not running; start the MCP server in Archi first,
+then reconnect.
+
+Two host caveats: the config schema is strict, so an unknown key silently
+drops the server, and config files do not expand `${...}` variables, which
+does not matter for this fixed localhost URL.
+
+Claude Code equivalent:
+
+```bash
+claude mcp add --transport http archi http://127.0.0.1:18090/mcp
+```
+
+Other hosts (Claude Desktop, Cline, Cursor): see the jgs-archi-mcp README.
+
 ## Consume-only policy
 
 - Skills **consume** MCP tools and resources only.

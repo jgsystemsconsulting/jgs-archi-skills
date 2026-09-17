@@ -23,5 +23,16 @@ class TestLiveSmokeRunbook(unittest.TestCase):
         self.assertIn("MODEL_OPENED", t)
 
 
+class TestZCodeWire(unittest.TestCase):
+    def test_mcp_doc_has_zcode_attach(self):
+        t = text("docs/MCP.md")
+        self.assertIn("18090/mcp", t)
+        self.assertIn("Attach from ZCode", t)
+        self.assertIn("mcp.servers", t)
+
+    def test_readme_links_zcode_attach(self):
+        self.assertIn("docs/MCP.md#attach-from-zcode", text("README.md"))
+
+
 if __name__ == "__main__":
     unittest.main()

@@ -39,7 +39,8 @@ MCP resources are the sole ArchiMate reference.
 
 - Archi with the JGS Archi Bridge plugin
 - MCP endpoint (default): see [docs/MCP.md](docs/MCP.md)
-  (`http://127.0.0.1:18090/mcp`, 69 tools, 14 resources)
+  (`http://127.0.0.1:18090/mcp`, 69 tools, 14 resources). ZCode attach:
+  [Attach from ZCode](docs/MCP.md#attach-from-zcode)
 - Python 3.10+ (standard library only; no pip packages required)
 
 ## Install
@@ -87,6 +88,7 @@ A. Bridge (MCP)
 - Default endpoint: http://127.0.0.1:18090/mcp
 - Wire this agent to that endpoint using the README section for this host (ZCode, Claude Code CLI, Claude Desktop, Cline, or other). Example for Claude Code:
     claude mcp add --transport http archi http://127.0.0.1:18090/mcp
+  ZCode: add to ~/.zcode/cli/config.json under mcp.servers: {"archi": {"type": "http", "url": "http://127.0.0.1:18090/mcp"}}, then restart the session (details: docs/MCP.md#attach-from-zcode)
 - Leave bind, TLS, and auth at README defaults unless the user asked otherwise.
 
 B. Skills
