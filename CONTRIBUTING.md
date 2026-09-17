@@ -16,6 +16,14 @@ python helpers/validate_skill_mcp_refs.py
 python scripts/check_release.py
 ```
 
+`scripts/check_release.py` is the local release gate: required files,
+forbidden tracked paths, leak sentinels, Python headers and SPDX, UTF-8 BOM
+in parser-critical files, version consistency across the six version-bearing
+sources, and SKILL.md frontmatter lint. `.github/workflows/validate.yml`
+runs the equivalent checks inline as the CI authority; it reads files only
+and never executes repo code. Both content scans skip `.github/`, so a
+secret pasted into a workflow file would not trip either gate.
+
 Live MCP checks need Archi plus the JGS Archi Bridge. They are opt-in:
 `python tests/live_mcp_smoke.py`. Runbook:
 [docs/live-mcp-smoke.md](docs/live-mcp-smoke.md).
