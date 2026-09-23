@@ -35,7 +35,7 @@ Guidance elsewhere in this file may use "prefer" or "when useful". The table bel
 | CP-G5 | Annotate last | Notes, legends, and images are the last objects placed on a view. Omit `height` on notes. Place notes with `position: below-content`. A later geometry change re-opens CP-G6. |
 | CP-G6 | Render close-out | After any add, move, resize, or style on a view, including notes, the last actions are `assess-layout` (dispose every non-pass `ratingBreakdown` dimension; `partial` and `not-checked` are unverified) and an `export-view` PNG that is inspected. |
 | CP-G7 | First generation is a draft | The documentation specialist ends the run at a draft checkpoint. Do not present the model as finished. |
-| CP-G8 | First-mutate readiness | The first mutating MCP call of every specialist run is a single small view call — `create-view`, or `add-to-view` on the confirmed target view — never a batch or bulk call. |
+| CP-G8 | First-mutate readiness | The first mutating MCP call of every specialist run is a single small view call (`create-view`, or `add-to-view` on the confirmed target view), never a batch or bulk call. |
 
 Offline assist for CP-G3: `python helpers/disposition.py ledger.md`.
 
@@ -183,9 +183,9 @@ Binding for ArchiMate legality and consistency. Violations are **explained** wit
 ### Known rejections and legal forms (targeted)
 
 - Node → ApplicationComponent is never Assignment (rejected). Legal form: `create-relationship` **Realization** from the Node to the ApplicationComponent, and nest the application element on the node in the view (`add-to-view` with the node as parent).
-- No Flow and no Association between sibling sequenced elements (Capabilities and similar stage-ordered sets) — the language rejects them. Sequence is placement, not edges: `add-to-view` order reads left-to-right; `archi-layout` preserves it; record reading order in an annotation note (annotations last per CP-G5).
+- No Flow and no Association between sibling sequenced elements (Capabilities and similar stage-ordered sets): the language rejects them. Sequence is placement, not edges: `add-to-view` order reads left-to-right; `archi-layout` preserves it; record reading order in an annotation note (annotations last per CP-G5).
 - Genuine cross-element dependencies that seem to need those edges are `needs-user` open questions resolved against `archimate://reference/archimate-relationships`; never silent-apply (COMP-02 / NG-3).
-- Scope note: `archimate://reference/archimate-relationships` remains source of truth; this list is targeted known-failure guidance, not a metamodel catalog (NG-4 — no table dumps).
+- Scope note: `archimate://reference/archimate-relationships` remains source of truth; this list is targeted known-failure guidance, not a metamodel catalog (NG-4: no table dumps).
 
 ### Offline depth (OBJ-5)
 
