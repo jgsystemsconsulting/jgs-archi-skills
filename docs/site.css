@@ -78,3 +78,6 @@ table.data caption{caption-side:bottom;text-align:left;padding:12px 0 0;font:400
 @media (prefers-reduced-motion:reduce){
   *{transition:none!important;}
 }
+
+nav.site .brand{border:0;display:inline-flex;align-items:center;}
+nav.site .brand img{display:block;}
