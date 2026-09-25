@@ -245,6 +245,30 @@ def check_frontmatter(root: pathlib.Path) -> list[str]:
     return fails
 
 
+def check_site_version(root, release_re):
+    """docs/index.html version strings must equal RELEASE-INFO.txt (ported from jgs-lit-memory)."""
+    m = re.search(release_re, (root / "RELEASE-INFO.txt").read_text(encoding="utf-8"), re.M)
+    if not m:
+        return ["RELEASE-INFO.txt: no version line"]
+    expected = m.group(1)
+    page = (root / "docs" / "index.html").read_text(encoding="utf-8")
+    loci = {
+        "softwareVersion": r'"softwareVersion":\s*"(\d+\.\d+\.\d+)"',
+        "masthead REV": r"REV <b>(\d+\.\d+\.\d+)</b>",
+        "footer Rev": r'<span class="label">Rev</span><b>(\d+\.\d+\.\d+)</b>',
+    }
+    bad = []
+    for name, pat in loci.items():
+        v = re.search(pat, page)
+        val = v.group(1) if v else None
+        if val != expected:
+            bad.append(f"{name}={val!r} (expected {expected})")
+    if bad:
+        return ["site page version mismatch or missing pattern: " + "; ".join(bad)]
+    print(f"site page versions agree at {expected}")
+    return []
+
+
 def main() -> int:
     root = pathlib.Path(".")
     try:
@@ -260,6 +284,7 @@ def main() -> int:
     fails += check_bom(root, tracked)
     fails += check_versions(root)
     fails += check_frontmatter(root)
+    fails += check_site_version(root, r"^Version:\s*(\d+\.\d+\.\d+)")
     if fails:
         print("RELEASE GATE FAILED:")
         for f in fails:
